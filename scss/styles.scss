@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+@mixin grid12 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: $gutter-v;
+    row-gap: $gutter-h;
+}
+
+@import 'variables';
+
+@import 'text';
+
+@import 'elements.scss';
+
+@import 'hero';
+
+@import 'assort';
+
+@import 'production';
+
+@import 'furn';
+
+@import 'reviews';
+
+@import 'calculator';
+
+@import 'calculator-mob';
+
+@import 'contacts';

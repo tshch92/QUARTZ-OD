@@ -1,0 +1,520 @@
+@mixin btn {
+  border: 1px solid black;
+  border-radius: 0;
+  background-color: white;
+  color: black;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin tab {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  box-sizing: border-box;
+}
+
+.viber {
+  height: 44px;
+  padding: 0 $spacebig-mob;
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  box-sizing: border-box;
+  border-radius: 0;
+
+  &:before {
+    content: "Заказать в Viber";
+  }
+
+  &:hover {
+    background-color: white;
+    color: $violet;
+    transition: 200ms;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.lookalike {
+  box-sizing: border-box;
+  height: 44px;
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  background-color: black;
+  color: white;
+  border: none;
+
+  &:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    transition: 200ms;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn {
+  &-text-44 {
+    & input[type="radio"] {
+      display: none;
+    }
+
+    & label {
+      @include btn;
+      height: 44px;
+      width: 44px;
+      padding: 0 10px;
+    }
+
+    & input[type="radio"]:checked + label {
+      background-color: black;
+      color: white;
+    }
+  }
+
+  &-icon-44 {
+    & input[type="radio"] {
+      display: none;
+    }
+
+    & label {
+      @include btn;
+      width: 44px;
+      height: 44px;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+    }
+
+    & input[type="radio"]:checked + label {
+      background-color: black;
+    }
+  }
+}
+
+.tabs {
+  &-icons {
+    display: none;
+  }
+
+  &-text {
+    display: flex;
+  }
+}
+
+@media only (max-width: 1078px) {
+  .tabs {
+    &-icons {
+      display: flex;
+    }
+
+    &-text {
+      display: none;
+    }
+  }
+}
+
+.tab {
+  &-text {
+    //width: 50%;
+    flex-grow: 1;
+
+    & input[type="radio"] {
+      display: none;
+    }
+
+    & label {
+      @include tab;
+      border-bottom: 1px solid black;
+    }
+
+    & input[type="radio"]:checked + label {
+      border-bottom: 3px solid black;
+      padding-top: 2px;
+    }
+  }
+
+  &-icon {
+    //width: 50%;
+    flex-grow: 1;
+
+    & input[type="radio"] {
+      display: none;
+    }
+
+    & label {
+      @include tab;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-bottom: 1px solid black;
+    }
+
+    & input[type="radio"]:checked + label {
+      border-bottom: 3px solid black;
+      height: 42px;
+      margin-top: 2px;
+    }
+  }
+}
+
+.chip {
+  &-basic {
+    display: inline-block;
+
+    & input[type="checkbox"] {
+      display: none;
+    }
+
+    & label {
+      @include btn;
+      height: 32px;
+      padding: 0 10px;
+    }
+
+    & input[type="checkbox"]:checked + label {
+      color: white;
+      background-color: black;
+    }
+
+    & #Avant + :before {
+        content: '';
+        background-image: url('./images/icons/country/China.jpg');
+        background-position: center;
+        width: 24px;
+        height: 16px;
+        margin-right: 8px;
+    }
+
+    & #Reston + :before {
+        content: '';
+        background-image: url('./images/icons/country/China.jpg');
+        background-position: center;
+        width: 24px;
+        height: 16px;
+        margin-right: 8px;
+    }
+
+    & #Atem + :before {
+        content: '';
+        background-image: url('./images/icons/country/UA.jpg');
+        background-position: center;
+        width: 24px;
+        height: 16px;
+        margin-right: 8px;
+    }
+
+    & #Caesarstone + :before {
+        content: '';
+        background-image: url('./images/icons/country/Israel.jpg');
+        background-position: center;
+        width: 24px;
+        height: 16px;
+        margin-right: 8px;
+    }
+
+    & #Belenco + :before {
+        content: '';
+        background-image: url('./images/icons/country/Turkey.jpg');
+        background-position: center;
+        width: 24px;
+        height: 16px;
+        margin-right: 8px;
+    }
+  }
+
+  &-X {
+    display: inline-block;
+
+    & input[type="checkbox"] {
+      display: none;
+    }
+
+    & label {
+      @include btn;
+      height: 32px;
+      padding: 0 10px;
+
+      &:after {
+        content: "";
+        margin-left: 4px;
+        width: 10px;
+        height: 10px;
+        background-image: url(./images/icons/close-small.svg);
+      }
+    }
+  }
+
+  &-color {
+    display: inline-block;
+
+    & input[type="checkbox"] {
+      display: none;
+    }
+
+    & label {
+      @include btn;
+      height: 32px;
+      width: 32px;
+    }
+
+    & input[type="checkbox"]:checked + label {
+      color: white;
+      background-color: black;
+    }
+  }
+}
+
+.input {
+  @include btn;
+  height: 44px;
+  padding: 0 10px;
+  width: 100%;
+
+  &:active {
+    border: 2px solid black;
+    border-radius: 0;
+  }
+
+  &:focus {
+    border: 2px solid black;
+    border-radius: 0;
+    outline: none;
+    padding: 0 9px;
+  }
+
+  &-small {
+    @include btn;
+    height: 32px;
+    width: 54px;
+    text-align: center;
+
+    &::placeholder {
+      font-family: "Futura PT", sans-serif;
+      font-size: 15px;
+      letter-spacing: 0.4px;
+      font-weight: 400;
+    }
+
+    &:active {
+      border: 2px solid black;
+      border-radius: 0;
+    }
+
+    &:focus::placeholder {
+      color: white;
+    }
+
+
+    &:focus {
+      border: 2px solid black;
+      border-radius: 0;
+      outline: none;
+
+      & + label.arrow {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@mixin chipcolor {
+  content: "";
+  width: 24px;
+  height: 24px;
+}
+
+.c-white::before {
+  @include chipcolor;
+  background-color: snow;
+}
+
+.c-beige::before {
+  @include chipcolor;
+  background-color: beige;
+}
+
+.c-brown::before {
+  @include chipcolor;
+  background-color: rgb(110, 72, 45);
+}
+
+.c-grey::before {
+  @include chipcolor;
+  background-color: gray;
+}
+
+.c-black::before {
+  @include chipcolor;
+  background-color: rgb(22, 22, 22);
+}
+
+@mixin iconhovertext {
+  background-color: white;
+  padding: 0 5px;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+  font-family: "Futura PT", sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+}
+
+.icon {
+  &-search {
+    background-image: url(./images/icons/magnifying-glass.svg);
+  }
+
+  &-filter {
+    background-image: url(./images/icons/filters.svg);
+  }
+
+  &-shapeI {
+    background-image: url(./images/icons/forma/01.svg);
+
+    &:hover:after {
+      content: "прямая";
+      @include iconhovertext;
+    }
+  }
+
+  &-shapeL {
+    background-image: url(./images/icons/forma/03.svg);
+
+    &:hover:after {
+      content: "угловая";
+      @include iconhovertext;
+    }
+  }
+
+  &-shapeU {
+    background-image: url(./images/icons/forma/02.svg);
+
+    &:hover:after {
+      content: "П-образная";
+      @include iconhovertext;
+    }
+  }
+
+  &-edge1 {
+    background-image: url(./images/icons/profil/01.svg);
+
+    &:hover:after {
+      content: "фаска 3х3";
+      @include iconhovertext;
+    }
+  }
+
+  &-edge2 {
+    background-image: url(./images/icons/profil/02.svg);
+
+    &:hover:after {
+      content: "фаска R3";
+      @include iconhovertext;
+    }
+  }
+
+  &-edge3 {
+    background-image: url(./images/icons/profil/03.svg);
+
+    &:hover:after {
+      content: "О-профиль";
+      @include iconhovertext;
+    }
+  }
+
+  &-edge4 {
+    background-image: url(./images/icons/profil/04.svg);
+
+    &:hover:after {
+      content: "М-профиль";
+      @include iconhovertext;
+    }
+  }
+
+  &-edge5 {
+    background-image: url(./images/icons/profil/05.svg);
+
+    &:hover:after {
+      content: "рваный край";
+      @include iconhovertext;
+    }
+  }
+
+  &-edge6 {
+    background-image: url(./images/icons/profil/06.svg);
+
+    &:hover:after {
+      content: "лофт профиль";
+      @include iconhovertext;
+    }
+  }
+
+  &-edge7 {
+    background-image: url(./images/icons/profil/07.svg);
+
+    &:hover:after {
+      content: "М-профиль";
+      @include iconhovertext;
+    }
+  }
+}
+
+input[type="radio"]:checked + label.icon {
+  &-shapeI {
+    background-image: url(./images/icons/forma/01-white.svg);
+  }
+
+  &-shapeU {
+    background-image: url(./images/icons/forma/02-white.svg);
+  }
+
+  &-shapeL {
+    background-image: url(./images/icons/forma/03-white.svg);
+  }
+
+  &-edge1 {
+    background-image: url(./images/icons/profil/01-white.svg);
+  }
+
+  &-edge2 {
+    background-image: url(./images/icons/profil/02-white.svg);
+  }
+
+  &-edge3 {
+    background-image: url(./images/icons/profil/03-white.svg);
+  }
+
+  &-edge4 {
+    background-image: url(./images/icons/profil/04-white.svg);
+  }
+
+  &-edge5 {
+    background-image: url(./images/icons/profil/05-white.svg);
+  }
+
+  &-edge6 {
+    background-image: url(./images/icons/profil/06-white.svg);
+  }
+
+  &-edge7 {
+    background-image: url(./images/icons/profil/07-white.svg);
+  }
+}

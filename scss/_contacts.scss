@@ -1,0 +1,73 @@
+.contacts {
+
+    &-wrapper {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding-top: $spacebig;
+        box-sizing: border-box;
+    }
+
+    &-main {
+        display: flex;
+        flex-grow: 1;
+    }
+
+    &-title {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 153px;
+    }
+
+    &-list {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        & > * {
+            margin-bottom: 20px;
+        }
+    }
+
+    &-image {
+        background-image: url(./images/anemon_84bda.jpg);
+        background-size: cover;
+        background-position: top;
+        height: 40%;
+    }
+}
+
+@media only (max-width: 1078px) {
+
+    .contacts {
+
+        &-wrapper {
+            padding-top: $spacebig-mob;
+        }
+
+        &-main {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-title {
+            justify-content: flex-end;
+            margin-bottom: $spacebig-mob;
+            flex-grow: 0;
+        }
+
+        &-list {
+            align-items: center;
+            justify-content: start;
+            flex-grow: 0;
+
+            & a.text-bold.instagram {
+                display: flex;
+            }
+        }
+    }
+}

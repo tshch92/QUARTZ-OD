@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          <title>
+            Кварцевые столешницы в Одессе - Калькулятор цен
+        </title>
+        <!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-1WR9EMX0PC"></script><script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-1WR9EMX0PC');</script>
+        <link rel="stylesheet" href="./normalize.css">
+        <link rel="stylesheet" href="./fonts/stylesheet.css">
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <div class="calc-wrapper">
+            <nav class="header-nav">
+                <div class="header-nav-left">
+                    <a class="header-nav-link text-bold" href="./index.html">Столешницы</a>
+                    <a class="header-nav-link text-bold" href="./calculator.html">Цены</a>
+                </div>
+                <a class="header-nav-link text-bold" href="./contacts.html">Контакты</a>
+            </nav>
+
+            <button class="stones-collapsed">
+                <p class="text stones-summary">Найдено: 300 цветов</p>
+                <span class="text-bold">выбрать камень</span>
+            </button>
+
+            <section class="colorselect" id="colorselect">
+                <div class="tabs tabs-icons">
+                    <div class="tab-icon">
+                        <input type="radio" id="filter2" name="tabs2" value="filter" checked>
+                        <label for="filter2" class="icon-filter"></label>
+                    </div>
+<!--                     <div class="tab-icon">
+                        <input type="radio" id="search2" name="tabs2" value="search">
+                        <label for="search2" class="icon-search"></label>
+                    </div> -->
+                </div>
+                <div class="tabs tabs-text">
+                    <div class="tab-text">
+                        <input type="radio" id="filter" name="tabs" value="filter" checked>
+                        <label for="filter" class="text-bold">Фильтры</label>
+                    </div>
+<!--                     <div class="tab-text">
+                        <input type="radio" id="search" name="tabs" value="search">
+                        <label for="search" class="text-bold">Поиск</label>
+                    </div> -->
+                </div>
+                <!-- <input type="text" class="input text" placeholder="название камня..."> -->
+                <div class="filter-card">
+                    <button class="filter-card-title text-bold">
+                        Бренды
+                    </button>
+                    <div class="filter-card-content" id="brandlist">
+                        <!-- <div class="chip-basic">
+                            <input type="checkbox" id="Avant" name="Avant" value="Avant">
+                            <label for="Avant" class="text-bold">Avant</label>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="filter-card">
+                    <button class="filter-card-title text-bold">
+                        Группы цветов
+                    </button>
+                    <div class="filter-card-content" id="colorlist">
+                        <div class="chip-color">
+                            <input type="checkbox" id="white" name="white" value="white">
+                            <label for="white" class="c-white"></label>
+                        </div>
+                        <div class="chip-color">
+                            <input type="checkbox" id="beige" name="beige" value="beige">
+                            <label for="beige" class="c-beige"></label>
+                        </div>
+                        <div class="chip-color">
+                            <input type="checkbox" id="brown" name="brown" value="brown">
+                            <label for="brown" class="c-brown"></label>
+                        </div>
+                        <div class="chip-color">
+                            <input type="checkbox" id="grey" name="grey" value="grey">
+                            <label for="grey" class="c-grey"></label>
+                        </div>
+                        <div class="chip-color">
+                            <input type="checkbox" id="black" name="black" value="black">
+                            <label for="black" class="c-black"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-card">
+                    <button class="filter-card-title text-bold">
+                        Узор камня
+                    </button>
+                    <div class="filter-card-content" id='patternlist'>
+                        <div class="chip-basic">
+                            <input type="checkbox" id="manka" name="manka" value="manka">
+                            <label for="manka" class="text-bold">песок</label>
+                        </div>
+                        <div class="chip-basic">
+                            <input type="checkbox" id="zerno" name="zerno" value="zerno">
+                            <label for="zerno" class="text-bold">зерно</label>
+                        </div>
+                        <div class="chip-basic">
+                            <input type="checkbox" id="sparkle" name="sparkle" value="sparkle">
+                            <label for="sparkle" class="text-bold">блёстки</label>
+                        </div>
+                        <div class="chip-basic">
+                            <input type="checkbox" id="marble" name="marble" value="marble">
+                            <label for="marble" class="text-bold">под мрамор</label>
+                        </div>
+                        <div class="chip-basic">
+                            <input type="checkbox" id="calacatta" name="calacatta" value="calacatta">
+                            <label for="calacatta" class="text-bold">калакатта</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-card">
+                    <button class="filter-card-title text-bold">
+                        Поверхность
+                    </button>
+                    <div class="filter-card-content" id='surfacelist'>
+                        <div class="chip-basic">
+                            <input type="checkbox" id="glanz" name="glanz" value="glanz">
+                            <label for="glanz" class="text-bold">глянец</label>
+                        </div>
+                        <div class="chip-basic">
+                            <input type="checkbox" id="matte" name="matte" value="matte">
+                            <label for="matte" class="text-bold">мат</label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section id="samples123" class="samples">
+<!--                 <div class="sample">
+                    <div class="sample-image"></div>
+                    <div class="sample-text">
+                        <div class="sample-top">
+                            <div class="sample-brand text">Caesarstone</div>
+                            <div class="sample-slabs">2.5</div>
+                        </div>
+                        <div class="sample-bottom">
+                            <div class="sample-name text-bold">5100 Vanilla Noir</div>
+                            <div class="sample-price text-bold">2150$</div>
+                        </div>
+                    </div>
+                    <button class="lookalike text-bold">
+                        Искать похожие цвета
+                    </button>
+                </div>
+                <div class="sample recommend">
+                    <div class="sample-image"></div>
+                    <div class="sample-text">
+                        <div class="sample-top">
+                            <div class="sample-brand text">Caesarstone</div>
+                            <div class="sample-slabs">2.5</div>
+                        </div>
+                        <div class="sample-bottom">
+                            <div class="sample-name text-bold">5100 Vanilla Noir</div>
+                            <div class="sample-price text-bold">2150$</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sample preorder">
+                    <div class="sample-image sparkle"></div>
+                    <div class="sample-text">
+                        <div class="sample-top">
+                            <div class="sample-brand text">Caesarstone</div>
+                            <div class="sample-slabs">2.5</div>
+                        </div>
+                        <div class="sample-bottom">
+                            <div class="sample-name text-bold">5100 Vanilla Noir</div>
+                            <div class="sample-price text-bold">2150$</div>
+                        </div>
+                    </div>
+                </div> -->
+            </section>
+
+            <button class="kitchen-collapsed">
+                <p class="text kitchen-summary">Кухня 3000х600мм, 40мм...</p>
+                <span class="text-bold">изменить</span>
+            </button>
+    
+            <section class="kitchen">
+                <div class="kitchen-wrapper">
+                    <div class="parameter">
+                        <div class="parameter-title text-bold">Форма кухни</div>
+                        <div class="parameter-options" id='shapes'>
+                            <div class="btn-icon-44">
+                                <input type="radio" id="shapeI" name="kitchen-shape" value="I" checked>
+                                <label for="shapeI" class="icon-shapeI"></label>
+                            </div>
+                            <div class="btn-icon-44">
+                                <input type="radio" id="shapeL" name="kitchen-shape" value="L">
+                                <label for="shapeL" class="icon-shapeL"></label>
+                            </div>
+                            <div class="btn-icon-44">
+                                <input type="radio" id="shapeU" name="kitchen-shape" value="U">
+                                <label for="shapeU" class="icon-shapeU"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="parameter" id="kitchen-dimensions">
+                        <div class="parameter-title text-bold">Размеры, мм</div>
+                        <div class="parameter-options shapeI" style="display: flex">
+                            <input type="text" id='l1' class="input-small text-bold" placeholder="3000">
+                            <span class="text">x</span>
+                            <input type="text" id='w1' class="input-small text-bold" placeholder="600">
+                        </div>
+                        <div class="parameter-shape shapeL" style="display:none">
+                            <input type="text" id="l-A" class="input-small text-bold length-A" placeholder="3000">
+                            <label class="arrow length-A" for="length-A"><img src="./images/kitchen-shapes/arrow143.svg"></label>
+    
+                            <input type="text" id="l-B" class="input-small text-bold length-B" placeholder="3600">
+                            <label class="arrow length-B" for="length-B"><img src="./images/kitchen-shapes/arrow130.svg"></label>
+    
+                            <input type="text" id="w-A" class="input-small text-bold width-A" placeholder="600">
+                            <label class="arrow width-A" for="width-A"><img src="./images/kitchen-shapes/arrow48.svg"></label>
+    
+                            <input type="text" id="w-B" class="input-small text-bold w-B" placeholder="600">
+                            <label class="arrow w-B" for="width-B"><img src="./images/kitchen-shapes/arrow42.svg"></label>
+                        </div>
+                        <div class="parameter-shape shapeU" style="display: none">
+                            <input type="text" id="length-A" class="input-small text-bold length-A" placeholder="3000">
+                            <label class="arrow length-A" for="length-A"><img src="./images/kitchen-shapes/arrow143.svg"></label>
+    
+                            <input type="text" id="length-B" class="input-small text-bold length-B" placeholder="3600">
+                            <label class="arrow length-B" for="length-B"><img src="./images/kitchen-shapes/arrow130.svg"></label>
+    
+                            <input type="text" id="length-C" class="input-small text-bold length-C" placeholder="2400">
+                            <label class="arrow length-C" for="length-C"><img src="./images/kitchen-shapes/arrow143.svg"></label>
+    
+                            <input type="text" id="width-A" class="input-small text-bold width-A" placeholder="600">
+                            <label class="arrow width-A" for="width-A"><img src="./images/kitchen-shapes/arrow48.svg"></label>
+    
+                            <input type="text" id="width-B" class="input-small text-bold width-B" placeholder="600">
+                            <label class="arrow width-B" for="width-B"><img src="./images/kitchen-shapes/arrow42.svg"></label>
+    
+                            <input type="text" id="width-C" class="input-small text-bold width-C" placeholder="600">
+                            <label class="arrow width-C" for="width-C"><img src="./images/kitchen-shapes/arrow48.svg"></label>
+                        </div>
+                    </div>
+                    <div class="parameter">
+                        <div class="parameter-title text-bold">Толщина столешницы</div>
+                        <div class="parameter-options" id='thickness'>
+                            <div class="btn-text-44">
+                                <input type="radio" id="thickness20" name="thickness" value="20">
+                                <label for="thickness20" class="text-bold">20</label>
+                            </div>
+                            <div class="btn-text-44">
+                                <input type="radio" id="thickness40" name="thickness" value="40" checked>
+                                <label for="thickness40" class="text-bold">40</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="parameter">
+                        <div class="parameter-title text-bold">Профиль торца</div>
+                        <div class="parameter-options" id="edges">
+                            <div class="btn-icon-44 e20 e40" style="margin-right: 20px">
+                                <input type="radio" id="edge1" name="edge" value="edge1" checked>
+                                <label for="edge1" class="icon-edge1"></label>
+                            </div>
+                            <div class="btn-icon-44 e20 e40" style="margin-right: 20px">
+                                <input type="radio" id="edge2" name="edge" value="edge2">
+                                <label for="edge2" class="icon-edge2"></label>
+                            </div>
+                            <div class="btn-icon-44 e40" style="margin-right: 20px">
+                                <input type="radio" id="edge3" name="edge" value="edge3">
+                                <label for="edge3" class="icon-edge3"></label>
+                            </div>
+                            <div class="btn-icon-44 e40" style="margin-right: 20px">
+                                <input type="radio" id="edge4" name="edge" value="edge4">
+                                <label for="edge4" class="icon-edge4"></label>
+                            </div>
+                            <div class="btn-icon-44 e40" style="margin: 0">
+                                <input type="radio" id="edge5" name="edge" value="edge5">
+                                <label for="edge5" class="icon-edge5"></label>
+                            </div>
+                            <div class="btn-icon-44 e20" style = "display: none;">
+                                <input type="radio" id="edge6" name="edge" value="edge6">
+                                <label for="edge6" class="icon-edge6"></label>
+                            </div>
+                            <div class="btn-icon-44 e20" style = "display: none;">
+                                <input type="radio" id="edge7" name="edge" value="edge7">
+                                <label for="edge7" class="icon-edge7"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="parameter">
+                        <div class="parameter-title text-bold">Пристенный бортик</div>
+                        <div class="parameter-options" id='backsplash'>
+                            <div class="btn-text-44">
+                                <input type="radio" id="backsplash1" name="backsplash" value=1 checked>
+                                <label for="backsplash1" class="text-bold">40</label>
+                            </div>
+                            <div class="btn-text-44">
+                                <input type="radio" id="backsplash0" name="backsplash" value=0>
+                                <label for="backsplash0" class="text-bold">нет</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="result">
+                <div class="result-sum text-bold">неизвестно</div>
+                <a href="viber://chat?number=%2B380964163862" class="viber text-bold"></a>
+            </div>
+        </div>
+    </body>
+    <script src="data.js"></script>
+    <script src="script-cut.js"></script>
+    <script src="script.js"></script>
+</html>

@@ -1,0 +1,256 @@
+.assort {
+    height: calc(((100vh - 160px) / 3 * 5) + 160px);
+    padding: 0 $spacebig;
+    margin: $spacebig 0;
+    grid-template-rows: repeat(20, 1fr);
+    @include grid12;
+
+    &-product-types {
+        grid-area: 1 / 1 / 6 / 13;
+        padding: 0 25%;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &-title {
+        grid-area: 6 / 2 / 11 / 12;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        & > .title-bold {
+            margin-left: 302px;
+        }
+
+        & .script::after {
+            content: '';
+            display: inline-block;
+            margin-bottom: 9px;
+            margin-left: 20px;
+            height: 2px;
+            width: 54px;
+            background-color: black;
+            position: relative;
+        }
+
+    }
+
+    &-image {
+        background-image: url(./images/5100vanillanoir.jpg);
+        background-size: cover;
+        grid-area: 11 / 4 / 16 / 13;
+    }
+
+    &-brlist {
+        grid-area: 17 / 1 / 21 / 13;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
+    &-brand {
+        margin-bottom: 0;
+        height: 50%;
+        width: 25%;
+    }
+}
+
+@mixin brandimg {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.vicostone {
+    @include brandimg;
+    background-image: url(./images/brands/VICOSTONE.jpg);
+}
+
+.avant {
+    @include brandimg;
+    background-image: url(./images/brands/AVANT.jpg);
+}
+
+.belenco {
+    @include brandimg;
+    background-image: url(./images/brands/BELENCO.jpg);
+}
+
+.reston {
+    @include brandimg;
+    background-image: url(./images/brands/RESTON.jpg);
+}
+
+.atem {
+    @include brandimg;
+    background-image: url(./images/brands/ATEM.jpg);
+}
+
+.caesarstone {
+    @include brandimg;
+    background-image: url(./images/brands/CAESARSTONE.jpg);
+}
+
+.hanstone {
+    @include brandimg;
+    background-image: url(./images/brands/HANSTONE.jpg);
+}
+
+.silestone {
+    @include brandimg;
+    background-image: url(./images/brands/SILESTONE.jpg);
+}
+
+.product {
+    text-transform: lowercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 33%;
+
+    &:last-child {
+        margin-top: 50px;
+    }
+}
+
+@mixin brandimg {
+    content: "";
+    width: 198px;
+    height: 102px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.countertops::before {
+        @include brandimg;
+        background-image: url(./images/product-types/countertops.svg);
+    }
+
+.bartops::before{
+        @include brandimg;
+        background-image: url(./images/product-types/bartops.svg);
+    }
+    
+.backsplashes::before {
+        @include brandimg;
+        background-image: url(./images/product-types/backsplashes.svg);
+    }
+    
+.washbasins::before {
+        @include brandimg;
+        background-image: url(./images/product-types/washbasins.svg);
+    }
+    
+.windowsills::before {
+        @include brandimg;
+        background-image: url(./images/product-types/windowsills.svg);
+    }
+
+@media only screen and (max-width: 1078px) {
+
+    .assort {
+        &-title {    
+            & > .title-bold {
+                margin-left: 302px;
+            }
+        }
+    }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+    .assort {
+        margin: $spacebig-mob 0;
+        padding: 0 $spacemid-mob;
+        display: block;
+        height: auto;
+
+        & > * {
+            margin-bottom: $spacemid-mob;
+        }
+
+        &-product-types {
+            padding: 0;
+            align-items: center;
+            margin-bottom: $spacebig-mob;
+        }
+
+        & > :last-child {
+            margin-bottom: 0;
+        }
+
+        &-title {
+            display: block;
+            max-width: 300px;
+    
+            & > .title-bold {
+                margin-left: 70px;
+            }
+    
+            & .script::after {
+                content: '';
+                display: inline-block;
+                margin-bottom: 5px;
+                margin-left: 10px;
+                height: 2px;
+                width: 30px;
+                background-color: black;
+                position: relative;
+            }
+        }
+
+        &-image {
+            height: 20vh;
+        }
+
+        &-brand {
+            height: calc((50vh / 4);
+            width: 50%;
+            margin-bottom: 0;
+        }
+    }
+
+    .product {
+        width: 50%;
+        background-size: cover;
+
+        &:last-child {
+            margin-top: 0;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: $spacebig-mob;
+        }
+    }
+
+    @mixin brandimg-mob {
+        width: 198px;
+        height: 80px;
+    }
+
+    .countertops::before {
+        @include brandimg-mob;
+    }
+
+.bartops::before{
+    @include brandimg-mob;
+    }
+    
+.backsplashes::before {
+    @include brandimg-mob;
+    }
+    
+.washbasins::before {
+    @include brandimg-mob;
+    }
+    
+.windowsills::before {
+    @include brandimg-mob;
+    }
+}

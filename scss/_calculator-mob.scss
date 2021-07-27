@@ -1,0 +1,139 @@
+@media only (max-width: 1078px) {
+  .colorselect {
+    max-width: 100%;
+    height: auto;
+    position: static;
+    margin-top: $spacebig-mob;
+  }
+
+  .filter {
+    &-card {
+      padding: 0 5px;
+      border-bottom: 1px solid black;
+      margin-bottom: 10px;
+
+      &-content {
+          display: none;
+      }
+
+      &-title {
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        border: 0;
+        height: 44px;
+        padding: 0;
+
+        &:after {
+          content: "";
+          background-image: url(./images/icons/plus.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          width: 24px;
+          height: 24px;
+        }
+
+        &.active:after {
+          content: "";
+          //background-color: peru;
+          background-image: url(./images/icons/minus.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+
+  .kitchen {
+    width: 100%;
+    top: calc(50px + 42px);
+    padding: 30px 0;
+    display: none;
+
+    &-collapsed {
+      width: 100%;
+      height: 42px;
+      top: calc(100vh - 42px - 64px);
+      background-color: black;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 $spacemid-mob;
+      border: 0;
+      outline: none;
+      position: fixed;
+    }
+
+    &-wrapper {
+    }
+  }
+
+  .stones {
+    &::-webkit-scrollbar {
+      width: 0; /* ширина для вертикального скролла */
+    }
+
+    &-collapsed {
+      width: 100%;
+      height: 42px;
+      background-color: black;
+      color: white;
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 $spacemid-mob;
+      border: 0;
+      outline: none;
+      top: 50px;
+      position: fixed;
+    }
+  }
+
+  .samples {
+    margin: $spacemid-mob 0 106px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .result {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px $spacemid-mob;
+
+    &-sum {
+      margin-bottom: 0;
+    }
+  }
+
+  .viber {
+    font-size: 0;
+    padding: 0px;
+    width: 44px;
+    background-image: url(./images/icons/viber.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &:before {
+      display: none;
+    }
+  }
+}
+
+@media only (max-width: 768px) {
+  .sample {
+    width: calc(100vw - 30px - 30px);
+    margin-bottom: $spacemid-mob;
+
+    &-image {
+      height: calc(100vw - 30px - 30px);
+    }
+  }
+}
