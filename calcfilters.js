@@ -79,7 +79,7 @@ function applyFilters() {
     filtersAreEmpty = true;
   }
 
-  console.log(filtersAreEmpty + " empty filters ex brands. APPLYING FILTERS?");
+  //console.log(filtersAreEmpty + " empty filters ex brands. APPLYING FILTERS?");
 
   if (!filtersAreEmpty) {
     filteredSamplesArray.sort(function (a, b) {
@@ -99,14 +99,6 @@ function applyFilters() {
 }
 
 const $brandlist = getBrandList(samplesArray);
-let custombrandlist = [];
-
-filterValues = {
-  brand: $staticbrandlist,
-  colorgroup: [],
-  pattern: [],
-  surface: [],
-};
 
 let diff = $brandlist.length - $staticbrandlist.length;
 
@@ -119,7 +111,7 @@ document.querySelector(
 ).innerHTML += `<button class="text-bold btn-simple" id="showmorebrands" onclick='showmorebrands()'>ещё...</button>`;
 document.querySelector(
   "#brandlist"
-).innerHTML += `<button class="text-bold btn-simple" id="showlessbrands" onclick='showlessbrandspro()'>показать основные</button>`;
+).innerHTML += `<button class="text-bold btn-simple" id="showlessbrands" onclick='showlessbrands()'>показать основные</button>`;
 
 function showlessbrands() {
   let arr = document.querySelectorAll("#brandlist .chip-basic");
@@ -163,24 +155,6 @@ function showlessbrands() {
   ).textContent = `ещё ${diff} ${word}...`;
 }
 
-function shortenbrands() {
-  let checkedbrands = [
-    ...document.querySelectorAll("#brandlist input:checked"),
-  ].map((n) => n.value);
-
-  if (!checkedbrands.length) {
-    filterValues.brand = $staticbrandlist;
-    applyFilters();
-    renderSamples();
-    renderMinMaxPrice();
-  }
-}
-
-function showlessbrandspro() {
-  showlessbrands();
-  shortenbrands();
-}
-
 function showmorebrands() {
   let arr = document.querySelectorAll("#brandlist .chip-basic");
 
@@ -188,25 +162,12 @@ function showmorebrands() {
     element.style = "display:flex";
   });
 
-  let checkedbrands = [
-    ...document.querySelectorAll("#brandlist input:checked"),
-  ].map((n) => n.value);
-
-  if (!checkedbrands.length) {
-    console.log("не біло чекнутіх брендов, показіваем все ");
-    filterValues.brand = [];
-    applyFilters();
-    renderSamples();
-    renderMinMaxPrice();
-  } else {
-    console.log("есть чекнутые бренды, ничего не делаем!");
-  }
-
   document.querySelector("#showlessbrands").style = "display: flex";
   document.querySelector("#showmorebrands").style = "display: none";
 }
 
-showlessbrandspro();
+showlessbrands();
+renderSamples();
 renderSamplesSummary(samplesArray, filterValues);
 renderKitchenSummary();
 
@@ -214,164 +175,19 @@ renderKitchenSummary();
 
 document.querySelector("#colorselect").addEventListener("change", function (e) {
   function helper() {
-    //console.log(filterValues);
-
-    //console.log(isChip);
     applyFilters();
-
-    if (
-      !filteredSamplesArray.length &&
-      Boolean(
-        document.querySelector("#showmorebrands").style.display === "flex"
-      )
-    ) {
-      showmorebrands();
-    }
-
     renderSamples();
     renderMinMaxPrice();
     renderSamplesSummary(filteredSamplesArray, filterValues);
   }
 
   let isChip = Boolean(
-    e.target.id !== "searchInput" &&
-      e.target.name !== "tabs" &&
-      e.target.name !== "tabs"
+    e.target.id !== "searchInput" && e.target.name !== "tabs"
   );
 
-  console.log(e.target);
-
-  let checkedbrands = [
-    ...document.querySelectorAll("#brandlist input:checked"),
-  ].map((n) => n.value);
-
   switch (true) {
-    case isChip &&
-      Boolean(
-        document.querySelector("#showmorebrands").style.display === "flex"
-      ) &&
-      Boolean(checkedbrands.length):
-      //console.log("панель брендов свернута, checked brands: " + checkedbrands);
-
-      filterValues = {
-        brand: [...document.querySelectorAll("#brandlist input:checked")].map(
-          (n) => n.value
-        ),
-
-        colorgroup: [
-          ...document.querySelectorAll("#colorlist input:checked"),
-        ].map((n) => n.value),
-
-        pattern: [
-          ...document.querySelectorAll("#patternlist input:checked"),
-        ].map((n) => n.value),
-
-        surface: [
-          ...document.querySelectorAll("#surfacelist input:checked"),
-        ].map((n) => n.value),
-      };
-      helper();
-
-      break;
-
-    case Boolean(
-      isChip &&
-        Boolean(
-          document.querySelector("#showmorebrands").style.display === "flex"
-        ) &&
-        Boolean(!checkedbrands.length)
-    ):
-      
-
-      console.log(
-        "панель брендов свернута, ни одного не вібрано, все значения брендов дефолтные"
-      );
-
-      //console.log(custombrandlist);
-
-      filterValues = {
-        brand: $staticbrandlist,
-
-        colorgroup: [
-          ...document.querySelectorAll("#colorlist input:checked"),
-        ].map((n) => n.value),
-
-        pattern: [
-          ...document.querySelectorAll("#patternlist input:checked"),
-        ].map((n) => n.value),
-
-        surface: [
-          ...document.querySelectorAll("#surfacelist input:checked"),
-        ].map((n) => n.value),
-      };
-
-      if (custombrandlist.length) {
-        filterValues.brand = custombrandlist;
-      }
-
-      helper();
-
-      break;
-
-    case isChip && Boolean(
-      document.querySelector("#showlessbrands").style.display === "flex"
-    ) && Boolean(!checkedbrands.length):
-      console.log(
-        "панель брендов развернута, все значения брендов дефолт"
-      );
-
-      ////console.log(custombrandlist);
-
-      filterValues = {
-        brand: $brandlist,
-
-        colorgroup: [
-          ...document.querySelectorAll("#colorlist input:checked"),
-        ].map((n) => n.value),
-
-        pattern: [
-          ...document.querySelectorAll("#patternlist input:checked"),
-        ].map((n) => n.value),
-
-        surface: [
-          ...document.querySelectorAll("#surfacelist input:checked"),
-        ].map((n) => n.value),
-      };
-
-      helper();
-
-      break;
-
-      case isChip && Boolean(!checkedbrands.length):
-        console.log(
-          "pikapika"
-        );
-  
-        ////console.log(custombrandlist);
-  
-        filterValues = {
-          brand: custombrandlist,
-  
-          colorgroup: [
-            ...document.querySelectorAll("#colorlist input:checked"),
-          ].map((n) => n.value),
-  
-          pattern: [
-            ...document.querySelectorAll("#patternlist input:checked"),
-          ].map((n) => n.value),
-  
-          surface: [
-            ...document.querySelectorAll("#surfacelist input:checked"),
-          ].map((n) => n.value),
-        };
-  
-        helper();
-  
-        break;
-    
-
     case isChip:
-      console.log("frooooog ");
+      //console.log("some filter values were changed");
 
       filterValues = {
         brand: [...document.querySelectorAll("#brandlist input:checked")].map(
@@ -410,23 +226,27 @@ if (window.innerWidth <= 1078) {
   document
     .querySelector("#colorselect")
     .addEventListener("click", function (e) {
+
+      let isCardTitle = [...e.target.classList].includes("filter-card-title");
+      let isActiveCardTitle = Boolean(
+        [...e.target.classList].includes("filter-card-title") &&
+          [...e.target.classList].includes("active")
+      );
+
       switch (true) {
-        case [...e.target.classList].includes("filter-card-title") &&
-          [...e.target.classList].includes("active") &&
-          Boolean(e.target.nextElementSibling.id === "brandlist"):
+        case isActiveCardTitle && Boolean(e.target.nextElementSibling.id === "brandlist"):
+
           showlessbrands();
-          shortenbrands();
           document.querySelector("#showmorebrands").style = "display: none";
+
           e.target.classList.remove("active");
           break;
 
-        case [...e.target.classList].includes("filter-card-title") &&
-          [...e.target.classList].includes("active"):
+        case isActiveCardTitle:
           e.target.classList.remove("active");
           break;
 
-        case [...e.target.classList].includes("filter-card-title") &&
-          Boolean(e.target.nextElementSibling.id === "brandlist"):
+        case isCardTitle && Boolean(e.target.nextElementSibling.id === "brandlist"):
           //console.log(e.target.nextElementSibling.id);
 
           document.querySelector("#showmorebrands").style = "display: flex";
@@ -437,10 +257,8 @@ if (window.innerWidth <= 1078) {
           e.target.classList.add("active");
           break;
 
-        case [...e.target.classList].includes("filter-card-title") &&
-          Boolean(e.target.nextElementSibling.id !== "brandlist"):
+        case isCardTitle:
           showlessbrands();
-          //shortenbrands();
           document.querySelector("#showmorebrands").style = "display: none";
 
           for (var i = 0; i < allFilterTitles.length; i++) {

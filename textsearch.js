@@ -20,47 +20,48 @@ document.querySelector("#searchInput").addEventListener("input", function (e) {
 });
 
 function setSameFilterValues(id, prop) {
-    let tmpList = document.getElementById(id).querySelectorAll('input');
+  let tmpList = document.getElementById(id).querySelectorAll("input");
 
-    for (let i = 0; i < tmpList.length ; i++) {
-        if (filterValues[prop].includes(tmpList[i].value)) {
-          tmpList[i].checked=true;
-        } else {
-          tmpList[i].checked=false;
-        }
+  for (let i = 0; i < tmpList.length; i++) {
+    if (filterValues[prop].includes(tmpList[i].value)) {
+      tmpList[i].checked = true;
+    } else {
+      tmpList[i].checked = false;
     }
   }
+}
 
 function lookalike(e) {
   //console.log("begu iskat!");
 
   if (window.innerWidth <= 1078) {
     var allFilterTitles = document.getElementsByClassName("filter-card-title");
-  
-          for (var i = 0; i < allFilterTitles.length; i++) {
-            allFilterTitles[i].classList.remove("active");
-          }
-  };
+
+    for (var i = 0; i < allFilterTitles.length; i++) {
+      allFilterTitles[i].classList.remove("active");
+    }
+
+    document.querySelector("#showmorebrands").style.display = "none";
+    document.querySelector("#showlessbrands").style.display = "none";
+  }
 
   filterValues = {
+    pattern: e.target.getAttribute("data-pattern").split(","),
 
-    pattern: e.target.getAttribute('data-pattern').split(","),
+    colorgroup: e.target.getAttribute("data-colorgroup").split(","),
 
-    colorgroup: e.target.getAttribute('data-colorgroup').split(","),
-
-    surface: e.target.getAttribute('data-surface').split(","),
+    surface: e.target.getAttribute("data-surface").split(","),
 
     brand: [],
-
   };
 
   //console.log(filterValues);
 
   document.querySelector("#filter2").checked = true;
-  setSameFilterValues('colorlist', 'colorgroup');
-  setSameFilterValues('patternlist', 'pattern');
-  setSameFilterValues('surfacelist', 'surface');
-  setSameFilterValues('brandlist', 'brand');
+  setSameFilterValues("colorlist", "colorgroup");
+  setSameFilterValues("patternlist", "pattern");
+  setSameFilterValues("surfacelist", "surface");
+  setSameFilterValues("brandlist", "brand");
 
   matchingSamplesArray = [];
 
@@ -73,16 +74,15 @@ function lookalike(e) {
     filtercards[i].style = "display: block";
   }
 
-  showmorebrands();
   renderSamples();
   renderMinMaxPrice();
   renderSamplesSummary(filteredSamplesArray, filterValues);
-  window.scrollTo(0,0);
+  window.scrollTo(0, 0);
 }
 
-document.querySelector("#samples123").addEventListener('click', function(e) {
-    if (e.target.className === 'lookalike text-bold') {
-        lookalike(e);
-    };
-    return;
-})
+document.querySelector("#samples123").addEventListener("click", function (e) {
+  if (e.target.className === "lookalike text-bold") {
+    lookalike(e);
+  }
+  return;
+});
