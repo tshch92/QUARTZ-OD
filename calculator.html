@@ -4,22 +4,54 @@
         <meta charset="UTF-8">
         <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          <meta name="description"
+          content="Онлайн просчет стоимости столешницы. 300+ цветов камня на выбор!">
+          <meta name="keywords"
+          content="Caesarstone, Avant, Atem, RestonQ, Reston, Belenco, quartz, кварц, агломерат, столешница">
+          <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
           <title>
-            Кварцевые столешницы в Одессе - Калькулятор цен
+            Кварцевые столешницы Одесса - Калькулятор цены
         </title>
         <!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-1WR9EMX0PC"></script><script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-1WR9EMX0PC');</script>
         <link rel="stylesheet" href="./normalize.css">
         <link rel="stylesheet" href="./fonts/stylesheet.css">
         <link rel="stylesheet" href="./styles.css">
+        <link rel="apple-touch-icon" href="./apple-touch-icon.png">
     </head>
     <body>
-        <div class="calc-wrapper">
+        <aside class='disclaimer' style="display: none">
+            <div class='disclaimer-card'>
+                <h2 class="title-bold">Дисклеймер</h2>
+                <ol class='text'>
+                    <li>
+                        Здесь показаны цены для конечного заказчика. Если вы мебельщик - напишите нам в <a href="viber://chat?number=%2B380964163862" class="text-bold">Viber</a> ;)
+                    </li>
+                    <li>
+                        Окончательная стоимость вашей столешницы будет сформирована после согласования расположения вырезов и стыков, и некоторых других деталей. Для того, чтобы узнать цену точно-точно - напишите нам в <a href="viber://chat?number=%2B380964163862" class="text-bold">Viber</a>.
+                    </li>
+                    <li>
+                        Если у вас изделие сложной формы: с выступами, "ногами", дугообразными элементами и т.д. - сбросьте чертёж нам на <a href="viber://chat?number=%2B380964163862" class="text-bold">Viber</a>.
+                    </li>
+                    <li>
+                        Доставка в пределах Одессы и Черноморска и установка входят в стоимость. Подъём на этаж без лифта в стоимость не включен.
+                    </li>
+                    <li>
+                        Все цены указаны в рекламных целях. Предложение не является офертой.
+                    </li>
+                </ol>
+                <button class="btn text-bold OK">Ок, я всё понял</button>
+            </div>
+        </aside>
+        <h1 style="display: none">Калькулятор стоимости столешниц</h1>
+        <main class="calc-wrapper">
             <nav class="header-nav">
                 <div class="header-nav-left">
                     <a class="header-nav-link text-bold" href="./index.html">Столешницы</a>
-                    <a class="header-nav-link text-bold" href="./calculator.html">Цены</a>
+                    <a class="header-nav-link text-bold current" href="./calculator.html">Цены</a>
                 </div>
-                <a class="header-nav-link text-bold" href="./contacts.html">Контакты</a>
+                <div>
+                    <a class="header-nav-link text-bold" href="./contacts.html">Контакты</a>
+                </div>
             </nav>
 
             <button class="stones-collapsed">
@@ -28,27 +60,17 @@
             </button>
 
             <section class="colorselect" id="colorselect">
-                <div class="tabs tabs-icons">
-                    <div class="tab-icon">
-                        <input type="radio" id="filter2" name="tabs2" value="filter" checked>
-                        <label for="filter2" class="icon-filter"></label>
+                <div class="tabs">
+                    <div class="tab">
+                        <input type="radio" id="filter2" name="tabs" value="filter" checked>
+                        <label for="filter2" class="tab-filter text-bold"></label>
                     </div>
-<!--                     <div class="tab-icon">
-                        <input type="radio" id="search2" name="tabs2" value="search">
-                        <label for="search2" class="icon-search"></label>
-                    </div> -->
-                </div>
-                <div class="tabs tabs-text">
-                    <div class="tab-text">
-                        <input type="radio" id="filter" name="tabs" value="filter" checked>
-                        <label for="filter" class="text-bold">Фильтры</label>
+                    <div class="tab">
+                        <input type="radio" id="search2" name="tabs" value="search">
+                        <label for="search2" class="tab-search text-bold"></label>
                     </div>
-<!--                     <div class="tab-text">
-                        <input type="radio" id="search" name="tabs" value="search">
-                        <label for="search" class="text-bold">Поиск</label>
-                    </div> -->
                 </div>
-                <!-- <input type="text" class="input text" placeholder="название камня..."> -->
+                <input type="text" class="input text" id="searchInput" placeholder="название камня..." style='display: none'>
                 <div class="filter-card">
                     <button class="filter-card-title text-bold">
                         Бренды
@@ -201,7 +223,7 @@
                         </div>
                     </div>
                     <div class="parameter" id="kitchen-dimensions">
-                        <div class="parameter-title text-bold">Размеры, мм</div>
+                        <div class="parameter-title text-bold">Размеры столешницы, мм</div>
                         <div class="parameter-options shapeI" style="display: flex">
                             <input type="text" id='l1' class="input-small text-bold" placeholder="3000">
                             <span class="text">x</span>
@@ -241,7 +263,7 @@
                         </div>
                     </div>
                     <div class="parameter">
-                        <div class="parameter-title text-bold">Толщина столешницы</div>
+                        <div class="parameter-title text-bold">Толщина</div>
                         <div class="parameter-options" id='thickness'>
                             <div class="btn-text-44">
                                 <input type="radio" id="thickness20" name="thickness" value="20">
@@ -302,12 +324,19 @@
                 </div>
             </section>
             <div class="result">
-                <div class="result-sum text-bold">неизвестно</div>
-                <a href="viber://chat?number=%2B380964163862" class="viber text-bold"></a>
+                <div class='result-cover'>
+                    <div class="result-sum text-bold">неизвестно</div>
+                    <button class="opendisclaimer" aria-label="show disclaimer"></button>
+                </div>
+                <a href="viber://chat?number=%2B380964163862" class="viber text-bold" aria-label="go to Viber to place an order"></a>
             </div>
-        </div>
+        </main>
     </body>
     <script src="data.js"></script>
+    <script src="templates.js"></script>
     <script src="script-cut.js"></script>
     <script src="script.js"></script>
+    <script src="calcfilters.js"></script>
+    <script src="textsearch.js"></script>
+    <script src="disclaimer.js"></script>
 </html>

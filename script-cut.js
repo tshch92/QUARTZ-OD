@@ -414,26 +414,6 @@ calcSpending(formats);
 function recalc() {
   calcSpending(formats);
   getCosts(samplesArray);
-
-  if (filteredSamplesArray.length) {
-  document.getElementById("samples123").innerHTML = `
-    ${filteredSamplesArray.map(sampleTemplate).join("")}
-  `;
-  document.querySelector(".result-sum").textContent = `
-    ${getMinPrice(filteredSamplesArray)}$ - ${getMaxPrice(
-    filteredSamplesArray
-  )}$
-  `} else {
-    document.getElementById("samples123").innerHTML = `
-    ${samplesArray.map(sampleTemplate).join("")}
-  `;
-  document.querySelector(".result-sum").textContent = `
-    ${getMinPrice(samplesArray)}$ - ${getMaxPrice(
-    samplesArray
-  )}$
-  `
-
-  };
 }
 
 function validateInputs(n, d, num) {
@@ -497,6 +477,8 @@ document
         break;
     }
     recalc();
+    renderSamples();
+    renderMinMaxPrice();
     renderKitchenSummary();
   });
 
@@ -510,6 +492,8 @@ document.querySelector("#backsplash").addEventListener("click", (evt) => {
       }`
     ); */
     recalc();
+    renderSamples();
+    renderMinMaxPrice();
     renderKitchenSummary();
   }
 });
@@ -537,6 +521,8 @@ document.querySelector("#thickness").addEventListener("click", (evt) => {
       document.querySelectorAll(".e40")[4].style = "margin: 0";
     }
     recalc();
+    renderSamples();
+    renderMinMaxPrice();
     renderKitchenSummary();
   }
 });
@@ -546,6 +532,8 @@ document.querySelector("#edges").addEventListener("click", (evt) => {
   if (evt.target.type === "radio") {
     kitchen.profile = evt.target.value;
     recalc();
+    renderSamples();
+    renderMinMaxPrice();
     renderKitchenSummary();
   }
 });
@@ -640,6 +628,8 @@ document.querySelector("#shapes").addEventListener("click", (evt) => {
         break;
     }
     recalc();
+    renderSamples();
+    renderMinMaxPrice();
     renderKitchenSummary();
   }
 });

@@ -1,7 +1,17 @@
 window.addEventListener("scroll", function () {
+  let $links = document.querySelectorAll(".header-nav-link");
+
   if (pageYOffset > window.innerHeight) {
-    document.querySelector(".header-nav").style = "color: black";
+
+    for (let i = 0; i< $links.length; i++) {
+      $links[i].classList.remove('whitelink');
+    }
+
   } else {
-    document.querySelector(".header-nav").style = "color: white";
+
+    for (let i = 0; i< $links.length; i++) {
+      $links[i].classList.add('whitelink');
+    }
+
   }
 });

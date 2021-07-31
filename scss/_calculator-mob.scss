@@ -1,20 +1,22 @@
 @media only (max-width: 1078px) {
+
   .colorselect {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     position: static;
     margin-top: $spacebig-mob;
   }
 
+  .tabs {
+    margin-bottom: 15px;
+  }
+
   .filter {
+
     &-card {
       padding: 0 5px;
       border-bottom: 1px solid black;
       margin-bottom: 10px;
-
-      &-content {
-          display: none;
-      }
 
       &-title {
         width: 100%;
@@ -36,14 +38,56 @@
           height: 24px;
         }
 
-        &.active:after {
-          content: "";
-          //background-color: peru;
-          background-image: url(./images/icons/minus.svg);
-          background-position: center;
-          background-repeat: no-repeat;
-          width: 24px;
-          height: 24px;
+        &.active {
+
+          &:after {
+            content: "";
+            background-image: url(./images/icons/minus.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 24px;
+            height: 24px;
+          }
+
+          & + .filter-card-content input + label {
+            display: flex;
+          }
+        }
+
+        &:not(.active) {
+
+          & + .filter-card-content > :not(:last-child) {
+            margin-right: 0px;
+          }
+
+          & + .filter-card-content input + label {
+            display: none;
+          }
+          
+          & + .filter-card-content input[type="checkbox"]:checked + label {
+            color: white;
+            background-color: black;
+            display: flex;
+            margin-right: 10px;
+    
+            &:after {
+              content: "";
+              margin-left: 5px;
+              margin-top: 2px;
+              width: 10px;
+              height: 10px;
+              background-image: url(./images/icons/close-small.svg);
+            }
+          }
+
+          & + .filter-card-content .chip-color input[type="checkbox"]:checked + label {
+            width: auto;
+            &:after {
+              margin-top: 0;
+              margin-right: 5px;
+              margin-left: 7px;
+            }
+          }
         }
       }
     }
@@ -58,7 +102,7 @@
     &-collapsed {
       width: 100%;
       height: 42px;
-      top: calc(100vh - 42px - 64px);
+      bottom: 64px;
       background-color: black;
       color: white;
       display: flex;
@@ -108,7 +152,7 @@
     justify-content: space-between;
     padding: 10px $spacemid-mob;
 
-    &-sum {
+    &-cover {
       margin-bottom: 0;
     }
   }
@@ -125,7 +169,24 @@
       display: none;
     }
   }
+
+  .disclaimer {
+    &-card {
+      max-width: 90vw;
+      min-height: 90vh;
+      padding: $spacemid-mob;
+      box-sizing: border-box;
+      top: 5vh;
+      left: 5vw;
+
+      & ol.text {
+        font-size: 12px;
+      }
+    }
+  }
 }
+
+
 
 @media only (max-width: 768px) {
   .sample {

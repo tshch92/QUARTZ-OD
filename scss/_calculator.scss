@@ -2,7 +2,7 @@
   position: relative;
 }
 .colorselect {
-  max-width: 360px;
+  width: 360px;
   box-sizing: border-box;
   height: 100vh;
   padding: 0 $spacemid-mob;
@@ -375,11 +375,67 @@
 
   &-sum {
     color: white;
-    margin-bottom: 20px;
+    
 
     &::before {
       content: "Итого:";
       margin-right: 10px;
+    }
+  }
+
+  &-cover {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}
+
+.disclaimer {
+  position: relative;
+
+  &::before {
+    z-index: 1000;
+    content: '';
+    background-color: black;
+    opacity: 0.8;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  &-card {
+    position: fixed;
+    z-index: 1001;
+    max-width: 40vw;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    padding: $spacebig-mob 100px $spacemid-mob;
+    top: calc(50vh - 35vh);
+    left: calc(50vw - 25vw);
+    box-sizing: border-box;
+  }
+
+  & a {
+    color: $violet;
+    font-weight: 700;
+  }
+
+  & .btn {
+    padding: 0 20px;
+  }
+
+  & li {
+    margin-bottom: 15px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+      opacity: 0.6;
     }
   }
 }
