@@ -9,38 +9,66 @@ function filterChipBuilder(element) {
 
 function sampleTemplate(sample) {
   return `
-      <div class="sample ${sample.recommend} ${sample.preorder} ${sample.out}">
-          <div style='background-image: url(${
-            sample.picture
-          }); background-color: teal;'class="sample-image ${sample.surface} ${
-    sample.pattern
-  }"></div>
-          <div class="sample-text">
-              <div class="sample-top">
-                  <div class="sample-brand text">${sample.brand}</div>
-                  <div class="sample-slabs">${formatsObj[sample.slab]}</div>
-              </div>
-              <div class="sample-bottom">
-                  <div class="sample-name text-bold">${sample.color}</div>
-                  <div class="sample-price text-bold">от ${Math.round(
-                    sample.totalCost
-                  )}$</div>
-              </div>
-          </div>
-      </div>
+      <div class="sample">
+        <div class="sample-image">
+            <picture class="${sample.pattern}">
+                <source media="(max-width: 360px)" srcset=${sample.picture} />
+                <source media="(max-width: 414px)" srcset=${
+                  sample.picture354
+                } />
+                <source media="(max-width: 766px)" srcset=${
+                  sample.picture706
+                } />
+
+                <img src=${sample.picture} alt="${sample.brand} ${
+    sample.color
+  }" loading="lazy" />
+            </picture>
+            <div class="sample-labels">
+                <span class=${sample.recommend}></span>
+                <span class=${sample.preorder}></span>
+                <span class=${sample.out}></span>
+            </div>
+        </div>
+        <div class="sample-text">
+            <div class="sample-top">
+                <div class="sample-brand text">${sample.brand}</div>
+                <div class="sample-slabs">${formatsObj[sample.slab]}</div>
+            </div>
+            <div class="sample-bottom">
+                <div class="sample-name text-bold">${sample.color}</div>
+                <div class="sample-price text-bold">от ${Math.round(
+                  sample.totalCost
+                )}$</div>
+            </div>
+        </div>
+    </div>
       `;
 }
 
 function sampleLookalike(sample) {
   return `
-        <div class="sample ${sample.recommend} ${sample.preorder} ${
-    sample.out
-  }">
-            <div style='background-image: url(${
-              sample.picture
-            }); background-color: teal;' class="sample-image ${sample.surface} ${
-    sample.pattern
-  }"></div>
+        <div class="sample">
+          <div class="sample-image">
+            <picture class="${sample.pattern}">
+                <source media="(max-width: 360px)" srcset=${sample.picture} />
+                <source media="(max-width: 414px)" srcset=${
+                  sample.picture354
+                } />
+                <source media="(max-width: 766px)" srcset=${
+                  sample.picture706
+                } />
+
+                <img src=${sample.picture} alt="${sample.brand} ${
+    sample.color
+  }" loading="lazy" />
+            </picture>
+            <div class="sample-labels">
+                <span class=${sample.recommend}></span>
+                <span class=${sample.preorder}></span>
+                <span class=${sample.out}></span>
+            </div>
+          </div>
             <div class="sample-text">
                 <div class="sample-top">
                     <div class="sample-brand text">${sample.brand}</div>
@@ -156,6 +184,7 @@ function renderSamplesSummary(arr, obj) {
   if (obj) {
     for (let i in obj) {
       document.querySelector(".stones-summary").textContent += obj[i];
+      document.querySelector(".stones-summary").textContent += " ";
     }
   }
 }
@@ -170,8 +199,8 @@ function renderSamples() {
 
   switch (true) {
     case Boolean(document.querySelector("#search2").checked) &&
-    Boolean(matchingSamplesArray.length) &&
-    Boolean(document.querySelector("#searchInput").value):
+      Boolean(matchingSamplesArray.length) &&
+      Boolean(document.querySelector("#searchInput").value):
       $sectionSamples.innerHTML = `
     ${matchingSamplesArray.map(sampleLookalike).join("")}
   `;
@@ -179,7 +208,7 @@ function renderSamples() {
       break;
 
     case Boolean(document.querySelector("#search2").checked) &&
-    Boolean(document.querySelector("#searchInput").value):
+      Boolean(document.querySelector("#searchInput").value):
       $sectionSamples.innerHTML = `
       <span class='text-bold'>Извините, такого кварца у нас нет :(</span>
       `;
@@ -194,7 +223,6 @@ function renderSamples() {
       break;
 
     case Boolean(filteredSamplesArray.length):
-
       $sectionSamples.innerHTML = `
   ${filteredSamplesArray.map(sampleTemplate).join("")}
 `;

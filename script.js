@@ -168,6 +168,15 @@ function getMaxPrice(array) {
   return Math.max(...tempArray);
 }
 
+function getImages(array) {
+  array.forEach(element => {
+    element.picture354 = element.picture.replace('samples', 'samples354');
+    element.picture706 = element.picture.replace('samples', 'samples706');
+  });
+}
+
+getImages(samplesArray);
+
 alignPrices(samplesArray);
 
 getCosts(samplesArray);

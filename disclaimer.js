@@ -3,5 +3,5 @@ document.querySelector('.btn.OK').addEventListener('click', function() {
   })
   
   document.querySelector('.opendisclaimer').addEventListener('click', function() {
-    document.querySelector('.disclaimer').style= "display: block";
+    document.querySelector('.disclaimer').style= "display: flex";
   })

@@ -20,12 +20,12 @@ function getBrandList(arr) {
 }
 
 const $staticbrandlist = [
-  //"Atem",
-  //"Avant",
-  //"Caesarstone",
+  "Atem",
+  "Avant",
+  "Caesarstone",
   "Belenco",
   "Reston",
-  //"Vicostone",
+  "Vicostone",
 ];
 
 function applyFilters() {
@@ -168,6 +168,7 @@ function showmorebrands() {
 
 showlessbrands();
 renderSamples();
+renderMinMaxPrice();
 renderSamplesSummary(samplesArray, filterValues);
 renderKitchenSummary();
 

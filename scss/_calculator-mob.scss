@@ -1,5 +1,4 @@
 @media only (max-width: 1078px) {
-
   .colorselect {
     width: 100%;
     height: auto;
@@ -12,7 +11,6 @@
   }
 
   .filter {
-
     &-card {
       padding: 0 5px;
       border-bottom: 1px solid black;
@@ -39,7 +37,6 @@
         }
 
         &.active {
-
           &:after {
             content: "";
             background-image: url(./images/icons/minus.svg);
@@ -55,7 +52,6 @@
         }
 
         &:not(.active) {
-
           & + .filter-card-content > :not(:last-child) {
             margin-right: 0px;
           }
@@ -63,13 +59,13 @@
           & + .filter-card-content input + label {
             display: none;
           }
-          
+
           & + .filter-card-content input[type="checkbox"]:checked + label {
             color: white;
             background-color: black;
             display: flex;
             margin-right: 10px;
-    
+
             &:after {
               content: "";
               margin-left: 5px;
@@ -80,7 +76,11 @@
             }
           }
 
-          & + .filter-card-content .chip-color input[type="checkbox"]:checked + label {
+          &
+            + .filter-card-content
+            .chip-color
+            input[type="checkbox"]:checked
+            + label {
             width: auto;
             &:after {
               margin-top: 0;
@@ -172,23 +172,29 @@
 
   .disclaimer {
     &-card {
-      max-width: 90vw;
-      min-height: 90vh;
       padding: $spacemid-mob;
-      box-sizing: border-box;
-      top: 5vh;
-      left: 5vw;
+      margin: 10px;
 
       & ol.text {
-        font-size: 12px;
+        font-size: 11px;
       }
+    }
+
+    & h2 {
+      margin-bottom: 20px;
+    }
+
+    & .btn {
+      margin-top: 20px;
+    }
+
+    & li {
+      margin-bottom: 10px;
     }
   }
 }
 
-
-
-@media only (max-width: 768px) {
+@media only (max-width: 766px) {
   .sample {
     width: calc(100vw - 30px - 30px);
     margin-bottom: $spacemid-mob;
