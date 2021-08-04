@@ -9,6 +9,16 @@ const cutParameters = {
   minMiddlePartOffset: 100, //когда разбиваем среднюю деталь П-образной столешки, это регулирует минимальную длину маленького куска
 };
 
+const limits = {
+  maxIlength: 7000,
+  minWidth: 300,
+  maxLlength: 8000,
+  maxUlength: 10000,
+  maxWidth: 1400,
+  smallRemainder: 0.05,
+  bigRemainder: 0.5,
+}
+
 const kitchen = {
   shape: "I",
   details: [
@@ -383,6 +393,7 @@ let formats = getFormatList(samplesArray);
 
 let formatsObj = new Object();
 
+
 function calcSpending(array) {
   // console.log('caclspending');
   array.forEach((format) => {
@@ -392,18 +403,47 @@ function calcSpending(array) {
 
     let slabSet = [];
 
-    //console.log(set1);
+/*     let slabSet = [
+      [1, 0.2],
+      [1.5, 0.7],
+      [1, 0.05],
+      [1, 0.8],
+      [1.5, 0.333],
+      [1, 0.49]
+    ] */
 
     set1.forEach((element) => {
       let countSlabs =
         Math.ceil(getArea(element) / ((format[0] * format[1]) / 2000000)) * 0.5;
-      slabSet.push(countSlabs);
-      //console.log(format[0]*format[1]/1000000);
-      //console.log('Area used: ' + getArea(element) + " m2");
-      //console.log('Slabs spent: '+ countSlabs);
-    });
 
-    formatsObj[format] = Math.min(...slabSet);
+      let countRemainder = 1-(getArea(element) / ((format[0] * format[1]) * countSlabs / 1000000));
+
+      slabSet.push([countSlabs, countRemainder]);
+      /*console.log(format[0] + ' x ' + format[1]);
+      console.log(format[0]*format[1]/1000000);
+      console.log('Area used: ' + getArea(element) + " m2");
+      console.log('Slabs spent: '+ countSlabs);
+      console.log(countRemainder); */
+    }); 
+
+    slabSet.sort(([a, b], [c, d]) => a - c || d - b);
+
+    formatsObj[format] = slabSet[0];
+
+    switch (true) {
+      case formatsObj[format][1] <= limits.smallRemainder:
+        formatsObj[format][2] = "priceup";
+        break;
+
+        case formatsObj[format][1] >= limits.bigRemainder:
+          formatsObj[format][2] = "pricedown";
+          break;
+    
+      default:
+        formatsObj[format][2] = "";
+        break;
+    }
+
   });
 
   return formatsObj;

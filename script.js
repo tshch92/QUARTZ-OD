@@ -51,19 +51,22 @@ function alignPrices(array) {
 
 function getCosts(array) {
   array.forEach((element) => {
-    let slabSpent = formatsObj[element.slab];
+
+    let slabSpent = formatsObj[element.slab][0];
 
     switch (true) {
-      case (element.brand === 'Quartzforms' && !element.price.eur):
+      case element.brand === "Quartzforms" && !element.price.eur:
         element.cost =
-        element.price.usd * (1 - discounts['Quartzforms_termopal']) * slabSpent;
-      break;
+          element.price.usd *
+          (1 - discounts["Quartzforms_termopal"]) *
+          slabSpent;
+        break;
 
       default:
         element.cost =
-        element.price.usd * (1 - discounts[element.brand]) * slabSpent;
-      break;
-    };
+          element.price.usd * (1 - discounts[element.brand]) * slabSpent;
+        break;
+    }
 
     let totalCost = element.cost;
 
@@ -75,22 +78,34 @@ function getCosts(array) {
     //console.log(totalCost);
 
     switch (true) {
-      case ((element.brand === 'Quartzforms' && !element.price.eur || element.brand === 'Hanstone') && slabSpent <= 0.5):
+      case ((element.brand === "Quartzforms" && !element.price.eur) ||
+        element.brand === "Hanstone") &&
+        slabSpent <= 0.5:
         //кварцформ половинка с термопала
         break;
-      case (( element.brand === 'Quartzforms' && !element.price.eur || element.brand === 'Hanstone') && slabSpent > 0.5):
-        totalCost += DELIVERY.odesa*slabSpent;
+      case ((element.brand === "Quartzforms" && !element.price.eur) ||
+        element.brand === "Hanstone") &&
+        slabSpent > 0.5:
+        totalCost += DELIVERY.odesa * slabSpent;
         break;
-      case (element.brand === 'Reston'):
+      case (element.brand === "Ginger" || element.brand === "Intekstone") &&
+        slabSpent <= 0.5:
+        //половинка
         break;
-      case ((element.brand === 'Belenco' || element.brand === 'Vicostone') && slabSpent <= 0.5):
+      case (element.brand === "Ginger" || element.brand === "Intekstone") &&
+        slabSpent > 0.5:
+        totalCost += DELIVERY.odesa * slabSpent;
+        break;
+      case element.brand === "Reston":
+        break;
+      case (element.brand === "Belenco" || element.brand === "Vicostone") &&
+        slabSpent <= 0.5:
         totalCost += DELIVERY.kiev;
         break;
       default:
-        totalCost += DELIVERY.kiev*slabSpent;
+        totalCost += DELIVERY.kiev * slabSpent;
         break;
-    };
-
+    }
 
     if (kitchen.thickness === 40) {
       totalCost += GLUE * slabSpent;
@@ -169,9 +184,9 @@ function getMaxPrice(array) {
 }
 
 function getImages(array) {
-  array.forEach(element => {
-    element.picture354 = element.picture.replace('samples', 'samples354');
-    element.picture706 = element.picture.replace('samples', 'samples706');
+  array.forEach((element) => {
+    element.picture354 = element.picture.replace("samples", "samples354");
+    element.picture706 = element.picture.replace("samples", "samples706");
   });
 }
 
@@ -192,7 +207,6 @@ samplesArray.sort(function (a, b) {
   // names must be equal
   return 0;
 });
-
 
 // переключалка выбора кухни и цветов камней - на мобильном
 
@@ -215,5 +229,3 @@ document
     document.querySelector(".kitchen").style = "display: block";
     document.querySelector(".kitchen-collapsed").style = "display: none";
   });
-
-

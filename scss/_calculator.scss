@@ -79,7 +79,6 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-start;
-
   }
 
   &-text {
@@ -98,6 +97,12 @@
     justify-content: space-between;
   }
 
+  &-price {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
   &-slabs {
     border: 1px solid black;
     width: 28px;
@@ -109,6 +114,52 @@
     font-size: 13px;
     line-height: 17px;
     letter-spacing: 0.05em;
+  }
+}
+
+@mixin pricearrow {
+  width: 16px;
+  height: 16px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin pricehover {
+  font-family: "Futura PT", sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+  right: 0;
+  width: 280px;
+  padding: 0 5px;
+  display: inline-block;
+  position: absolute;
+  color: white;
+}
+
+.pricedown {
+  @include pricearrow;
+  background-image: url(./images/icons/pricedown.svg);
+
+  &:hover:after {
+    content: "есть шанс, что цена будет ещё ниже";
+    @include pricehover;
+    background-color: #009922;
+    bottom: 20px;
+    height: 22px;
+  }
+}
+
+.priceup {
+  @include pricearrow;
+  background-image: url(./images/icons/priceup.svg);
+
+  &:hover:after {
+    content: "возможно, цена будет выше из-за особенности раскроя материала";
+    @include pricehover;
+    background-color: #C80000;
+    bottom: 16px;
+    height: auto;
   }
 }
 

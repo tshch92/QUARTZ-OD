@@ -33,13 +33,13 @@ function sampleTemplate(sample) {
         <div class="sample-text">
             <div class="sample-top">
                 <div class="sample-brand text">${sample.brand}</div>
-                <div class="sample-slabs">${formatsObj[sample.slab]}</div>
+                <div class="sample-slabs">${formatsObj[sample.slab][0]}</div>
             </div>
             <div class="sample-bottom">
                 <div class="sample-name text-bold">${sample.color}</div>
                 <div class="sample-price text-bold">от ${Math.round(
                   sample.totalCost
-                )}$</div>
+                )}$<span class="${formatsObj[sample.slab][2]}"></span></div>
             </div>
         </div>
     </div>
@@ -72,11 +72,11 @@ function sampleLookalike(sample) {
             <div class="sample-text">
                 <div class="sample-top">
                     <div class="sample-brand text">${sample.brand}</div>
-                    <div class="sample-slabs">${formatsObj[sample.slab]}</div>
+                    <div class="sample-slabs">${formatsObj[sample.slab][0]}</div>
                 </div>
                 <div class="sample-bottom">
                     <div class="sample-name text-bold">${sample.color}</div>
-                    <div class="sample-price text-bold">от ${Math.round(
+                    <div class="sample-price text-bold ${formatsObj[sample.slab][2]}">от ${Math.round(
                       sample.totalCost
                     )}$</div>
                 </div>
