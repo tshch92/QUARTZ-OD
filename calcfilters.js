@@ -8,6 +8,7 @@ function titleCase(str) {
 
 function getBrandList(arr) {
   let result = [];
+
   arr.forEach((element) => {
     if (!result.includes(element.brand.toLowerCase())) {
       result.push(element.brand.toLowerCase());
@@ -64,8 +65,13 @@ function applyFilters() {
       }
     })
     .filter(function (sample) {
-      if (filterValues["surface"].length) {
-        return filterValues["surface"].includes(sample["surface"]);
+      if (
+        filterValues["surface"].length &&
+        filterValues["surface"].includes(sample["surface"])
+      ) {
+        return true;
+      } else if (filterValues["surface"].length) {
+        return false;
       } else {
         return true;
       }
@@ -169,7 +175,7 @@ function showmorebrands() {
 showlessbrands();
 renderSamples();
 renderMinMaxPrice();
-renderSamplesSummary(samplesArray, filterValues);
+renderSamplesSummary(uniqueSamplesArray, filterValues);
 renderKitchenSummary();
 
 // поиск и рендер цветов по критериям фильтра
@@ -202,9 +208,9 @@ document.querySelector("#colorselect").addEventListener("change", function (e) {
           ...document.querySelectorAll("#patternlist input:checked"),
         ].map((n) => n.value),
 
-        surface: [
-          ...document.querySelectorAll("#surfacelist input:checked"),
-        ].map((n) => n.value),
+        surface: [...document.querySelectorAll("#surfacelist input:checked")]
+          .map((n) => n.value.split(" "))
+          .flat(),
       };
       helper();
 
@@ -227,7 +233,6 @@ if (window.innerWidth <= 1078) {
   document
     .querySelector("#colorselect")
     .addEventListener("click", function (e) {
-
       let isCardTitle = [...e.target.classList].includes("filter-card-title");
       let isActiveCardTitle = Boolean(
         [...e.target.classList].includes("filter-card-title") &&
@@ -235,8 +240,8 @@ if (window.innerWidth <= 1078) {
       );
 
       switch (true) {
-        case isActiveCardTitle && Boolean(e.target.nextElementSibling.id === "brandlist"):
-
+        case isActiveCardTitle &&
+          Boolean(e.target.nextElementSibling.id === "brandlist"):
           showlessbrands();
           document.querySelector("#showmorebrands").style = "display: none";
 
@@ -247,7 +252,8 @@ if (window.innerWidth <= 1078) {
           e.target.classList.remove("active");
           break;
 
-        case isCardTitle && Boolean(e.target.nextElementSibling.id === "brandlist"):
+        case isCardTitle &&
+          Boolean(e.target.nextElementSibling.id === "brandlist"):
           //console.log(e.target.nextElementSibling.id);
 
           document.querySelector("#showmorebrands").style = "display: flex";
@@ -285,7 +291,6 @@ document.querySelector("#search2").addEventListener("click", function () {
 
   renderSamples();
   recalc();
-  renderMinMaxPrice();
 });
 
 document.querySelector("#filter2").addEventListener("click", function () {
@@ -301,5 +306,4 @@ document.querySelector("#filter2").addEventListener("click", function () {
 
   renderSamples();
   recalc();
-  renderMinMaxPrice();
 });

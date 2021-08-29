@@ -18,6 +18,19 @@
   box-sizing: border-box;
 }
 
+@mixin iconhovertext {
+  background-color: white;
+  padding: 0 5px;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+  font-family: "Futura PT", sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+}
+
 .viber {
   height: 44px;
   padding: 0 $spacebig-mob;
@@ -30,7 +43,7 @@
   border-radius: 0;
 
   &:before {
-    content: "Заказать в Viber";
+    content: "Продолжить в Viber";
   }
 
   &:hover {
@@ -92,6 +105,96 @@
     }
   }
 
+  &-text-32 {
+    @include btn;
+    background-color: transparent;
+    height: 32px;
+    margin: 0 auto;
+
+    &:hover {
+      background-color: white;
+    }
+
+    &.addnode {
+      margin-top: $spacemid-mob;
+      padding-right: 12px;
+
+      &:before {
+        content: "";
+        margin-top: 2px;
+        margin-right: 0;
+        width: 24px;
+        height: 24px;
+        background-image: url(./images/icons/plus.svg);
+        background-size: contain;
+      }
+
+      &:hover {
+        background-color: white;
+      }
+    }
+  }
+
+  &-text-48 {
+    & input[type="radio"] {
+      display: none;
+    }
+
+    & label {
+      @include btn;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 48px;
+      width: 120px;
+      padding: 3px 0 0;
+      line-height: 15px;
+
+      &:before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    & input[type="radio"]:checked + label {
+      background-color: black;
+      color: white;
+    }
+  }
+
+  &-text-64 {
+    & input[type="radio"] {
+      display: none;
+    }
+
+    & label {
+      @include btn;
+      flex-direction: column;
+      justify-content: center;
+      height: 64px;
+      width: 80px;
+      padding: 0;
+      line-height: 15px;
+
+      &:before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    & input[type="radio"]:checked + label {
+      background-color: black;
+      color: white;
+    }
+  }
+
   &-text-44 {
     & input[type="radio"] {
       display: none;
@@ -127,6 +230,78 @@
     & input[type="radio"]:checked + label {
       background-color: black;
     }
+
+    &.openpopup {
+      @include btn;
+      width: 44px;
+      height: 44px;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      background-image: url(./images/icons/forma/04.svg);
+
+      &:hover:after {
+        content: "другая";
+        @include iconhovertext;
+      }
+    }
+  }
+
+  &-close {
+    box-sizing: border-box;
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    background-image: url("./images/icons/close-small-black.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 30px;
+    margin-right: -80px;
+    margin-top: -30px;
+
+    &:hover {
+      opacity: 0.6;
+      transition: 150ms;
+    }
+  }
+}
+
+.reset {
+  background-color: black;
+  color: white;
+  border: 0;
+  transition: 200ms;
+  padding-left: 10px;
+  padding-right: 12px;
+  margin-top: $spacebig-mob;
+
+  &:before {
+    content: "";
+    margin-top: 3px;
+    margin-right: 6px;
+    width: 24px;
+    height: 24px;
+    background-image: url(./images/icons/reload-white.svg);
+    background-size: contain;
+    transition: 500ms;
+  }
+
+  &:hover {
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+
+    &:before {
+      background-image: url(./images/icons/reload.svg);
+      transform: rotate(90deg);
+    }
   }
 }
 
@@ -153,6 +328,28 @@
   }
 }
 
+.aboutsinks {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  background-color: white;
+  width: 24px;
+  height: 24px;
+  background-image: url("./images/icons/question-teal.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+  margin-bottom: -3px;
+
+  &:hover {
+    opacity: 0.6;
+    transition: 150ms;
+  }
+}
+
 .tabs {
   display: flex;
 }
@@ -169,11 +366,11 @@
     border-bottom: 1px solid black;
 
     &.tab-filter::before {
-      content: 'Фильтры';
+      content: "Фильтры";
     }
 
     &.tab-search::before {
-      content: 'Поиск';
+      content: "Поиск";
     }
   }
 
@@ -184,8 +381,12 @@
 }
 
 @media only (max-width: 1078px) {
-  .tab {
+  .btn-close {
+    margin-top: 0;
+    margin-right: 0;
+  }
 
+  .tab {
     & input[type="radio"] {
       display: none;
     }
@@ -200,15 +401,15 @@
         background-size: 16px;
 
         &::before {
-          content: '';
+          content: "";
         }
       }
-    
+
       &.tab-filter {
         background-image: url(./images/icons/filters.svg);
         background-size: 16px;
         &::before {
-          content: '';
+          content: "";
         }
       }
     }
@@ -225,7 +426,8 @@
   &-basic {
     display: inline-block;
 
-    & input[type="checkbox"] {
+    & input[type="checkbox"],
+    input[type="radio"] {
       display: none;
     }
 
@@ -235,7 +437,8 @@
       padding: 0 10px;
     }
 
-    & input[type="checkbox"]:checked + label {
+    & input[type="checkbox"]:checked + label,
+    input[type="radio"]:checked + label {
       color: white;
       background-color: black;
     }
@@ -393,6 +596,109 @@
   }
 }
 
+.error {
+  display: block;
+  margin: 15px 15px 0;
+  color: red;
+  text-align: center;
+
+  &-label {
+    padding: 5px;
+    display: none;
+  }
+
+  &-input {
+    border-color: red;
+    color: red;
+
+    &:focus {
+      border-color: red;
+      color: red;
+    }
+  }
+}
+
+.removenode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  height: 32px;
+  width: 32px;
+
+  &:before {
+    display: inline-block;
+    background-image: url("./images/icons/close.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    content: "";
+  }
+
+  &:hover {
+    opacity: 0.6;
+    transition: 100ms;
+  }
+}
+
+.visible {
+  display: none;
+
+  & + label {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    margin-left: 15px;
+  }
+
+  & + label:before {
+    display: inline-block;
+    background-size: contain;
+    content: "";
+    margin-right: 8px;
+    margin-bottom: -2px;
+    height: 16px;
+    width: 16px;
+    background-image: url("./images/icons/visibility/off.svg");
+  }
+
+  &:checked + label:before {
+    background-image: url("./images/icons/visibility/on.svg");
+  }
+}
+
+.cannelures {
+  & > input {
+    display: none;
+  }
+
+  & > label {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    padding: 4px 6px;
+    box-sizing: border-box;
+    margin-left: 5px;
+  }
+
+  & > label:before {
+    display: inline-block;
+    background-size: contain;
+    content: "";
+    margin-right: 8px;
+    margin-bottom: -2px;
+    height: 20px;
+    width: 20px;
+    background-image: url("./images/icons/checkbox/empty.svg");
+  }
+
+  & input:checked + label:before {
+    background-image: url("./images/icons/checkbox/checked.svg");
+  }
+}
+
 @mixin chipcolor {
   content: "";
   width: 24px;
@@ -422,24 +728,10 @@
 .c-black::before {
   @include chipcolor;
   background-color: rgb(15, 15, 15);
-  outline: 1px solid rgba(255,255,255,0.4);
-}
-
-@mixin iconhovertext {
-  background-color: white;
-  padding: 0 5px;
-  display: inline-block;
-  position: absolute;
-  right: 0;
-  bottom: 40px;
-  font-family: "Futura PT", sans-serif;
-  font-size: 15px;
-  letter-spacing: 0.4px;
-  font-weight: 400;
+  outline: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .icon {
-
   &-shapeI {
     background-image: url(./images/icons/forma/01.svg);
 
@@ -529,6 +821,26 @@
       @include iconhovertext;
     }
   }
+
+  &-undermount:before {
+    background-image: url(./images/icons/sink/undermount.svg);
+  }
+
+  &-levelmount:before {
+    background-image: url(./images/icons/sink/levelmount.svg);
+  }
+
+  &-quartz:before {
+    background-image: url(./images/icons/sink/quartz.svg);
+  }
+
+  &-round:before {
+    background-image: url(./images/icons/sink/round.svg);
+  }
+
+  &-line:before {
+    background-image: url(./images/icons/sink/line.svg);
+  }
 }
 
 input[type="radio"]:checked + label.icon {
@@ -570,5 +882,25 @@ input[type="radio"]:checked + label.icon {
 
   &-edge7 {
     background-image: url(./images/icons/profil/07-white.svg);
+  }
+
+  &-undermount:before {
+    background-image: url(./images/icons/sink/undermount-white.svg);
+  }
+
+  &-levelmount:before {
+    background-image: url(./images/icons/sink/levelmount-white.svg);
+  }
+
+  &-quartz:before {
+    background-image: url(./images/icons/sink/quartz-white.svg);
+  }
+
+  &-round:before {
+    background-image: url(./images/icons/sink/round-white.svg);
+  }
+
+  &-line:before {
+    background-image: url(./images/icons/sink/line-white.svg);
   }
 }

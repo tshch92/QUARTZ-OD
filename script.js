@@ -13,10 +13,20 @@ const WAGE = {
   40: { 0.5: 300, 1: 550 },
   //1.5sl - 550*1.5
 };
+const HANDPOLISH = 300;
 const SHAPEDEDGE = 35;
 
 //норма расхода клея на 1 сляб
 const GLUE = 40;
+
+// стоимость моек и вырезов
+const QUARTZSINKLINE = 300;
+const QUARTZSINKROUND = 300;
+
+const CANNELURES = 100;
+
+const LEVELMOUNT = 50;
+const UNDERMOUNTCOOK = 50;
 
 const discounts = {
   Atem: 0,
@@ -51,7 +61,6 @@ function alignPrices(array) {
 
 function getCosts(array) {
   array.forEach((element) => {
-
     let slabSpent = formatsObj[element.slab][0];
 
     switch (true) {
@@ -120,37 +129,39 @@ function getCosts(array) {
       //console.log("работа: " + WAGE[kitchen.thickness]["1"] * slabSpent);
     }
 
-    let edgeLength = 0;
-    switch (kitchen.shape) {
-      case "I":
-        edgeLength = kitchen.details[0].l + kitchen.details[0].w;
-        break;
+    totalCost = AddStaticCosts(totalCost);
 
-      case "L":
-        edgeLength = kitchen.details[0].l + kitchen.details[1].l;
-        break;
+    if (kitchen.qsinkslist) {
+      totalCost += kitchen.qsinkslist.length * QUARTZSINKROUND;
 
-      case "U":
-        edgeLength =
-          kitchen.details[0].l +
-          kitchen.details[1].l -
-          kitchen.details[0].w -
-          kitchen.details[2].w +
-          kitchen.details[2].l;
-        break;
+      if (element.brand === "Silestone") {
+        kitchen.qsinkslist.forEach((sink) => {
+          qsinkprice = SINKS.find(
+            (e) =>
+              e.color === element.color &&
+              e.surface === element.surface &&
+              e.prices[sink]
+          );
 
-      default:
-        break;
-    }
+          if (qsinkprice) {
+            qsinkprice = qsinkprice.prices[sink];
 
-    if (
-      kitchen.profile === "edge3" ||
-      kitchen.profile === "edge4" ||
-      kitchen.profile === "edge5" ||
-      kitchen.profile === "edge6" ||
-      kitchen.profile === "edge7"
-    ) {
-      totalCost += (SHAPEDEDGE * edgeLength) / 1000;
+            let fabricSilestoneTotalcost = totalCost;
+
+            qsinkprice *= EURRATE;
+
+            fabricSilestoneTotalcost += qsinkprice;
+
+            fabricSilestoneTotalcost *= GREEDRATE;
+
+            element.fabricSilestoneTotalcost = Math.round(
+              fabricSilestoneTotalcost
+            );
+          } else {
+            element.fabricSilestoneTotalcost = 0;
+          }
+        });
+      }
     }
 
     //console.log("ИТОГО для мебельщика: " + Math.round(totalCost));
@@ -158,9 +169,118 @@ function getCosts(array) {
     totalCost *= GREEDRATE;
     element.totalCost = Math.round(totalCost);
 
+    //console.log(element);
+
     //console.log("умножаем на коэффициент жадности " + GREEDRATE);
     //console.log("--ИТОГО для конечника: " + element.totalCost);
   });
+}
+
+function AddStaticCosts(num) {
+  let edgeLength = 0;
+  switch (kitchen.shape) {
+    case "I":
+      edgeLength = kitchen.details[0].l + kitchen.details[0].w;
+      break;
+
+    case "L":
+      edgeLength = kitchen.details[0].l + kitchen.details[1].l;
+      break;
+
+    case "U":
+      edgeLength =
+        kitchen.details[0].l +
+        kitchen.details[1].l -
+        kitchen.details[0].w -
+        kitchen.details[2].w +
+        kitchen.details[2].l;
+      break;
+
+    default:
+      break;
+  }
+
+  if (kitchen.island) {
+    edgeLength += kitchen.island.l * 2 + kitchen.island.w * 2;
+  }
+
+  if (kitchen.bar) {
+    edgeLength += kitchen.bar.l * 2 + kitchen.bar.w;
+  }
+
+  if (
+    kitchen.profile === "edge3" ||
+    kitchen.profile === "edge4" ||
+    kitchen.profile === "edge5" ||
+    kitchen.profile === "edge6" ||
+    kitchen.profile === "edge7"
+  ) {
+    num += (SHAPEDEDGE * edgeLength) / 1000;
+  }
+
+  if (Object.keys(kitchen.legs).length && kitchen.thickness === 20) {
+    let polishArea = 0;
+    for (leg in kitchen.legs) {
+      let currentLeg = kitchen.legs[leg];
+      if (currentLeg.visibility) {
+        polishArea += currentLeg.l * currentLeg.w;
+      }
+    }
+
+    totalCost += (HANDPOLISH * polishArea) / 1000000;
+  }
+
+  if (Object.keys(kitchen.cutouts).length) {
+    let levelmount = 0;
+    let undermountCook = 0;
+    let cannelures = 0;
+    let quartzRound = 0;
+    let quartzLine = 0;
+    kitchen.qsinkslist = [];
+
+    for (i in kitchen.cutouts) {
+      switch (true) {
+        case kitchen.cutouts[i].type === "levelmount":
+          levelmount++;
+          break;
+
+        case kitchen.cutouts[i].type === "undermount" &&
+          kitchen.cutouts[i].class === "cooktop":
+          undermountCook++;
+          break;
+
+        case kitchen.cutouts[i].type === "quartz" &&
+          kitchen.cutouts[i].option === "round":
+          quartzRound++;
+          kitchen.qsinkslist.push(kitchen.cutouts[i].size);
+          break;
+
+        case kitchen.cutouts[i].type === "quartz" &&
+          kitchen.cutouts[i].option === "line":
+          quartzLine++;
+          break;
+        default:
+          break;
+      }
+
+      if (
+        (kitchen.cutouts[i].type === "undermount" ||
+          (kitchen.cutouts[i].type === "quartz" &&
+            kitchen.cutouts[i].option === "round")) &&
+        kitchen.cutouts[i].cannelures
+      ) {
+        cannelures++;
+      }
+    }
+
+    num +=
+      levelmount * LEVELMOUNT +
+      undermountCook * UNDERMOUNTCOOK +
+      cannelures * CANNELURES +
+      quartzLine * QUARTZSINKLINE;
+  }
+
+  return num;
 }
 
 function getMinPrice(array) {
@@ -206,6 +326,14 @@ samplesArray.sort(function (a, b) {
 
   // names must be equal
   return 0;
+});
+
+uniqueSamplesArray = samplesArray.filter(function (element) {
+  if (!uniqueColors.includes(element.color)) {
+    uniqueColors.push(element.color);
+    return true;
+  }
+  return false;
 });
 
 // переключалка выбора кухни и цветов камней - на мобильном

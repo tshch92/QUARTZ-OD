@@ -10,34 +10,47 @@ const cutParameters = {
 };
 
 const limits = {
+  minIlength: 500,
   maxIlength: 7000,
-  minWidth: 300,
-  maxLlength: 8000,
+  maxIslLength: 3000,
+  minWidth: 200,
+  maxLlength: 9000,
   maxUlength: 10000,
   maxWidth: 1400,
   smallRemainder: 0.05,
   bigRemainder: 0.5,
-}
+};
 
-const kitchen = {
+let kitchen = {
   shape: "I",
+  island: false,
   details: [
     { l: 3000, w: 600 },
     { l: 3600, w: 600 },
     { l: 2400, w: 600 },
   ],
+  legs: {},
+  island: false,
+  bar: false,
+  panels: {},
   profile: "edge1",
   thickness: 40,
   backsplash: true,
+  cutouts: {},
 };
 
 const defaultKitchen = {
   shape: "I",
+  island: false,
   details: [
     { l: 3000, w: 600 },
     { l: 3600, w: 600 },
     { l: 2400, w: 600 },
   ],
+  legs: {},
+  island: { l: 1800, w: 900 },
+  bar: { l: 2000, w: 600 },
+  panels: {},
   profile: "edge1",
   thickness: 40,
   backsplash: true,
@@ -56,7 +69,7 @@ function addAllowance(element, n = 1) {
 
 //добавить припуск на угловой стік
 function addCorner(dimension, profile, n = 1) {
-  if (profile === "profile1" || profile === "profile2") {
+  if (profile === "edge1" || profile === "edge2") {
     return (dimension +=
       cutParameters.cornerAllowanceFaucet * n +
       cutParameters.cornerMillAllowance * n);
@@ -85,7 +98,7 @@ function backsplashes(element, slab) {
 
 // разбивка детали под поклейку бутербродом с учетом припусков
 function split40(element, slab) {
-  if (addAllowance(element[0], 2) >= slab[0]) {
+  if (addAllowance(element[0], 2) > slab[0]) {
     var det1 = slab[0] - cutParameters.allowance * 2;
     var det2 = element[0] - det1;
 
@@ -99,18 +112,19 @@ function split40(element, slab) {
 }
 
 //разбика детали на толщине 20мм
-function split20(element, slab) {
-  if (element[0] >= slab[0]) {
+function split20(element, slab, type = "основная") {
+  //console.log("split 20");
+  if (element[0] > slab[0]) {
     var det1 = slab[0];
     var det2 = element[0] - det1;
 
     return [
-      [det1, element[1], "основная"],
-      [det2, element[1], "основная"],
+      [det1, element[1], type],
+      [det2, element[1], type],
     ];
   }
 
-  return [[element[0], element[1], "основная"]];
+  return [[element[0], element[1], type]];
 }
 
 function tryU(kitchen) {
@@ -253,7 +267,6 @@ function setDetails(kitchen, format) {
 
   if (kitchen.shape === "L") {
     myList = tryL(kitchen);
-    //console.log(myList);
   }
 
   if (kitchen.shape === "I") {
@@ -272,7 +285,7 @@ function setDetails(kitchen, format) {
         tmpSet = tmpSet.concat(split40(element, format));
       });
 
-      //console.log(tmpSet);
+      //console.log('format: '+format);
 
       myList[key] = tmpSet;
 
@@ -281,14 +294,167 @@ function setDetails(kitchen, format) {
   }
 
   if (kitchen.thickness === 20) {
-    myList.forEach((set) => {
+    myList.forEach((set, key) => {
       let tmpSet = [];
 
       set.forEach((element) => {
         tmpSet = tmpSet.concat(split20(element, format));
       });
 
-      set = tmpSet;
+      myList[key] = tmpSet;
+    });
+  }
+
+  //add island
+
+  if (kitchen.island && kitchen.thickness === 40) {
+    let islandSet = [
+      [
+        addAllowance(kitchen.island.l, 2),
+        addAllowance(kitchen.island.w, 2),
+        "остров",
+      ],
+      [
+        addAllowance(kitchen.island.l, 2),
+        addAllowance(cutParameters.lowerLayerWidth, 1),
+        "остров ж",
+      ],
+      [
+        addAllowance(kitchen.island.l, 2),
+        addAllowance(cutParameters.lowerLayerWidth, 1),
+        "остров ж",
+      ],
+      [
+        kitchen.island.w - cutParameters.lowerLayerWidth * 2,
+        addAllowance(cutParameters.lowerLayerWidth, 1),
+        "остров ж",
+      ],
+      [
+        kitchen.island.w - cutParameters.lowerLayerWidth * 2,
+        addAllowance(cutParameters.lowerLayerWidth, 1),
+        "остров ж",
+      ],
+    ];
+
+    myList.forEach((set, key) => {
+      myList[key] = myList[key].concat(islandSet);
+    });
+  }
+
+  if (kitchen.island && kitchen.thickness === 20) {
+    let islandSet = [[kitchen.island.l, kitchen.island.w, "остров"]];
+
+    myList.forEach((set, key) => {
+      myList[key] = myList[key].concat(islandSet);
+    });
+  }
+
+  //add bar
+
+  if (kitchen.bar && kitchen.thickness === 40) {
+    let barSet = [
+      [
+        addAllowance(kitchen.bar.l, 2),
+        addAllowance(kitchen.bar.w, 2),
+        "барная",
+      ],
+      [
+        addAllowance(kitchen.bar.l, 2),
+        addAllowance(cutParameters.lowerLayerWidth, 1),
+        "барная ж",
+      ],
+      [
+        addAllowance(kitchen.bar.l, 2),
+        addAllowance(cutParameters.lowerLayerWidth, 1),
+        "барная ж",
+      ],
+      [
+        kitchen.bar.w - cutParameters.lowerLayerWidth * 2,
+        addAllowance(cutParameters.lowerLayerWidth, 1),
+        "барная ж",
+      ],
+    ];
+
+    myList.forEach((set, key) => {
+      myList[key] = myList[key].concat(barSet);
+    });
+  }
+
+  if (kitchen.bar && kitchen.thickness === 20) {
+    let barSet = [[kitchen.bar.l, kitchen.bar.w, "барная"]];
+
+    myList.forEach((set, key) => {
+      myList[key] = myList[key].concat(barSet);
+    });
+  }
+
+  //add legs
+
+  if (Object.keys(kitchen.legs).length && kitchen.thickness === 40) {
+    let legSet = [];
+
+    for (leg in kitchen.legs) {
+      let currentLeg = kitchen.legs[leg];
+      if (currentLeg.visibility) {
+        legSet = legSet.concat([
+          [
+            addAllowance(currentLeg.l, 2),
+            addAllowance(currentLeg.w, 2),
+            "нога",
+          ],
+          [
+            addAllowance(currentLeg.l, 2),
+            addAllowance(currentLeg.w, 2),
+            "нога изнанка",
+          ],
+        ]);
+      } else {
+        legSet = legSet.concat([
+          [
+            addAllowance(currentLeg.l, 2),
+            addAllowance(currentLeg.w, 2),
+            "нога",
+          ],
+          [
+            addAllowance(currentLeg.l, 2),
+            addAllowance(cutParameters.lowerLayerWidth, 1),
+            "нога ж",
+          ],
+        ]);
+      }
+    }
+
+    myList.forEach((set, key) => {
+      myList[key] = myList[key].concat(legSet);
+    });
+  }
+
+  if (Object.keys(kitchen.legs).length && kitchen.thickness === 20) {
+    let legSet = [];
+
+    for (leg in kitchen.legs) {
+      let currentLeg = kitchen.legs[leg];
+      legSet = legSet.concat([[currentLeg.l, currentLeg.w, "нога"]]);
+    }
+
+    myList.forEach((set, key) => {
+      myList[key] = myList[key].concat(legSet);
+    });
+  }
+
+  //add wall panels
+
+  if (Object.keys(kitchen.panels).length) {
+    let panelSet = [];
+
+    for (panel in kitchen.panels) {
+      let currentPanel = [kitchen.panels[panel].l, kitchen.panels[panel].w];
+
+      panelSet = panelSet.concat(split20(currentPanel, format, "панель"));
+    }
+
+    myList.forEach((set, key) => {
+      myList[key] = myList[key].concat(panelSet);
     });
   }
 
@@ -303,7 +469,7 @@ function setDetails(kitchen, format) {
           backsplashes(kitchen.details[0], format)
         );
         myBacksplashes = myBacksplashes.concat([
-          [kitchen.details[0].w, cutParameters.backsplashHeight],
+          [kitchen.details[0].w, cutParameters.backsplashHeight, "пристенок"],
         ]);
         /*         myBacksplashes = myBacksplashes.concat([
           [kitchen.details[0].w, cutParameters.backsplashHeight],
@@ -318,7 +484,7 @@ function setDetails(kitchen, format) {
           backsplashes(kitchen.details[1], format)
         );
         myBacksplashes = myBacksplashes.concat([
-          [kitchen.details[0].w, cutParameters.backsplashHeight],
+          [kitchen.details[0].w, cutParameters.backsplashHeight, "пристенок"],
         ]);
         /*         myBacksplashes = myBacksplashes.concat([
           [kitchen.details[1].w, cutParameters.backsplashHeight],
@@ -336,7 +502,7 @@ function setDetails(kitchen, format) {
           backsplashes(kitchen.details[2], format)
         );
         myBacksplashes = myBacksplashes.concat([
-          [kitchen.details[0].w, cutParameters.backsplashHeight],
+          [kitchen.details[0].w, cutParameters.backsplashHeight, "пристенок"],
         ]);
         /*         myBacksplashes = myBacksplashes.concat([
           [kitchen.details[2].w, cutParameters.backsplashHeight],
@@ -390,20 +556,20 @@ function getFormatList(arr) {
 }
 
 let formats = getFormatList(samplesArray);
+//let formats = [[3030, 1420]];
 
 let formatsObj = new Object();
-
 
 function calcSpending(array) {
   // console.log('caclspending');
   array.forEach((format) => {
     //console.log(`Slab format: ${format[0]}x${format[1]} mm`);
 
-    let set1 = setDetails(kitchen, array);
+    let set1 = setDetails(kitchen, format);
 
     let slabSet = [];
 
-/*     let slabSet = [
+    /*     let slabSet = [
       [1, 0.2],
       [1.5, 0.7],
       [1, 0.05],
@@ -416,7 +582,8 @@ function calcSpending(array) {
       let countSlabs =
         Math.ceil(getArea(element) / ((format[0] * format[1]) / 2000000)) * 0.5;
 
-      let countRemainder = 1-(getArea(element) / ((format[0] * format[1]) * countSlabs / 1000000));
+      let countRemainder =
+        1 - getArea(element) / ((format[0] * format[1] * countSlabs) / 1000000);
 
       slabSet.push([countSlabs, countRemainder]);
       /*console.log(format[0] + ' x ' + format[1]);
@@ -424,7 +591,7 @@ function calcSpending(array) {
       console.log('Area used: ' + getArea(element) + " m2");
       console.log('Slabs spent: '+ countSlabs);
       console.log(countRemainder); */
-    }); 
+    });
 
     slabSet.sort(([a, b], [c, d]) => a - c || d - b);
 
@@ -435,15 +602,14 @@ function calcSpending(array) {
         formatsObj[format][2] = "priceup";
         break;
 
-        case formatsObj[format][1] >= limits.bigRemainder:
-          formatsObj[format][2] = "pricedown";
-          break;
-    
+      case formatsObj[format][1] >= limits.bigRemainder:
+        formatsObj[format][2] = "pricedown";
+        break;
+
       default:
         formatsObj[format][2] = "";
         break;
     }
-
   });
 
   return formatsObj;
@@ -454,6 +620,8 @@ calcSpending(formats);
 function recalc() {
   calcSpending(formats);
   getCosts(samplesArray);
+  renderMinMaxPrice();
+  renderKitchenSummary();
 }
 
 function validateInputs(n, d, num) {
@@ -465,11 +633,33 @@ function validateInputs(n, d, num) {
   }
 }
 
+let lastClickTime = 0;
+
+let shot;
+
+function timeChecker(t) {
+  timeNow = new Date().getTime();
+
+  if (timeNow - t > 300) {
+    recalc();
+    renderSamples();
+    //console.log("shot!" + (timeNow - t));
+    clearInterval(shot);
+  }
+
+  return;
+}
+
 document
   .querySelector("#kitchen-dimensions")
   .addEventListener("input", function (e) {
     let target = e.target;
     let val = Number(target.value);
+
+    clearInterval(shot);
+
+    let thisClickTime = new Date().getTime();
+
     switch (target.id) {
       case "l1":
         validateInputs(0, "l", val);
@@ -516,11 +706,220 @@ document
         return;
         break;
     }
-    recalc();
-    renderSamples();
-    renderMinMaxPrice();
-    renderKitchenSummary();
+
+    shot = setInterval(timeChecker, 50, thisClickTime);
   });
+
+function dimensionsAlert() {
+  //console.log('aleeeert!');
+
+  let I = Boolean(kitchen.shape === "I");
+  let L = Boolean(kitchen.shape === "L");
+  let U = Boolean(kitchen.shape === "U");
+  let island = Boolean(kitchen.island);
+
+  let arrLlengths = [kitchen.details[0].l, kitchen.details[1].l];
+
+  let arrUlengths = [
+    kitchen.details[0].l,
+    kitchen.details[1].l,
+    kitchen.details[2].l,
+  ];
+
+  let arrLwidths = [kitchen.details[0].w, kitchen.details[1].w];
+
+  let arrUwidths = [
+    kitchen.details[0].w,
+    kitchen.details[1].w,
+    kitchen.details[2].w,
+  ];
+
+  let Uwidths = [
+    document.querySelector("#width-A"),
+    document.querySelector("#width-B"),
+    document.querySelector("#width-C"),
+  ];
+
+  let Lwidths = [
+    document.querySelector("#w-A"),
+    document.querySelector("#w-B"),
+  ];
+
+  let Ulengths = [
+    document.querySelector("#length-A"),
+    document.querySelector("#length-B"),
+    document.querySelector("#length-C"),
+  ];
+
+  let Llengths = [
+    document.querySelector("#l-A"),
+    document.querySelector("#l-B"),
+  ];
+
+  // красим инпуты, в которых значения вылезают за лимиты
+
+  let Iwidth = document.querySelector("#w1");
+  let Ilength = document.querySelector("#l1");
+  let isllength = document.querySelector("#l-i");
+  let islwidth = document.querySelector("#w-i");
+
+  if (
+    islwidth.value &&
+    (islwidth.value <= limits.minWidth || islwidth.value > limits.maxWidth)
+  ) {
+    islwidth.classList.add("error-input");
+  } else {
+    islwidth.classList.remove("error-input");
+  }
+
+  if (
+    Iwidth.value &&
+    (Iwidth.value <= limits.minWidth || Iwidth.value >= limits.maxWidth)
+  ) {
+    Iwidth.classList.add("error-input");
+  } else {
+    Iwidth.classList.remove("error-input");
+  }
+
+  Lwidths.forEach((element) => {
+    if (
+      element.value &&
+      (element.value <= limits.minWidth || element.value >= limits.maxWidth)
+    ) {
+      element.classList.add("error-input");
+    } else {
+      element.classList.remove("error-input");
+    }
+  });
+
+  Uwidths.forEach((element) => {
+    if (
+      element.value &&
+      (element.value <= limits.minWidth || element.value >= limits.maxWidth)
+    ) {
+      element.classList.add("error-input");
+    } else {
+      element.classList.remove("error-input");
+    }
+  });
+
+  if (
+    isllength.value &&
+    (isllength.value <= limits.minIlength ||
+      isllength.value > limits.maxIslLength)
+  ) {
+    isllength.classList.add("error-input");
+  } else {
+    isllength.classList.remove("error-input");
+  }
+
+  if (
+    Ilength.value &&
+    (Ilength.value >= limits.maxIlength || Ilength.value <= limits.minIlength)
+  ) {
+    Ilength.classList.add("error-input");
+  } else {
+    Ilength.classList.remove("error-input");
+  }
+
+  Llengths.forEach((element) => {
+    if (element.value && element.value <= limits.minIlength) {
+      element.classList.add("error-input");
+    } else {
+      element.classList.remove("error-input");
+    }
+  });
+
+  Ulengths.forEach((element) => {
+    if (element.value && element.value <= limits.minIlength) {
+      element.classList.add("error-input");
+    } else {
+      element.classList.remove("error-input");
+    }
+  });
+
+  //проверка на слишком маленькую длину
+
+  if (
+    (I && kitchen.details[0].l <= limits.minIlength) ||
+    (L && arrLlengths.some((element) => element <= limits.minIlength)) ||
+    (U && arrUlengths.some((element) => element <= limits.minIlength))
+  ) {
+    document.querySelector(".I-length-small").style = "display: block";
+  } else {
+    document.querySelector(".I-length-small").style = "display: none";
+  }
+
+  if (island && kitchen.island.l <= limits.minIlength) {
+    document.querySelector(".isl-length-small").style = "display: block";
+  } else {
+    document.querySelector(".isl-length-small").style = "display: none";
+  }
+
+  //проверка на слишком большую длину
+
+  switch (true) {
+    case I && kitchen.details[0].l >= limits.maxIlength:
+      document.querySelector(".I-length-big").style = "display: block";
+      break;
+
+    case L && arrLlengths.reduce((acc, el) => acc + el, 0) >= limits.maxLlength:
+      document.querySelector(".L-length-big").style = "display: block";
+      break;
+
+    case U && arrUlengths.reduce((acc, el) => acc + el, 0) >= limits.maxUlength:
+      document.querySelector(".U-length-big").style = "display: block";
+      break;
+
+    default:
+      document.querySelector(".I-length-big").style = "display: none";
+      document.querySelector(".L-length-big").style = "display: none";
+      document.querySelector(".U-length-big").style = "display: none";
+      break;
+  }
+
+  if (island && kitchen.island.l > limits.maxIslLength) {
+    document.querySelector(".isl-length-big").style = "display: block";
+  } else {
+    document.querySelector(".isl-length-big").style = "display: none";
+  }
+
+  //проверка на слишком маленькую ширину
+
+  if (
+    (I && kitchen.details[0].w <= limits.minWidth) ||
+    (L && arrLwidths.some((element) => element <= limits.minWidth)) ||
+    (U && arrUwidths.some((element) => element <= limits.minWidth))
+  ) {
+    document.querySelector(".I-width-small").style = "display: block";
+  } else {
+    document.querySelector(".I-width-small").style = "display: none";
+  }
+
+  if (island && kitchen.island.w <= limits.minWidth) {
+    document.querySelector(".isl-width-small").style = "display: block";
+  } else {
+    document.querySelector(".isl-width-small").style = "display: none";
+  }
+
+  //проверка на слишком большую ширину
+
+  if (
+    (I && kitchen.details[0].w >= limits.maxWidth) ||
+    (L && arrLwidths.some((element) => element >= limits.maxWidth)) ||
+    (U && arrUwidths.some((element) => element >= limits.maxWidth))
+  ) {
+    document.querySelector(".I-width-big").style = "display: block";
+  } else {
+    document.querySelector(".I-width-big").style = "display: none";
+  }
+
+  if (island && kitchen.island.w > limits.maxWidth) {
+    document.querySelector(".isl-width-big").style = "display: block";
+  } else {
+    document.querySelector(".isl-width-big").style = "display: none";
+  }
+}
 
 document.querySelector("#backsplash").addEventListener("click", (evt) => {
   //  event delegation: only act if the click originated from input[type=radio]
@@ -531,10 +930,14 @@ document.querySelector("#backsplash").addEventListener("click", (evt) => {
         document.querySelector(`label[for='${evt.target.id}']`).textContent
       }`
     ); */
+
+    if (kitchen.backsplash) {
+      document.querySelector(".backsplash-warning").style = "display: block";
+    } else {
+      document.querySelector(".backsplash-warning").style = "display: none";
+    }
     recalc();
     renderSamples();
-    renderMinMaxPrice();
-    renderKitchenSummary();
   }
 });
 
@@ -562,8 +965,6 @@ document.querySelector("#thickness").addEventListener("click", (evt) => {
     }
     recalc();
     renderSamples();
-    renderMinMaxPrice();
-    renderKitchenSummary();
   }
 });
 
@@ -573,8 +974,6 @@ document.querySelector("#edges").addEventListener("click", (evt) => {
     kitchen.profile = evt.target.value;
     recalc();
     renderSamples();
-    renderMinMaxPrice();
-    renderKitchenSummary();
   }
 });
 
@@ -667,9 +1066,420 @@ document.querySelector("#shapes").addEventListener("click", (evt) => {
       default:
         break;
     }
+    dimensionsAlert();
     recalc();
     renderSamples();
-    renderMinMaxPrice();
-    renderKitchenSummary();
   }
 });
+
+function adjustCustom() {
+  if (kitchen.island) {
+    document.querySelector("#addisland").style = "display: none";
+    document.querySelector("#island").style = "";
+  } else {
+    document.querySelector("#addisland").style = "";
+    document.querySelector("#island").style = "display: none";
+  }
+
+  if (kitchen.bar) {
+    document.querySelector("#addbar").style = "display: none";
+    document.querySelector("#bar").style = "";
+  } else {
+    document.querySelector("#addbar").style = "";
+    document.querySelector("#bar").style = "display: none";
+  }
+
+  if (
+    Object.keys(kitchen.legs).length >=
+    2 + Boolean(kitchen.island) * 2 + Boolean(kitchen.bar)
+  ) {
+    document.querySelector("#addleg").style = "display: none";
+  } else {
+    document.querySelector("#addleg").style = "";
+  }
+
+  switch (true) {
+    case Object.keys(kitchen.legs).length > 1:
+      document.querySelector("#leg .parameter-title").textContent = "Ноги";
+
+      break;
+
+    case Object.keys(kitchen.legs).length === 1:
+      document.querySelector("#leg").style = "";
+      document.querySelector("#leg .parameter-title").textContent = "Нога";
+
+      break;
+
+    case Object.keys(kitchen.legs).length === 0:
+      document.querySelector("#leg").style = "display: none";
+      break;
+
+    default:
+      break;
+  }
+
+  switch (true) {
+    case Object.keys(kitchen.panels).length > 1:
+      document.querySelector("#panel .parameter-title").textContent =
+        "Стеновые панели";
+
+      break;
+
+    case Object.keys(kitchen.panels).length === 1:
+      document.querySelector("#panel").style = "";
+      document.querySelector("#panel .parameter-title").textContent =
+        "Стеновая панель";
+
+      break;
+
+    case Object.keys(kitchen.panels).length === 0:
+      document.querySelector("#panel").style = "display: none";
+      break;
+
+    default:
+      break;
+  }
+}
+
+const multipleCustom = document.querySelectorAll(".custom");
+
+for (let i = 0; i < multipleCustom.length; i++) {
+  multipleCustom[i].addEventListener("click", function (e) {
+    let target = e.target;
+
+    switch (true) {
+      case target.className === "removenode":
+        node = document.getElementById(target.parentNode.id);
+        target.parentNode.parentNode.removeChild(node);
+
+        if ([...target.parentNode.classList].includes("island")) {
+          kitchen.island = false;
+        }
+
+        if ([...target.parentNode.classList].includes("bar")) {
+          console.log("remove bar");
+          kitchen.bar = false;
+        }
+
+        if ([...target.parentNode.classList].includes("leg")) {
+          delete kitchen.legs[target.parentNode.id];
+        }
+
+        if ([...target.parentNode.classList].includes("panel")) {
+          delete kitchen.panels[target.parentNode.id];
+        }
+        break;
+
+      case target.className === "visible":
+        if (target.checked) {
+          kitchen.legs[target.parentNode.id].visibility = true;
+        } else {
+          kitchen.legs[target.parentNode.id].visibility = false;
+        }
+        break;
+
+      default:
+        return;
+    }
+
+    recalc();
+    renderSamples();
+    adjustCustom();
+
+    return;
+  });
+
+  multipleCustom[i].addEventListener("input", function (e) {
+    let target = e.target;
+    let val = Number(target.value);
+
+    clearInterval(shot);
+    let thisClickTime = new Date().getTime();
+
+    switch (true) {
+      case [...target.classList].includes("length") &&
+        [...target.parentNode.classList].includes("bar"):
+        kitchen.bar.l = val;
+
+        break;
+
+      case [...target.classList].includes("length") &&
+        [...target.parentNode.classList].includes("island"):
+        kitchen.island.l = val;
+
+        break;
+
+      case [...target.classList].includes("width") &&
+        [...target.parentNode.classList].includes("bar"):
+        kitchen.bar.w = val;
+
+        break;
+
+      case [...target.classList].includes("width") &&
+        [...target.parentNode.classList].includes("island"):
+        kitchen.island.w = val;
+
+        break;
+
+      case [...target.classList].includes("length") &&
+        [...target.parentNode.classList].includes("leg"):
+        kitchen.legs[target.parentNode.id].l = val;
+
+        break;
+
+      case [...target.classList].includes("width") &&
+        [...target.parentNode.classList].includes("leg"):
+        kitchen.legs[target.parentNode.id].w = val;
+
+        break;
+
+      case [...target.classList].includes("length") &&
+        [...target.parentNode.classList].includes("panel"):
+        kitchen.panels[target.parentNode.id].l = val;
+
+        break;
+
+      case [...target.classList].includes("width") &&
+        [...target.parentNode.classList].includes("panel"):
+        kitchen.panels[target.parentNode.id].w = val;
+
+        break;
+
+      default:
+        return;
+        break;
+    }
+
+    shot = setInterval(timeChecker, 50, thisClickTime);
+  });
+}
+
+document.querySelector("#cutouts-here").addEventListener("input", function (e) {
+  let target = e.target;
+
+  let tmpNode = target.parentNode.parentNode.parentNode;
+
+  if ([...target.parentNode.parentNode.parentNode.classList].includes("sink")) {
+    let cannelureSet = document.querySelector(
+      '[id="' + tmpNode.id + '"] .cannelures'
+    );
+    let sizeRadioSet = document.querySelector(
+      '[id="' + tmpNode.id + '"] .cutout-size-radios'
+    );
+    let sizeInputSet = document.querySelector(
+      '[id="' + tmpNode.id + '"] .cutout-size-inputs'
+    );
+    let optionsSet = document.querySelector(
+      '[id="' + tmpNode.id + '"] .cutout-options-48'
+    );
+
+    switch (true) {
+      case [...target.parentNode.classList].includes("cannelures"):
+        if (target.checked) {
+          kitchen.cutouts[tmpNode.id].cannelures = true;
+        } else {
+          kitchen.cutouts[tmpNode.id].cannelures = false;
+        }
+
+        recalc();
+        renderSamples();
+
+        break;
+
+      case target.name === tmpNode.id + "-cutout-type" &&
+        target.value === "levelmount":
+        console.log("level!");
+
+        cannelureSet.style = "display: none";
+        sizeRadioSet.style = "display: none";
+        sizeInputSet.style = "display: none";
+        optionsSet.style = "display: none";
+
+        kitchen.cutouts[tmpNode.id].type = "levelmount";
+
+        recalc();
+        renderSamples();
+
+        break;
+
+      case target.name === tmpNode.id + "-cutout-type" &&
+        target.value === "undermount":
+        console.log("under!");
+
+        cannelureSet.style = "";
+        sizeRadioSet.style = "display: none";
+        sizeInputSet.style = "display: none";
+        optionsSet.style = "display: none";
+
+        kitchen.cutouts[tmpNode.id].type = "undermount";
+
+        recalc();
+        renderSamples();
+
+        break;
+
+      case target.name === tmpNode.id + "-cutout-type" &&
+        target.value === "quartz":
+        console.log("quartz!");
+
+        sizeRadioSet.style = "";
+        sizeInputSet.style = "display: none";
+        optionsSet.style = "";
+
+        kitchen.cutouts[tmpNode.id].type = "quartz";
+        kitchen.cutouts[tmpNode.id].option = document.querySelector(
+          '[id="' + tmpNode.id + '"] .cutout-options-48 input:checked'
+        ).value;
+
+        if (kitchen.cutouts[tmpNode.id].option === "line") {
+          sizeInputSet.style = "";
+          sizeRadioSet.style = "display: none";
+          cannelureSet.style = "display: none";
+          validateSinkSize(tmpNode.id);
+        } else {
+          sizeInputSet.style = "display: none";
+          sizeRadioSet.style = "";
+          cannelureSet.style = "";
+        }
+
+        kitchen.cutouts[tmpNode.id].size = document.querySelector(
+          '[id="' + tmpNode.id + '"] .cutout-size-radios input:checked'
+        ).value;
+
+        recalc();
+        renderSamples();
+
+        break;
+
+      case target.name === tmpNode.id + "-quartz-type" &&
+        target.value === "round":
+        cannelureSet.style = "";
+        sizeRadioSet.style = "";
+        sizeInputSet.style = "display: none";
+        optionsSet.style = "";
+
+        kitchen.cutouts[tmpNode.id].type = "quartz";
+        kitchen.cutouts[tmpNode.id].option = document.querySelector(
+          '[id="' + tmpNode.id + '"] .cutout-options-48 input:checked'
+        ).value;
+        kitchen.cutouts[tmpNode.id].size = document.querySelector(
+          '[id="' + tmpNode.id + '"] .cutout-size-radios input:checked'
+        ).value;
+
+        recalc();
+        renderSamples();
+
+        break;
+
+      case target.name === tmpNode.id + "-sinksize":
+        kitchen.cutouts[tmpNode.id].size = document.querySelector(
+          '[id="' + tmpNode.id + '"] .cutout-size-radios input:checked'
+        ).value;
+
+        recalc();
+        renderSamples();
+
+        break;
+
+      case target.name === tmpNode.id + "-quartz-type" &&
+        target.value === "line":
+        cannelureSet.style = "display: none";
+        sizeRadioSet.style = "display: none";
+        sizeInputSet.style = "";
+        optionsSet.style = "";
+
+        kitchen.cutouts[tmpNode.id].type = "quartz";
+        kitchen.cutouts[tmpNode.id].option = document.querySelector(
+          '[id="' + tmpNode.id + '"] .cutout-options-48 input:checked'
+        ).value;
+
+        validateSinkSize(tmpNode.id);
+        recalc();
+        renderSamples();
+
+        break;
+
+      case target.id === tmpNode.id + "-l" || target.id === tmpNode.id + "-w":
+        clearInterval(shot);
+
+        let thisClickTime = new Date().getTime();
+
+        validateSinkSize(tmpNode.id);
+
+        shot = setInterval(timeChecker, 50, thisClickTime);
+
+        break;
+
+      default:
+        break;
+    }
+  } else {
+    switch (true) {
+      case target.name === tmpNode.id + "-cutout-type":
+        kitchen.cutouts[tmpNode.id].type = target.value;
+        recalc();
+        renderSamples();
+
+        break;
+
+      default:
+        break;
+    }
+  }
+});
+
+document.querySelector("#cutouts-here").addEventListener("click", function (e) {
+  if (e.target.className === "removenode") {
+    node = document.getElementById(e.target.parentNode.parentNode.id);
+    e.target.parentNode.parentNode.parentNode.removeChild(node);
+    delete kitchen.cutouts[e.target.parentNode.parentNode.id];
+    recalc();
+    renderSamples();
+  }
+});
+
+function validateSinkSize(nodeID) {
+  let length = 600;
+  let width = 350;
+
+  if (document.getElementById(nodeID + "-l").value) {
+    length = document.getElementById(nodeID + "-l").value;
+  }
+
+  if (document.getElementById(nodeID + "-w").value) {
+    width = document.getElementById(nodeID + "-w").value;
+  }
+
+  kitchen.cutouts[nodeID].size = [length, width];
+}
+
+function resetKitchen() {
+  kitchen = {
+    shape: "I",
+    island: false,
+    details: [
+      { l: 3000, w: 600 },
+      { l: 3600, w: 600 },
+      { l: 2400, w: 600 },
+    ],
+    legs: {},
+    island: false,
+    bar: false,
+    panels: {},
+    profile: "edge1",
+    thickness: 40,
+    backsplash: true,
+    cutouts: {},
+  };
+
+  document.querySelector("#cutouts-here").innerHTML = "";
+  let custominputs = document.querySelectorAll(".customInput");
+
+  for (let i = 0; i < Object.keys(custominputs).length; i++) {
+    custominputs[i].parentNode.removeChild(custominputs[i]);
+  }
+
+  adjustCustom();
+  recalc();
+  renderSamples();
+}

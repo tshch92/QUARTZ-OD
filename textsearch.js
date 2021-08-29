@@ -15,7 +15,6 @@ document.querySelector("#searchInput").addEventListener("input", function (e) {
 
   renderSamples();
   recalc();
-  renderMinMaxPrice();
   renderSamplesSummary(matchingSamplesArray);
 });
 
@@ -24,6 +23,11 @@ function setSameFilterValues(id, prop) {
 
   for (let i = 0; i < tmpList.length; i++) {
     if (filterValues[prop].includes(tmpList[i].value)) {
+      tmpList[i].checked = true;
+    } else if (
+      id === "surfacelist" &&
+      filterValues[prop].join(" ") === tmpList[i].value
+    ) {
       tmpList[i].checked = true;
     } else {
       tmpList[i].checked = false;
@@ -45,12 +49,55 @@ function lookalike(e) {
     document.querySelector("#showlessbrands").style.display = "none";
   }
 
+  let matte = [
+    "matte",
+    "leather",
+    "seta",
+    "honed",
+    "velvet-touch",
+    "brushed",
+    "suede",
+  ].includes(e.target.getAttribute("data-surface"));
+
+  let drift = ["drift", "spacco", "chenille", "brash", "volcano"].includes(
+    e.target.getAttribute("data-surface")
+  );
+
+  let glanz = e.target.getAttribute("data-surface") === "glanz";
+
+  let S = [];
+
+  switch (true) {
+    case matte:
+      S = [
+        "matte",
+        "leather",
+        "seta",
+        "honed",
+        "velvet-touch",
+        "brushed",
+        "suede",
+      ];
+      break;
+
+    case drift:
+      S = ["drift", "spacco", "chenille", "brash", "volcano"];
+      break;
+
+    case glanz:
+      S = ["glanz"];
+      break;
+
+    default:
+      break;
+  }
+
   filterValues = {
     pattern: e.target.getAttribute("data-pattern").split(","),
 
     colorgroup: e.target.getAttribute("data-colorgroup").split(","),
 
-    surface: e.target.getAttribute("data-surface").split(","),
+    surface: S,
 
     brand: [],
   };
@@ -60,8 +107,8 @@ function lookalike(e) {
   document.querySelector("#filter2").checked = true;
   setSameFilterValues("colorlist", "colorgroup");
   setSameFilterValues("patternlist", "pattern");
-  setSameFilterValues("surfacelist", "surface");
   setSameFilterValues("brandlist", "brand");
+  setSameFilterValues("surfacelist", "surface");
 
   matchingSamplesArray = [];
 

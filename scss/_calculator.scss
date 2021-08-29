@@ -157,7 +157,7 @@
   &:hover:after {
     content: "возможно, цена будет выше из-за особенности раскроя материала";
     @include pricehover;
-    background-color: #C80000;
+    background-color: #c80000;
     bottom: 16px;
     height: auto;
   }
@@ -210,6 +210,73 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+@mixin surface-special {
+  text-transform: lowercase;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.seta .sample-name.text-bold:after {
+  @include surface-special;
+  content: " seta";
+}
+
+.matte .sample-name.text-bold:after {
+  content: " matte";
+  @include surface-special;
+}
+
+.honed .sample-name.text-bold:after {
+  content: " honed";
+  @include surface-special;
+}
+
+.brushed .sample-name.text-bold:after {
+  content: " brushed";
+  @include surface-special;
+}
+
+.velvet-touch .sample-name.text-bold:after {
+  content: " velvet";
+  @include surface-special;
+}
+
+.chenille .sample-name.text-bold:after {
+  content: " chenille";
+  @include surface-special;
+}
+
+.spacco .sample-name.text-bold:after {
+  content: " spacco";
+  @include surface-special;
+}
+
+.brash .sample-name.text-bold:after {
+  content: " brushed";
+  @include surface-special;
+}
+
+.leather .sample-name.text-bold:after {
+  content: " leather";
+  @include surface-special;
+}
+
+.suede .sample-name.text-bold:after {
+  content: " suede";
+  @include surface-special;
+}
+
+.volcano .sample-name.text-bold:after {
+  content: " volcano";
+  @include surface-special;
+}
+
+.island {
+  &-title {
+    margin-top: 35px;
+  }
 }
 
 .kitchen {
@@ -305,6 +372,91 @@
     width: 100%;
     height: 223px;
     position: relative;
+  }
+}
+
+.custom .addnode {
+  margin: 0 5px;
+}
+
+#cutouts .addnode {
+  margin: 0;
+  flex-grow: 1;
+
+  &:first-child {
+    margin-right: 20px;
+    margin-left: $spacemid-mob;
+  }
+
+  &:last-child {
+    margin-right: $spacemid-mob;
+  }
+}
+
+.cutout {
+  &-card {
+    margin: 0 $spacemid-mob $spacemid-mob;
+    padding: 15px 20px 20px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+
+    & > :not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-options {
+    &-64 {
+      display: flex;
+      justify-content: space-between;
+
+      &.parameter-options > * {
+        margin: 0;
+      }
+    }
+
+    &-48 {
+      display: flex;
+      justify-content: space-between;
+
+      &.parameter-options > * {
+        margin: 0;
+      }
+    }
+  }
+
+  &-size {
+    &-radios {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      &.parameter-options > * {
+        margin: 0;
+      }
+
+      & > :not(:last-child):not(:nth-last-child(2)) {
+        margin-bottom: 10px;
+      }
+
+      & .chip-basic {
+        width: 125px;
+      }
+    }
+
+    &-inputs {
+      &.parameter-options {
+        margin: 0;
+      }
+    }
   }
 }
 
@@ -406,7 +558,7 @@
 
 .width-C {
   @include arrowpositioning;
-  transform: translate(19px, 80px);
+  transform: translate(18px, 80px);
 
   &.input-small {
     width: 50px;
@@ -415,8 +567,36 @@
   &.arrow {
     @include arrowpositioning;
     opacity: 0.3;
-    transform: translate(19px, 62px);
+    transform: translate(18px, 62px);
   }
+}
+
+.customInput {
+  margin-bottom: 10px;
+}
+
+.leg {
+  padding-left: 10px;
+
+  & .removenode {
+    margin-right: 10px;
+  }
+}
+
+.island,
+.bar,
+.panel {
+  padding-right: 30px;
+
+  & .removenode {
+    margin-right: 15px;
+  }
+}
+
+.backsplash-warning {
+  margin: 0 auto 15px;
+  padding: 0 30px;
+  text-align: center;
 }
 
 .result {
@@ -447,6 +627,68 @@
   }
 }
 
+.gift {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    display: block;
+    margin-bottom: 5px;
+    background-image: url("./images/icons/gift.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &-mini {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      display: block;
+      margin-bottom: 5px;
+      background-image: url("./images/icons/gift.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.extras {
+  padding: 0 $spacebig-mob;
+
+  & ul {
+    padding-inline-start: 0;
+  }
+
+  & li {
+    list-style-type: none;
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &:before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      background-image: url("./images/icons/check.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
 .disclaimer {
   position: fixed;
   z-index: 1000;
@@ -460,6 +702,18 @@
   align-items: center;
   justify-content: center;
 
+  & .viber {
+    background-color: $violet;
+    margin: $spacemid-mob 0;
+    color: white;
+    font-weight: 600;
+
+    &:hover {
+      color: white;
+      opacity: 0.8;
+    }
+  }
+
   &-card {
     display: flex;
     flex-direction: column;
@@ -469,6 +723,10 @@
     padding: $spacebig-mob 100px $spacemid-mob;
     box-sizing: border-box;
     margin: 0 15%;
+  }
+
+  & .text {
+    max-width: 720px;
   }
 
   & a {
@@ -491,6 +749,26 @@
     &:last-of-type {
       margin-bottom: 0;
       opacity: 0.6;
+    }
+  }
+}
+
+.sink-examples {
+  display: flex;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 15px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    & > .text {
+      opacity: 0.7;
     }
   }
 }

@@ -12,23 +12,23 @@
           <title>
             Кварцевые столешницы Одесса - Калькулятор цены
         </title>
-        <!-- Facebook Pixel Code -->
-        <script>
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '2336933439953264');
-            fbq('track', 'PageView');
-            </script>
-            <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=2336933439953264&ev=PageView&noscript=1"
-            /></noscript>
-            <!-- End Facebook Pixel Code -->
+                <!-- Facebook Pixel Code -->
+                <script>
+                    !function(f,b,e,v,n,t,s)
+                    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                    n.queue=[];t=b.createElement(e);t.async=!0;
+                    t.src=v;s=b.getElementsByTagName(e)[0];
+                    s.parentNode.insertBefore(t,s)}(window, document,'script',
+                    'https://connect.facebook.net/en_US/fbevents.js');
+                    fbq('init', '2336933439953264');
+                    fbq('track', 'PageView');
+                    </script>
+                    <noscript><img height="1" width="1" style="display:none"
+                    src="https://www.facebook.com/tr?id=2336933439953264&ev=PageView&noscript=1"
+                    /></noscript>
+                    <!-- End Facebook Pixel Code -->
         <!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-1WR9EMX0PC"></script><script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-1WR9EMX0PC');</script>
         <link rel="stylesheet" href="./normalize.css">
         <link rel="stylesheet" href="./fonts/stylesheet.css">
@@ -36,7 +36,7 @@
         <link rel="apple-touch-icon" href="./apple-touch-icon.png">
     </head>
     <body>
-        <aside class='disclaimer' style="display: none">
+        <aside class='disclaimer' id="disclaimer" style="display: none">
             <div class='disclaimer-card'>
                 <h2 class="title-bold">Дисклеймер</h2>
                 <ol class='text'>
@@ -47,16 +47,58 @@
                         Окончательная стоимость вашей столешницы будет сформирована после согласования расположения вырезов и стыков, и некоторых других деталей. Для того, чтобы узнать цену точно-точно - напишите нам в <a href="viber://chat?number=%2B380964163862" class="text-bold">Viber</a>.
                     </li>
                     <li>
-                        Если у вас изделие сложной формы: с выступами, "ногами", дугообразными элементами и т.д. - сбросьте чертёж нам на <a href="viber://chat?number=%2B380964163862" class="text-bold">Viber</a>.
+                        Подъём деталей на этаж без лифта (силами грузчиков) в стоимость не включен.
                     </li>
                     <li>
-                        Доставка в пределах Одессы и Черноморска и установка входят в стоимость. Подъём на этаж без лифта в стоимость не включен.
+                        Реальный цвет камня может отличаться от своего изображения на сайте (это зависит от настроек вашего монитора).
                     </li>
                     <li>
                         Все цены указаны в рекламных целях. Предложение не является офертой.
                     </li>
                 </ol>
-                <button class="btn text-bold OK">Ок, я всё понял</button>
+                <button class="btn text-bold OK" onclick="closePopup(this)">Ок, я всё понял</button>
+            </div>
+        </aside>
+        <aside class='disclaimer' id='complexkitchenshape' style="display: none">
+            <div class='disclaimer-card'>
+                <button class="btn-close" aria-label="close popup" onclick="closePopup(this)"></button>
+                <h2 class="title-bold">Другая форма кухни?</h2>
+                <p class='text'>
+                    Если у вас изделие сложной формы: с выступами, "ногами", дугообразными элементами и т.д. - его нужно считать вручную, раскладывая подетально в Автокаде.
+                </p>
+                <img src="./images/math_lady_meme.png" style="margin: 15px 0">
+                <p class='text'>
+                    Пожалуйста, сбросьте чертёж нам на Viber: <a href="viber://chat?number=%2B380964163862" class="text-bold">+38-096-416-38-62</a>
+                </p>
+                
+                <a href="viber://chat?number=%2B380964163862" class="viber text-bold"></a>
+            </div>
+        </aside>
+        <aside class='disclaimer' id='about-sinks' style="display: none;">
+            <div class='disclaimer-card'>
+                <button class="btn-close" aria-label="close popup" onclick="closePopup(this)"></button>
+                <h2 class="title-bold">О кварцевых мойках</h2>
+                <p class='text'>
+                    Фабричные мойки из кварцевого агломерата делает только один производитель - Silestone. <br>
+                    Это монолитные чаши, которые отливают из того же материала, что и слэбы (листы камня) и полируют там же, на заводе.<br><br>
+
+                    Все остальные кварцевые мойки, кроме фабричных Silestone, - клееные мойки. Буквально склеиваются вручную из кусков камня - как "коробочка". 
+                </p>
+                <div class="sink-examples">
+                    <div>
+                        <img src="./images/silestone-quartz-sink.jpg" style="margin: 15px 0">
+                        <span class="text">Фабричная мойка Silestone</span>
+                    </div>
+                    <div>
+                        <img src="./images/handmade-quartz-sink.jpg" style="margin: 15px 0">
+                        <span class="text">Обычная клееная мойка из кварца</span>
+                    </div> 
+                </div>
+                <p class='text'>
+                    Р.S.: то, что продаётся на рынке под названием "каменные мойки" - это НЕ кварц. Кварцевых моек всего 2 разновидности, перечисленных выше. Всё прочее - это акрил, силгранит, фрагранит и др.
+                </p>
+                
+                <button class="btn text-bold OK" onclick="closePopup(this)">Ок, я всё понял</button>
             </div>
         </aside>
         <h1 style="display: none">Калькулятор стоимости столешниц</h1>
@@ -163,67 +205,18 @@
                             <label for="glanz" class="text-bold">глянец</label>
                         </div>
                         <div class="chip-basic">
-                            <input type="checkbox" id="matte" name="matte" value="matte">
+                            <input type="checkbox" id="matte" name="matte" value="matte leather seta honed velvet-touch brushed suede">
                             <label for="matte" class="text-bold">мат</label>
+                        </div>
+                        <div class="chip-basic">
+                            <input type="checkbox" id="drift" name="drift" value="drift spacco chenille brash volcano">
+                            <label for="drift" class="text-bold">фактурная</label>
                         </div>
                     </div>
                 </div>
             </section>
     
             <section id="samples123" class="samples">
-                 <!-- <div class="sample">
-                    <div class="sample-image">
-                        <picture class="sparkle">
-                            <source media="(min-width: 18em)" srcset="./images/samples/aurorasnow.jpg" />
-                            <source src="./images/samples/hanstone/passion_rouge.jpg" />
-                            <img src="./images/samples/hanstone/passion_rouge.jpg" alt="Photo of a turboencabulator" loading="lazy" />
-                        </picture>
-                        <div class="sample-labels">
-                            <span class="recommend"></span>
-                            <span class=""></span>
-                            <span class="out"></span>
-                        </div>
-                    </div>
-                    <div class="sample-text">
-                        <div class="sample-top">
-                            <div class="sample-brand text">Caesarstone</div>
-                            <div class="sample-slabs">2.5</div>
-                        </div>
-                        <div class="sample-bottom">
-                            <div class="sample-name text-bold">5100 Vanilla Noir</div>
-                            <div class="sample-price text-bold">2150$</div>
-                        </div>
-                    </div>
-                    <button class="lookalike text-bold">
-                        Искать похожие цвета
-                    </button>
-                </div> -->
-<!--                <div class="sample recommend">
-                    <div class="sample-image"></div>
-                    <div class="sample-text">
-                        <div class="sample-top">
-                            <div class="sample-brand text">Caesarstone</div>
-                            <div class="sample-slabs">2.5</div>
-                        </div>
-                        <div class="sample-bottom">
-                            <div class="sample-name text-bold">5100 Vanilla Noir</div>
-                            <div class="sample-price text-bold">2150$</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sample preorder">
-                    <div class="sample-image sparkle"></div>
-                    <div class="sample-text">
-                        <div class="sample-top">
-                            <div class="sample-brand text">Caesarstone</div>
-                            <div class="sample-slabs">2.5</div>
-                        </div>
-                        <div class="sample-bottom">
-                            <div class="sample-name text-bold">5100 Vanilla Noir</div>
-                            <div class="sample-price text-bold">2150$</div>
-                        </div>
-                    </div>
-                </div> -->
             </section>
 
             <button class="kitchen-collapsed">
@@ -248,6 +241,7 @@
                                 <input type="radio" id="shapeU" name="kitchen-shape" value="U">
                                 <label for="shapeU" class="icon-shapeU"></label>
                             </div>
+                            <button class="btn-icon-44 openpopup" aria-label="complex kitchen shape"></button>
                         </div>
                     </div>
                     <div class="parameter" id="kitchen-dimensions">
@@ -288,6 +282,49 @@
     
                             <input type="text" id="width-C" class="input-small text-bold width-C" placeholder="600">
                             <label class="arrow width-C" for="width-C"><img src="./images/kitchen-shapes/arrow48.svg"></label>
+                        </div>
+                        <div class="error basic">
+                            <div class="I-width-small error-label text-bold">Столешница подозрительно узкая!</div>
+                            <div class="I-width-big error-label text-bold">Столешница подозрительно глубокая!</div>
+                            <div class="I-length-small error-label text-bold">Столешница подозрительно маленькая!</div>
+                            <div class="I-length-big error-label text-bold">Столешница больше 8 метров? Такие изделия лучше считать индивидуально - напишите нам в Viber</div>
+                            <div class="L-length-big error-label text-bold">Больше 9 погонных метров? Такие изделия лучше считать индивидуально - напишите нам в Viber</div>
+                            <div class="U-length-big error-label text-bold">Больше 10 погонных метров? Такие изделия лучше считать индивидуально - напишите нам в Viber</div>
+                        </div>
+
+<!--                         <button class="btn-text-32 text-bold" id="addisland">добавить остров</button>
+
+                        <div class="parameter-title text-bold island-title" style="display: none">Размеры острова, мм</div>
+                        <div class="parameter-options island" style="display: none">
+                            <input type="text" id='l-i' class="input-small text-bold" placeholder="1800">
+                            <span class="text">x</span>
+                            <input type="text" id='w-i' class="input-small text-bold" placeholder="900">
+                        </div>
+                        <div class="error isl">
+                            <div class="isl-width-small error-label text-bold">Остров подозрительно узкий!</div>
+                            <div class="isl-width-big error-label text-bold">Остров подозрительно глубокий!</div>
+                            <div class="isl-length-small error-label text-bold">Остров подозрительно маленький!</div>
+                            <div class="isl-length-big error-label text-bold">Остров больше 3 метров? Такие изделия лучше считать индивидуально - напишите нам в Viber</div>
+                        </div>
+
+                        <button class="btn-text-32 text-bold" id="removeisland" style="display: none">убрать остров</button> -->
+                    </div>
+                    <div class="custom">
+                        <div class="parameter" id='island' style="display: none">
+                            <div class="parameter-title text-bold">Остров</div>
+                        </div>
+                        <div class="parameter" id='bar' style="display: none">
+                            <div class="parameter-title text-bold">Барная стойка</div>
+                        </div>
+                        <div class="parameter" id='leg' style="display: none">
+                            <div class="parameter-title text-bold">Нога</div>
+                        </div>
+                        <div class="parameter">
+                            <div class="parameter-options">
+                                <button class="btn-text-32 text-bold addnode" id='addisland' onclick='addCustom("island")'>остров</button>
+                                <button class="btn-text-32 text-bold addnode" id='addbar' onclick='addCustom("bar")'>барная</button>
+                                <button class="btn-text-32 text-bold addnode" id='addleg' onclick='addCustom("leg")'>нога</button>
+                            </div>
                         </div>
                     </div>
                     <div class="parameter">
@@ -344,9 +381,57 @@
                                 <label for="backsplash1" class="text-bold">40</label>
                             </div>
                             <div class="btn-text-44">
-                                <input type="radio" id="backsplash0" name="backsplash" value=0>
+                                <input type="radio" id="backsplash0" name="backsplash" value=0 >
                                 <label for="backsplash0" class="text-bold">нет</label>
                             </div>
+                        </div>
+                    </div>
+                    <div class="custom">
+                        <div class="parameter" id='panel' style="display: none">
+                            <div class="parameter-title text-bold">Стеновые панели</div>
+                            <div class="text backsplash-warning">Там, где стоят панели - бортик убирается автоматически</div>
+                        </div>
+                        <div class="parameter">
+                            <button class="btn-text-32 text-bold addnode" id='addpanel' style='margin: 0 auto;' onclick='addCustom("panel")'>стеновая панель</button>
+                        </div>
+                    </div>
+
+                    <div id='cutouts' class='cutouts'>
+                        <div class="parameter">
+                            <div class="parameter-title text-bold">Мойки, варочные и др.техника</div>
+                            <div class="text cutouts-warning gift-mini">
+                                Все вырезы под накладную технику<br>
+                                (мойки, варочные, розетки...) -<br>
+                                в подарок!
+                            </div>
+                        </div>
+                        <div id="cutouts-here"></div>
+                        <div class="parameter-options">
+                            <button class="btn-text-32 text-bold addnode" id='addsink' style="width: 120px" onclick='addCutout("sink")'>мойка</button>
+                            <button class="btn-text-32 text-bold addnode" id='addcooktop' onclick='addCutout("cooktop")'>варочная и др.</button>
+                        </div>
+                    </div>
+                    <button class="btn-text-32 text-bold reset" onclick="resetKitchen()">сбросить все параметры</button>
+
+
+                    <hr style="margin: 30px 15px 30px;">
+                    <div class="parameter">
+                        <div class="parameter-title text-bold gift">В подарок:</div>
+                        <div class="parameter-options extras" id='extras'>
+                            <ul>
+                                <li class="text-bold">
+                                    все вырезы под накладную технику
+                                </li>
+                                <li class="text-bold">
+                                    вырез под подстольную мойку
+                                </li>
+                                <li class="text-bold">
+                                    замер и монтаж изделия
+                                </li>
+                                <li class="text-bold">
+                                    доставка в пределах Одессы, Черноморска
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -354,13 +439,14 @@
             <div class="result">
                 <div class='result-cover'>
                     <div class="result-sum text-bold">неизвестно</div>
-                    <button class="opendisclaimer" aria-label="show disclaimer"></button>
+                    <button class="opendisclaimer" id="opendisclaimer" aria-label="show disclaimer"></button>
                 </div>
                 <a href="viber://chat?number=%2B380964163862" class="viber text-bold" aria-label="go to Viber to place an order"></a>
             </div>
         </main>
     </body>
     <script src="data.js"></script>
+    <script src="quartzsinks.js"></script>
     <script src="templates.js"></script>
     <script src="script-cut.js"></script>
     <script src="script.js"></script>

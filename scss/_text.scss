@@ -47,6 +47,16 @@ h1 {
     margin: 0;
 }
 
+.crossed {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    letter-spacing: inherit;
+    position: relative;
+    text-decoration: line-through;
+
+}
+
 @media only screen and (max-width: 768px) {
 
     .script {
