@@ -85,12 +85,6 @@
     width: 220px;
     box-sizing: border-box;
     text-align: center;
-
-    &:hover {
-        background-color: transparent;
-        border-color: white;
-        color: white;
-    }
   }
 }
 
@@ -147,6 +141,12 @@
 
     & .ex3 .crossed:after {
         border-bottom: 1.5px solid white;
+    }
+
+    & .ex3 a:hover {
+        background-color: transparent;
+        border-color: white;
+        color: white;
     }
 }
 

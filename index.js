@@ -1,11 +1,11 @@
 let $exclusiveStart =
   document.querySelector(".exclusive").getBoundingClientRect().top +
   pageYOffset -
-  window.innerHeight * 0.5;
+  window.innerHeight * 0.4;
 let $exclusiveEnd =
   $exclusiveStart +
-  document.querySelector(".exclusive").getBoundingClientRect().height -
-  window.innerHeight * 0.5;
+  document.querySelector(".exclusive").getBoundingClientRect().height +
+  window.innerHeight * 0.05;
 
 window.addEventListener("scroll", function () {
   let $links = document.querySelectorAll(".header-nav-link");
