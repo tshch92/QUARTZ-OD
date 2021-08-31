@@ -4,6 +4,7 @@
   @include grid12;
   grid-template-rows: repeat(12, 1fr);
   min-height: 100vh;
+  height: 100vh;
 
   & h2 {
     grid-area: 1 / 2 / 3 / 13;
