@@ -169,37 +169,6 @@
       display: none;
     }
   }
-
-  .disclaimer {
-    &-card {
-      padding: $spacemid-mob;
-      margin: 10px;
-
-      & img {
-        width: 220px;
-      }
-
-      & ol.text {
-        font-size: 11px;
-      }
-    }
-
-    & h2 {
-      margin-bottom: 20px;
-    }
-
-    & .btn {
-      margin-top: 20px;
-    }
-
-    & li {
-      margin-bottom: 10px;
-    }
-  }
-
-  .sink-examples {
-    flex-direction: column;
-  }
 }
 
 @media only (max-width: 766px) {

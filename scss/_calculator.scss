@@ -402,8 +402,8 @@
     flex-direction: column;
     justify-content: stretch;
 
-    & > :not(:last-child) {
-      margin-bottom: 15px;
+    & > :not(:first-child) {
+      margin-top: 15px;
     }
   }
 
@@ -414,12 +414,19 @@
   }
 
   &-options {
+
     &-64 {
       display: flex;
       justify-content: space-between;
 
       &.parameter-options > * {
+        background-color: turquoise;
         margin: 0;
+        width: 100%;
+
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
       }
     }
 
@@ -429,11 +436,18 @@
 
       &.parameter-options > * {
         margin: 0;
+        width: 100%;
+
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+
       }
     }
   }
 
   &-size {
+
     &-radios {
       display: flex;
       justify-content: space-between;
@@ -441,6 +455,12 @@
 
       &.parameter-options > * {
         margin: 0;
+        //width: 100%;
+
+        &:nth-child(odd) {
+          margin-right: 10px;
+        }
+
       }
 
       & > :not(:last-child):not(:nth-last-child(2)) {
@@ -448,13 +468,13 @@
       }
 
       & .chip-basic {
-        width: 125px;
+        width: calc((100% - 10px) / 2);
       }
     }
 
     &-inputs {
       &.parameter-options {
-        margin: 0;
+        margin: 30px 0 20px;
       }
     }
   }
@@ -685,90 +705,6 @@
       background-image: url("./images/icons/check.svg");
       background-size: cover;
       background-repeat: no-repeat;
-    }
-  }
-}
-
-.disclaimer {
-  position: fixed;
-  z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.8);
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  & .viber {
-    background-color: $violet;
-    margin: $spacemid-mob 0;
-    color: white;
-    font-weight: 600;
-
-    &:hover {
-      color: white;
-      opacity: 0.8;
-    }
-  }
-
-  &-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: white;
-    padding: $spacebig-mob 100px $spacemid-mob;
-    box-sizing: border-box;
-    margin: 0 15%;
-  }
-
-  & .text {
-    max-width: 720px;
-  }
-
-  & a {
-    color: $violet;
-    font-weight: 700;
-  }
-
-  & h2 {
-    margin-bottom: $spacebig-mob;
-  }
-
-  & .btn {
-    padding: 0 20px;
-    margin-top: $spacebig-mob;
-  }
-
-  & li {
-    margin-bottom: 15px;
-
-    &:last-of-type {
-      margin-bottom: 0;
-      opacity: 0.6;
-    }
-  }
-}
-
-.sink-examples {
-  display: flex;
-
-  & > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
-    margin-top: 15px;
-
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
-
-    & > .text {
-      opacity: 0.7;
     }
   }
 }

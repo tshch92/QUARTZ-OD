@@ -128,8 +128,14 @@ function lookalike(e) {
 }
 
 document.querySelector("#samples123").addEventListener("click", function (e) {
+
   if (e.target.className === "lookalike text-bold") {
     lookalike(e);
   }
+
+  if (e.target.className === "aboutsinks") {
+    document.querySelector("#about-sinks").style = "display: flex";
+  }
+
   return;
 });

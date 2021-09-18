@@ -12,13 +12,25 @@ const cutParameters = {
 const limits = {
   minIlength: 500,
   maxIlength: 7000,
-  maxIslLength: 3000,
-  minWidth: 200,
   maxLlength: 9000,
   maxUlength: 10000,
+  minWidth: 200,
   maxWidth: 1400,
+
+  maxIslLength: 3000,
+
+  minLegHeight: 200,
+  maxLegHeight: 1500,
+
+  minPanelHeight: 40,
+  maxPanelHeight: 1400,
+
   smallRemainder: 0.05,
   bigRemainder: 0.5,
+
+  smallsink: 300,
+  bigSinkLength: 2800,
+  bigSinkWidth: 550,
 };
 
 let kitchen = {
@@ -256,7 +268,91 @@ function addLowerLayer(arr) {
   return lowerParts;
 }
 
-function setDetails(kitchen, format) {
+function processCutouts(kitchen) {
+  let quartzSinkDetails = [];
+  kitchen.qsinkslistR = [];
+  kitchen.qsinkslistL = [];
+
+  for (i in kitchen.cutouts) {
+    switch (true) {
+      case kitchen.cutouts[i].type === "quartz" &&
+        kitchen.cutouts[i].option === "round":
+        kitchen.qsinkslistR.push(kitchen.cutouts[i].size);
+        break;
+
+      case kitchen.cutouts[i].type === "quartz" &&
+        kitchen.cutouts[i].option === "line":
+        kitchen.qsinkslistL.push(kitchen.cutouts[i].size);
+        break;
+      default:
+        break;
+    }
+  }
+
+  if (kitchen.qsinkslistR.length) {
+    kitchen.qsinkslistR.forEach((sink) => {
+      let l, w, h;
+
+      switch (sink) {
+        case "540x440":
+          l = 540;
+          w = 440;
+          h = 200;
+          break;
+
+        case "670x435":
+          l = 670;
+          w = 435;
+          h = 200;
+          break;
+
+        case "370x400":
+          l = 400;
+          w = 370;
+          h = 200;
+          break;
+
+        case "540x400":
+          l = 540;
+          w = 400;
+          h = 200;
+          break;
+        default:
+          break;
+      }
+
+      quartzSinkDetails = quartzSinkDetails.concat([
+        [addAllowance(l, 2), addAllowance(w, 2), "дно"],
+        [addAllowance(h, 1), addAllowance(l, 2), "стенка мойки"],
+        [addAllowance(h, 1), addAllowance(l, 2), "стенка мойки"],
+        [addAllowance(h, 1), w, "стенка мойки"],
+        [addAllowance(h, 1), w, "стенка мойки"],
+      ]);
+    });
+  }
+
+  if (kitchen.qsinkslistL.length) {
+    kitchen.qsinkslistL.forEach((sink) => {
+      let l, w, h;
+
+      l = sink[0];
+      w = sink[1];
+      h = 180;
+
+      quartzSinkDetails = quartzSinkDetails.concat([
+        [l, addAllowance(w, 2), "дно"],
+        [addAllowance(h, 1), addAllowance(l, 2), "стенка мойки"],
+        [addAllowance(h, 1), addAllowance(l, 2), "стенка мойки"],
+        [addAllowance(h, 1), w, "стенка мойки"],
+        [addAllowance(h, 1), w, "стенка мойки"],
+      ]);
+    });
+  }
+
+  return quartzSinkDetails;
+}
+
+function setDetailsSileSink(kitchen, format) {
   //console.log('setdetails');
   let myList = [];
 
@@ -523,6 +619,20 @@ function setDetails(kitchen, format) {
   return myList;
 }
 
+function setDetails(kitchen, format) {
+  let myList = setDetailsSileSink(kitchen, format);
+
+  // add quartz sink details
+
+  myList.forEach((set, key) => {
+    myList[key] = myList[key].concat(processCutouts(kitchen));
+  });
+
+  //console.log(myList);
+
+  return myList;
+}
+
 function compareArrs(arr1, arr2) {
   if (arr1[0] === arr2[0] && arr1[1] === arr2[1]) {
     return true;
@@ -561,7 +671,6 @@ let formats = getFormatList(samplesArray);
 let formatsObj = new Object();
 
 function calcSpending(array) {
-  // console.log('caclspending');
   array.forEach((format) => {
     //console.log(`Slab format: ${format[0]}x${format[1]} mm`);
 
@@ -569,14 +678,7 @@ function calcSpending(array) {
 
     let slabSet = [];
 
-    /*     let slabSet = [
-      [1, 0.2],
-      [1.5, 0.7],
-      [1, 0.05],
-      [1, 0.8],
-      [1.5, 0.333],
-      [1, 0.49]
-    ] */
+
 
     set1.forEach((element) => {
       let countSlabs =
@@ -586,12 +688,11 @@ function calcSpending(array) {
         1 - getArea(element) / ((format[0] * format[1] * countSlabs) / 1000000);
 
       slabSet.push([countSlabs, countRemainder]);
-      /*console.log(format[0] + ' x ' + format[1]);
-      console.log(format[0]*format[1]/1000000);
-      console.log('Area used: ' + getArea(element) + " m2");
-      console.log('Slabs spent: '+ countSlabs);
-      console.log(countRemainder); */
     });
+
+    //start(data);
+    //const result = checkTheBestMethod();
+    //spent: 0.5 /1 /1.5 /2 ;
 
     slabSet.sort(([a, b], [c, d]) => a - c || d - b);
 
@@ -609,6 +710,42 @@ function calcSpending(array) {
       default:
         formatsObj[format][2] = "";
         break;
+    }
+
+    if (kitchen.qsinkslistR.length) {
+      let set2 = setDetailsSileSink(kitchen, format);
+
+      let slabSet = [];
+
+      set2.forEach((element) => {
+        let countSlabs =
+          Math.ceil(getArea(element) / ((format[0] * format[1]) / 2000000)) *
+          0.5;
+
+        let countRemainder =
+          1 -
+          getArea(element) / ((format[0] * format[1] * countSlabs) / 1000000);
+
+        slabSet.push([countSlabs, countRemainder]);
+      });
+
+      slabSet.sort(([a, b], [c, d]) => a - c || d - b);
+
+      formatsObj[format] = formatsObj[format].concat(slabSet[0]);
+
+      switch (true) {
+        case formatsObj[format][4] <= limits.smallRemainder:
+          formatsObj[format][5] = "priceup";
+          break;
+
+        case formatsObj[format][4] >= limits.bigRemainder:
+          formatsObj[format][5] = "pricedown";
+          break;
+
+        default:
+          formatsObj[format][5] = "";
+          break;
+      }
     }
   });
 
@@ -641,6 +778,7 @@ function timeChecker(t) {
   timeNow = new Date().getTime();
 
   if (timeNow - t > 300) {
+    dimensionsAlert();
     recalc();
     renderSamples();
     //console.log("shot!" + (timeNow - t));
@@ -716,7 +854,6 @@ function dimensionsAlert() {
   let I = Boolean(kitchen.shape === "I");
   let L = Boolean(kitchen.shape === "L");
   let U = Boolean(kitchen.shape === "U");
-  let island = Boolean(kitchen.island);
 
   let arrLlengths = [kitchen.details[0].l, kitchen.details[1].l];
 
@@ -760,17 +897,6 @@ function dimensionsAlert() {
 
   let Iwidth = document.querySelector("#w1");
   let Ilength = document.querySelector("#l1");
-  let isllength = document.querySelector("#l-i");
-  let islwidth = document.querySelector("#w-i");
-
-  if (
-    islwidth.value &&
-    (islwidth.value <= limits.minWidth || islwidth.value > limits.maxWidth)
-  ) {
-    islwidth.classList.add("error-input");
-  } else {
-    islwidth.classList.remove("error-input");
-  }
 
   if (
     Iwidth.value &&
@@ -802,16 +928,6 @@ function dimensionsAlert() {
       element.classList.remove("error-input");
     }
   });
-
-  if (
-    isllength.value &&
-    (isllength.value <= limits.minIlength ||
-      isllength.value > limits.maxIslLength)
-  ) {
-    isllength.classList.add("error-input");
-  } else {
-    isllength.classList.remove("error-input");
-  }
 
   if (
     Ilength.value &&
@@ -850,12 +966,6 @@ function dimensionsAlert() {
     document.querySelector(".I-length-small").style = "display: none";
   }
 
-  if (island && kitchen.island.l <= limits.minIlength) {
-    document.querySelector(".isl-length-small").style = "display: block";
-  } else {
-    document.querySelector(".isl-length-small").style = "display: none";
-  }
-
   //проверка на слишком большую длину
 
   switch (true) {
@@ -878,12 +988,6 @@ function dimensionsAlert() {
       break;
   }
 
-  if (island && kitchen.island.l > limits.maxIslLength) {
-    document.querySelector(".isl-length-big").style = "display: block";
-  } else {
-    document.querySelector(".isl-length-big").style = "display: none";
-  }
-
   //проверка на слишком маленькую ширину
 
   if (
@@ -896,12 +1000,6 @@ function dimensionsAlert() {
     document.querySelector(".I-width-small").style = "display: none";
   }
 
-  if (island && kitchen.island.w <= limits.minWidth) {
-    document.querySelector(".isl-width-small").style = "display: block";
-  } else {
-    document.querySelector(".isl-width-small").style = "display: none";
-  }
-
   //проверка на слишком большую ширину
 
   if (
@@ -912,12 +1010,6 @@ function dimensionsAlert() {
     document.querySelector(".I-width-big").style = "display: block";
   } else {
     document.querySelector(".I-width-big").style = "display: none";
-  }
-
-  if (island && kitchen.island.w > limits.maxWidth) {
-    document.querySelector(".isl-width-big").style = "display: block";
-  } else {
-    document.querySelector(".isl-width-big").style = "display: none";
   }
 }
 
@@ -1475,8 +1567,14 @@ function resetKitchen() {
   document.querySelector("#cutouts-here").innerHTML = "";
   let custominputs = document.querySelectorAll(".customInput");
 
+  let inputs = document.querySelectorAll("#kitchen-dimensions input");
+
   for (let i = 0; i < Object.keys(custominputs).length; i++) {
     custominputs[i].parentNode.removeChild(custominputs[i]);
+  }
+
+  for (let i = 0; i < Object.keys(inputs).length; i++) {
+    inputs[i].value = "";
   }
 
   adjustCustom();

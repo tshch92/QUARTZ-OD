@@ -22,6 +22,7 @@ const GLUE = 40;
 // стоимость моек и вырезов
 const QUARTZSINKLINE = 300;
 const QUARTZSINKROUND = 300;
+const QUARTZSINKROUNDSILE = 200;
 
 const CANNELURES = 100;
 
@@ -131,37 +132,53 @@ function getCosts(array) {
 
     totalCost = AddStaticCosts(totalCost);
 
-    if (kitchen.qsinkslist) {
-      totalCost += kitchen.qsinkslist.length * QUARTZSINKROUND;
+    if (Object.keys(kitchen.cutouts).length) {
+      let levelmount = 0;
+      let undermountCook = 0;
+      let cannelures = 0;
+      let quartzRound = 0;
+      let quartzLine = 0;
 
-      if (element.brand === "Silestone") {
-        kitchen.qsinkslist.forEach((sink) => {
-          qsinkprice = SINKS.find(
-            (e) =>
-              e.color === element.color &&
-              e.surface === element.surface &&
-              e.prices[sink]
-          );
+      for (i in kitchen.cutouts) {
+        switch (true) {
+          case kitchen.cutouts[i].type === "levelmount":
+            levelmount++;
+            break;
 
-          if (qsinkprice) {
-            qsinkprice = qsinkprice.prices[sink];
+          case kitchen.cutouts[i].type === "undermount" &&
+            kitchen.cutouts[i].class === "cooktop":
+            undermountCook++;
+            break;
 
-            let fabricSilestoneTotalcost = totalCost;
+          case kitchen.cutouts[i].type === "quartz" &&
+            kitchen.cutouts[i].option === "round":
+            quartzRound++;
+            break;
 
-            qsinkprice *= EURRATE;
+          case kitchen.cutouts[i].type === "quartz" &&
+            kitchen.cutouts[i].option === "line":
+            quartzLine++;
+            break;
+          default:
+            break;
+        }
 
-            fabricSilestoneTotalcost += qsinkprice;
-
-            fabricSilestoneTotalcost *= GREEDRATE;
-
-            element.fabricSilestoneTotalcost = Math.round(
-              fabricSilestoneTotalcost
-            );
-          } else {
-            element.fabricSilestoneTotalcost = 0;
-          }
-        });
+        if (
+          (kitchen.cutouts[i].type === "undermount" ||
+            (kitchen.cutouts[i].type === "quartz" &&
+              kitchen.cutouts[i].option === "round")) &&
+          kitchen.cutouts[i].cannelures
+        ) {
+          cannelures++;
+        }
       }
+
+      totalCost +=
+        levelmount * LEVELMOUNT +
+        undermountCook * UNDERMOUNTCOOK +
+        cannelures * CANNELURES +
+        quartzLine * QUARTZSINKLINE +
+        quartzRound * QUARTZSINKROUND;
     }
 
     //console.log("ИТОГО для мебельщика: " + Math.round(totalCost));
@@ -169,10 +186,123 @@ function getCosts(array) {
     totalCost *= GREEDRATE;
     element.totalCost = Math.round(totalCost);
 
-    //console.log(element);
+    //
+    //
+    //
 
-    //console.log("умножаем на коэффициент жадности " + GREEDRATE);
-    //console.log("--ИТОГО для конечника: " + element.totalCost);
+    // доп вычисления для столешки с мойкой сайлстоун
+
+    if (kitchen.qsinkslistR.length && element.brand === "Silestone") {
+      let allSinksFound = false;
+      let fabricSilestoneTotalcost = 0;
+
+      for (let i = 0; i < kitchen.qsinkslistR.length; i++) {
+        qsinkprice = SINKS.find(
+          (e) =>
+            e.color === element.color &&
+            e.surface === element.surface &&
+            e.prices[kitchen.qsinkslistR[i]]
+        );
+
+        if (qsinkprice) {
+          allSinksFound = true;
+
+          qsinkprice = qsinkprice.prices[kitchen.qsinkslistR[i]];
+
+          qsinkprice *= EURRATE;
+
+          fabricSilestoneTotalcost += qsinkprice;
+        } else {
+          element.fabricSilestoneTotalcost = 0;
+          allSinksFound = false;
+          break;
+        }
+      }
+
+      if (allSinksFound) {
+        let SilestoneSlabSpent = formatsObj[element.slab][3];
+
+        fabricSilestoneTotalcost +=
+          element.price.usd *
+          (1 - discounts[element.brand]) *
+          SilestoneSlabSpent;
+
+        fabricSilestoneTotalcost += DELIVERY.kiev * SilestoneSlabSpent;
+
+        if (kitchen.thickness === 40) {
+          fabricSilestoneTotalcost += GLUE * SilestoneSlabSpent;
+          //console.log("клей: " + GLUE * slabSpent);
+        }
+
+        if (SilestoneSlabSpent === 0.5) {
+          fabricSilestoneTotalcost += WAGE[kitchen.thickness]["0.5"];
+          //console.log("работа: " + WAGE[kitchen.thickness]["0.5"]);
+        } else {
+          fabricSilestoneTotalcost +=
+            WAGE[kitchen.thickness]["1"] * SilestoneSlabSpent;
+          //console.log("работа: " + WAGE[kitchen.thickness]["1"] * slabSpent);
+        }
+
+        fabricSilestoneTotalcost = AddStaticCosts(fabricSilestoneTotalcost);
+
+        if (Object.keys(kitchen.cutouts).length) {
+          let levelmount = 0;
+          let undermountCook = 0;
+          let cannelures = 0;
+          let quartzRound = 0;
+          let quartzLine = 0;
+
+          for (i in kitchen.cutouts) {
+            switch (true) {
+              case kitchen.cutouts[i].type === "levelmount":
+                levelmount++;
+                break;
+
+              case kitchen.cutouts[i].type === "undermount" &&
+                kitchen.cutouts[i].class === "cooktop":
+                undermountCook++;
+                break;
+
+              case kitchen.cutouts[i].type === "quartz" &&
+                kitchen.cutouts[i].option === "round":
+                quartzRound++;
+                break;
+
+              case kitchen.cutouts[i].type === "quartz" &&
+                kitchen.cutouts[i].option === "line":
+                quartzLine++;
+                break;
+              default:
+                break;
+            }
+
+            if (
+              (kitchen.cutouts[i].type === "undermount" ||
+                (kitchen.cutouts[i].type === "quartz" &&
+                  kitchen.cutouts[i].option === "round")) &&
+              kitchen.cutouts[i].cannelures
+            ) {
+              cannelures++;
+            }
+          }
+
+          fabricSilestoneTotalcost +=
+            levelmount * LEVELMOUNT +
+            undermountCook * UNDERMOUNTCOOK +
+            cannelures * CANNELURES +
+            quartzLine * QUARTZSINKLINE;
+          quartzRound * QUARTZSINKROUNDSILE;
+        }
+
+        fabricSilestoneTotalcost *= GREEDRATE;
+
+        element.fabricSilestoneTotalcost = Math.round(fabricSilestoneTotalcost);
+      } else {
+        element.fabricSilestoneTotalcost = 0;
+      }
+    } else {
+      element.fabricSilestoneTotalcost = 0;
+    }
   });
 }
 
@@ -227,57 +357,7 @@ function AddStaticCosts(num) {
       }
     }
 
-    totalCost += (HANDPOLISH * polishArea) / 1000000;
-  }
-
-  if (Object.keys(kitchen.cutouts).length) {
-    let levelmount = 0;
-    let undermountCook = 0;
-    let cannelures = 0;
-    let quartzRound = 0;
-    let quartzLine = 0;
-    kitchen.qsinkslist = [];
-
-    for (i in kitchen.cutouts) {
-      switch (true) {
-        case kitchen.cutouts[i].type === "levelmount":
-          levelmount++;
-          break;
-
-        case kitchen.cutouts[i].type === "undermount" &&
-          kitchen.cutouts[i].class === "cooktop":
-          undermountCook++;
-          break;
-
-        case kitchen.cutouts[i].type === "quartz" &&
-          kitchen.cutouts[i].option === "round":
-          quartzRound++;
-          kitchen.qsinkslist.push(kitchen.cutouts[i].size);
-          break;
-
-        case kitchen.cutouts[i].type === "quartz" &&
-          kitchen.cutouts[i].option === "line":
-          quartzLine++;
-          break;
-        default:
-          break;
-      }
-
-      if (
-        (kitchen.cutouts[i].type === "undermount" ||
-          (kitchen.cutouts[i].type === "quartz" &&
-            kitchen.cutouts[i].option === "round")) &&
-        kitchen.cutouts[i].cannelures
-      ) {
-        cannelures++;
-      }
-    }
-
-    num +=
-      levelmount * LEVELMOUNT +
-      undermountCook * UNDERMOUNTCOOK +
-      cannelures * CANNELURES +
-      quartzLine * QUARTZSINKLINE;
+    num += (HANDPOLISH * polishArea) / 1000000;
   }
 
   return num;

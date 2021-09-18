@@ -88,6 +88,7 @@
   background-color: black;
   height: 44px;
   padding: 0 10px;
+  box-sizing: border-box;
 
   &:hover {
     color: black;
@@ -145,7 +146,7 @@
       flex-direction: column;
       justify-content: flex-start;
       height: 48px;
-      width: 120px;
+      //width: 120px;
       padding: 3px 0 0;
       line-height: 15px;
 
@@ -175,7 +176,7 @@
       flex-direction: column;
       justify-content: center;
       height: 64px;
-      width: 80px;
+      //width: 80px;
       padding: 0;
       line-height: 15px;
 
@@ -422,6 +423,14 @@
   }
 }
 
+@mixin flag {
+  content: "";
+  background-position: center;
+  width: 24px;
+  height: 16px;
+  margin-right: 8px;
+}
+
 .chip {
   &-basic {
     display: inline-block;
@@ -444,57 +453,34 @@
     }
 
     & #Avant + :before {
-      content: "";
+      @include flag;
       background-image: url("./images/icons/country/China.jpg");
-      background-position: center;
-      width: 24px;
-      height: 16px;
-      margin-right: 8px;
     }
 
     & #Reston + :before {
-      content: "";
+      @include flag;
       background-image: url("./images/icons/country/China.jpg");
-      background-position: center;
-      width: 24px;
-      height: 16px;
-      margin-right: 8px;
     }
 
     & #Atem + :before {
-      content: "";
+      @include flag;
       background-image: url("./images/icons/country/UA.jpg");
       background-position: center;
-      width: 24px;
-      height: 16px;
-      margin-right: 8px;
     }
 
     & #Vicostone + :before {
-      content: "";
+      @include flag;
       background-image: url("./images/icons/country/Vietnam.jpg");
-      background-position: center;
-      width: 24px;
-      height: 16px;
-      margin-right: 8px;
     }
 
     & #Caesarstone + :before {
-      content: "";
+      @include flag;
       background-image: url("./images/icons/country/Israel.jpg");
-      background-position: center;
-      width: 24px;
-      height: 16px;
-      margin-right: 8px;
     }
 
     & #Belenco + :before {
-      content: "";
+      @include flag;
       background-image: url("./images/icons/country/Turkey.jpg");
-      background-position: center;
-      width: 24px;
-      height: 16px;
-      margin-right: 8px;
     }
   }
 
@@ -593,6 +579,16 @@
         opacity: 1;
       }
     }
+  }
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+  padding: 10px;
+
+  &:focus {
+      padding: 9px;
   }
 }
 

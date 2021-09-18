@@ -13,16 +13,12 @@ function SAMPLEBASE(sample) {
   <div class="sample-image">
       <picture class="${sample.pattern}">
           <source media="(max-width: 360px)" srcset=${sample.picture} />
-          <source media="(max-width: 414px)" srcset=${
-            sample.picture354
-          } />
-          <source media="(max-width: 766px)" srcset=${
-            sample.picture706
-          } />
+          <source media="(max-width: 414px)" srcset=${sample.picture354} />
+          <source media="(max-width: 766px)" srcset=${sample.picture706} />
 
           <img src=${sample.picture} alt="${sample.brand} ${
-sample.color
-}" loading="lazy" />
+    sample.color
+  }" loading="lazy" />
       </picture>
       <div class="sample-labels">
           <span class=${sample.recommend}></span>
@@ -34,12 +30,14 @@ sample.color
       <div class="sample-top">
           <div class="sample-brand text">${sample.brand}</div>
           <div class="sample-slabs">${formatsObj[sample.slab][0]}</div>
-      </div> `};
+      </div> `;
+}
 
 function sampleTemplate(sample) {
-
   if (sample.fabricSilestoneTotalcost) {
-    return SAMPLEBASE(sample) + `
+    return (
+      SAMPLEBASE(sample) +
+      `
         <div class="sample-bottom">
             <div class="sample-name text-bold">${sample.color}</div>
             <div class="sample-price text-bold"></div>
@@ -53,15 +51,19 @@ function sampleTemplate(sample) {
         <div class="sample-bottom" style="color: teal">
             <div class="text" style="display:flex; align-items: center;">
             <button class="aboutsinks" aria-label="more about quartz sinks"></button>
-            c фабричной мойкой </div>
-            <div class="sample-price text-bold">от ${sample.fabricSilestoneTotalcost}$<span class="${formatsObj[sample.slab][2]}"></span></div>
+            c фабричной мойкой: </div>
+            <div class="sample-price text-bold">от ${
+              sample.fabricSilestoneTotalcost
+            }$<span class="${formatsObj[sample.slab][2]}"></span></div>
         </div>
     </div>
     </div>
     `
+    );
   } else {
-
-  return SAMPLEBASE(sample) + `
+    return (
+      SAMPLEBASE(sample) +
+      `
             <div class="sample-bottom">
                 <div class="sample-name text-bold">${sample.color}</div>
                 <div class="sample-price text-bold">от ${
@@ -70,39 +72,53 @@ function sampleTemplate(sample) {
             </div>
         </div>
     </div>
-      `};
+      `
+    );
+  }
 }
 
 function sampleLookalike(sample) {
-  return `
-        <div class="sample ${sample.surface}">
-          <div class="sample-image">
-            <picture class="${sample.pattern}">
-                <source media="(max-width: 360px)" srcset=${sample.picture} />
-                <source media="(max-width: 414px)" srcset=${
-                  sample.picture354
-                } />
-                <source media="(max-width: 766px)" srcset=${
-                  sample.picture706
-                } />
-
-                <img src=${sample.picture} alt="${sample.brand} ${
-    sample.color
-  }" loading="lazy" />
-            </picture>
-            <div class="sample-labels">
-                <span class=${sample.recommend}></span>
-                <span class=${sample.preorder}></span>
-                <span class=${sample.out}></span>
+  if (sample.fabricSilestoneTotalcost) {
+    return (
+      SAMPLEBASE(sample) +
+      `
+                  <div class="sample-bottom">
+                      <div class="sample-name text-bold">${sample.color}</div>
+                      <div class="sample-price text-bold"></div>
+                  </div>
+                  <div class="sample-bottom">
+                      <div class="text">c клееной мойкой:</div>
+                      <div class="sample-price text-bold">от ${Math.round(
+                        sample.totalCost
+                      )}$<span class="${
+        formatsObj[sample.slab][2]
+      }"></span></div>
+                  </div>
+                  <div class="sample-bottom" style="color: teal">
+                      <div class="text" style="display:flex; align-items: center;">
+                      <button class="aboutsinks" aria-label="more about quartz sinks"></button>
+                      c фабричной мойкой:</div>
+                      <div class="sample-price text-bold">от ${
+                        sample.fabricSilestoneTotalcost
+                      }$<span class="${
+        formatsObj[sample.slab][2]
+      }"></span></div>
+                  </div>
+                <button class="lookalike text-bold" data-colorgroup='${
+                  sample.colorGroup
+                }' data-surface='${sample.surface}' data-pattern='${
+        sample.pattern
+      }'>
+                        Искать похожие цвета
+                </button>
             </div>
-          </div>
-            <div class="sample-text">
-                <div class="sample-top">
-                    <div class="sample-brand text">${sample.brand}</div>
-                    <div class="sample-slabs">${
-                      formatsObj[sample.slab][0]
-                    }</div>
-                </div>
+        </div>
+        `
+    );
+  } else {
+    return (
+      SAMPLEBASE(sample) +
+      `
                 <div class="sample-bottom">
                     <div class="sample-name text-bold">${sample.color}</div>
                     <div class="sample-price text-bold">от ${Math.round(
@@ -112,13 +128,15 @@ function sampleLookalike(sample) {
                 <button class="lookalike text-bold" data-colorgroup='${
                   sample.colorGroup
                 }' data-surface='${sample.surface}' data-pattern='${
-    sample.pattern
-  }'>
+        sample.pattern
+      }'>
                         Искать похожие цвета
                 </button>
             </div>
         </div>
-        `;
+        `
+    );
+  }
 }
 
 function addCustom(detailType) {
@@ -463,19 +481,19 @@ function addCutout(detailType) {
                             <label for="${tmpNode.id}-700x400" class="text">540x400</label>
                           </div>
                         </div>
-                        <div>
+                        
                           <div class="parameter-options cutout-size-inputs" style="display: none">
                               <input type="text" id='${tmpNode.id}-l' class="input-small text-bold" placeholder="600">
                               <span class="text">x</span>
                               <input type="text" id='${tmpNode.id}-w' class="input-small text-bold" placeholder="350">
                           </div>
-                        </div>
-                        <div>
+                        
+                        
                           <div class="parameter-options cutout-cannelures cannelures">
                             <input type="checkbox" class="tick" id='${tmpNode.id}-cannelures'>
                             <label for='${tmpNode.id}-cannelures' class='text-bold'>мокрый стол (каннелюры)</label>
                           </div>
-                        </div>
+                        
 
 `;
 
