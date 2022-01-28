@@ -5,13 +5,14 @@
         <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
           <meta name="description"
-          content="Онлайн просчет стоимости столешницы. 300+ цветов камня на выбор!">
+          content="Онлайн просчет стоимости столешницы. 500+ цветов камня на выбор!">
           <meta name="keywords"
           content="Caesarstone, Avant, Atem, RestonQ, Reston, Belenco, quartz, кварц, агломерат, столешница">
           <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
           <title>
             Кварцевые столешницы Одесса - Калькулятор цены
         </title>
+
         <!-- Facebook Pixel Code -->
         <script>
             !function(f,b,e,v,n,t,s)
@@ -30,7 +31,32 @@
         /></noscript>
         <!-- End Facebook Pixel Code -->
                     <meta name="facebook-domain-verification" content="mvkowyvliog2q1sl95qezxbtj02gs0" />
-        <!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-1WR9EMX0PC"></script><script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-1WR9EMX0PC');</script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1WR9EMX0PC"></script>
+        <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} 
+        gtag('js', new Date()); 
+        gtag('config', 'G-1WR9EMX0PC');
+        gtag('config', 'AW-799609805');
+        </script>
+
+        <!-- Event snippet for Open calculator conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-799609805/st-NCJW2xP0CEM2npP0C',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+
+
         <link rel="stylesheet" href="./normalize.css">
         <link rel="stylesheet" href="./fonts/stylesheet.css">
         <link rel="stylesheet" href="./styles.css">
@@ -42,10 +68,10 @@
                 <h2 class="title-bold">Дисклеймер</h2>
                 <ol class='text'>
                     <li>
-                        На сайте отображаются рекомендованные розничные цены. Если вы мебельщик и не понимаете что это значит - напишите нам в <a href="viber://chat?number=%2B380964163862" class="text-bold">Viber +38 096 416 38 62</a> ;)
+                        На сайте отображаются рекомендованные розничные цены. Если вы мебельщик и не понимаете что это значит - напишите нам в <a href="viber://chat?number=%2B380956568480" class="text-bold">Viber +38 096 416 38 62</a> ;)
                     </li>
                     <li>
-                        Окончательная стоимость вашей столешницы будет сформирована после согласования расположения вырезов и стыков, и некоторых других деталей. Для того, чтобы узнать цену точно-точно - напишите нам в <a href="viber://chat?number=%2B380964163862" class="text-bold">Viber</a>.
+                        Окончательная стоимость вашей столешницы будет сформирована после согласования расположения вырезов и стыков, и некоторых других деталей. Для того, чтобы узнать цену точно-точно - напишите нам в <a href="viber://chat?number=%2B380956568480" class="text-bold">Viber</a>.
                     </li>
                     <li>
                         Подъём деталей на этаж без лифта (силами грузчиков) в стоимость не включен.
@@ -60,8 +86,63 @@
                 <button class="btn text-bold OK" onclick="closePopup(this)">Ок, я всё понял</button>
             </div>
         </aside>
-        <aside class='disclaimer' id='complexkitchenshape' style="display: none">
+        <aside class='disclaimer' id="saveproject" style="display: none">
             <div class='disclaimer-card'>
+
+                <button class="btn-close" aria-label="close popup" onclick="closePopup(this)"></button>
+                <div class="save1 form" style="display: none">
+                    <span class="cutout-title text-big">Сохранить просчёт</span>
+                    <div class="form__item">
+                        <div class="form__label text-bold">Куда Вам удобнее сохранить просчёт?</div>
+                        <div class="options">
+                            <div class="options__item respondTelegram">
+                                <input id="saveTelegram" type="radio" value="telegram" name="respond">
+                                <label for="saveTelegram" class="btn"><span class="text-bold">в Telegram</span></label>
+                            </div>
+                            <div class="options__item respondEmail">
+                                <input id="saveEmail" type="radio" value="email" name="respond" class="options__input">
+                                <label for="saveEmail" class="btn"><span class="text-bold">на e-mail</span></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="btn text-bold OK next" onclick="openNext(this)">Далее</button>
+                    </div>
+                </div>
+                
+                <div class="save2 form" style="display: none">
+                    <span class="cutout-title text-big">Сохранить просчёт</span>
+                    <div class="form__item">
+                        <div class="form__label text-bold">Ваш номер Telegram:</div>
+                        <div class="form__item">
+                            <input id="save-phone" type="tel" name="phone" class="input text _req" placeholder="+38 000 000 00 00 *">
+                        </div>
+                    </div>
+                    <div>
+                        <button class="text-bold back" onclick="openPrev(this)">Назад</button>
+                        <button class="btn text-bold OK" onclick="catchNewUser(this)">OK</button>
+                    </div>
+                </div>
+                
+                <div class="save3 form">
+                    <span class="cutout-title text-big">Сохранить просчёт заказа</span>
+                    <div class="form__item">
+                        <div class="form__label text-bold">Ваш адрес e-mail:</div>
+                        <div class="form__item">
+                            <input id="save-email" type="email" name="email" class="input text _req" placeholder="my@email.com *">
+                        </div>
+                    </div>
+                    <span class="text">Просчёты будут автоматически приходить на указанный Вами e-mail.</span>
+                    <div>
+                        <!-- <button class="text-bold back" onclick="openPrev(this)">Назад</button> -->
+                        <button class="btn text-bold OK" onclick="catchNewUser(this)">OK</button>
+                    </div>
+                </div>
+
+            </div>
+        </aside>
+        <aside class='disclaimer' id='complexkitchenshape' style="display: none">
+            <div class='disclaimer-card form'>
                 <button class="btn-close" aria-label="close popup" onclick="closePopup(this)"></button>
                 <h2 class="title-bold">Другая форма кухни?</h2>
                 <form class="form__body">
@@ -95,15 +176,15 @@
                         <div class="form__item">
                             <div class="form__label text-bold">Где Вам удобнее получить ответ?</div>
                             <div class="options">
-                                <div class="options__item">
-                                    <input id="respondViber" type="radio" value="viber" name="respond" class="options__input" checked>
+                                <div class="options__item respondViber">
+                                    <input id="respondViber" type="radio" value="viber" name="respond" checked class="options__input">
                                     <label for="respondViber" class="btn"><span class="text-bold">Viber</span></label>
                                 </div>
-                                <div class="options__item">
+                                <div class="options__item respondTelegram">
                                     <input id="respondTelegram" type="radio" value="telegram" name="respond">
                                     <label for="respondTelegram" class="btn"><span class="text-bold">Telegram</span></label>
                                 </div>
-                                <div class="options__item">
+                                <div class="options__item respondEmail">
                                     <input id="respondEmail" type="radio" value="email" name="respond" class="options__input">
                                     <label for="respondEmail" class="btn"><span class="text-bold">E-mail</span></label>
                                 </div>
@@ -221,6 +302,10 @@
                         <div class="chip-color">
                             <input type="checkbox" id="black" name="black" value="black">
                             <label for="black" class="c-black"></label>
+                        </div>
+                        <div class="chip-color">
+                            <input type="checkbox" id="rainbow" name="rainbow" value="rainbow">
+                            <label for="rainbow" class="c-rainbow"></label>
                         </div>
                     </div>
                 </div>
@@ -497,13 +582,16 @@
                     <div class="result-sum text-bold">неизвестно</div>
                     <button class="opendisclaimer" id="opendisclaimer" aria-label="show disclaimer"></button>
                 </div>
-                <a href="viber://chat?number=%2B380964163862" class="viber text-bold" aria-label="go to Viber to place an order"></a>
+                <div class="result-buttons">
+                    <button class='save-setup text-bold' onclick="openSaveSetup()"></button>
+                    <a href="viber://chat?number=%2B380956568480" class="viber text-bold" aria-label="go to Viber to place an order"></a>
+                </div>
             </div>
         </main>
     </body>
     <script src="data.js"></script>
     <script src="quartzsinks.js"></script>
-    <script src="app.js"></script>
+    <script src="olha-packing.js"></script>
     <script src="templates.js"></script>
     <script src="script-cut.js"></script>
     <script src="script.js"></script>

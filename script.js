@@ -5,6 +5,8 @@ const DELIVERY = {
   odesa: 30,
 };
 const GREEDRATE = 1.3;
+const OLHARATE = 0.05;
+
 const WAGE = {
   //0.5sl - 300,
   20: { 0.5: 300, 1: 450 },
@@ -29,11 +31,15 @@ const CANNELURES = 100;
 const LEVELMOUNT = 50;
 const UNDERMOUNTCOOK = 50;
 
+const RASPILQUARTZUA = 23;
+
 const discounts = {
   Atem: 0,
   Avant: 0.29,
   Belenco: 0.2,
+  Compac: 0.2,
   Caesarstone: 0.27,
+  Caesarstone_quartzua: 0,
   Hanstone: 0,
   Reston: 0,
   Vicostone: 0.25,
@@ -70,6 +76,18 @@ function getCosts(array) {
           element.price.usd *
           (1 - discounts["Quartzforms_termopal"]) *
           slabSpent;
+        break;
+
+      case element.brand === "Caesarstone" &&
+        element.slab[0] === 3060 &&
+        slabSpent !== Math.round(slabSpent):
+        element.cost =
+          element.price.usd * (1 - discounts[element.brand]) * slabSpent;
+          element.cost += RASPILQUARTZUA;
+        break;
+
+      case element.brand === "Атем":
+        element.cost = element.price.usd * (1 - discounts["Atem"]) * slabSpent;
         break;
 
       default:
@@ -183,7 +201,7 @@ function getCosts(array) {
 
     //console.log("ИТОГО для мебельщика: " + Math.round(totalCost));
 
-    totalCost *= GREEDRATE;
+    totalCost *= GREEDRATE + OLHARATE;
     element.totalCost = Math.round(totalCost);
 
     //
@@ -294,7 +312,7 @@ function getCosts(array) {
           quartzRound * QUARTZSINKROUNDSILE;
         }
 
-        fabricSilestoneTotalcost *= GREEDRATE;
+        fabricSilestoneTotalcost *= GREEDRATE + OLHARATE;
 
         element.fabricSilestoneTotalcost = Math.round(fabricSilestoneTotalcost);
       } else {
@@ -421,6 +439,7 @@ uniqueSamplesArray = samplesArray.filter(function (element) {
 document
   .querySelector(".stones-collapsed")
   .addEventListener("click", function () {
+    gtag_report_conversion();
     document.querySelector(".kitchen-collapsed").style = "display: flex";
     document.querySelector("#samples123").style = "display: flex";
     document.querySelector(".colorselect").style = "display: block";
@@ -431,6 +450,7 @@ document
 document
   .querySelector(".kitchen-collapsed")
   .addEventListener("click", function () {
+    gtag_report_conversion();
     document.querySelector(".stones-collapsed").style = "display: flex";
     document.querySelector("#samples123").style = "display: none";
     document.querySelector(".colorselect").style = "display: none";

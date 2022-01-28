@@ -1,10 +1,11 @@
 const cutParameters = {
   blade: 3, //толщина пилы
-  allowance: 10, //припуск на торцовку бутерброда на 1 сторону
+  allowance: 5, //припуск на торцовку бутерброда на 1 сторону
   cornerAllowanceFaucet: 7, //припуск на угловой стык простого торца
   cornerAllowanceShaped: 40, //припуск на угловой стык фигурного торца
   cornerMillAllowance: 3, //припуск на чистовую фрезеровку углового стыка
-  lowerLayerWidth: 60, //чистовая ширина подклейки
+  lowerLayerWidth: 60, //чистовая ширина подклейки бутербродом
+  lowerLayerWidthQuarter: 40, //чистовая ширина подклейки четвертью
   backsplashHeight: 40, //высота пристенка
   minMiddlePartOffset: 100, //когда разбиваем среднюю деталь П-образной столешки, это регулирует минимальную длину маленького куска
 };
@@ -26,12 +27,14 @@ const limits = {
   maxPanelHeight: 1400,
 
   smallRemainder: 0.05,
-  bigRemainder: 0.5,
+  bigRemainder: 0.4,
 
   smallsink: 300,
   bigSinkLength: 2800,
   bigSinkWidth: 550,
 };
+
+let dimserror = false;
 
 let kitchen = {
   shape: "I",
@@ -243,28 +246,32 @@ function tryL(kitchen) {
 // добавляем в список детали подклейки. без жоп
 function addLowerLayer(arr) {
   let lowerParts = [];
+  let ll = 0;
+
+  if (kitchen.profile === "edge5") {
+    ll = lowerLayerWidth;
+  } else {
+    ll = cutParameters.lowerLayerWidthQuarter;
+  }
 
   arr.forEach((element) => {
+    lowerParts.push([element[0], addAllowance(ll), "лицо"]); //подклейка перед
+
+    /*     lowerParts.push([
+      element[0] - addAllowance(ll) - cutParameters.lowerLayerWidthQuarter,
+      cutParameters.lowerLayerWidthQuarter,
+      "жопа",
+    ]); */ //подклейка жопа
+
     lowerParts.push([
-      element[0],
-      addAllowance(cutParameters.lowerLayerWidth),
-      "лицо",
-    ]); //подклейка перед
-    lowerParts.push([
-      element[1] -
-        addAllowance(cutParameters.lowerLayerWidth) -
-        cutParameters.lowerLayerWidth,
-      addAllowance(cutParameters.lowerLayerWidth),
+      element[1] - addAllowance(ll),
+      addAllowance(ll),
       "бочина",
     ]); //подклейка видимый бок
-    /* lowerParts.push([
-      element[1] -
-        addAllowance(cutParameters.lowerLayerWidth) -
-        cutParameters.lowerLayerWidth,
-      cutParameters.lowerLayerWidth,
-      "стык",
-    ]); */ //подклейка где стык
+
+    //lowerParts.push([element[1] - addAllowance(ll), cutParameters.lowerLayerWidthQuarter, "стык"]); //подклейка где стык
   });
+
   return lowerParts;
 }
 
@@ -352,7 +359,7 @@ function processCutouts(kitchen) {
   return quartzSinkDetails;
 }
 
-function setDetailsSileSink(kitchen, format) {
+function setDetailsNoSink(kitchen, format) {
   //console.log('setdetails');
   let myList = [];
 
@@ -501,7 +508,7 @@ function setDetailsSileSink(kitchen, format) {
           [
             addAllowance(currentLeg.l, 2),
             addAllowance(currentLeg.w, 2),
-            "нога изнанка",
+            "нога изн.",
           ],
         ]);
       } else {
@@ -620,7 +627,7 @@ function setDetailsSileSink(kitchen, format) {
 }
 
 function setDetails(kitchen, format) {
-  let myList = setDetailsSileSink(kitchen, format);
+  let myList = setDetailsNoSink(kitchen, format);
 
   // add quartz sink details
 
@@ -657,8 +664,10 @@ function getFormatList(arr) {
   result.forEach((el) => {
     if (cleanres.length && !myInclude(el, cleanres)) {
       cleanres.push(el);
+      createContainer(el);
     } else if (!cleanres.length) {
       cleanres.push(el);
+      createContainer(el);
     }
   });
 
@@ -669,34 +678,60 @@ let formats = getFormatList(samplesArray);
 //let formats = [[3030, 1420]];
 
 let formatsObj = new Object();
+let formatsObjNoSink = new Object();
 
 function calcSpending(array) {
   array.forEach((format) => {
     //console.log(`Slab format: ${format[0]}x${format[1]} mm`);
 
+    container.height = format[1];
+    container.width = format[0];
+
     let set1 = setDetails(kitchen, format);
 
     let slabSet = [];
 
-
-
     set1.forEach((element) => {
-      let countSlabs =
-        Math.ceil(getArea(element) / ((format[0] * format[1]) / 2000000)) * 0.5;
+      /*       let countSlabs =
+        Math.ceil(getArea(element) / ((format[0] * format[1]) / 2000000)) * 0.5; */
+
+      BOXSET = [];
+
+      element.forEach((piece) => {
+        BOXSET.push({ width: piece[0], height: piece[1], prop: piece[2] });
+      });
+
+      //console.log('boxset');
+      //console.log(BOXSET);
+
+      boxes = BOXSET;
+
+      result = smartCutter(boxes, container);
+
+      //console.log('result:');
+      //console.log(result);
+
+      let countSlabs = result.best.total;
 
       let countRemainder =
         1 - getArea(element) / ((format[0] * format[1] * countSlabs) / 1000000);
 
-      slabSet.push([countSlabs, countRemainder]);
+      let countRemainder2 =
+        (format[0] * format[1] * countSlabs) / 1000000 -
+        getArea(element) / countSlabs;
+
+      slabSet.push([countSlabs, countRemainder, , result.best]);
     });
 
-    //start(data);
-    //const result = checkTheBestMethod();
-    //spent: 0.5 /1 /1.5 /2 ;
+    //console.log('Slabset:');
+
+    //console.log(slabSet);
 
     slabSet.sort(([a, b], [c, d]) => a - c || d - b);
 
     formatsObj[format] = slabSet[0];
+
+    showCargo(format);
 
     switch (true) {
       case formatsObj[format][1] <= limits.smallRemainder:
@@ -713,7 +748,7 @@ function calcSpending(array) {
     }
 
     if (kitchen.qsinkslistR.length) {
-      let set2 = setDetailsSileSink(kitchen, format);
+      let set2 = setDetailsNoSink(kitchen, format);
 
       let slabSet = [];
 
@@ -731,21 +766,23 @@ function calcSpending(array) {
 
       slabSet.sort(([a, b], [c, d]) => a - c || d - b);
 
-      formatsObj[format] = formatsObj[format].concat(slabSet[0]);
+      formatsObjNoSink[format] = slabSet[0];
 
       switch (true) {
-        case formatsObj[format][4] <= limits.smallRemainder:
-          formatsObj[format][5] = "priceup";
+        case formatsObjNoSink[format][1] <= limits.smallRemainder:
+          formatsObjNoSink[format][2] = "priceup";
           break;
 
-        case formatsObj[format][4] >= limits.bigRemainder:
-          formatsObj[format][5] = "pricedown";
+        case formatsObjNoSink[format][1] >= limits.bigRemainder:
+          formatsObjNoSink[format][2] = "pricedown";
           break;
 
         default:
-          formatsObj[format][5] = "";
+          formatsObjNoSink[format][2] = "";
           break;
       }
+    } else {
+      formatsObjNoSink = {};
     }
   });
 
@@ -755,9 +792,12 @@ function calcSpending(array) {
 calcSpending(formats);
 
 function recalc() {
-  calcSpending(formats);
-  getCosts(samplesArray);
-  renderMinMaxPrice();
+  if (!dimserror) {
+    calcSpending(formats);
+    getCosts(samplesArray);
+    renderMinMaxPrice();
+  }
+
   renderKitchenSummary();
 }
 
@@ -791,6 +831,7 @@ function timeChecker(t) {
 document
   .querySelector("#kitchen-dimensions")
   .addEventListener("input", function (e) {
+    gtag_report_conversion();
     let target = e.target;
     let val = Number(target.value);
 
@@ -850,6 +891,8 @@ document
 
 function dimensionsAlert() {
   //console.log('aleeeert!');
+
+  dimserror = false;
 
   let I = Boolean(kitchen.shape === "I");
   let L = Boolean(kitchen.shape === "L");
@@ -962,6 +1005,7 @@ function dimensionsAlert() {
     (U && arrUlengths.some((element) => element <= limits.minIlength))
   ) {
     document.querySelector(".I-length-small").style = "display: block";
+    dimserror = true;
   } else {
     document.querySelector(".I-length-small").style = "display: none";
   }
@@ -971,14 +1015,17 @@ function dimensionsAlert() {
   switch (true) {
     case I && kitchen.details[0].l >= limits.maxIlength:
       document.querySelector(".I-length-big").style = "display: block";
+      dimserror = true;
       break;
 
     case L && arrLlengths.reduce((acc, el) => acc + el, 0) >= limits.maxLlength:
       document.querySelector(".L-length-big").style = "display: block";
+      dimserror = true;
       break;
 
     case U && arrUlengths.reduce((acc, el) => acc + el, 0) >= limits.maxUlength:
       document.querySelector(".U-length-big").style = "display: block";
+      dimserror = true;
       break;
 
     default:
@@ -996,6 +1043,7 @@ function dimensionsAlert() {
     (U && arrUwidths.some((element) => element <= limits.minWidth))
   ) {
     document.querySelector(".I-width-small").style = "display: block";
+    dimserror = true;
   } else {
     document.querySelector(".I-width-small").style = "display: none";
   }
@@ -1008,20 +1056,19 @@ function dimensionsAlert() {
     (U && arrUwidths.some((element) => element >= limits.maxWidth))
   ) {
     document.querySelector(".I-width-big").style = "display: block";
+    dimserror = true;
   } else {
     document.querySelector(".I-width-big").style = "display: none";
   }
+
+  console.log(dimserror);
 }
 
 document.querySelector("#backsplash").addEventListener("click", (evt) => {
   //  event delegation: only act if the click originated from input[type=radio]
   if (evt.target.type === "radio") {
+    gtag_report_conversion();
     kitchen.backsplash = +evt.target.value;
-    /* console.log(
-      `Value: ${evt.target.value}, text: ${
-        document.querySelector(`label[for='${evt.target.id}']`).textContent
-      }`
-    ); */
 
     if (kitchen.backsplash) {
       document.querySelector(".backsplash-warning").style = "display: block";
@@ -1036,6 +1083,7 @@ document.querySelector("#backsplash").addEventListener("click", (evt) => {
 document.querySelector("#thickness").addEventListener("click", (evt) => {
   //  event delegation: only act if the click originated from input[type=radio]
   if (evt.target.type === "radio") {
+    gtag_report_conversion();
     kitchen.thickness = +evt.target.value;
 
     if (evt.target.value === "20") {
@@ -1063,6 +1111,7 @@ document.querySelector("#thickness").addEventListener("click", (evt) => {
 document.querySelector("#edges").addEventListener("click", (evt) => {
   //  event delegation: only act if the click originated from input[type=radio]
   if (evt.target.type === "radio") {
+    gtag_report_conversion();
     kitchen.profile = evt.target.value;
     recalc();
     renderSamples();
@@ -1072,6 +1121,7 @@ document.querySelector("#edges").addEventListener("click", (evt) => {
 document.querySelector("#shapes").addEventListener("click", (evt) => {
   //  event delegation: only act if the click originated from input[type=radio]
   if (evt.target.type === "radio") {
+    gtag_report_conversion();
     kitchen.shape = evt.target.value;
     switch (evt.target.value) {
       case "I":
@@ -1237,6 +1287,7 @@ const multipleCustom = document.querySelectorAll(".custom");
 
 for (let i = 0; i < multipleCustom.length; i++) {
   multipleCustom[i].addEventListener("click", function (e) {
+    gtag_report_conversion();
     let target = e.target;
 
     switch (true) {
@@ -1281,7 +1332,11 @@ for (let i = 0; i < multipleCustom.length; i++) {
     return;
   });
 
+  //sasasas
+
   multipleCustom[i].addEventListener("input", function (e) {
+
+    gtag_report_conversion();
     let target = e.target;
     let val = Number(target.value);
 
@@ -1347,6 +1402,8 @@ for (let i = 0; i < multipleCustom.length; i++) {
 }
 
 document.querySelector("#cutouts-here").addEventListener("input", function (e) {
+  gtag_report_conversion();
+
   let target = e.target;
 
   let tmpNode = target.parentNode.parentNode.parentNode;
@@ -1366,18 +1423,6 @@ document.querySelector("#cutouts-here").addEventListener("input", function (e) {
     );
 
     switch (true) {
-      case [...target.parentNode.classList].includes("cannelures"):
-        if (target.checked) {
-          kitchen.cutouts[tmpNode.id].cannelures = true;
-        } else {
-          kitchen.cutouts[tmpNode.id].cannelures = false;
-        }
-
-        recalc();
-        renderSamples();
-
-        break;
-
       case target.name === tmpNode.id + "-cutout-type" &&
         target.value === "levelmount":
         console.log("level!");
@@ -1468,6 +1513,8 @@ document.querySelector("#cutouts-here").addEventListener("input", function (e) {
           '[id="' + tmpNode.id + '"] .cutout-size-radios input:checked'
         ).value;
 
+
+
         recalc();
         renderSamples();
 
@@ -1505,9 +1552,20 @@ document.querySelector("#cutouts-here").addEventListener("input", function (e) {
       default:
         break;
     }
-  } else {
+  } else if ([...target.parentNode.classList].includes("cannelures")) {
+    if (target.checked) {
+      kitchen.cutouts[target.parentNode.parentNode.id].cannelures = true;
+    } else {
+      kitchen.cutouts[target.parentNode.parentNode.id].cannelures = false;
+    }
+
+    recalc();
+    renderSamples();
+  } else if (
+    [...target.parentNode.parentNode.parentNode.classList].includes("cooktop")
+  ) {
     switch (true) {
-      case target.name === tmpNode.id + "-cutout-type":
+      case target.value !== kitchen.cutouts[tmpNode.id].type:
         kitchen.cutouts[tmpNode.id].type = target.value;
         recalc();
         renderSamples();
@@ -1518,6 +1576,7 @@ document.querySelector("#cutouts-here").addEventListener("input", function (e) {
         break;
     }
   }
+  //console.log(kitchen.cutouts);
 });
 
 document.querySelector("#cutouts-here").addEventListener("click", function (e) {

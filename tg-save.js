@@ -19,14 +19,13 @@ document.addEventListener("DOMContentLoaded", function () {
       });
       let result = await response.json();
       if (response.ok) {
-        //alert(result.message);
+        console.log(result.message);
         //formPreview.innerHTML = "";
         form.reset();
         form.classList.remove("_sending");
         goToDownload();
       } else {
         alert(result.message);
-        //formPreview.innerHTML = "";
         form.reset();
         form.classList.remove("_sending");
       }
@@ -64,41 +63,40 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function goToDownload() {
-    /*         let step1height = document.querySelector(".step-1").offsetHeight;
-        document.querySelector(".step-2").style  =  'height: '+step1height+'px';
-        document.querySelector(".step-1").style = "display: none"; */
     window.location.href = "https://quartz-stone.od.ua/commercial-success.html";
   }
 });
 
 function phoneTest(input) {
-
   let phone = input.value.replace(/[^\d]/g, "");
   let res = true;
   if (phone.length === 10 && phonecodes.includes(phone.substr(0, 3))) {
-      res = false;
-  } else if (phone.length === 12 && phone.substr(0, 3) === "380" && phonecodes.includes(phone.substr(2, 3))) {
+    res = false;
+  } else if (
+    phone.length === 12 &&
+    phone.substr(0, 3) === "380" &&
+    phonecodes.includes(phone.substr(2, 3))
+  ) {
     res = false;
   }
 
-  console.log(res);
   return res;
 }
 
 const phonecodes = [
-    '039',
-    '067',
-    '068',
-    '096',
-    '097',
-    '098',
-    '050',
-    '066',
-    '095',
-    '099',
-    '063',
-    '093',
-    '091',
-    '094',
-    '092',
+  "039",
+  "067",
+  "068",
+  "096",
+  "097",
+  "098",
+  "050",
+  "066",
+  "095",
+  "099",
+  "063",
+  "093",
+  "091",
+  "094",
+  "092",
 ];

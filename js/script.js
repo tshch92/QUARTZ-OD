@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
       let result = await response.json();
       if (response.ok) {
-        //alert(result.message);
+        console.log(result.message);
         formPreview.innerHTML = "";
         form.reset();
         form.classList.remove("_sending");
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector(".form__stepone .btn").textContent =
           "Выбрать файл";
       } else {
-        //alert(result.message);
+        console.log(result.message);
         formPreview.innerHTML = "";
         form.reset();
         form.classList.remove("_sending");
@@ -71,19 +71,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function formValidate(form) {
     let error = 0;
-    let formReq = document.querySelectorAll("._req");
+    let formReq = document.querySelectorAll("#complexkitchenshape ._req");
 
     for (let index = 0; index < formReq.length; index++) {
       const input = formReq[index];
       formRemoveError(input);
 
       if (input.classList.contains("_email") && emailTest(input)) {
+        console.log('пустой email');
         formAddError(input);
         error++;
       } else if (input.classList.contains("_phone") && phoneTest(input)) {
+        console.log('пустой телефон');
         formAddError(input);
         error++;
       } else if (input.value === "") {
+        console.log('хуета какая-то');
         formAddError(input);
         error++;
       }
@@ -167,6 +170,17 @@ function phoneTest(input) {
     res = false;
   }
   return res;
+}
+
+function adjust(phone) {
+  let ph = phone.replace(/[^\d]/g, "");
+  if (ph.length === 10) {
+    phone = '+38'+ph;
+  } else if (ph.length === 12) {
+    phone = '+'+ph;
+  }
+
+  return phone;
 }
 
 const phonecodes = [

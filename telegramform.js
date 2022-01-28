@@ -75,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
 function phoneTest(input) {
 
   let phone = input.value.replace(/[^\d]/g, "");

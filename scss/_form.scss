@@ -29,83 +29,83 @@
       opacity: 1;
       visibility: visible;
     }
+  }
 
-    & .options {
-      display: flex;
+  & .options {
+    display: flex;
 
-      &__item {
-        width: 33%;
+    &__item {
+      width: 33%;
 
-        &:not(:last-child) {
-          margin-right: 10px;
-        }
+      &:not(:last-child) {
+        margin-right: 10px;
       }
     }
+  }
 
-    & input[type="radio"] {
-      display: none;
+  & input[type="radio"] {
+    display: none;
 
-      & + .btn {
-        padding: 0 4px;
-        background-color: transparent;
-        color: black;
-        margin-top: 0;
+    & + .btn {
+      padding: 0 4px;
+      background-color: transparent;
+      color: black;
+      margin-top: 0;
 
-        &::before {
-          margin-right: 6px;
-          background-size: cover;
-        }
+      &::before {
+        margin-right: 6px;
+        background-size: cover;
       }
+    }
+  }
 
-      &#respondViber {
-        & + .btn::before {
-          @include chipcolor;
-          background-image: url("./images/icons/viber-violet.svg");
-        }
+  & .respondViber {
+    & .btn::before {
+      @include chipcolor;
+      background-image: url("./images/icons/viber-violet.svg");
+    }
 
-        &:checked + label {
-          background-color: $violet;
-          color: white;
-          border: 0;
+    & input:checked + label {
+      background-color: $violet;
+      color: white;
+      border: 0;
 
-          &::before {
-            background-image: url("./images/icons/viber.svg");
-          }
-        }
+      &::before {
+        background-image: url("./images/icons/viber.svg");
       }
+    }
+  }
 
-      &#respondTelegram {
-        & + .btn::before {
-          @include chipcolor;
-          background-image: url("./images/icons/telegram-blue.svg");
-        }
+  & .respondTelegram {
+    & .btn::before {
+      @include chipcolor;
+      background-image: url("./images/icons/telegram-blue.svg");
+    }
 
-        &:checked + label {
-          background-color: $lightblue;
-          color: white;
-          border: 0;
+    & input:checked + label {
+      background-color: $lightblue;
+      color: white;
+      border: 0;
 
-          &::before {
-            background-image: url("./images/icons/telegram.svg");
-          }
-        }
+      &::before {
+        background-image: url("./images/icons/telegram.svg");
       }
+    }
+  }
 
-      &#respondEmail {
-        & + .btn::before {
-          @include chipcolor;
-          background-image: url("./images/icons/email.svg");
-        }
+  & .respondEmail {
+    & .btn::before {
+      @include chipcolor;
+      background-image: url("./images/icons/email.svg");
+    }
 
-        &:checked + label {
-          background-color: teal;
-          color: white;
-          border: 0;
+    & input:checked + label {
+      background-color: teal;
+      color: white;
+      border: 0;
 
-          &::before {
-            background-image: url("./images/icons/email-white.svg");
-          }
-        }
+      &::before {
+        background-image: url("./images/icons/email-white.svg");
       }
     }
   }
@@ -218,6 +218,55 @@
   }
 }
 
+#saveproject {
+  
+  & .form {
+    min-height: 400px;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    & .form__item {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    & .cutout-title {
+      margin: 0 auto;
+    }
+
+    & .btn.OK {
+      margin-top: 10px;
+    }
+  }
+
+  & .form__item {
+    margin: 0;
+
+    & .back {
+      margin-top: $spacebig-mob;
+    }
+    & .OK {
+      margin-top: $spacebig-mob;
+    }
+  }
+
+  & .options {
+    flex-direction: column;
+
+    &__item {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
 @media only (max-width: 1282px) {
     & .form__body input[type="radio"] + label.btn {
       & span {
@@ -246,6 +295,14 @@
   
       & > * {
         width: 100%;
+      }
+    }
+
+    & #saveproject {
+  
+      & .form {
+        min-height: 400px;
+        min-width: auto;
       }
     }
   

@@ -21,7 +21,7 @@ function getBrandList(arr) {
 }
 
 const $staticbrandlist = [
-  "Atem",
+  "Атем",
   "Avant",
   "Caesarstone",
   "Belenco",
@@ -181,6 +181,8 @@ renderKitchenSummary();
 // поиск и рендер цветов по критериям фильтра
 
 document.querySelector("#colorselect").addEventListener("change", function (e) {
+  gtag_report_conversion();
+
   function helper() {
     applyFilters();
     renderSamples();
@@ -281,6 +283,7 @@ if (window.innerWidth <= 1078) {
 }
 
 document.querySelector("#search2").addEventListener("click", function () {
+  gtag_report_conversion();
   document.querySelector("#searchInput").style = "display: flex";
 
   let filtercards = document.querySelectorAll(".filter-card");
@@ -294,6 +297,7 @@ document.querySelector("#search2").addEventListener("click", function () {
 });
 
 document.querySelector("#filter2").addEventListener("click", function () {
+  gtag_report_conversion();
   matchingSamplesArray = [];
 
   document.querySelector("#searchInput").style = "display: none";

@@ -1,6 +1,7 @@
 .calc-wrapper {
   position: relative;
 }
+
 .colorselect {
   width: 360px;
   box-sizing: border-box;
@@ -12,6 +13,18 @@
 
   & > * {
     margin-bottom: $spacemid-mob;
+  }
+}
+
+.canvas-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  & canvas {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
   }
 }
 
@@ -270,6 +283,11 @@
 
 .volcano .sample-name.text-bold:after {
   content: " volcano";
+  @include surface-special;
+}
+
+.relief .sample-name.text-bold:after {
+  content: " relief";
   @include surface-special;
 }
 
@@ -633,10 +651,20 @@
 
   &-sum {
     color: white;
+    flex-grow: 1;
 
     &::before {
-      content: "Итого:";
+      content: "Стоимость:";
       margin-right: 10px;
+      font-weight: 400;
+      opacity: 0.6;
+    }
+
+    &::after {
+      content: "(в зависимости от цвета)";
+      display: block;
+      font-weight: 400;
+      opacity: 0.6;
     }
   }
 
@@ -644,6 +672,16 @@
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    align-self: stretch;
+  }
+
+  &-buttons {
+    display: flex;
+    width: 100%;
+
+    & :not(:last-child) {
+      margin-right: 10px;
+    }
   }
 }
 

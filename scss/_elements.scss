@@ -32,21 +32,31 @@
 }
 
 .viber {
+
+  font-size: 0;
+  padding: 0px;
+  width: 44px;
+  background-image: url(./images/icons/viber.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
   height: 44px;
-  padding: 0 $spacebig-mob;
-  display: flex;
-  align-items: center;
-  color: white;
   background-color: transparent;
   border: 1px solid white;
   box-sizing: border-box;
   border-radius: 0;
 
+/*   
+  padding: 0 $spacemid-mob;
+  display: flex;
+  align-items: center;
+  color: white;
+
   &:before {
     content: "Продолжить в Viber";
-  }
+  } */
 
   &:hover {
+    background-image: url(./images/icons/viber-violet.svg);
     background-color: white;
     color: $violet;
     transition: 200ms;
@@ -57,12 +67,17 @@
   }
 }
 
+.lookandsave {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 .lookalike {
   box-sizing: border-box;
   height: 44px;
-  width: 100%;
+  flex-grow: 1;
   margin-top: 15px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 0;
@@ -79,6 +94,16 @@
 
   &:focus {
     outline: none;
+  }
+
+  & + .save {
+    margin-top: 15px;
+    margin-right: 15px;
+    width: 44px;
+
+    &::before {
+      margin: 0;
+    }
   }
 }
 
@@ -701,6 +726,205 @@
   height: 24px;
 }
 
+.blik {
+  position: relative;
+  animation: black 600ms;
+
+  &::after {
+    content: ""; /* отображает псевдоэлемент */
+    position: absolute; /* абсолютное позиционирование */
+    top: 0; /* верхняя координата */
+    left: 0; /* левая координата */
+    width: 2em; /* относительная ширина */
+    height: 100%; /* высота как у оригинала */
+    background-color: rgba(255, 255, 255, 0.5); /* белый цвет с полупрозрачностью */
+    transform: translateX(-0.5em) skewX(-45deg);    
+    animation: moveLight 600ms ease-out;
+  }
+}
+
+.infinity {
+
+  &:after {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    content: '';
+    background-image: url("./images/Infinity.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.save-setup {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  box-sizing: border-box;
+  border-radius: 0;
+
+  &:before {
+    @include chipcolor;
+    display: inline-block;
+    background-image: url("./images/icons/save-white.svg");
+    background-size: cover;
+    margin: 1px 6px 0 -8px;
+  }
+
+  &:after {
+    content: 'Сохранить просчёт'
+  }
+
+  &:hover {
+    background-color: white;
+
+    &::before {
+      background-image: url("./images/icons/save-violet.svg");
+    }
+
+    &:after {
+      color: $violet;
+    }
+  }
+}
+
+.save-settings {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  box-sizing: border-box;
+  border-radius: 0;
+
+  &:before {
+    @include chipcolor;
+    display: inline-block;
+    background-image: url("./images/icons/save-settings.svg");
+    background-size: cover;
+    margin: 1px 6px 0 -8px;
+  }
+
+  &:after {
+    content: 'Настройки сохранения'
+  }
+
+  &:hover {
+    background-color: white;
+
+    &::before {
+      background-image: url("./images/icons/save-settings-violet.svg");
+    }
+
+    &:after {
+      color: $violet;
+    }
+  }
+}
+
+.save {
+
+  width: 100%;
+  color: black;
+  background-color: white;
+  margin-top: 10px;
+  position: relative;
+
+  &:before {
+    @include chipcolor;
+    display: inline-block;
+    background-image: url("./images/icons/save.svg");
+    background-size: cover;
+    margin: 1px 6px 0 -8px;
+    opacity: 0.9;
+  }
+
+  &:hover {
+    background-color: black;
+    color: white;
+
+    &:before {
+      background-image: url("./images/icons/save-white.svg");
+      transition: 300ms;
+    }
+  }
+}
+
+
+@keyframes black {
+
+  90% {
+    background-color: black;
+    color: white;
+  }
+  100% {
+    background-color: white;
+    color: black;
+  }
+}
+
+
+@keyframes moveLight {
+  0% {
+      transform: translateX(-4em) skewX(-45deg);
+  }
+  99% {
+      transform: translateX(18em) skewX(-45deg);
+      opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.next {
+  &:after {
+    @include chipcolor;
+    background-image: url("./images/icons/chevron-white.svg");
+    background-size: cover;
+    margin: 2px -6px 0 4px;
+  }
+
+  &:hover:after {
+    transition: 300ms;
+    background-image: url("./images/icons/chevron.svg");
+  }
+}
+
+.back {
+  background-color: transparent;
+  border: 0;
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+
+  &:before {
+    @include chipcolor;
+    display: inline-block;
+    background-image: url("./images/icons/chevron.svg");
+    transform: rotate(180deg);
+    background-size: cover;
+    margin: 1px 4px 0 -16px;
+    opacity: 0.9;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+}
+
 .c-white::before {
   @include chipcolor;
   background-color: snow;
@@ -726,6 +950,12 @@
   background-color: rgb(15, 15, 15);
   outline: 1px solid rgba(255, 255, 255, 0.4);
 }
+
+.c-rainbow::before {
+  @include chipcolor;
+  background-image: url('images/icons/rainbow.svg');
+}
+
 
 .icon {
   &-shapeI {
