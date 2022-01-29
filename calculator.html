@@ -141,6 +141,31 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
             </div>
         </aside>
+        <aside class='disclaimer' id="projectsummary" style="display: none">
+            <div class='disclaimer-card longcard-mob'>
+
+                    
+                    <button class="btn-close" aria-label="close popup" onclick="closePopup(this)"></button>
+                    <div class="cutout-title text-big">Что входит в стоимость?</div>
+
+                <div class="project-summary text">Столешница 2020220</div>
+                <div class="disclaimer-bottom-buttons">
+                    <div class="sample-text">
+                        <div class="sample-top">
+                            <div class="sample-brand text">Brand</div>
+                        </div>
+                        <div class="sample-bottom">
+                          <div class="sample-name text-bold">Color</div>
+                          <div class="sample-price text-bold loading">1587$<span class=""></span></div>
+                        </div>
+                    </div>
+                    <div class="disclaimer-bottom-buttons-actions">
+                        <button class="btn text-bold save" onclick="saveThis(lastopened)">Сохранить просчет</button>
+                        <button class="btn text-bold edit" onclick="openEdits()">Изменить столешницу</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
         <aside class='disclaimer' id='complexkitchenshape' style="display: none">
             <div class='disclaimer-card form'>
                 <button class="btn-close" aria-label="close popup" onclick="closePopup(this)"></button>
@@ -361,7 +386,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             </section>
 
             <button class="kitchen-collapsed">
-                <p class="text kitchen-summary">Кухня 3000х600мм, 40мм...</p>
+                <p class="text kitchen-summary">Ла-ла-ла</p>
                 <span class="text-bold">изменить</span>
             </button>
     
@@ -540,10 +565,21 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     <div id='cutouts' class='cutouts'>
                         <div class="parameter">
                             <div class="parameter-title text-bold">Мойки, варочные и др.техника</div>
-                            <div class="text cutouts-warning gift-mini">
-                                Все вырезы под накладную технику<br>
-                                (мойки, варочные, розетки...) -<br>
-                                в подарок!
+
+
+
+                            <div class="text cutouts-warning">
+                                <div class="cutout-card gift-mini">
+                                    <div class="cutout-header">
+                                        <span class="cutout-title text-bold">Вырез под накладную мойку</span>
+                                    </div>
+                                </div>
+    
+                                <div class="cutout-card gift-mini">
+                                    <div class="cutout-header">
+                                        <span class="cutout-title text-bold">Вырез под накладную варочную или др. технику</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div id="cutouts-here"></div>
@@ -579,7 +615,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             </section>
             <div class="result">
                 <div class='result-cover'>
-                    <div class="result-sum text-bold">неизвестно</div>
+                    <div class="result-sum text-bold loading">неизвестно</div>
                     <button class="opendisclaimer" id="opendisclaimer" aria-label="show disclaimer"></button>
                 </div>
                 <div class="result-buttons">

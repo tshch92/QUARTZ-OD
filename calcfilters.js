@@ -177,6 +177,13 @@ renderSamples();
 renderMinMaxPrice();
 renderSamplesSummary(uniqueSamplesArray, filterValues);
 renderKitchenSummary();
+updLocalSampleKitchen();
+document.querySelector(
+  ".kitchen-summary"
+).textContent = KITCHENSUMMARY;
+;
+document.querySelector(".project-summary").innerHTML = longKitchenSummary();
+setTimeout(removeLoading, 1000);
 
 // поиск и рендер цветов по критериям фильтра
 
@@ -187,6 +194,7 @@ document.querySelector("#colorselect").addEventListener("change", function (e) {
     applyFilters();
     renderSamples();
     renderMinMaxPrice();
+    setTimeout(removeLoading, 1000);
     renderSamplesSummary(filteredSamplesArray, filterValues);
   }
 
@@ -294,6 +302,7 @@ document.querySelector("#search2").addEventListener("click", function () {
 
   renderSamples();
   recalc();
+  setTimeout(removeLoading, 1000);
 });
 
 document.querySelector("#filter2").addEventListener("click", function () {
@@ -310,4 +319,5 @@ document.querySelector("#filter2").addEventListener("click", function () {
 
   renderSamples();
   recalc();
+  setTimeout(removeLoading, 1000);
 });

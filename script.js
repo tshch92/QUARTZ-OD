@@ -457,3 +457,21 @@ document
     document.querySelector(".kitchen").style = "display: block";
     document.querySelector(".kitchen-collapsed").style = "display: none";
   });
+
+function openEdits() {
+  gtag_report_conversion();
+  document.querySelector("#projectsummary").style="display: none";
+
+  if (window.screen.width <= 1078) {
+    document.querySelector(".stones-collapsed").style = "display: flex";
+    document.querySelector("#samples123").style = "display: none";
+    document.querySelector(".colorselect").style = "display: none";
+    document.querySelector(".kitchen").style = "display: block";
+    document.querySelector(".kitchen-collapsed").style = "display: none";
+  } else {
+    document.querySelector(".kitchen").classList.add('hint');
+    setTimeout(() => {document.querySelector(".kitchen").classList.remove('hint');}, 1000);
+  }
+
+
+}

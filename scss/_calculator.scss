@@ -16,7 +16,7 @@
   }
 }
 
-.canvas-wrapper{
+.canvas-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -96,6 +96,7 @@
 
   &-text {
     margin: 0 5px;
+    position: relative;
   }
 
   &-top {
@@ -107,13 +108,34 @@
 
   &-bottom {
     display: flex;
+    position: relative;
     justify-content: space-between;
   }
 
   &-price {
     display: flex;
     align-items: center;
-    position: relative;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    font-size: 24px;
+
+    &.loading {
+      &:after {
+        content: "";
+        display: block;
+        background-image: url("./images/icons/three-dots-black.svg");
+        background-size: 36px;
+        background-position: center;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-repeat: no-repeat;
+      }
+    }
   }
 
   &-slabs {
@@ -121,12 +143,52 @@
     width: 28px;
     height: 18px;
     box-sizing: border-box;
+    background-color: white;
     text-align: center;
     font-family: "Futura PT Cond";
     font-weight: 400;
     font-size: 13px;
     line-height: 17px;
     letter-spacing: 0.05em;
+    position: absolute;
+    left: 0;
+    top: -32px;
+  }
+
+  &-kitchen {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    margin-right: 20px;
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    height: 26px;
+    padding: 0;
+    margin: 0;
+    text-decoration: underline;
+
+    & .text {
+      width: 100%;
+      text-overflow: ellipsis;
+      white-space: pre;
+      overflow: hidden;
+      text-align: left;
+    }
+
+    &:before {
+      content: "";
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+      background-image: url("./images/icons/ruler.svg");
+      background-size: cover;
+      margin-right: 6px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
@@ -297,6 +359,13 @@
   }
 }
 
+.hint {
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(146, 26, 167, 1);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(146, 26, 167, 1);
+  box-shadow: 0px 0px 20px 0px rgba(146, 26, 167, 1);
+  transition: 300ms;
+}
+
 .kitchen {
   width: 360px;
   box-sizing: border-box;
@@ -397,17 +466,23 @@
   margin: 0 5px;
 }
 
-#cutouts .addnode {
-  margin: 0;
-  flex-grow: 1;
-
-  &:first-child {
-    margin-right: 20px;
-    margin-left: $spacemid-mob;
+#cutouts {
+  & .parameter {
+    margin-bottom: $spacemid-mob;
   }
 
-  &:last-child {
-    margin-right: $spacemid-mob;
+  & .addnode {
+    margin: 0;
+    flex-grow: 1;
+
+    &:first-child {
+      margin-right: 20px;
+      margin-left: $spacemid-mob;
+    }
+
+    &:last-child {
+      margin-right: $spacemid-mob;
+    }
   }
 }
 
@@ -432,7 +507,6 @@
   }
 
   &-options {
-
     &-64 {
       display: flex;
       justify-content: space-between;
@@ -459,13 +533,11 @@
         &:not(:last-child) {
           margin-right: 15px;
         }
-
       }
     }
   }
 
   &-size {
-
     &-radios {
       display: flex;
       justify-content: space-between;
@@ -478,7 +550,6 @@
         &:nth-child(odd) {
           margin-right: 10px;
         }
-
       }
 
       & > :not(:last-child):not(:nth-last-child(2)) {
@@ -652,6 +723,26 @@
   &-sum {
     color: white;
     flex-grow: 1;
+    position: relative;
+    height: 34.5px;
+
+    &.loading {
+      &:after {
+        content: "";
+        display: block;
+        background-image: url("./images/icons/three-dots-white.svg");
+        background-size: 36px;
+        background-position: center;
+        background-color: $violet;
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-repeat: no-repeat;
+      }
+    }
 
     &::before {
       content: "Стоимость:";
@@ -702,10 +793,11 @@
   }
 
   &-mini {
-    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
+    position: relative;
+    opacity: 0.6;
 
     &:before {
       content: "";
@@ -716,6 +808,11 @@
       background-image: url("./images/icons/gift.svg");
       background-size: cover;
       background-repeat: no-repeat;
+      background-color: #f5f5f5;
+      outline: 6px solid #f5f5f5;
+      position: absolute;
+      top: -8px;
+      right: -8px;
     }
   }
 }

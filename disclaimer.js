@@ -16,6 +16,17 @@ for (let i = 0; i < Object.keys(aboutsinks).length; i++) {
   });
 }
 
+var lastopened;
+
+function openKitchenSummary(el) {
+  lastopened = el.parentNode;
+  console.log(el.parentNode.querySelector(".sample-brand").textContent);
+  document.querySelector("#projectsummary .sample-brand").textContent = el.parentNode.querySelector(".sample-brand").textContent;
+  document.querySelector("#projectsummary .sample-name").textContent = el.parentNode.querySelector(".sample-name").textContent;
+  document.querySelector("#projectsummary .sample-price").textContent = el.parentNode.querySelector(".sample-price").textContent;
+  document.querySelector("#projectsummary").style="display: flex";
+}
+
 document.querySelector(".openpopup").addEventListener("click", function () {
   document.querySelector("#complexkitchenshape").style = "display: flex";
 });

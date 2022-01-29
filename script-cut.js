@@ -71,6 +71,8 @@ const defaultKitchen = {
   backsplash: true,
 };
 
+var KITCHENSUMMARY;
+
 function getArea(arr) {
   return arr.reduce((acc, element) => {
     return (acc += (element[0] * element[1]) / 1000000);
@@ -797,8 +799,14 @@ function recalc() {
     getCosts(samplesArray);
     renderMinMaxPrice();
   }
-
   renderKitchenSummary();
+
+  document.querySelector(
+    ".kitchen-summary"
+  ).textContent = KITCHENSUMMARY;
+
+  document.querySelector(".project-summary").innerHTML = longKitchenSummary();
+  ;
 }
 
 function validateInputs(n, d, num) {
@@ -821,6 +829,7 @@ function timeChecker(t) {
     dimensionsAlert();
     recalc();
     renderSamples();
+    setTimeout(removeLoading, 1000);
     //console.log("shot!" + (timeNow - t));
     clearInterval(shot);
   }
@@ -1077,6 +1086,7 @@ document.querySelector("#backsplash").addEventListener("click", (evt) => {
     }
     recalc();
     renderSamples();
+    setTimeout(removeLoading, 1000);
   }
 });
 
@@ -1105,6 +1115,7 @@ document.querySelector("#thickness").addEventListener("click", (evt) => {
     }
     recalc();
     renderSamples();
+    setTimeout(removeLoading, 1000);
   }
 });
 
@@ -1115,6 +1126,7 @@ document.querySelector("#edges").addEventListener("click", (evt) => {
     kitchen.profile = evt.target.value;
     recalc();
     renderSamples();
+    setTimeout(removeLoading, 1000);
   }
 });
 
@@ -1211,6 +1223,7 @@ document.querySelector("#shapes").addEventListener("click", (evt) => {
     dimensionsAlert();
     recalc();
     renderSamples();
+    setTimeout(removeLoading, 1000);
   }
 });
 
@@ -1327,6 +1340,7 @@ for (let i = 0; i < multipleCustom.length; i++) {
 
     recalc();
     renderSamples();
+    setTimeout(removeLoading, 1000);
     adjustCustom();
 
     return;
@@ -1436,6 +1450,7 @@ document.querySelector("#cutouts-here").addEventListener("input", function (e) {
 
         recalc();
         renderSamples();
+        setTimeout(removeLoading, 1000);
 
         break;
 
@@ -1452,6 +1467,7 @@ document.querySelector("#cutouts-here").addEventListener("input", function (e) {
 
         recalc();
         renderSamples();
+        setTimeout(removeLoading, 1000);
 
         break;
 
@@ -1485,6 +1501,7 @@ document.querySelector("#cutouts-here").addEventListener("input", function (e) {
 
         recalc();
         renderSamples();
+        setTimeout(removeLoading, 1000);
 
         break;
 
@@ -1505,6 +1522,7 @@ document.querySelector("#cutouts-here").addEventListener("input", function (e) {
 
         recalc();
         renderSamples();
+        setTimeout(removeLoading, 1000);
 
         break;
 
@@ -1535,6 +1553,7 @@ document.querySelector("#cutouts-here").addEventListener("input", function (e) {
         validateSinkSize(tmpNode.id);
         recalc();
         renderSamples();
+        setTimeout(removeLoading, 1000);
 
         break;
 
@@ -1561,6 +1580,7 @@ document.querySelector("#cutouts-here").addEventListener("input", function (e) {
 
     recalc();
     renderSamples();
+    setTimeout(removeLoading, 1000);
   } else if (
     [...target.parentNode.parentNode.parentNode.classList].includes("cooktop")
   ) {
@@ -1569,6 +1589,7 @@ document.querySelector("#cutouts-here").addEventListener("input", function (e) {
         kitchen.cutouts[tmpNode.id].type = target.value;
         recalc();
         renderSamples();
+        setTimeout(removeLoading, 1000);
 
         break;
 
@@ -1586,6 +1607,7 @@ document.querySelector("#cutouts-here").addEventListener("click", function (e) {
     delete kitchen.cutouts[e.target.parentNode.parentNode.id];
     recalc();
     renderSamples();
+    setTimeout(removeLoading, 1000);
   }
 });
 
@@ -1639,4 +1661,5 @@ function resetKitchen() {
   adjustCustom();
   recalc();
   renderSamples();
+  setTimeout(removeLoading, 1000);
 }
