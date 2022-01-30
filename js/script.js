@@ -154,8 +154,14 @@ function hideMessage(id) {
 
 //Функция теста email
 function emailTest(input) {
-  return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+  return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input);
 }
+
+/* function emailTest(val) {
+  console.log(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val));
+  console.log('sisis');
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+} */
 
 function phoneTest(input) {
   let phone = input.value.replace(/[^\d]/g, "");

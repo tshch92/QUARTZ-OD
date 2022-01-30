@@ -125,17 +125,17 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 </div>
                 
                 <div class="save3 form">
-                    <span class="cutout-title text-big">Сохранить просчёт заказа</span>
+                    <span class="cutout-title text-big">Сохранить просчёт столешницы</span>
                     <div class="form__item">
                         <div class="form__label text-bold">Ваш адрес e-mail:</div>
                         <div class="form__item">
                             <input id="save-email" type="email" name="email" class="input text _req" placeholder="my@email.com *">
                         </div>
                     </div>
-                    <span class="text">Просчёты будут автоматически приходить на указанный Вами e-mail.</span>
+                    <span class="text">Данные будут автоматически отправлены на указанный Вами e-mail.</span>
                     <div>
                         <!-- <button class="text-bold back" onclick="openPrev(this)">Назад</button> -->
-                        <button class="btn text-bold OK" onclick="catchNewUser(this)">OK</button>
+                        <button class="btn text-bold OK" onclick="catchNewUser(lastopened, lasttwinbutton)">OK</button>
                     </div>
                 </div>
 
@@ -160,7 +160,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         </div>
                     </div>
                     <div class="disclaimer-bottom-buttons-actions">
-                        <button class="btn text-bold save" onclick="saveThis(lastopened)">Сохранить просчет</button>
+                        <button class="btn text-bold save" onclick="saveThis(lastopened, this)">Сохранить просчет</button>
                         <button class="btn text-bold edit" onclick="openEdits()">Изменить столешницу</button>
                     </div>
                 </div>
@@ -275,11 +275,6 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 </div>
             </nav>
 
-            <button class="stones-collapsed">
-                <p class="text stones-summary">Найдено: 300 цветов</p>
-                <span class="text-bold">выбрать камень</span>
-            </button>
-
             <section class="colorselect" id="colorselect">
                 <div class="tabs">
                     <div class="tab">
@@ -387,7 +382,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
             <button class="kitchen-collapsed">
                 <p class="text kitchen-summary">Ла-ла-ла</p>
-                <span class="text-bold">изменить</span>
+                <!-- <span class="text-bold">изменить</span> -->
+            </button>
+
+            <button class="stones-collapsed">
+                <p class="text stones-summary">Найдено: 300 цветов</p>
+                <span class="text-bold next">Цвета и цены</span>
             </button>
     
             <section class="kitchen">
@@ -619,7 +619,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     <button class="opendisclaimer" id="opendisclaimer" aria-label="show disclaimer"></button>
                 </div>
                 <div class="result-buttons">
-                    <button class='save-setup text-bold' onclick="openSaveSetup()"></button>
+                    <!-- <button class='save-setup text-bold' onclick="openSaveSetup()"></button> -->
                     <a href="viber://chat?number=%2B380956568480" class="viber text-bold" aria-label="go to Viber to place an order"></a>
                 </div>
             </div>

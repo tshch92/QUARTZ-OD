@@ -15,6 +15,7 @@ document.querySelector("#searchInput").addEventListener("input", function (e) {
 
   renderSamples();
   recalc();
+  setTimeout(removeLoading, 1000);
   renderSamplesSummary(matchingSamplesArray);
 });
 
@@ -123,6 +124,7 @@ function lookalike(e) {
 
   renderSamples();
   renderMinMaxPrice();
+  setTimeout(removeLoading, 1000);
   renderSamplesSummary(filteredSamplesArray, filterValues);
   window.scrollTo(0, 0);
 }

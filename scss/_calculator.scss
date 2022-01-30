@@ -115,10 +115,11 @@
   &-price {
     display: flex;
     align-items: center;
-    position: absolute;
+    position: relative;
     right: 0;
-    bottom: -3px;
+    bottom: 7px;
     font-size: 24px;
+    margin-left: 6px;
 
     &.loading {
       &:after {
@@ -388,6 +389,19 @@
 
   &-collapsed {
     display: none;
+
+    &:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      background-position: center;
+      box-sizing: border-box;
+      display: inline-block;
+      background-image: url("./images/icons/pencil-white.svg");
+      background-size: cover;
+      margin-right: 8px;
+      flex-shrink: 0;
+    }
   }
 
   &-summary {
@@ -396,7 +410,6 @@
     white-space: pre;
     text-overflow: ellipsis;
     text-align: left;
-    margin-right: 15px;
   }
 }
 

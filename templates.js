@@ -55,10 +55,9 @@ function SAMPLEINFO(sample) {
 }
 
 function sampleTemplate(sample) {
-  let sendMethod = window.localStorage.getItem("sendMethod");
 
   switch (true) {
-    case sample.fabricSilestoneTotalcost && Boolean(sendMethod):
+    case sample.fabricSilestoneTotalcost:
       return (
         SAMPLEBASE(sample) +
         `
@@ -85,7 +84,7 @@ function sampleTemplate(sample) {
         }"></span></div>
                     </div>
                     <div>
-                      <button class="btn save text-bold" onclick="saveThis(this)">
+                      <button class="btn save text-bold" onclick="saveThis(this.parentNode.parentNode)">
                               Сохранить просчёт
                       </button>
                     </div>
@@ -93,40 +92,14 @@ function sampleTemplate(sample) {
           </div>
           `
       );
-    case sample.fabricSilestoneTotalcost:
-      return (
-        SAMPLEBASE(sample) +
-        `
-          <div class="sample-bottom">
-              <div class="sample-name text-bold">${sample.color}</div>
-              <div class="sample-price text-bold"></div>
-          </div>
-          <div class="sample-bottom">
-              <div class="text">c клееной мойкой:</div>
-              <div class="sample-price text-bold">от ${Math.round(
-                sample.totalCost
-              )}$<span class="${formatsObj[sample.slab][2]}"></span></div>
-          </div>
-          <div class="sample-bottom" style="color: teal">
-              <div class="text" style="display:flex; align-items: center;">
-              <button class="aboutsinks" aria-label="more about quartz sinks"></button>
-              c фабричной мойкой: </div>
-              <div class="sample-price text-bold">${
-                sample.fabricSilestoneTotalcost
-              }$<span class="${formatsObj[sample.slab][2]}"></span></div>
-          </div>
-      </div>
-      </div>
-      `
-      );
-      break;
-    case Boolean(sendMethod):
+    
+    default:
       return (
         SAMPLEBASE(sample) +
         SAMPLEINFO(sample) +
         `
                   <div>
-                    <button class="btn save text-bold" onclick="saveThis(this)">
+                    <button class="btn save text-bold" onclick="saveThis(this.parentNode.parentNode)">
                             Сохранить просчёт
                     </button>
                   </div>
@@ -134,24 +107,14 @@ function sampleTemplate(sample) {
           </div>
           `
       );
-      break;
-    default:
-      return (
-        SAMPLEBASE(sample) +
-        SAMPLEINFO(sample) +
-        `
-      </div>
-        `
-      );
-      break;
+
   }
 }
 
 function sampleLookalike(sample) {
-  let sendMethod = window.localStorage.getItem("sendMethod");
 
   switch (true) {
-    case sample.fabricSilestoneTotalcost && Boolean(sendMethod):
+    case sample.fabricSilestoneTotalcost:
       return (
         SAMPLEBASE(sample) +
         `
@@ -185,53 +148,15 @@ function sampleLookalike(sample) {
         }'>
                               Искать похожие цвета
                       </button>
-                      <button class="btn save text-bold" onclick="saveThis(this)"></button>
+                      <button class="btn save text-bold" onclick="saveThis(this.parentNode.parentNode)"></button>
                     </div>
               </div>
           </div>
           `
       );
 
-    case sample.fabricSilestoneTotalcost:
-      return (
-        SAMPLEBASE(sample) +
-        `
-                    <div class="sample-bottom">
-                        <div class="sample-name text-bold">${sample.color}</div>
-                        <div class="sample-price text-bold"></div>
-                    </div>
-                    <div class="sample-bottom">
-                        <div class="text">c клееной мойкой:</div>
-                        <div class="sample-price text-bold">${Math.round(
-                          sample.totalCost
-                        )}$<span class="${
-          formatsObj[sample.slab][2]
-        }"></span></div>
-                    </div>
-                    <div class="sample-bottom" style="color: teal">
-                        <div class="text" style="display:flex; align-items: center;">
-                        <button class="aboutsinks" aria-label="more about quartz sinks"></button>
-                        c фабричной мойкой:</div>
-                        <div class="sample-price text-bold">${
-                          sample.fabricSilestoneTotalcost
-                        }$<span class="${
-          formatsObj[sample.slab][2]
-        }"></span></div>
-                    </div>
-                    <div>
-                      <button class="lookalike text-bold" data-colorgroup='${
-                        sample.colorGroup
-                      }' data-surface='${sample.surface}' data-pattern='${
-          sample.pattern
-        }'>
-                              Искать похожие цвета
-                      </button>
-                    </div>
-              </div>
-          </div>
-          `
-      );
-    case Boolean(sendMethod):
+    
+    default:
       return (
         SAMPLEBASE(sample) +
         SAMPLEINFO(sample) +
@@ -240,7 +165,7 @@ function sampleLookalike(sample) {
                     <button class="lookalike text-bold" data-colorgroup='${sample.colorGroup}' data-surface='${sample.surface}' data-pattern='${sample.pattern}'>
                             Искать похожие цвета
                     </button>
-                    <button class="btn save text-bold" onclick="saveThis(this)"></button>
+                    <button class="btn save text-bold" onclick="saveThis(this.parentNode.parentNode)"></button>
                   </div>
   
               </div>
@@ -248,21 +173,7 @@ function sampleLookalike(sample) {
           `
       );
 
-    default:
-      return (
-        SAMPLEBASE(sample) +
-        SAMPLEINFO(sample) +
-        `
-                  <div>
-                    <button class="lookalike text-bold" data-colorgroup='${sample.colorGroup}' data-surface='${sample.surface}' data-pattern='${sample.pattern}'>
-                            Искать похожие цвета
-                    </button>
-                  </div>
-  
-              </div>
-          </div>
-          `
-      );
+    
   }
 }
 
@@ -991,15 +902,14 @@ function tgSample(sample) {
 }
 
 function mailSample(sample) {
-  let parent = sample.parentNode.parentNode.parentNode;
 
   return {
-    brand: parent.querySelector(".sample-brand").textContent,
-    name: parent.querySelector(".sample-name").textContent,
-    price: parent.querySelector(".sample-price").textContent,
-    slabs: parent.querySelector(".sample-slabs").textContent,
-    surface: parent.className.replace("sample ", "").replace("glanz", ""),
-    retailprice: parent
+    brand: sample.querySelector(".sample-brand").textContent,
+    name: sample.querySelector(".sample-name").textContent,
+    price: sample.querySelector(".sample-price").textContent,
+    slabs: sample.querySelector(".sample-slabs").textContent,
+    surface: sample.className.replace("sample ", "").replace("glanz", ""),
+    retailprice: sample
       .querySelector(".sample-price")
       .textContent.replace("от ", "")
       .replace("$", ""),

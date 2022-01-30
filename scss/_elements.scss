@@ -31,40 +31,10 @@
   font-weight: 400;
 }
 
-.viber {
-
-  font-size: 0;
-  padding: 0px;
-  width: 44px;
-  background-image: url(./images/icons/viber.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 44px;
-  background-color: transparent;
-  border: 1px solid white;
-  box-sizing: border-box;
-  border-radius: 0;
-
-/*   
-  padding: 0 $spacemid-mob;
-  display: flex;
-  align-items: center;
-  color: white;
-
-  &:before {
-    content: "Продолжить в Viber";
-  } */
-
-  &:hover {
-    background-image: url(./images/icons/viber-violet.svg);
-    background-color: white;
-    color: $violet;
-    transition: 200ms;
-  }
-
-  &:focus {
-    outline: none;
-  }
+@mixin chipcolor {
+  content: "";
+  width: 24px;
+  height: 24px;
 }
 
 .lookandsave {
@@ -720,12 +690,6 @@
   }
 }
 
-@mixin chipcolor {
-  content: "";
-  width: 24px;
-  height: 24px;
-}
-
 .blik {
   position: relative;
   animation: black 600ms;
@@ -743,87 +707,37 @@
   }
 }
 
-.infinity {
-
-  &:after {
-    background-color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    height: 100%;
-    width: 100%;
-    content: '';
-    background-image: url("./images/Infinity.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-}
-
-.save-setup {
+.viber {
   display: flex;
   flex-grow: 1;
   align-items: center;
   justify-content: center;
   color: white;
+  height: 44px;
   background-color: transparent;
   border: 1px solid white;
   box-sizing: border-box;
   border-radius: 0;
+  transition: 100ms;
+  padding-right: 6px;
 
   &:before {
     @include chipcolor;
     display: inline-block;
-    background-image: url("./images/icons/save-white.svg");
+    background-image: url("./images/icons/viber.svg");
     background-size: cover;
     margin: 1px 6px 0 -8px;
   }
 
   &:after {
-    content: 'Сохранить просчёт'
+    content: 'Заказать в Viber'
   }
 
   &:hover {
     background-color: white;
 
     &::before {
-      background-image: url("./images/icons/save-violet.svg");
-    }
-
-    &:after {
-      color: $violet;
-    }
-  }
-}
-
-.save-settings {
-  display: flex;
-  flex-grow: 1;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  background-color: transparent;
-  border: 1px solid white;
-  box-sizing: border-box;
-  border-radius: 0;
-
-  &:before {
-    @include chipcolor;
-    display: inline-block;
-    background-image: url("./images/icons/save-settings.svg");
-    background-size: cover;
-    margin: 1px 6px 0 -8px;
-  }
-
-  &:after {
-    content: 'Настройки сохранения'
-  }
-
-  &:hover {
-    background-color: white;
-
-    &::before {
-      background-image: url("./images/icons/save-settings-violet.svg");
+      background-image: url("./images/icons/viber-violet.svg");
     }
 
     &:after {
@@ -860,6 +774,24 @@
   }
 }
 
+.infinity {
+
+  &:before {
+    background-image: url("./images/Infinity.svg");
+    background-size: 100px;
+    background-position: center;
+  }
+
+  &:hover {
+    color: black;
+    background-color: white;
+
+    &:before {
+      background-image: url("./images/Infinity.svg");
+    }
+  }
+}
+
 .edit {
 
   width: 100%;
@@ -871,7 +803,6 @@
     background-image: url("./images/icons/pencil-white.svg");
     background-size: cover;
     margin-right: 8px;
-    opacity: 0.9;
   }
 
   &:hover {
@@ -911,11 +842,15 @@
 }
 
 .next {
+  display: flex;
+  align-items: center;
+
   &:after {
     @include chipcolor;
     background-image: url("./images/icons/chevron-white.svg");
     background-size: cover;
-    margin: 2px -6px 0 4px;
+    margin-left: 2px;
+    display: inline-block;
   }
 
   &:hover:after {

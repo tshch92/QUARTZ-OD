@@ -96,8 +96,9 @@
 
   .kitchen {
     width: 100%;
-    top: calc(50px + 42px);
-    padding: 30px 0;
+    top: 0;
+    height: calc(100vh - 64px - 42px);
+    padding: 72px 0 0;
     display: none;
 
     &-collapsed {
@@ -108,7 +109,6 @@
       color: white;
       display: flex;
       align-items: center;
-      justify-content: space-between;
       padding: 0 $spacemid-mob;
       border: 0;
       outline: none;
@@ -135,7 +135,7 @@
       padding: 0 $spacemid-mob;
       border: 0;
       outline: none;
-      top: 50px;
+      bottom: 64px;
       position: fixed;
     }
   }
@@ -199,16 +199,32 @@
     &:before {
       display: none;
     }
+
+    &:after {
+      display: none;
+    }
   }
 }
 
 @media only (max-width: 766px) {
-  .sample {
+  & .sample {
     width: calc(100vw - 30px - 30px);
     margin-bottom: $spacemid-mob;
 
     &-image {
       height: calc(100vw - 30px - 30px);
     }
+  }
+
+  & .kitchen-collapsed {
+    padding: 0 20px;
+  }
+
+  & .stones-collapsed {
+    padding: 0 20px;
+  }
+
+  & .result {
+    padding: 10px 20px;
   }
 }

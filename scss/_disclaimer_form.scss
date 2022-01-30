@@ -22,10 +22,10 @@
       margin-top: $spacemid-mob;
       align-self: stretch;
 
-      & > * {
+      & .btn {
         margin-top: 0;
       }
-  
+
       & :not(:last-child) {
         margin-right: 10px;
       }
@@ -39,7 +39,7 @@
       display: block;
     }
 
-    & .disclaimer-card{
+    & .disclaimer-card {
       width: 680px;
     }
 
@@ -184,31 +184,8 @@
     height: 100%;
     overflow-y: auto;
 
-    &-bottom-buttons {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      box-sizing: border-box;
-      background-color: white;
-      padding: 0 $spacemid-mob $spacemid-mob;
-
-      &-actions {
-        flex-direction: column;
-        margin-top: 0;
-      }
-
-      &:before {
-        content: "";
-        background: linear-gradient(rgba(255, 255, 255, 0), white);
-        height: 30px;
-        width: 100%;
-        position: absolute;
-        left: 0;
-        top: -30px;
-      }
+    &-bottom-buttons-actions .btn {
+      margin-top: 0;
     }
 
     &-card {
@@ -234,14 +211,14 @@
 
     & .btn {
       margin-top: 20px;
-
-      &.edit {
-        margin-top: 10px;
-      }
     }
 
     & li {
       margin-bottom: 10px;
+    }
+
+    &-bottom-buttons-actions .btn {
+      margin-top: 0;
     }
   }
 
@@ -265,6 +242,41 @@
     min-height: calc(100vh - 20px);
     justify-content: start;
     width: calc(100% - 20px);
+  }
+
+  & .disclaimer-bottom-buttons {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 0 $spacemid-mob $spacemid-mob;
+
+    &-actions {
+      flex-direction: column;
+      margin-top: 0;
+
+      & .btn {
+        margin-top: 20px;
+
+        &.edit {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    &:before {
+      content: "";
+      background: linear-gradient(rgba(255, 255, 255, 0), white);
+      height: 30px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: -30px;
+    }
   }
 
   & .longcard-mob {
