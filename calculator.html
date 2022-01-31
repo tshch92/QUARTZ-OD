@@ -62,7 +62,42 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         <link rel="stylesheet" href="./styles.css">
         <link rel="apple-touch-icon" href="./apple-touch-icon.png">
     </head>
-    <body>
+    <body style="overflow-y: scroll">
+        <!-- Онбординг десктоп -->
+        <aside id="onboarding-desktop-1" class="onboarding-desktop onboarding-desktop-1" style="display: none">
+            <div class="paranja"></div>
+            <div class="speech-bubble text-bold">Сюда вбиваете параметры столешницы</div>
+            <img src="./images/illustrations/man-1.svg" alt="man pointing on kitchen dimensions">
+            <button class="btn text-bold proceed">Ясно!</button>
+        </aside>
+        <aside id="onboarding-desktop-2" class="onboarding-desktop onboarding-desktop-2" style="display: none">
+            <div class="paranja"></div>
+            <div class="speech-bubble text-bold">Здесь сразу же видите её стоимость</div>
+            <img src="./images/illustrations/man-2.svg" alt="man pointing on stone price">
+            <button class="btn text-bold proceed">Понятно!</button>
+        </aside>
+        <!-- Онбординг мобильный и планшет -->
+        <aside id="onboarding-mobile-1" class="onboarding-mobile onboarding-mobile-1" style="display: none">
+            <div class="paranja"></div>
+            <div class="paranja-2"></div>
+            <div class="speech-bubble text-bold">Здесь меняете параметры столешницы</div>
+            <img src="./images/illustrations/boy-1.svg" alt="man pointing on kitchen dimensions">
+            <button class="btn text-bold proceed">OK</button>
+        </aside>
+        <aside id="onboarding-mobile-2" class="onboarding-mobile onboarding-mobile-2" style="display: none">
+            <div class="paranja"></div>
+            <div class="paranja-2"></div>
+            <div class="speech-bubble text-bold">Жмём сюда если хотим вернуться в каталог камня</div>
+            <img src="./images/illustrations/boy-1.svg" alt="man pointing on button">
+            <button class="btn text-bold proceed">Ясно</button>
+        </aside>
+        <aside id="onboarding-mobile-3" class="onboarding-mobile onboarding-mobile-3" style="display: none">
+            <div class="paranja"></div>
+            <div class="speech-bubble text-bold">Стоимость столешницы обновляется автоматически!</div>
+            <img src="./images/illustrations/boy-2.svg" alt="man pointing on price">
+            <button class="btn text-bold proceed">Понятно</button>
+        </aside>
+        <!-- остальные модальные окна -->
         <aside class='disclaimer' id="disclaimer" style="display: none">
             <div class='disclaimer-card'>
                 <h2 class="title-bold">Дисклеймер</h2>
@@ -377,11 +412,11 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 </div>
             </section>
     
-            <section id="samples123" class="samples">
+            <section id="samples123" class="samples" style="">
             </section>
 
             <button class="kitchen-collapsed">
-                <p class="text kitchen-summary">Ла-ла-ла</p>
+                <p class="text kitchen-summary">Столешница 3000мм, торец 40мм, фаска 3х3...</p>
                 <!-- <span class="text-bold">изменить</span> -->
             </button>
 
@@ -635,4 +670,5 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     <script src="textsearch.js"></script>
     <script src="disclaimer.js"></script>
     <script src="js/script.js"></script>
+    <script src="onboarding.js"></script>
 </html>

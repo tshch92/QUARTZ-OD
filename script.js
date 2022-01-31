@@ -83,7 +83,7 @@ function getCosts(array) {
         slabSpent !== Math.round(slabSpent):
         element.cost =
           element.price.usd * (1 - discounts[element.brand]) * slabSpent;
-          element.cost += RASPILQUARTZUA;
+        element.cost += RASPILQUARTZUA;
         break;
 
       case element.brand === "Атем":
@@ -440,6 +440,49 @@ document
   .querySelector(".stones-collapsed")
   .addEventListener("click", function () {
     gtag_report_conversion();
+
+    if (
+      window.localStorage.getItem("onboardingm3") !== "true" &&
+      window.innerWidth <= 766
+    ) {
+      window.localStorage.setItem("onboardingm2", true);
+      document.getElementById("onboarding-mobile-2").style = "display: none";
+      document.querySelector(".stones-collapsed").classList.remove("hint");
+
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: "instant",
+      });
+
+      setTimeout(() => {
+        let firstsamplepos = document
+          .querySelector(".sample")
+          .getBoundingClientRect();
+
+        let scrollTo = firstsamplepos.top;
+
+        console.log(firstsamplepos.bottom - window.innerHeight + 80);
+
+        window.scroll({
+          top: firstsamplepos.bottom - window.innerHeight + 180,
+          left: 0,
+          behavior: "smooth",
+        });
+      }, 1000);
+
+      setTimeout(() => {
+        document.getElementById("onboarding-mobile-3").style = "";
+
+        document.querySelector(
+          "#onboarding-mobile-3 .paranja"
+        ).style = `background: radial-gradient(circle closest-side at ${
+          window.innerWidth - 76
+        }px ${window.innerHeight - 280}px, rgba(0,0,0,0) 50%, black 100%);`;
+      }, 1500);
+    }
+
+    console.log('tktktkt');
     document.querySelector(".kitchen-collapsed").style = "display: flex";
     document.querySelector("#samples123").style = "display: flex";
     document.querySelector(".colorselect").style = "display: block";
@@ -451,6 +494,23 @@ document
   .querySelector(".kitchen-collapsed")
   .addEventListener("click", function () {
     gtag_report_conversion();
+
+    if (
+      window.localStorage.getItem("onboardingm2") !== "true" &&
+      window.innerWidth <= 766
+    ) {
+      document.getElementById("onboarding-mobile-1").style = "display: none";
+      document.querySelector(".kitchen-collapsed").classList.remove("hint");
+      window.localStorage.setItem("onboardingm1", true);
+
+      setTimeout(() => {
+        document.getElementById("onboarding-mobile-2").style = "";
+        document.querySelector(".stones-collapsed").classList.add("hint");
+        document.querySelector("body").style =
+          "height: 100vh; overflow-y: hidden;";
+      }, 2000);
+    }
+
     document.querySelector(".stones-collapsed").style = "display: flex";
     document.querySelector("#samples123").style = "display: none";
     document.querySelector(".colorselect").style = "display: none";
@@ -460,7 +520,7 @@ document
 
 function openEdits() {
   gtag_report_conversion();
-  document.querySelector("#projectsummary").style="display: none";
+  document.querySelector("#projectsummary").style = "display: none";
 
   if (window.screen.width <= 1078) {
     document.querySelector(".stones-collapsed").style = "display: flex";
@@ -469,9 +529,9 @@ function openEdits() {
     document.querySelector(".kitchen").style = "display: block";
     document.querySelector(".kitchen-collapsed").style = "display: none";
   } else {
-    document.querySelector(".kitchen").classList.add('hint');
-    setTimeout(() => {document.querySelector(".kitchen").classList.remove('hint');}, 1000);
+    document.querySelector(".kitchen").classList.add("hint");
+    setTimeout(() => {
+      document.querySelector(".kitchen").classList.remove("hint");
+    }, 1000);
   }
-
-
 }

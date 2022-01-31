@@ -830,10 +830,11 @@
 
 @keyframes moveLight {
   0% {
-      transform: translateX(-4em) skewX(-45deg);
+      transform: translateX(-150px) skewX(-45deg);
+      opacity: 0.5;
   }
   99% {
-      transform: translateX(18em) skewX(-45deg);
+      transform: translateX(100vw) skewX(-45deg);
       opacity: 1;
   }
   100% {
