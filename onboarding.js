@@ -4,6 +4,7 @@ setTimeout(() => {
     window.innerWidth >= 1079
   ) {
     document.getElementById("onboarding-desktop-1").style = "";
+    document.querySelector("#onboarding-desktop-1 .paranja").style = `width: ${document.querySelector(".kitchen").getBoundingClientRect().left}px`;
     document.getElementById("samples123").style =
       "height: calc(100vh - 80px); overflow-y: hidden;";
   } else if (
