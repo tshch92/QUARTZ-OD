@@ -3,7 +3,8 @@ setTimeout(() => {
     window.localStorage.getItem("onboarding") !== "true" &&
     window.innerWidth >= 1079
   ) {
-    document.getElementById("onboarding-desktop-1").style = "";
+    console.log('ziiii');
+    document.querySelector("#onboarding-desktop-1").style= '';
     document.querySelector("#onboarding-desktop-1 .paranja").style = `width: ${document.querySelector(".kitchen").getBoundingClientRect().left}px`;
     document.getElementById("samples123").style =
       "height: calc(100vh - 80px); overflow-y: hidden;";
@@ -11,7 +12,7 @@ setTimeout(() => {
     window.localStorage.getItem("onboardingm1") !== "true" &&
     window.innerWidth <= 766
   ) {
-    document.getElementById("onboarding-mobile-1").style = "";
+    document.getElementById("onboarding-mobile-1").style = `height: ${window.innerHeight - 106}px`;
     document.querySelector(".kitchen-collapsed").classList.add("hint");
     document.querySelector("body").style = "height: 100vh; overflow-y: hidden;";
   }
@@ -82,7 +83,7 @@ document
     }, 1000);
 
     setTimeout(() => {
-      document.getElementById("onboarding-mobile-3").style = "";
+      document.getElementById("onboarding-mobile-3").style = `height: ${window.innerHeight}`;
 
       document.querySelector(
         "#onboarding-mobile-3 .paranja"

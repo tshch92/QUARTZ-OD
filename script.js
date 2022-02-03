@@ -1,5 +1,5 @@
-const UAHRATE = 0.037;
-const EURRATE = 1.18;
+const UAHRATE = 0.035;
+const EURRATE = 1.13;
 const DELIVERY = {
   kiev: 40,
   odesa: 30,
@@ -9,11 +9,11 @@ const OLHARATE = 0.05;
 
 const WAGE = {
   //0.5sl - 300,
-  20: { 0.5: 300, 1: 450 },
-  //1.5sl - 450*1.5
+  20: { 0.5: 300, 1: 500 },
+  //1.5sl - 500*1.5
   //0.5sl - 300,
-  40: { 0.5: 300, 1: 550 },
-  //1.5sl - 550*1.5
+  40: { 0.5: 350, 1: 600 },
+  //1.5sl - 600*1.5
 };
 const HANDPOLISH = 300;
 const SHAPEDEDGE = 35;
@@ -68,31 +68,38 @@ function alignPrices(array) {
 
 function getCosts(array) {
   array.forEach((element) => {
+    //сколько реально будет затрачено камня
     let slabSpent = formatsObj[element.slab][0];
+    //сколько нужно купить и привезти, если это камень под заказ
+    let fakeSlabSpent = slabSpent;
+
+    if (element.preorder && slabSpent !== Math.round(slabSpent)) {
+      fakeSlabSpent = Math.round(slabSpent);
+    }
 
     switch (true) {
       case element.brand === "Quartzforms" && !element.price.eur:
         element.cost =
           element.price.usd *
           (1 - discounts["Quartzforms_termopal"]) *
-          slabSpent;
+          fakeSlabSpent;
         break;
 
       case element.brand === "Caesarstone" &&
         element.slab[0] === 3060 &&
         slabSpent !== Math.round(slabSpent):
         element.cost =
-          element.price.usd * (1 - discounts[element.brand]) * slabSpent;
+          element.price.usd * (1 - discounts[element.brand]) * fakeSlabSpent;
         element.cost += RASPILQUARTZUA;
         break;
 
       case element.brand === "Атем":
-        element.cost = element.price.usd * (1 - discounts["Atem"]) * slabSpent;
+        element.cost = element.price.usd * (1 - discounts["Atem"]) * fakeSlabSpent;
         break;
 
       default:
         element.cost =
-          element.price.usd * (1 - discounts[element.brand]) * slabSpent;
+          element.price.usd * (1 - discounts[element.brand]) * fakeSlabSpent;
         break;
     }
 
@@ -107,27 +114,21 @@ function getCosts(array) {
 
     switch (true) {
       case ((element.brand === "Quartzforms" && !element.price.eur) ||
-        element.brand === "Hanstone") &&
-        slabSpent <= 0.5:
+        element.brand === "Hanstone" ||
+        element.brand === "Intekstone") &&
+        fakeSlabSpent <= 0.5:
         //кварцформ половинка с термопала
         break;
       case ((element.brand === "Quartzforms" && !element.price.eur) ||
-        element.brand === "Hanstone") &&
-        slabSpent > 0.5:
+        element.brand === "Hanstone" ||
+        element.brand === "Intekstone") &&
+        fakeSlabSpent > 0.5:
         totalCost += DELIVERY.odesa * slabSpent;
         break;
-      case (element.brand === "Ginger" || element.brand === "Intekstone") &&
-        slabSpent <= 0.5:
-        //половинка
-        break;
-      case (element.brand === "Ginger" || element.brand === "Intekstone") &&
-        slabSpent > 0.5:
-        totalCost += DELIVERY.odesa * slabSpent;
-        break;
-      case element.brand === "Reston":
+      case element.brand === "Reston" || element.brand === "Ginger":
         break;
       case (element.brand === "Belenco" || element.brand === "Vicostone") &&
-        slabSpent <= 0.5:
+        fakeSlabSpent <= 0.5:
         totalCost += DELIVERY.kiev;
         break;
       default:
@@ -140,12 +141,23 @@ function getCosts(array) {
       //console.log("клей: " + GLUE * slabSpent);
     }
 
-    if (slabSpent === 0.5) {
-      totalCost += WAGE[kitchen.thickness]["0.5"];
-      //console.log("работа: " + WAGE[kitchen.thickness]["0.5"]);
-    } else {
-      totalCost += WAGE[kitchen.thickness]["1"] * slabSpent;
-      //console.log("работа: " + WAGE[kitchen.thickness]["1"] * slabSpent);
+    switch (true) {
+      case slabSpent === 0.5 && Boolean(element.preorder):
+        totalCost += WAGE[kitchen.thickness]["0.5"] * 2;
+        break;
+      case slabSpent > 0.5 && Boolean(element.preorder):
+        totalCost += WAGE[kitchen.thickness]["1"] * slabSpent * 2;
+        break;
+
+      case slabSpent === 0.5:
+        totalCost += WAGE[kitchen.thickness]["0.5"];
+        //console.log("работа: " + WAGE[kitchen.thickness]["0.5"]);
+        break;
+
+      default:
+        totalCost += WAGE[kitchen.thickness]["1"] * slabSpent;
+        //console.log("работа: " + WAGE[kitchen.thickness]["1"] * slabSpent);
+        break;
     }
 
     totalCost = AddStaticCosts(totalCost);
@@ -472,7 +484,9 @@ document
       }, 1000);
 
       setTimeout(() => {
-        document.getElementById("onboarding-mobile-3").style = "";
+        document.getElementById(
+          "onboarding-mobile-3"
+        ).style = `height: ${window.innerHeight}`;
 
         document.querySelector(
           "#onboarding-mobile-3 .paranja"
@@ -482,7 +496,7 @@ document
       }, 1500);
     }
 
-    console.log('tktktkt');
+    console.log("tktktkt");
     document.querySelector(".kitchen-collapsed").style = "display: flex";
     document.querySelector("#samples123").style = "display: flex";
     document.querySelector(".colorselect").style = "display: block";
@@ -504,7 +518,9 @@ document
       window.localStorage.setItem("onboardingm1", true);
 
       setTimeout(() => {
-        document.getElementById("onboarding-mobile-2").style = "";
+        document.getElementById("onboarding-mobile-2").style = `height: ${
+          window.innerHeight - 106
+        }px`;
         document.querySelector(".stones-collapsed").classList.add("hint");
         document.querySelector("body").style =
           "height: 100vh; overflow-y: hidden;";

@@ -33,3 +33,7 @@ window.addEventListener("scroll", function () {
 function offset(el) {
   return el.getBoundingClientRect().top;
 }
+
+if (window.innerWidth < 1079) {
+  document.querySelector(".hero").style = `height: ${window.innerHeight}px`;
+}
