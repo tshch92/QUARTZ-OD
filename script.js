@@ -54,6 +54,7 @@ const discounts = {
   SantaMargherita: 0,
   Technistone: 0.2,
   Quartzforms: 0.2,
+  'Modern Stone': 0,
 };
 
 function alignPrices(array) {
@@ -74,7 +75,7 @@ function getCosts(array) {
     let fakeSlabSpent = slabSpent;
 
     if (element.preorder && slabSpent !== Math.round(slabSpent)) {
-      fakeSlabSpent = Math.round(slabSpent);
+      fakeSlabSpent = Math.round(slabSpent) * 2;
     }
 
     switch (true) {
@@ -142,13 +143,6 @@ function getCosts(array) {
     }
 
     switch (true) {
-      case slabSpent === 0.5 && Boolean(element.preorder):
-        totalCost += WAGE[kitchen.thickness]["0.5"] * 2;
-        break;
-      case slabSpent > 0.5 && Boolean(element.preorder):
-        totalCost += WAGE[kitchen.thickness]["1"] * slabSpent * 2;
-        break;
-
       case slabSpent === 0.5:
         totalCost += WAGE[kitchen.thickness]["0.5"];
         //console.log("работа: " + WAGE[kitchen.thickness]["0.5"]);
@@ -223,8 +217,11 @@ function getCosts(array) {
     // доп вычисления для столешки с мойкой сайлстоун
 
     if (kitchen.qsinkslistR.length && element.brand === "Silestone") {
+
       let allSinksFound = false;
       let fabricSilestoneTotalcost = 0;
+
+      //console.log(fabricSilestoneTotalcost);
 
       for (let i = 0; i < kitchen.qsinkslistR.length; i++) {
         qsinkprice = SINKS.find(
@@ -242,6 +239,8 @@ function getCosts(array) {
           qsinkprice *= EURRATE;
 
           fabricSilestoneTotalcost += qsinkprice;
+
+          //console.log(fabricSilestoneTotalcost);
         } else {
           element.fabricSilestoneTotalcost = 0;
           allSinksFound = false;
@@ -252,24 +251,29 @@ function getCosts(array) {
       if (allSinksFound) {
         let SilestoneSlabSpent = formatsObj[element.slab][3];
 
+        //console.log(fabricSilestoneTotalcost);
+
         fabricSilestoneTotalcost +=
           element.price.usd *
           (1 - discounts[element.brand]) *
-          SilestoneSlabSpent;
+          SilestoneSlabSpent.total;
 
-        fabricSilestoneTotalcost += DELIVERY.kiev * SilestoneSlabSpent;
+          //console.log(SilestoneSlabSpent);
+
+
+        fabricSilestoneTotalcost += DELIVERY.kiev * SilestoneSlabSpent.total;
 
         if (kitchen.thickness === 40) {
-          fabricSilestoneTotalcost += GLUE * SilestoneSlabSpent;
+          fabricSilestoneTotalcost += GLUE * SilestoneSlabSpent.total;
           //console.log("клей: " + GLUE * slabSpent);
         }
 
-        if (SilestoneSlabSpent === 0.5) {
+        if (SilestoneSlabSpent.total === 0.5) {
           fabricSilestoneTotalcost += WAGE[kitchen.thickness]["0.5"];
           //console.log("работа: " + WAGE[kitchen.thickness]["0.5"]);
         } else {
           fabricSilestoneTotalcost +=
-            WAGE[kitchen.thickness]["1"] * SilestoneSlabSpent;
+            WAGE[kitchen.thickness]["1"] * SilestoneSlabSpent.total;
           //console.log("работа: " + WAGE[kitchen.thickness]["1"] * slabSpent);
         }
 
@@ -327,6 +331,9 @@ function getCosts(array) {
         fabricSilestoneTotalcost *= GREEDRATE + OLHARATE;
 
         element.fabricSilestoneTotalcost = Math.round(fabricSilestoneTotalcost);
+
+        //console.log(fabricSilestoneTotalcost);
+
       } else {
         element.fabricSilestoneTotalcost = 0;
       }
@@ -474,7 +481,7 @@ document
 
         let scrollTo = firstsamplepos.top;
 
-        console.log(firstsamplepos.bottom - window.innerHeight + 80);
+        //console.log(firstsamplepos.bottom - window.innerHeight + 80);
 
         window.scroll({
           top: firstsamplepos.bottom - window.innerHeight + 180,
@@ -496,7 +503,6 @@ document
       }, 1500);
     }
 
-    console.log("tktktkt");
     document.querySelector(".kitchen-collapsed").style = "display: flex";
     document.querySelector("#samples123").style = "display: flex";
     document.querySelector(".colorselect").style = "display: block";
@@ -551,3 +557,7 @@ function openEdits() {
     }, 1000);
   }
 }
+
+if (window.innerWidth >= 1079) {
+  document.getElementById('cta').href="tel:+380956568480"
+};

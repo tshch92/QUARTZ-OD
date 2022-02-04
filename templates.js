@@ -54,45 +54,59 @@ function SAMPLEINFO(sample) {
   `;
 }
 
-function sampleTemplate(sample) {
+function SAMPLEINFOEXT(sample) {
+  return `
+      <div class="sample-text">
+        <div class="sample-top">
+            <div class="sample-brand text">${sample.brand}</div>
+            <div class="sample-slabs" onclick="opendrawing(${sample.slab[0]},${
+    sample.slab[1]
+  })">${formatsObj[sample.slab][0]}</div>
+        </div>
+        <div class="sample-bottom">
+          <div class="sample-name text-bold">${sample.color}</div>
+          <div></div>
+        </div>
 
+        <div class="sample-bottom">
+          <div class="text" style="display:flex; align-items: center;">
+          c клееной мойкой:</div>
+          <div class="sample-price text-bold loading sample-price-f">${
+            sample.totalCost
+          }$<span class="${formatsObj[sample.slab][2]}"></span></div>
+        </div>
+
+        <div class="sample-bottom" style="color: teal">
+          <div class="text" style="display:flex; align-items: center;">
+          <button class="aboutsinks" aria-label="more about quartz sinks"></button>
+          c фабричной мойкой:</div>
+          <div class="sample-price text-bold loading sample-price-f">${
+            sample.fabricSilestoneTotalcost
+          }$<span class="${formatsObj[sample.slab][2]}"></span></div>
+        </div>
+
+        <button class="sample-kitchen" onclick="openKitchenSummary(this)"><p class="text">${KITCHENSUMMARY}</p></button>
+      </div>
+  `;
+}
+
+function sampleTemplate(sample) {
   switch (true) {
-    case sample.fabricSilestoneTotalcost:
+    case Boolean(sample.fabricSilestoneTotalcost):
       return (
         SAMPLEBASE(sample) +
+        SAMPLEINFOEXT(sample) +
         `
-                    <div class="sample-bottom">
-                        <div class="sample-name text-bold">${sample.color}</div>
-                        <div class="sample-price text-bold"></div>
-                    </div>
-                    <div class="sample-bottom">
-                        <div class="text">c клееной мойкой:</div>
-                        <div class="sample-price text-bold">${Math.round(
-                          sample.totalCost
-                        )}$<span class="${
-          formatsObj[sample.slab][2]
-        }"></span></div>
-                    </div>
-                    <div class="sample-bottom" style="color: teal">
-                        <div class="text" style="display:flex; align-items: center;">
-                        <button class="aboutsinks" aria-label="more about quartz sinks"></button>
-                        c фабричной мойкой:</div>
-                        <div class="sample-price text-bold">${
-                          sample.fabricSilestoneTotalcost
-                        }$<span class="${
-          formatsObj[sample.slab][2]
-        }"></span></div>
-                    </div>
-                    <div>
-                      <button class="btn save text-bold" onclick="saveThis(this.parentNode.parentNode)">
-                              Сохранить просчёт
-                      </button>
-                    </div>
+                  <div>
+                    <button class="btn save text-bold" onclick="saveThis(this.parentNode.parentNode)">
+                            Сохранить просчёт
+                    </button>
+                  </div>
               </div>
           </div>
           `
       );
-    
+
     default:
       return (
         SAMPLEBASE(sample) +
@@ -107,45 +121,18 @@ function sampleTemplate(sample) {
           </div>
           `
       );
-
   }
 }
 
 function sampleLookalike(sample) {
-
   switch (true) {
-    case sample.fabricSilestoneTotalcost:
+    case Boolean(sample.fabricSilestoneTotalcost):
       return (
         SAMPLEBASE(sample) +
+        SAMPLEINFOEXT(sample) +
         `
-                    <div class="sample-bottom">
-                        <div class="sample-name text-bold">${sample.color}</div>
-                        <div class="sample-price text-bold"></div>
-                    </div>
-                    <div class="sample-bottom">
-                        <div class="text">c клееной мойкой:</div>
-                        <div class="sample-price text-bold">${Math.round(
-                          sample.totalCost
-                        )}$<span class="${
-          formatsObj[sample.slab][2]
-        }"></span></div>
-                    </div>
-                    <div class="sample-bottom" style="color: teal">
-                        <div class="text" style="display:flex; align-items: center;">
-                        <button class="aboutsinks" aria-label="more about quartz sinks"></button>
-                        c фабричной мойкой:</div>
-                        <div class="sample-price text-bold">${
-                          sample.fabricSilestoneTotalcost
-                        }$<span class="${
-          formatsObj[sample.slab][2]
-        }"></span></div>
-                    </div>
                     <div class="lookandsave">
-                      <button class="lookalike text-bold" data-colorgroup='${
-                        sample.colorGroup
-                      }' data-surface='${sample.surface}' data-pattern='${
-          sample.pattern
-        }'>
+                      <button class="lookalike text-bold" data-colorgroup='${sample.colorGroup}' data-surface='${sample.surface}' data-pattern='${sample.pattern}'>
                               Искать похожие цвета
                       </button>
                       <button class="btn save text-bold" onclick="saveThis(this.parentNode.parentNode)"></button>
@@ -155,7 +142,6 @@ function sampleLookalike(sample) {
           `
       );
 
-    
     default:
       return (
         SAMPLEBASE(sample) +
@@ -172,8 +158,6 @@ function sampleLookalike(sample) {
           </div>
           `
       );
-
-    
   }
 }
 
@@ -441,6 +425,7 @@ function removeLoading() {
   }
 
   r.classList.remove("loading");
+  console.log("removed");
 }
 
 function updLocalSampleKitchen() {
@@ -677,7 +662,7 @@ function longKitchenSummary() {
       break;
   }
 
-  msg += "<hr>"
+  msg += "<hr>";
 
   switch (kitchen.backsplash) {
     case true:
@@ -902,7 +887,6 @@ function tgSample(sample) {
 }
 
 function mailSample(sample) {
-
   return {
     brand: sample.querySelector(".sample-brand").textContent,
     name: sample.querySelector(".sample-name").textContent,

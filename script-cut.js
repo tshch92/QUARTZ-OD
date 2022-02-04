@@ -825,7 +825,7 @@ let shot;
 function timeChecker(t) {
   timeNow = new Date().getTime();
 
-  if (timeNow - t > 300) {
+  if (timeNow - t > 1000) {
     dimensionsAlert();
     recalc();
     renderSamples();
@@ -1535,7 +1535,7 @@ document.querySelector("#cutouts-here").addEventListener("input", function (e) {
 
         recalc();
         renderSamples();
-
+        setTimeout(removeLoading, 1000);
         break;
 
       case target.name === tmpNode.id + "-quartz-type" &&

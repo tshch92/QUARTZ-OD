@@ -121,6 +121,11 @@
     font-size: 24px;
     margin-left: 6px;
 
+    &-f{
+      font-size: 18px;
+      bottom: 0;
+    }
+
     &.loading {
       &:after {
         content: "";
@@ -271,7 +276,7 @@
   padding-bottom: 22px;
   &:after {
     @include label;
-    content: "снят с производства";
+    content: "заканчивается";
     background-color: grey;
   }
 }
