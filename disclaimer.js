@@ -62,10 +62,10 @@ function openPrev(el) {
 }
 
 function catchNewUser(a, b) {
-  console.log("catch new user");
+  //console.log("catch new user");
 
-  console.log(a);
-  console.log(b);
+  //console.log(a);
+  //console.log(b);
   let email = document.getElementById("save-email").value;
 
   if (!emailTest(email)) {
@@ -162,8 +162,11 @@ async function saveThis(sample, twinbutton) {
     formData.set("sampleprice", currentSample["price"]);
     formData.set("sampleslabs", currentSample["slabs"]);
     formData.set("samplesurface", currentSample["surface"]);
+    formData.set("sampleimage", currentSample["picture"]);
 
     formData.set("message", currentKitchenSummary);
+
+    formData.set("signature", `<br><br><b>С уважением, quartz_stone_od<br>+38 095 656 84 80<b>`);
 
     let response = await fetch("savetomail.php", {
       method: "POST",

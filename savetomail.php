@@ -39,6 +39,10 @@
 	$body .= '<strong>Параметры изделия</strong><br>';
 
 	$body .= $_POST['message'];
+
+	$body .= $_POST['sampleimage'];
+
+	$body .= $_POST['signature'];
 	
 /* 	//Прикрепить файл
 	if (!empty($_FILES['image']['tmp_name'])) {

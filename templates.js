@@ -856,7 +856,7 @@ function tgKitchenSummary() {
   }
 
   msg += `<br><hr><i>Замер, доставка в пределах Одессы/Черноморска, а также монтаж изделия - в подарок!
-  <br>Ручной подъём деталей на этаж оплачивается отдельно, при необходимости.</i><br><br><br><b>С уважением, quartz_stone_od<br>+38 095 656 84 80<b>`;
+  <br>Ручной подъём деталей на этаж оплачивается отдельно, при необходимости.</i><br>`;
 
   return msg;
 }
@@ -887,6 +887,9 @@ function tgSample(sample) {
 }
 
 function mailSample(sample) {
+  let pic = sample.querySelector(".sample-image img").src.split('images');
+
+
   return {
     brand: sample.querySelector(".sample-brand").textContent,
     name: sample.querySelector(".sample-name").textContent,
@@ -897,5 +900,6 @@ function mailSample(sample) {
       .querySelector(".sample-price")
       .textContent.replace("от ", "")
       .replace("$", ""),
+    picture: `<br><img src="https://quartz-stone.od.ua/images${pic[1]}">`,
   };
 }

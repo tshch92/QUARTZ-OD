@@ -1,8 +1,9 @@
-const UAHRATE = 0.035;
-const EURRATE = 1.13;
+const UAHRATE = 0.03466;
+const EURRATE = 1.130;
 const DELIVERY = {
   kiev: 40,
   odesa: 30,
+  brovary: 50,
 };
 const GREEDRATE = 1.3;
 const OLHARATE = 0.05;
@@ -42,7 +43,7 @@ const discounts = {
   Caesarstone_quartzua: 0,
   Hanstone: 0,
   Reston: 0,
-  Vicostone: 0.25,
+  Vicostone: 0.3,
   Silestone: 0.2,
   Ginger: 0,
   Quarella: 0,
@@ -54,7 +55,7 @@ const discounts = {
   SantaMargherita: 0,
   Technistone: 0.2,
   Quartzforms: 0.2,
-  'Modern Stone': 0,
+  "Modern Stone": 0,
 };
 
 function alignPrices(array) {
@@ -87,15 +88,19 @@ function getCosts(array) {
         break;
 
       case element.brand === "Caesarstone" &&
-        element.slab[0] === 3060 &&
-        slabSpent !== Math.round(slabSpent):
+        element.slab[0] === 3060:
         element.cost =
-          element.price.usd * (1 - discounts[element.brand]) * fakeSlabSpent;
-        element.cost += RASPILQUARTZUA;
+          element.price.usd * (1 - discounts['Caesarstone_quartzua']) * fakeSlabSpent;
+
+          if (slabSpent !== Math.round(slabSpent)) {
+            element.cost += RASPILQUARTZUA;
+          }      
+           
         break;
 
       case element.brand === "Атем":
-        element.cost = element.price.usd * (1 - discounts["Atem"]) * fakeSlabSpent;
+        element.cost =
+          element.price.usd * (1 - discounts["Atem"]) * fakeSlabSpent;
         break;
 
       default:
@@ -131,6 +136,19 @@ function getCosts(array) {
       case (element.brand === "Belenco" || element.brand === "Vicostone") &&
         fakeSlabSpent <= 0.5:
         totalCost += DELIVERY.kiev;
+        break;
+      case (element.brand === "Quarella" ||
+        element.brand === "Quartzforms" ||
+        element.brand === "Technistone" ||
+        (element.brand === "Caesarstone" && element.slab[0] === 3060)) &&
+        fakeSlabSpent <= 0.5:
+        totalCost += DELIVERY.brovary;
+        break;
+      case element.brand === "Quarella" ||
+        element.brand === "Quartzforms" ||
+        element.brand === "Technistone" ||
+        (element.brand === "Caesarstone" && element.slab[0] === 3060):
+        totalCost += DELIVERY.brovary * slabSpent;
         break;
       default:
         totalCost += DELIVERY.kiev * slabSpent;
@@ -217,7 +235,6 @@ function getCosts(array) {
     // доп вычисления для столешки с мойкой сайлстоун
 
     if (kitchen.qsinkslistR.length && element.brand === "Silestone") {
-
       let allSinksFound = false;
       let fabricSilestoneTotalcost = 0;
 
@@ -258,8 +275,7 @@ function getCosts(array) {
           (1 - discounts[element.brand]) *
           SilestoneSlabSpent.total;
 
-          //console.log(SilestoneSlabSpent);
-
+        //console.log(SilestoneSlabSpent);
 
         fabricSilestoneTotalcost += DELIVERY.kiev * SilestoneSlabSpent.total;
 
@@ -333,7 +349,6 @@ function getCosts(array) {
         element.fabricSilestoneTotalcost = Math.round(fabricSilestoneTotalcost);
 
         //console.log(fabricSilestoneTotalcost);
-
       } else {
         element.fabricSilestoneTotalcost = 0;
       }
@@ -559,5 +574,5 @@ function openEdits() {
 }
 
 if (window.innerWidth >= 1079) {
-  document.getElementById('cta').href="tel:+380956568480"
-};
+  document.getElementById("cta").href = "tel:+380956568480";
+}
