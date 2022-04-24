@@ -68,6 +68,11 @@
             & a.text-bold.instagram {
                 display: flex;
             }
+
+            & div {
+                padding: 0 $spacebig-mob;
+                text-align: center;
+            }
         }
     }
 }

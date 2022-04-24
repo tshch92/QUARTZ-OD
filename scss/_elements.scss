@@ -237,7 +237,7 @@
       background-image: url(./images/icons/forma/04.svg);
 
       &:hover:after {
-        content: "другая";
+        content: "інша";
         @include iconhovertext;
       }
     }
@@ -362,11 +362,11 @@
     border-bottom: 1px solid black;
 
     &.tab-filter::before {
-      content: "Фильтры";
+      content: "Фільтри";
     }
 
     &.tab-search::before {
-      content: "Поиск";
+      content: "Пошук";
     }
   }
 
@@ -730,7 +730,7 @@
   }
 
   &:after {
-    content: 'Оформить заказ: 095-656-8480'
+    content: 'Замовити: 095-656-8480'
   }
 
   &:hover {
@@ -921,7 +921,7 @@
     background-image: url(./images/icons/forma/01.svg);
 
     &:hover:after {
-      content: "прямая";
+      content: "пряма";
       @include iconhovertext;
     }
   }
@@ -930,7 +930,7 @@
     background-image: url(./images/icons/forma/03.svg);
 
     &:hover:after {
-      content: "угловая";
+      content: "кутова";
       @include iconhovertext;
     }
   }
@@ -939,7 +939,7 @@
     background-image: url(./images/icons/forma/02.svg);
 
     &:hover:after {
-      content: "П-образная";
+      content: "П-подібна";
       @include iconhovertext;
     }
   }
@@ -966,7 +966,7 @@
     background-image: url(./images/icons/profil/03.svg);
 
     &:hover:after {
-      content: "О-профиль";
+      content: "О-профіль";
       @include iconhovertext;
     }
   }
@@ -975,7 +975,7 @@
     background-image: url(./images/icons/profil/04.svg);
 
     &:hover:after {
-      content: "М-профиль";
+      content: "М-профіль";
       @include iconhovertext;
     }
   }
@@ -984,7 +984,7 @@
     background-image: url(./images/icons/profil/05.svg);
 
     &:hover:after {
-      content: "рваный край";
+      content: "рваний край";
       @include iconhovertext;
     }
   }
@@ -993,7 +993,7 @@
     background-image: url(./images/icons/profil/06.svg);
 
     &:hover:after {
-      content: "лофт профиль";
+      content: "лофт профіль";
       @include iconhovertext;
     }
   }
@@ -1002,7 +1002,7 @@
     background-image: url(./images/icons/profil/07.svg);
 
     &:hover:after {
-      content: "М-профиль";
+      content: "М-профіль";
       @include iconhovertext;
     }
   }

@@ -99,7 +99,7 @@ function sampleTemplate(sample) {
         `
                   <div>
                     <button class="btn save text-bold" onclick="saveThis(this.parentNode.parentNode)">
-                            Сохранить просчёт
+                            Зберегти прорахунок
                     </button>
                   </div>
               </div>
@@ -114,7 +114,7 @@ function sampleTemplate(sample) {
         `
                   <div>
                     <button class="btn save text-bold" onclick="saveThis(this.parentNode.parentNode)">
-                            Сохранить просчёт
+                            Зберегти прорахунок
                     </button>
                   </div>
               </div>
@@ -133,7 +133,7 @@ function sampleLookalike(sample) {
         `
                     <div class="lookandsave">
                       <button class="lookalike text-bold" data-colorgroup='${sample.colorGroup}' data-surface='${sample.surface}' data-pattern='${sample.pattern}'>
-                              Искать похожие цвета
+                              Знайти схожі кольори
                       </button>
                       <button class="btn save text-bold" onclick="saveThis(this.parentNode.parentNode)"></button>
                     </div>
@@ -149,7 +149,7 @@ function sampleLookalike(sample) {
         `
                   <div class="lookandsave">
                     <button class="lookalike text-bold" data-colorgroup='${sample.colorGroup}' data-surface='${sample.surface}' data-pattern='${sample.pattern}'>
-                            Искать похожие цвета
+                            Знайти схожі кольори
                     </button>
                     <button class="btn save text-bold" onclick="saveThis(this.parentNode.parentNode)"></button>
                   </div>
@@ -229,7 +229,7 @@ function addCustom(detailType) {
           <span class="text">x</span>
           <input type="text" class="input-small text-bold width" placeholder="${kitchen.details[0].w}">
           <input type="checkbox" class="visible" id='${tmpNode.id}-checkbox'>
-          <label for='${tmpNode.id}-checkbox' class='text'>изнанка</label>
+          <label for='${tmpNode.id}-checkbox' class='text'>внутр. бік</label>
   
         `;
 
@@ -260,14 +260,14 @@ function renderKitchenSummary() {
 
   switch (kitchen.shape) {
     case "I":
-      K = `Столешница ${kitchen.details[0].l} мм`;
+      K = `Стільниця ${kitchen.details[0].l} мм`;
       break;
 
     case "L":
-      K = `Столешница ${kitchen.details[0].l}x${kitchen.details[1].l} мм`;
+      K = `Стільниця ${kitchen.details[0].l}x${kitchen.details[1].l} мм`;
       break;
     case "U":
-      K = `Столешница ${kitchen.details[0].l}x${kitchen.details[1].l}х${kitchen.details[2].l} мм`;
+      K = `Стільниця ${kitchen.details[0].l}x${kitchen.details[1].l}х${kitchen.details[2].l} мм`;
       break;
 
     default:
@@ -275,14 +275,14 @@ function renderKitchenSummary() {
   }
 
   if (kitchen.island) {
-    K += ` + остров ${kitchen.island.l}x${kitchen.island.w}мм`;
+    K += ` + острів ${kitchen.island.l}x${kitchen.island.w}мм`;
   }
 
   if (kitchen.bar) {
-    K += ` + барная ${kitchen.bar.l}x${kitchen.bar.w}мм`;
+    K += ` + барна ${kitchen.bar.l}x${kitchen.bar.w}мм`;
   }
 
-  K += `, торец ${kitchen.thickness}мм, `;
+  K += `, торець ${kitchen.thickness}мм, `;
 
   switch (kitchen.profile) {
     case "edge1":
@@ -293,21 +293,21 @@ function renderKitchenSummary() {
       K += `фаска R3, `;
       break;
     case "edge3":
-      K += `о-профиль, `;
+      K += `о-профіль, `;
       break;
     case "edge4":
-      K += `M-профиль, `;
+      K += `M-профіль, `;
       break;
     case "edge5":
-      K += `рваный край, `;
+      K += `рваний край, `;
       break;
     case "edge6":
       document.querySelector(
         ".kitchen-summary"
-      ).textContent += `лофт профиль, `;
+      ).textContent += `лофт профіль, `;
       break;
     case "edge7":
-      K += `M-профиль, `;
+      K += `M-профіль, `;
       break;
 
     default:
@@ -316,11 +316,11 @@ function renderKitchenSummary() {
 
   switch (kitchen.backsplash) {
     case true:
-      K += `пристенки 40мм`;
+      K += `пристінки 40мм`;
       break;
 
     default:
-      K += `без пристенков`;
+      K += `без пристінків`;
       break;
   }
 
@@ -334,18 +334,18 @@ function renderSamplesSummary(arr, obj) {
   let word = "";
 
   if (end >= 11 && end <= 14) {
-    word = "цветов";
+    word = "кольорів";
   } else if ((end >= 2 && end <= 4) || (end % 10 >= 2 && end % 10 <= 4)) {
-    word = "цвета";
+    word = "кольори";
   } else if (end === 1 || end % 10 === 1) {
-    word = "цвет";
+    word = "колір";
   } else {
-    word = "цветов";
+    word = "кольорів";
   }
 
   document.querySelector(
     ".stones-summary"
-  ).textContent = `Найдено: ${arr.length} ${word}. `;
+  ).textContent = `Знайдено: ${arr.length} ${word}. `;
   if (obj) {
     for (let i in obj) {
       document.querySelector(".stones-summary").textContent += obj[i];
@@ -377,7 +377,7 @@ function renderSamples() {
     case Boolean(document.querySelector("#search2").checked) &&
       Boolean(document.querySelector("#searchInput").value):
       $sectionSamples.innerHTML = `
-      <span class='text-bold'>Извините, такого кварца у нас нет :(</span>
+      <span class='text-bold'>Вибачте, такого кварцу в нас немає :(</span>
       `;
       //console.log("текстовій поиск ничего не нашел");
       break;
@@ -399,7 +399,7 @@ function renderSamples() {
 
     case Boolean(!filteredSamplesArray.length) && !filtersAreEmpty:
       $sectionSamples.innerHTML = `
-  <span class='text-bold'>Извините, такого кварца у нас нет :(</span>
+  <span class='text-bold'>Вибачте, такого кварцу в нас немає :(</span>
   `;
       //console.log("нет камня, которій соответствует критериям фильтров");
       break;
@@ -443,7 +443,7 @@ function checkSamePrice(arr) {
         ${getMaxPrice(arr)}$
         `;
   }
-  return `от 
+  return `від 
         ${getMinPrice(arr)}$ - до ${getMaxPrice(arr)}$
         `;
 }
@@ -479,31 +479,31 @@ function addCutout(detailType) {
     case "sink":
       tmpNode.innerHTML = `
                         <div class="cutout-header">
-                          <span class="cutout-title text-bold">Мойка</span>
+                          <span class="cutout-title text-bold">Мийка</span>
                           <button class="removenode"></button>
                         </div>
                         <div class="parameter-options cutout-options-64">
                           <div class="btn-text-64">
                             <input type="radio" id="${tmpNode.id}-undermount" name='${tmpNode.id}-cutout-type' value="undermount" checked>
-                            <label for="${tmpNode.id}-undermount" class="icon-undermount text">подстол.</label>
+                            <label for="${tmpNode.id}-undermount" class="icon-undermount text">підстіл.</label>
                           </div>
                           <div class="btn-text-64">
                             <input type="radio" id="${tmpNode.id}-levelmount" name='${tmpNode.id}-cutout-type' value="levelmount">
-                            <label for="${tmpNode.id}-levelmount" class="icon-levelmount text">заподлицо</label>
+                            <label for="${tmpNode.id}-levelmount" class="icon-levelmount text">запідлице</label>
                           </div>
                           <div class="btn-text-64">
                             <input type="radio" id="${tmpNode.id}-quartz" name='${tmpNode.id}-cutout-type' value="quartz">
-                            <label for="${tmpNode.id}-quartz" class="icon-quartz text">из кварца</label>
+                            <label for="${tmpNode.id}-quartz" class="icon-quartz text">з кварцу</label>
                           </div>
                         </div>
                         <div class="parameter-options cutout-options-48" style="display: none">
                           <div class="btn-text-48">
                             <input type="radio" id="${tmpNode.id}-round"  name='${tmpNode.id}-quartz-type' value="round" checked>
-                            <label for="${tmpNode.id}-round" class="icon-round text">круглый сток</label>
+                            <label for="${tmpNode.id}-round" class="icon-round text">круглий стік</label>
                           </div>
                           <div class="btn-text-48">
                             <input type="radio" id="${tmpNode.id}-line" name='${tmpNode.id}-quartz-type' value="line">
-                            <label for="${tmpNode.id}-line" class="icon-line text">щелевая</label>
+                            <label for="${tmpNode.id}-line" class="icon-line text">щільова</label>
                           </div>
                         </div>
                         <div class="parameter-options cutout-size-radios" style="display: none">
@@ -534,7 +534,7 @@ function addCutout(detailType) {
                         
                           <div class="parameter-options cutout-cannelures cannelures">
                             <input type="checkbox" class="tick" id='${tmpNode.id}-cannelures'>
-                            <label for='${tmpNode.id}-cannelures' class='text-bold'>мокрый стол (каннелюры)</label>
+                            <label for='${tmpNode.id}-cannelures' class='text-bold'>мокрий стіл (каннелюри)</label>
                           </div>
                         
 
@@ -551,17 +551,17 @@ function addCutout(detailType) {
     case "cooktop":
       tmpNode.innerHTML = `
                           <div class="cutout-header">
-                              <span class="cutout-title text-bold">Варочная</span>
+                              <span class="cutout-title text-bold">Варочна</span>
                               <button class="removenode"></button>
                           </div>
                           <div class="parameter-options cutout-options-48">
                               <div class="btn-text-48">
                                   <input type="radio" id="${tmpNode.id}-undermount"  name='${tmpNode.id}-quartz-type' value="undermount" checked>
-                                  <label for="${tmpNode.id}-undermount" class="icon-undermount text">подстол.</label>
+                                  <label for="${tmpNode.id}-undermount" class="icon-undermount text">підстіл.</label>
                               </div>
                               <div class="btn-text-48">
                                   <input type="radio" id="${tmpNode.id}-levelmount" name='${tmpNode.id}-quartz-type' value="levelmount">
-                                  <label for="${tmpNode.id}-levelmount" class="icon-levelmount text">заподлицо</label>
+                                  <label for="${tmpNode.id}-levelmount" class="icon-levelmount text">урівень</label>
                               </div>
                           </div>
   
@@ -590,14 +590,14 @@ function longKitchenSummary() {
 
   switch (kitchen.shape) {
     case "I":
-      msg += `Столешница ${kitchen.details[0].l}х${kitchen.details[0].w}мм <br>`;
+      msg += `Стільниця ${kitchen.details[0].l}х${kitchen.details[0].w}мм <br>`;
       break;
 
     case "L":
       if (kitchen.details[0].w === kitchen.details[1].w) {
-        msg += `Столешница Г-образная, ${kitchen.details[0].l}x${kitchen.details[1].l} мм, глубина ${kitchen.details[0].w}мм <br>`;
+        msg += `Стільниця Г-подібна, ${kitchen.details[0].l}x${kitchen.details[1].l} мм, глибина ${kitchen.details[0].w}мм <br>`;
       } else {
-        msg += `Столешница Г-образная, ${kitchen.details[0].l}x${kitchen.details[1].l} мм, глубина ${kitchen.details[0].w} и ${kitchen.details[1].w} мм <br>`;
+        msg += `Стільниця Г-подібна, ${kitchen.details[0].l}x${kitchen.details[1].l} мм, глибина ${kitchen.details[0].w} и ${kitchen.details[1].w} мм <br>`;
       }
       break;
     case "U":
@@ -605,9 +605,9 @@ function longKitchenSummary() {
         kitchen.details[0].w === kitchen.details[1].w &&
         kitchen.details[0].w === kitchen.details[2].w
       ) {
-        msg += `Столешница П-образная, ${kitchen.details[0].l}x${kitchen.details[1].l}х${kitchen.details[2].l} мм, глубина ${kitchen.details[0].w}мм <br>`;
+        msg += `Стільниця П-подібна, ${kitchen.details[0].l}x${kitchen.details[1].l}х${kitchen.details[2].l} мм, глибина ${kitchen.details[0].w}мм <br>`;
       } else {
-        msg += `Столешница П-образная, ${kitchen.details[0].l}x${kitchen.details[1].l}х${kitchen.details[2].l} мм, глубина ${kitchen.details[0].w}-${kitchen.details[1].w}-${kitchen.details[1].w}мм <br>`;
+        msg += `Стільниця П-подібна, ${kitchen.details[0].l}x${kitchen.details[1].l}х${kitchen.details[2].l} мм, глибина ${kitchen.details[0].w}-${kitchen.details[1].w}-${kitchen.details[1].w}мм <br>`;
       }
       break;
 
@@ -616,19 +616,19 @@ function longKitchenSummary() {
   }
 
   if (kitchen.island) {
-    msg += `+ остров ${kitchen.island.l}x${kitchen.island.w}мм <br>`;
+    msg += `+ острів ${kitchen.island.l}x${kitchen.island.w}мм <br>`;
   }
 
   if (kitchen.bar) {
-    msg += `+ барная стойка ${kitchen.bar.l}x${kitchen.bar.w}мм <br>`;
+    msg += `+ барна стійка ${kitchen.bar.l}x${kitchen.bar.w}мм <br>`;
   }
 
   for (leg in kitchen.legs) {
     msg += `+ нога ${kitchen.legs[leg].l}x${kitchen.legs[leg].w}мм, `;
     if (kitchen.legs[leg].visibility) {
-      msg += `изнанка полированая (видимая)<br>`;
+      msg += `зворотній бік полирований (видимий)<br>`;
     } else {
-      msg += `изнанка невидимая<br>`;
+      msg += `зворотній бік невидимий<br>`;
     }
   }
 
@@ -643,19 +643,19 @@ function longKitchenSummary() {
       msg += `фаска R3 <br>`;
       break;
     case "edge3":
-      msg += `о-профиль <br>`;
+      msg += `о-профіль <br>`;
       break;
     case "edge4":
-      msg += `M-профиль <br>`;
+      msg += `M-профіль <br>`;
       break;
     case "edge5":
-      msg += `рваный край <br>`;
+      msg += `рваний край <br>`;
       break;
     case "edge6":
-      msg += `лофт профиль <br>`;
+      msg += `лофт профіль <br>`;
       break;
     case "edge7":
-      msg += `M-профиль <br>`;
+      msg += `M-профіль <br>`;
       break;
 
     default:
@@ -666,33 +666,33 @@ function longKitchenSummary() {
 
   switch (kitchen.backsplash) {
     case true:
-      msg += `Пристенки 40мм <br>`;
+      msg += `Пристінки 40мм <br>`;
       break;
 
     default:
-      msg += `Без пристенков <br>`;
+      msg += `Без пристінків <br>`;
       break;
   }
 
   for (panel in kitchen.panels) {
-    msg += `+ стеновая панель ${kitchen.panels[panel].l}x${kitchen.panels[panel].w}мм <br>`;
+    msg += `+ стінова панель ${kitchen.panels[panel].l}x${kitchen.panels[panel].w}мм <br>`;
   }
 
-  msg += `<hr>вырез под накладную мойку - <span class="text-bold">в подарок</span><br>`;
-  msg += `вырез под накладную варочную или др. технику - <span class="text-bold">в подарок</span><br>`;
+  msg += `<hr>виріз під накладну мийку - <span class="text-bold">в подарунок</span><br>`;
+  msg += `виріз під накладну варочну чи ін. техніку - <span class="text-bold">в подарунок</span><br>`;
 
   for (c in kitchen.cutouts) {
     if (kitchen.cutouts[c].class === "sink") {
       if (kitchen.cutouts[c].type === "levelmount") {
-        msg += `+ вырез под мойку заподлицо`;
+        msg += `+ виріз під мийку урівень`;
       } else if (kitchen.cutouts[c].type === "undermount") {
-        msg += `+ вырез под мойку нижнего монтажа`;
+        msg += `+ віріз під мойку нижного монтажу`;
       } else {
-        msg += `+ мойка из кварца `;
+        msg += `+ мийка из кварцю `;
         if (kitchen.cutouts[c].option === "round") {
-          msg += `${kitchen.cutouts[c].size}мм, круглый сток`;
+          msg += `${kitchen.cutouts[c].size}мм, круглий стік`;
         } else {
-          msg += `${kitchen.cutouts[c].size[0]}x${kitchen.cutouts[c].size[1]}мм, щелевая`;
+          msg += `${kitchen.cutouts[c].size[0]}x${kitchen.cutouts[c].size[1]}мм, щільова`;
         }
       }
 
@@ -702,25 +702,25 @@ function longKitchenSummary() {
             kitchen.cutouts[c].option === "round")) &&
         kitchen.cutouts[c].cannelures
       ) {
-        msg += ' с каннелюрами ("мокрый стол") <br>';
+        msg += ' з каннелюрами ("мокрий стіл") <br>';
       } else {
         msg += `<br>`;
       }
     } else {
-      msg += `+ вырез под варочную или др.технику `;
+      msg += `+ виріз під варочну чи ін. техніку `;
       if (kitchen.cutouts[c].type === "levelmount") {
-        msg += `заподлицо <br>`;
+        msg += `урівень <br>`;
       } else {
-        msg += `нижнего монтажа <br>`;
+        msg += `нижнього монтажу <br>`;
       }
     }
   }
 
   msg += `<hr>
-  Замеры<br>
-  Доставка по Одессе/Черноморску<br>
-  Подъем на лифте<br>
-  Монтаж столешницы<br><hr><br>
+  Заміри<br>
+  Доставка по Одесі/Чорноморську<br>
+  Підняття ліфтом<br>
+  Монтаж стільниці<br><hr><br>
   `;
 
   return msg;
@@ -731,14 +731,14 @@ function tgKitchenSummary() {
 
   switch (kitchen.shape) {
     case "I":
-      msg += `Столешница ${kitchen.details[0].l}х${kitchen.details[0].w}мм <br>`;
+      msg += `Стільниця ${kitchen.details[0].l}х${kitchen.details[0].w}мм <br>`;
       break;
 
     case "L":
       if (kitchen.details[0].w === kitchen.details[1].w) {
-        msg += `Столешница Г-образная, ${kitchen.details[0].l}x${kitchen.details[1].l} мм, глубина ${kitchen.details[0].w}мм <br>`;
+        msg += `Стільниця Г-подібна, ${kitchen.details[0].l}x${kitchen.details[1].l} мм, глубина ${kitchen.details[0].w}мм <br>`;
       } else {
-        msg += `Столешница Г-образная, ${kitchen.details[0].l}x${kitchen.details[1].l} мм, глубина ${kitchen.details[0].w} и ${kitchen.details[1].w} мм <br>`;
+        msg += `Стільниця Г-подібна, ${kitchen.details[0].l}x${kitchen.details[1].l} мм, глубина ${kitchen.details[0].w} и ${kitchen.details[1].w} мм <br>`;
       }
       break;
     case "U":
@@ -746,9 +746,9 @@ function tgKitchenSummary() {
         kitchen.details[0].w === kitchen.details[1].w &&
         kitchen.details[0].w === kitchen.details[2].w
       ) {
-        msg += `Столешница П-образная, ${kitchen.details[0].l}x${kitchen.details[1].l}х${kitchen.details[2].l} мм, глубина ${kitchen.details[0].w}мм <br>`;
+        msg += `Стільниця П-подібна, ${kitchen.details[0].l}x${kitchen.details[1].l}х${kitchen.details[2].l} мм, глубина ${kitchen.details[0].w}мм <br>`;
       } else {
-        msg += `Столешница П-образная, ${kitchen.details[0].l}x${kitchen.details[1].l}х${kitchen.details[2].l} мм, глубина ${kitchen.details[0].w}-${kitchen.details[1].w}-${kitchen.details[1].w}мм <br>`;
+        msg += `Стільниця П-подібна, ${kitchen.details[0].l}x${kitchen.details[1].l}х${kitchen.details[2].l} мм, глубина ${kitchen.details[0].w}-${kitchen.details[1].w}-${kitchen.details[1].w}мм <br>`;
       }
       break;
 
@@ -757,23 +757,23 @@ function tgKitchenSummary() {
   }
 
   if (kitchen.island) {
-    msg += `+ остров ${kitchen.island.l}x${kitchen.island.w}мм <br>`;
+    msg += `+ острів ${kitchen.island.l}x${kitchen.island.w}мм <br>`;
   }
 
   if (kitchen.bar) {
-    msg += `+ барная стойка ${kitchen.bar.l}x${kitchen.bar.w}мм <br>`;
+    msg += `+ барна стійка ${kitchen.bar.l}x${kitchen.bar.w}мм <br>`;
   }
 
   for (leg in kitchen.legs) {
     msg += `+ нога ${kitchen.legs[leg].l}x${kitchen.legs[leg].w}мм, `;
     if (kitchen.legs[leg].visibility) {
-      msg += `изнанка полированая (видимая)<br>`;
+      msg += `зворотній бік полірований (видимий)<br>`;
     } else {
-      msg += `изнанка невидимая<br>`;
+      msg += `зворотній бік невидимий<br>`;
     }
   }
 
-  msg += `<br>Толщина ${kitchen.thickness}мм, `;
+  msg += `<br>Товщина ${kitchen.thickness}мм, `;
 
   switch (kitchen.profile) {
     case "edge1":
@@ -784,19 +784,19 @@ function tgKitchenSummary() {
       msg += `фаска R3 <br>`;
       break;
     case "edge3":
-      msg += `о-профиль <br>`;
+      msg += `о-профіль <br>`;
       break;
     case "edge4":
-      msg += `M-профиль <br>`;
+      msg += `M-профіль <br>`;
       break;
     case "edge5":
-      msg += `рваный край <br>`;
+      msg += `рваний край <br>`;
       break;
     case "edge6":
-      msg += `лофт профиль <br>`;
+      msg += `лофт профіль <br>`;
       break;
     case "edge7":
-      msg += `M-профиль <br>`;
+      msg += `M-профіль <br>`;
       break;
 
     default:
@@ -805,33 +805,33 @@ function tgKitchenSummary() {
 
   switch (kitchen.backsplash) {
     case true:
-      msg += `<br>Пристенки 40мм <br>`;
+      msg += `<br>Пристінки 40мм <br>`;
       break;
 
     default:
-      msg += `<br>Без пристенков <br>`;
+      msg += `<br>Без пристінків <br>`;
       break;
   }
 
   for (panel in kitchen.panels) {
-    msg += `+ стеновая панель ${kitchen.panels[panel].l}x${kitchen.panels[panel].w}мм <br>`;
+    msg += `+ стінова панель ${kitchen.panels[panel].l}x${kitchen.panels[panel].w}мм <br>`;
   }
 
-  msg += `<br><i>Вырезы под накладную технику - в подарок</i><br>`;
+  msg += `<br><i>Вирізи під накладну техніку - в подарунок</i><br>`;
 
   for (c in kitchen.cutouts) {
     if (kitchen.cutouts[c].class === "sink") {
-      msg += `+ мойка `;
+      msg += `+ мийка `;
       if (kitchen.cutouts[c].type === "levelmount") {
-        msg += `заподлицо`;
+        msg += `урівень зі стільницею`;
       } else if (kitchen.cutouts[c].type === "undermount") {
-        msg += `нижнего монтажа`;
+        msg += `нижнього монтажу`;
       } else {
-        msg += `кварцевая, `;
+        msg += `кварцева, `;
         if (kitchen.cutouts[c].option === "round") {
-          msg += `${kitchen.cutouts[c].size}мм, круглый сток`;
+          msg += `${kitchen.cutouts[c].size}мм, круглий стік`;
         } else {
-          msg += `${kitchen.cutouts[c].size[0]}x${kitchen.cutouts[c].size[1]}мм, щелевая`;
+          msg += `${kitchen.cutouts[c].size[0]}x${kitchen.cutouts[c].size[1]}мм, щільова`;
         }
       }
 
@@ -841,22 +841,22 @@ function tgKitchenSummary() {
             kitchen.cutouts[c].option === "round")) &&
         kitchen.cutouts[c].cannelures
       ) {
-        msg += ' с каннелюрами ("мокрый стол") <br>';
+        msg += ' с каннелюрами ("мокрий стіл") <br>';
       } else {
         msg += `<br>`;
       }
     } else {
-      msg += `+ варочная или др.техника `;
+      msg += `+ варочная чи ін. техніка `;
       if (kitchen.cutouts[c].type === "levelmount") {
-        msg += `заподлицо <br>`;
+        msg += `урівень зі стільницею <br>`;
       } else {
-        msg += `нижнего монтажа <br>`;
+        msg += `нижнього монтажу <br>`;
       }
     }
   }
 
-  msg += `<br><hr><i>Замер, доставка в пределах Одессы/Черноморска, а также монтаж изделия - в подарок!
-  <br>Ручной подъём деталей на этаж оплачивается отдельно, при необходимости.</i><br>`;
+  msg += `<br><hr><i>Заміри, доставка в межах Одеси/Чорноморська, а також монтаж виробу - в подарунок!
+  <br>Підняття деталей на поверх вручну (сходами) сплачується окремо, за необхідності.</i><br>`;
 
   return msg;
 }

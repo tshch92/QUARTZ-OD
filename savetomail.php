@@ -7,7 +7,7 @@
 
 	$mail = new PHPMailer(true);
 	$mail->CharSet = 'UTF-8';
-	$mail->setLanguage('ru', 'phpmailer/language/');
+	$mail->setLanguage('uk', 'phpmailer/language/');
 	$mail->IsHTML(true);
 
 	//От кого письмо
@@ -19,7 +19,7 @@
 	//копия
 	$mail->addCC("tshch92@gmail.com");
 	//Тема письма
-	$mail->Subject = 'Столешница '.$_POST['samplebrand'].' '.$_POST['samplename'].' '.$_POST['samplesurface'].' '.$_POST['sampleprice'];
+	$mail->Subject = 'Стільниця '.$_POST['samplebrand'].' '.$_POST['samplename'].' '.$_POST['samplesurface'].' '.$_POST['sampleprice'];
 
 	//Рука
 /* 	$respond = "Правая";
@@ -32,11 +32,11 @@
 
 	$body .= '<h2>'.$_POST['sampleprice'].'</h2></br>';
 
-	$body .= 'Расход камня, сл.: '.$_POST['sampleslabs'];
+	$body .= 'Витрати матеріалу, сл.: '.$_POST['sampleslabs'];
 
 	$body .= '<hr>';
 
-	$body .= '<strong>Параметры изделия</strong><br>';
+	$body .= '<strong>Параметри виробу</strong><br>';
 
 	$body .= $_POST['message'];
 

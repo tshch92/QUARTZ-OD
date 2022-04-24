@@ -223,7 +223,7 @@
   background-image: url(./images/icons/pricedown.svg);
 
   &:hover:after {
-    content: "есть шанс, что цена будет ещё ниже";
+    content: "є шанс, що ціна буде ще нижча";
     @include pricehover;
     background-color: #009922;
     bottom: 20px;
@@ -236,7 +236,7 @@
   background-image: url(./images/icons/priceup.svg);
 
   &:hover:after {
-    content: "возможно, цена будет выше из-за особенности раскроя материала";
+    content: "можливо, ціна буде вища через особливості розкрою матеріала";
     @include pricehover;
     background-color: #c80000;
     bottom: 16px;
@@ -258,7 +258,7 @@
   padding-bottom: 22px;
   &:after {
     @include label;
-    content: "рекомендуем";
+    content: "рекомендуємо";
     background-color: $violet;
   }
 }
@@ -267,7 +267,7 @@
   padding-bottom: 22px;
   &:after {
     @include label;
-    content: "под заказ (до 6 мес.)";
+    content: "під замовл. (до 6 міс.)";
     background-color: teal;
   }
 }
@@ -276,7 +276,7 @@
   padding-bottom: 22px;
   &:after {
     @include label;
-    content: "заканчивается";
+    content: "закінчується";
     background-color: grey;
   }
 }
@@ -763,14 +763,14 @@
     }
 
     &::before {
-      content: "Стоимость:";
+      content: "Вартість:";
       margin-right: 10px;
       font-weight: 400;
       opacity: 0.6;
     }
 
     &::after {
-      content: "(в зависимости от цвета)";
+      content: "(в залежності від кольору)";
       display: block;
       font-weight: 400;
       opacity: 0.6;

@@ -143,9 +143,9 @@ async function saveThis(sample, twinbutton) {
       if (sample.querySelector(".save").textContent) {
         sample.querySelector(
           ".save"
-        ).textContent = `отправляем на ${window.localStorage.getItem("email")}`;
+        ).textContent = `відправляємо на ${window.localStorage.getItem("email")}`;
         setTimeout(() => {
-          sample.querySelector(".save").textContent = "Сохранить просчёт";
+          sample.querySelector(".save").textContent = "Зберегти прорахунок";
         }, 1500);
       }
     }
@@ -166,7 +166,7 @@ async function saveThis(sample, twinbutton) {
 
     formData.set("message", currentKitchenSummary);
 
-    formData.set("signature", `<br><br><b>С уважением, quartz_stone_od<br>+38 095 656 84 80<b>`);
+    formData.set("signature", `<br><br><b>З повагою, quartz_stone_od<br>+38 095 656 84 80<b>`);
 
     let response = await fetch("savetomail.php", {
       method: "POST",

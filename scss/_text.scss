@@ -5,12 +5,28 @@
 //     font-weight: 400;
 // }
 
+@font-face {
+    font-family: "Gogol";
+    src: url("/fonts/Gogol.woff") format("woff") ,
+         url("/fonts/Gogol.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "MrHamiltone";
+    src: url("/fonts/mr_HamiltoneG.woff") format("woff") ,
+         url("/fonts/mr_HamiltoneG.woff2") format("woff2");
+  }
+
 .script {
     font-family: 'Caveat', serif;
     font-size: 48px;
     line-height: 32px;
     letter-spacing: -2px;
     font-weight: 400;
+}
+
+.gogol {
+    font-family: 'Gogol', serif;
 }
 
 .title-bold {

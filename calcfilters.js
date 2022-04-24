@@ -114,10 +114,10 @@ document.querySelector("#brandlist").innerHTML = `${$brandlist
 
 document.querySelector(
   "#brandlist"
-).innerHTML += `<button class="text-bold btn-simple" id="showmorebrands" onclick='showmorebrands()'>ещё...</button>`;
+).innerHTML += `<button class="text-bold btn-simple" id="showmorebrands" onclick='showmorebrands()'>ще...</button>`;
 document.querySelector(
   "#brandlist"
-).innerHTML += `<button class="text-bold btn-simple" id="showlessbrands" onclick='showlessbrands()'>показать основные</button>`;
+).innerHTML += `<button class="text-bold btn-simple" id="showlessbrands" onclick='showlessbrands()'>показати основні</button>`;
 
 function showlessbrands() {
   let arr = document.querySelectorAll("#brandlist .chip-basic");
@@ -145,20 +145,20 @@ function showlessbrands() {
   let word = "";
 
   if (end >= 11 && end <= 14) {
-    word = "брендов";
+    word = "брендів";
   } else if ((end >= 2 && end <= 4) || (end % 10 >= 2 && end % 10 <= 4)) {
-    word = "бренда";
+    word = "бренди";
   } else if (end === 1 || end % 10 === 1) {
     word = "бренд";
   } else {
-    word = "брендов";
+    word = "брендів";
   }
 
   document.querySelector("#showlessbrands").style = "display: none";
   document.querySelector("#showmorebrands").style = "display: flex";
   document.querySelector(
     "#showmorebrands"
-  ).textContent = `ещё ${diff} ${word}...`;
+  ).textContent = `ще ${diff} ${word}...`;
 }
 
 function showmorebrands() {

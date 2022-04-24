@@ -16,7 +16,7 @@ setTimeout(() => {
     document.querySelector(".kitchen-collapsed").classList.add("hint");
     document.querySelector("body").style = "height: 100vh; overflow-y: hidden;";
   }
-}, 2000);
+}, 3000);
 
 document
   .getElementById("onboarding-desktop-1")
