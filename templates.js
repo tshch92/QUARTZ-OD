@@ -316,11 +316,11 @@ function renderKitchenSummary() {
 
   switch (kitchen.backsplash) {
     case true:
-      K += `пристінки 40мм`;
+      K += `пристінний бортик 40мм`;
       break;
 
     default:
-      K += `без пристінків`;
+      K += `без пристінного бортика`;
       break;
   }
 
@@ -632,7 +632,7 @@ function longKitchenSummary() {
     }
   }
 
-  msg += `Толщина ${kitchen.thickness}мм, `;
+  msg += `Товщина ${kitchen.thickness}мм, `;
 
   switch (kitchen.profile) {
     case "edge1":
@@ -666,11 +666,11 @@ function longKitchenSummary() {
 
   switch (kitchen.backsplash) {
     case true:
-      msg += `Пристінки 40мм <br>`;
+      msg += `Пристінний бортик 40мм <br>`;
       break;
 
     default:
-      msg += `Без пристінків <br>`;
+      msg += `Без пристінного бортика <br>`;
       break;
   }
 
@@ -805,11 +805,11 @@ function tgKitchenSummary() {
 
   switch (kitchen.backsplash) {
     case true:
-      msg += `<br>Пристінки 40мм <br>`;
+      msg += `<br>Пристінний бортик 40мм <br>`;
       break;
 
     default:
-      msg += `<br>Без пристінків <br>`;
+      msg += `<br>Без пристінного бортика <br>`;
       break;
   }
 
@@ -841,7 +841,7 @@ function tgKitchenSummary() {
             kitchen.cutouts[c].option === "round")) &&
         kitchen.cutouts[c].cannelures
       ) {
-        msg += ' с каннелюрами ("мокрий стіл") <br>';
+        msg += ' з каннелюрами ("мокрий стіл") <br>';
       } else {
         msg += `<br>`;
       }

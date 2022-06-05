@@ -40,9 +40,11 @@
         <link rel="stylesheet" href="./fonts/stylesheet.css">
         <link rel="stylesheet" href="./styles.css">
         <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+        <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
     </head>
     <body>
-        <section class="hero">
+<!--         <section class="hero">
             <nav class="header-nav">
                 <div class="header-nav-left">
                     <a class="header-nav-link text-bold current whitelink" href="./index.html">Стільниці</a>
@@ -61,18 +63,51 @@
                 <div class="hero-title">
                     <h1 class="title-bold">Кварцові<br>стільниці</h1>
                     <span class="script">в Одесі</span>
-                    <!-- <img class= "script" src="./images/scripts/v-odesse.svg"> -->
+                    
                 </div>
             </div>
             <div class="contact">
                 <span class="text-bold">Одеса, ж/м Райдужний</span>
                 <a href="tel:+380956568480" class="contact-link text-bold">+380956568480</a>
-                <!-- <a href="" class="contact-link instagram-big"></a> -->
                 <a href="mailto:quartzstoneod@gmail.com" class="contact-link text-bold">quartzstoneod@gmail.com</a>
                 <a href="https://www.instagram.com/quartz_stone_od" class="contact-link text-bold instagram">quartz_stone_od</a>
             </div>
+        </section> -->
+        <section class="hero">
+            <nav class="header-nav">
+                <div class="header-nav-left">
+                    <a class="header-nav-link text-bold current" href="./index.html">Стільниці</a>
+                    <a class="header-nav-link text-bold" href="./calculator.html">Ціни</a>
+                </div>
+                <div>
+                    <a class="header-nav-link text-bold" href="./contacts.html">Контакти</a>
+                </div>
+            </nav>
+            <div class="wrapper-hero">
+                <div class="hero-title">
+                    <div class="script">С. Тушич</div>
+                    <div class="text-big">Сергій Тушич & Ко. Одеса</div>
+                    <h1 class="title-bold">Кварцові стільниці</h1>
+                </div>
+                <div class="quick-links">
+                    <a class="quick-link text" href="#assort">Асортимент та ціни</a>
+                    <a class="quick-link text" href="#maintenance">Про матеріал</a>
+                    <a class="quick-link text newpost" href="#getsamples">Отримати безкоштовні зразки</a>
+                    <a class="quick-link text" href="#production">Виробництво</a>
+                    <a class="quick-link text" href="#furn">Меблярам</a>
+                    <a class="quick-link text" href="#reviews">Відгуки</a>
+                    <a class="quick-link text" href="#war">Працюємо під час війни</a>
+                </div> 
+                <div class="contact">
+                    <span class="text-bold">ж/м Райдужний (Таїрова)</span>
+                    <a href="tel:+380956568480" class="contact-link text-bold">+380956568480</a>
+                    <a href="mailto:quartzstoneod@gmail.com" class="contact-link text-bold">quartzstoneod@gmail.com</a>
+                    <a href="https://www.instagram.com/quartz_stone_od" class="contact-link text-bold instagram">quartz_stone_od</a>
+                </div>
+                <img src="images/5130_Cosmopolitan_White_mini_space_DPS-MR.jpg" alt="">
+            </div>
         </section>
-        <section class="assort" id="assort">
+<!--         <section class="assort" id="assort">
             <div class="assort-product-types">
                 <div class="product countertops text">
                     Стільниці
@@ -105,6 +140,108 @@
                 <div class="assort-brand caesarstone"></div>
                 <div class="assort-brand atem"></div>
             </div>
+        </section> -->
+        <section class="assort" id="assort">
+            <div class="assort-product-types">
+                <button class="product countertops text" onclick="baranScroll()">
+                    Стільниці
+                </button>
+                <button class="product bartops text" onclick="baranScroll()">
+                    Барні стійки
+                </button>
+                <button class="product backsplashes text" onclick="baranScroll()">
+                    Фартуки
+                </button>
+                <button class="product washbasins text" onclick="baranScroll()">
+                    Вмивальники
+                </button>
+                <button class="product windowsills text" onclick="baranScroll()">
+                    Підвіконня
+                </button>
+            </div>
+
+            <div class="slider-big">
+                    <div class="example">
+                        <div class="example-picture">
+                            <img src="./images/5100vanillanoir.jpg" alt="">
+                            <img src="./images/hvoya.jpg" alt="">
+                            <img src="./images/grafit.jpg" alt="">
+                        </div>
+
+                        <div class="example-content">
+                            <span class="example-title text-big">Стільниця зі стіновими панелями</span>
+                            <div class="example-brand text-bold">Caesarstone 4121 Atlantic salt</div>
+                            <div class="example-detail text">3000 x 600 мм</div>
+                            <div class="example-detail text">торець 40мм, фігурний профіль</div>
+                            <div class="example-detail text">накладна варочна</div>
+                            <div class="example-detail text">підстільна мийка</div>
+                            <div class="example-bottom">
+                                <span class="text-bold">Вартість <br>під ключ:</span>
+                                <span class="example-price">3522$</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example">
+                        <div class="example-picture">
+                            <img src="./images/5100vanillanoir.jpg" alt="">
+                            <img src="./images/hvoya.jpg" alt="">
+                            <img src="./images/grafit.jpg" alt="">
+                        </div>
+
+                        <div class="example-content">
+                            <span class="example-title text-big">Стільниця зі стіновими панелями</span>
+                            <div class="example-brand text-bold">Caesarstone 4121 Atlantic salt</div>
+                            <div class="example-detail text">3000 x 600 мм</div>
+                            <div class="example-detail text">торець 40мм, фігурний профіль</div>
+                            <div class="example-detail text">накладна варочна</div>
+                            <div class="example-detail text">підстільна мийка</div>
+                            <div class="example-bottom">
+                                <span class="text-bold">Вартість <br>під ключ:</span>
+                                <span class="example-price">3522$</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example">
+                        <div class="example-picture">
+                            <img src="./images/5100vanillanoir.jpg" alt="">
+                            <img src="./images/hvoya.jpg" alt="">
+                            <img src="./images/grafit.jpg" alt="">
+                        </div>
+
+                        <div class="example-content">
+                            <span class="example-title text-big">Стільниця зі стіновими панелями</span>
+                            <div class="example-brand text-bold">Caesarstone 4121 Atlantic salt</div>
+                            <div class="example-detail text">3000 x 600 мм</div>
+                            <div class="example-detail text">торець 40мм, фігурний профіль</div>
+                            <div class="example-detail text">накладна варочна</div>
+                            <div class="example-detail text">підстільна мийка</div>
+                            <div class="example-bottom">
+                                <span class="text-bold">Вартість <br>під ключ:</span>
+                                <span class="example-price">3522$</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example">
+                        <div class="example-picture">
+                            <img src="./images/5100vanillanoir.jpg" alt="">
+                            <img src="./images/hvoya.jpg" alt="">
+                            <img src="./images/grafit.jpg" alt="">
+                        </div>
+
+                        <div class="example-content">
+                            <span class="example-title text-big">Стільниця зі стіновими панелями</span>
+                            <div class="example-brand text-bold">Caesarstone 4121 Atlantic salt</div>
+                            <div class="example-detail text">3000 x 600 мм</div>
+                            <div class="example-detail text">торець 40мм, фігурний профіль</div>
+                            <div class="example-detail text">накладна варочна</div>
+                            <div class="example-detail text">підстільна мийка</div>
+                            <div class="example-bottom">
+                                <span class="text-bold">Вартість <br>під ключ:</span>
+                                <span class="example-price">3522$</span>
+                            </div>
+                        </div>
+                    </div>
+              </div>
         </section>
         <section class="getprices">
             <p>
@@ -136,6 +273,110 @@
             </div>
             <div class="production-image-2" role="img" aria-label="ЧПУ фрезер"></div>
         </section>
+
+        <section class="pre-ordersamples" id="getsamples">
+
+            <div class="promotext">            
+                <img class='nplogo' src="./images/icons/novaposhta.svg" alt="">
+                <h2 class="title-bold">Замовте зразки</h2>
+                <div class="script">безкоштовно!</div>
+                <div class="text">
+                    Ми пропонуємо зразки <span class="text-bold">найпопулярніших</span> кольорів кварцевого агломерату з доставкою Новою Поштою в межах України - безкоштовно.
+    
+    Розмір зразка 200х100мм. Камінчик залишайте собі, повертати нам не потрібно :)
+                </div>
+            </div>
+            <img src="./images/IMG_20210906_160136.png" alt="" class="samplestack">
+        </section>
+
+        <section class="ordersamples">
+            <div class="sample-to-order">
+                <img src="images/samples-to-order/Ryan.png" alt="">
+                <div class="sample-to-order-content">
+                    <div class="sampe-brand text">Ginger</div>
+                    <div class="sample-name text-bold">Crystal Black 1015</div>
+                    <div class="text">чорний глянець зі срібними блискітками</div>
+                </div>
+                <button class="btn text-bold novaposhta" onclick="getsample('Ginger Crystal Black 1015')">Замовити зразок</button>
+            </div>
+            <div class="sample-to-order">
+                <img src="images/samples-to-order/3100_Jet_Black.jpg" alt="">
+                <div class="sample-to-order-content">
+                    <div class="sampe-brand text">Caesarstone</div>
+                    <div class="sample-name text-bold">3100 Jet Black</div>
+                    <div class="text">чорний глянець у дрібне зернятко, як морський пісок</div>
+                </div>
+                <button class="btn text-bold novaposhta" onclick="getsample('Caesarstone 3100 Jet Black')">Замовити зразок</button>
+            </div>
+            <div class="sample-to-order">
+                <img src="images/samples-to-order/5212_Taj_Royale.jpg" alt="">
+                <div class="sample-to-order-content">
+                    <div class="sampe-brand text">Caesarstone</div>
+                    <div class="sample-name text-bold">5212 Taj Royale</div>
+                    <div class="text">бежевий як заварний крем, з мармуровим візерунком</div>
+                </div>
+                <button class="btn text-bold novaposhta" onclick="getsample('Caesarstone 5212 Taj Royale')">Замовити зразок</button>
+            </div>
+            <div class="sample-to-order">
+                <img src="images/samples-to-order/Nougat-2.jpg" alt="">
+                <div class="sample-to-order-content">
+                    <div class="sampe-brand text">Reston</div>
+                    <div class="sample-name text-bold">RS 301 Олімп</div>
+                    <div class="text">білий глянець у крупне зернятко</div>
+                </div>
+                <button class="btn text-bold novaposhta" onclick="getsample('Reston RS 301 Олімп')">Замовити зразок</button>
+            </div>
+            <div class="sample-to-order">
+                <img src="images/samples-to-order/3142.jpg" alt="">
+                <div class="sample-to-order-content">
+                    <div class="sampe-brand text">Ginger</div>
+                    <div class="sample-name text-bold">Grain White 3626</div>
+                    <div class="text">білий глянець у дрібне зернятко, як морський пісок</div>
+                </div>
+                <button class="btn text-bold novaposhta" onclick="getsample('Ginger Grain White 3626')">Замовити зразок</button>
+            </div>
+            <div class="sample-to-order">
+                <img src="images/samples-to-order/3141_Eggshell.jpg" alt="">
+                <div class="sample-to-order-content">
+                    <div class="sampe-brand text">Avant</div>
+                    <div class="sample-name text-bold">1000 Діжон</div>
+                    <div class="text">білий глянець у дрібнесеньке зернятко, майже однотонний</div>
+                </div>
+                <button class="btn text-bold novaposhta" onclick="getsample('Avant 1000 Діжон')">Замовити зразок</button>
+            </div>
+            
+        </section>
+
+        <section class="getsample-form" id="getsample-form" style="display: none">
+                <div class="disclaimer-card">
+                    <button class="btn-close" aria-label="close popup" onclick="closePopup(this)"></button>
+                    <h1 class="title-bold">Замовити зразок</h1>
+                    <h2 class='text'>Наша менеджерка Оля зв’яжеться з вами найближчим часом для підтверждення деталей доставки.
+                        Камінчик відправимо протягом декількох днів.</h2>
+                    <form class="form__body">
+                        <div class="form__item">
+                            <input id="formName" type="text" name="name" class="input text _req" placeholder="Ім'я, Прізвище *">
+                        </div>
+                        <div class="form__item">
+                            <input id="formPhone" type="text" name="phone" class="input text _req _phone" placeholder="Моб. телефон *">
+                        </div>
+                        <div class="form__item">
+                            <input id="formAddress" type="text" name="address" class="input text _req" placeholder="Місто, відділення Нової Пошти *">
+                        </div>
+                        <input id="formSample" type="hidden" name="sample" class="input text" value="?">
+                        <button type="submit" class="btn text-bold OK">Отримати зразок</button>
+                    </form>
+                </div>
+        </section>
+
+        <section class="getsample-form" id="samplesuccess" style="display: none">
+                <div class="disclaimer-card">
+                    <button class="btn-close" aria-label="close popup" onclick="closePopup(this)"></button>
+                    <h1 class="title-bold">✔</h1>
+                    <h2 class='text-big'>Заявку відправлено</h2>
+                </div>
+        </section>
+
         <section class="furn" id="furn">
             <div class="furn-title">
                 <span class="script">Ліпші друзі</span>
@@ -189,21 +430,7 @@
                 <a href="./calculator.html" class="btn text-bold OK">Перейти до калькулятора</a>
             </div>
         </section>
-<!--         <section class="commercial comm-section" id="commercial">
-                <div class="disclaimer-card step-1">
-                    <h1 class="title-bold">Скачать коммерческое предложение</h1>
-                    <h2 class='text-big'>Оставьте свои контакты чтобы скачать файл</h2>
-                    <form class="form__body">
-                        <div class="form__item">
-                            <input id="formName" type="text" name="name" class="input text _req" placeholder="Имя *">
-                        </div>
-                        <div class="form__item">
-                            <input id="formPhone" type="text" name="phone" class="input text _req _phone" placeholder="Моб. телефон *">
-                        </div>
-                        <button type="submit" class="btn text-bold OK">Скачать файл</button>
-                    </form>
-                </div>
-        </section> -->
+        
         <section class="commercial comm-section" id="maintenance">
             <div class="disclaimer-card download step-1">
                 <span class="script">Дуже проста</span>
@@ -310,6 +537,10 @@
             })();
           </script>
     </body>
+    <script src="siteexamples.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="slick/slick.min.js"></script>
     <script src="index.js"></script>
     <script src="telegramform.js"></script>
+
 </html> 

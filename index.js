@@ -10,11 +10,11 @@ let $exclusiveEnd =
 window.addEventListener("scroll", function () {
   let $links = document.querySelectorAll(".header-nav-link");
 
-  if (pageYOffset < window.innerHeight) {
+/*   if (pageYOffset < window.innerHeight) {
     for (let i = 0; i < $links.length; i++) {
       $links[i].classList.add("whitelink");
     }
-  } else if (pageYOffset > $exclusiveStart && pageYOffset < $exclusiveEnd) {
+  } else */ if (pageYOffset > $exclusiveStart && pageYOffset < $exclusiveEnd) {
     document.querySelector("body").classList.add("violet");
     document.querySelector("body").classList.remove("normal");
     for (let i = 0; i < $links.length; i++) {
@@ -30,6 +30,11 @@ window.addEventListener("scroll", function () {
   }
 });
 
+function baranScroll() {
+  var examples = document.querySelector('.slider-big');
+  examples.scrollIntoView({behavior: "smooth", block: "start"});
+}
+
 function offset(el) {
   return el.getBoundingClientRect().top;
 }
@@ -37,3 +42,72 @@ function offset(el) {
 if (window.innerWidth < 1079) {
   document.querySelector(".hero").style = `height: ${window.innerHeight}px`;
 }
+
+function closePopup(el) {
+  document.getElementById(el.parentNode.parentNode.id).style = "display: none";
+}
+
+function getsample(sample) {
+  document.getElementById('formSample').value = sample;
+  document.querySelector('#getsample-form').style = "display: flex";
+}
+
+$(document).ready(function () {
+  $(".slider-big").slick({
+    centerMode: true,
+    centerPadding: "200px",
+    slidesToShow: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+});
+
+
+$(document).ready(function () {
+  $(".example-picture").slick({
+    centerMode: true,
+    dots: true,
+    swipe: false,
+    fade: true,
+    centerPadding: "0px",
+    slidesToShow: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+});

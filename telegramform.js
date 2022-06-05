@@ -1,6 +1,6 @@
 "use strict";
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function (sample) {
   const form = document.querySelector("form");
   form.addEventListener("submit", formSend);
 
@@ -12,10 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (error === 0) {
       form.classList.add("_sending");
 
-      let phone = document.querySelector('#formPhone').value;
-      document.querySelector('#formPhone').value = adjust(phone);
+      let phone = document.querySelector("#formPhone").value;
+      document.querySelector("#formPhone").value = adjust(phone);
+
 
       let formData = new FormData(form);
+
 
       let response = await fetch("telegram.php", {
         method: "POST",
@@ -23,19 +25,19 @@ document.addEventListener("DOMContentLoaded", function () {
       });
       let result = await response.json();
       if (response.ok) {
-        //alert(result.message);
-        //formPreview.innerHTML = "";
         form.reset();
         form.classList.remove("_sending");
-        goToDownload();
+        document.querySelector("#getsample-form").style = "display: none";
+        showSuccess();
+        //goToDownload();
       } else {
         alert(result.message);
-        //formPreview.innerHTML = "";
+
         form.reset();
         form.classList.remove("_sending");
       }
     } else {
-      alert("Правильно заполните обязательные поля");
+      alert("Правильно заповніть обов'язкові поля");
     }
   }
 
@@ -66,22 +68,26 @@ document.addEventListener("DOMContentLoaded", function () {
     input.parentElement.classList.remove("error-input");
     input.classList.remove("error-input");
   }
-
-  function goToDownload() {
-    /*         let step1height = document.querySelector(".step-1").offsetHeight;
-        document.querySelector(".step-2").style  =  'height: '+step1height+'px';
-        document.querySelector(".step-1").style = "display: none"; */
-    window.location.href = "https://quartz-stone.od.ua/commercial-success.html";
-  }
 });
 
-function phoneTest(input) {
+function showSuccess() {
+  document.querySelector("#samplesuccess").style = "display: flex";
 
+  setTimeout(() => {
+    document.querySelector("#samplesuccess").style = "display: none";
+  }, 3000);
+}
+
+function phoneTest(input) {
   let phone = input.value.replace(/[^\d]/g, "");
   let res = true;
   if (phone.length === 10 && phonecodes.includes(phone.substr(0, 3))) {
-      res = false;
-  } else if (phone.length === 12 && phone.substr(0, 3) === "380" && phonecodes.includes(phone.substr(2, 3))) {
+    res = false;
+  } else if (
+    phone.length === 12 &&
+    phone.substr(0, 3) === "380" &&
+    phonecodes.includes(phone.substr(2, 3))
+  ) {
     res = false;
   }
 
@@ -92,28 +98,28 @@ function phoneTest(input) {
 function adjust(phone) {
   let ph = phone.replace(/[^\d]/g, "");
   if (ph.length === 10) {
-    phone = '+38'+ph;
+    phone = "+38" + ph;
   } else if (ph.length === 12) {
-    phone = '+'+ph;
+    phone = "+" + ph;
   }
 
   return phone;
 }
 
 const phonecodes = [
-    '039',
-    '067',
-    '068',
-    '096',
-    '097',
-    '098',
-    '050',
-    '066',
-    '095',
-    '099',
-    '063',
-    '093',
-    '091',
-    '094',
-    '092',
+  "039",
+  "067",
+  "068",
+  "096",
+  "097",
+  "098",
+  "050",
+  "066",
+  "095",
+  "099",
+  "063",
+  "093",
+  "091",
+  "094",
+  "092",
 ];

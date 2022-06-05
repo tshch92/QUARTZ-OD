@@ -7,21 +7,21 @@
 
 @font-face {
     font-family: "Gogol";
-    src: url("/fonts/Gogol.woff") format("woff") ,
-         url("/fonts/Gogol.woff2") format("woff2");
+    src: url("./fonts/Gogol.woff") format("woff") ,
+         
   }
 
   @font-face {
-    font-family: "MrHamiltone";
-    src: url("/fonts/mr_HamiltoneG.woff") format("woff") ,
-         url("/fonts/mr_HamiltoneG.woff2") format("woff2");
+    font-family: "Kyiv Type Sans";
+    src: url("./fonts/KyivTypeSans-Black.woff") format("woff") ,
+         url("./fonts/KyivTypeSans-Black.woff2") format("woff2");
   }
 
+
 .script {
-    font-family: 'Caveat', serif;
+    font-family: 'Gogol', 'Caveat', serif;
     font-size: 48px;
     line-height: 32px;
-    letter-spacing: -2px;
     font-weight: 400;
 }
 
@@ -30,11 +30,10 @@
 }
 
 .title-bold {
-    font-family: 'Futura PT', sans-serif;
+    font-family: 'Kyiv Type Sans', 'Roboto', sans-serif;
     font-size: 64px;
     line-height: 63px;
     font-weight: 700;
-    letter-spacing: 3.2px;
     text-transform: uppercase;
 }
 

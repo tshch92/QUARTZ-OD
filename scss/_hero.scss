@@ -1,12 +1,45 @@
 .hero {
   height: 100vh;
-  background-color: #1a2c2c;
-  background-image: url("./images/cloudburst-1-caesarstone.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   display: flex;
   flex-direction: column;
+
+  & .script {
+    display: inline-block;
+    opacity: 0.2;
+    transform: rotate(-4deg);
+    margin-left: 150px;
+  }
+
+  & .text-big {
+    transform: translateX(-120px) translateY(10px);
+    display: inline-block;
+  }
+
+  & .wrapper-hero {
+    max-height: 100vh;
+    padding: $spacebig $spacebig 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+
+  & h1 {
+    font-size: 90px;
+    line-height: 90px;
+    margin-top: $spacemid-mob;
+  }
+
+  & .hero-title {
+    margin: auto 24px;
+    position: relative;
+  }
+
+  & img {
+    width: 100%;
+    max-height: 50%;
+    object-fit: cover;
+  }
+
 }
 
 .header-nav {
@@ -39,8 +72,41 @@
   }  
 }
 
+.quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 600px;
+  margin-left: $spacemid-mob;
+
+  & .quick-link {
+    border: 1px solid black;
+    border-radius: 0;
+    background-color: white;
+    color: black;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    padding: 0 10px;
+    margin-bottom: 15px;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &:hover {
+      background-color: black;
+      color: white;
+      transition: 200ms;
+    }
+  }
+}
+
 a.whitelink {
-  color: white;
+  //color: white;
 
   &:hover {
     border-bottom: 2px solid white;
@@ -51,45 +117,6 @@ a.whitelink {
   }
 }
 
-.side-nav {
-  transform: rotate(-90deg) translateY(80px);
-  transform-origin: bottom left;
-  height: $spacebig;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  justify-content: flex-end;
-  position: fixed;
-  bottom: 0;
-  padding-left: $spacebig;
-
-  & :not(:last-child) {
-    margin-left: 60px;
-  }
-
-  &-link {
-    font-family: "Futura PT", sans-serif;
-    font-size: 19px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    opacity: 0.54;
-    color: black;
-    padding: 9px 0;
-
-    &:active {
-      opacity: 1;
-    }
-
-    &:hover {
-      opacity: 1;
-      transition: 300ms;
-    }
-
-    &-visited {
-      color: inherit;
-    }
-  }
-}
 
 .instagram:before {
   content: "";
@@ -106,7 +133,7 @@ a.whitelink {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-right: $spacebig;
+  margin-right: $spacemid-mob;
 
   & :not(:first-child) {
     margin-left: 40px;
@@ -132,30 +159,11 @@ a.whitelink {
   }
 }
 
-.instagram-big {
-  display: none;
-  width: 32px;
-  height: 32px;
-  background-image: url(./images/icons/instagram.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 .wrapper-12 {
   padding: $spacebig $spacebig 0;
   grid-template-rows: repeat(12, 1fr);
   @include grid12;
   flex-grow: 1;
-
-  & .hero-title {
-    grid-area: 8 / 2 / 12 / 12;
-  }
-
-  & h1 + .script {
-    margin-left: 290px;
-    margin-top: -25px;
-    width: 293px;
-  }
 }
 
 @media only (max-width: 960px) {
@@ -175,12 +183,26 @@ a.whitelink {
     }
   }
 
+  .wrapper-hero {
+    height: 100%;
+  }
+
+}
+
+.newpost:after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-image: url('./images/icons/novaposhta.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-left: 6px;
 }
 
 @media only (max-width: 768px) {
   .hero {
-    background-image: url("./images/cloudburst-1-caesarstone-mob.jpg");
-    background-attachment: scroll;
+
   }
 
 
@@ -191,7 +213,8 @@ a.whitelink {
   .contact {
     height: $spacebig-mob;
     justify-content: space-between;
-    margin: 0 $spacemid-mob;
+    margin: 0;
+    align-self: stretch;
 
     & :not(:first-child) {
       margin: 0px;
@@ -200,6 +223,10 @@ a.whitelink {
     & :nth-child(3) {
       display: none;
     }
+  }
+
+  .quick-links {
+    margin: auto 0;
   }
 
   .instagram-big {
@@ -212,15 +239,49 @@ a.whitelink {
     grid-template-columns: 1fr;
     flex-grow: 1;
     align-items: center;
+  }
+
+  .hero .wrapper-hero {
+    padding: $spacemid-mob $spacemid-mob 0;
+    flex-grow: 1;
+    align-items: center;
 
     & .hero-title {
-      grid-area: 5 / 1 / 8 / 2;
+
+      margin: auto 0;
+
+      & .script {
+        margin-left: 30px;
+      }
+
+      & .text-big {
+        transform: translateX(60px) translateY(-5px);
+      }
+
     }
 
-    & h1 + .script {
-      margin-left: 123px;
-      margin-top: -10px;
-      width: 160px;
+    & h1 {
+      font-size: 48px;
+      line-height: 48px;
     }
+  }
+}
+
+@media only (max-height: 750px) {
+  & .hero .wrapper-hero {
+
+    & .hero-title {
+      margin-top: $spacebig-mob;
+      margin-bottom: 15px;
+    }
+
+    & .quick-links {
+      margin: 15px 0;
+    }
+
+  }
+
+  & .hero img {
+    max-height: 25%;
   }
 }

@@ -1,0 +1,182 @@
+.pre-ordersamples {
+
+    padding: $spacebig;
+    display: grid;
+    @include grid12;
+    grid-template-rows: 1fr;
+
+    & .promotext {
+        grid-area: 1 / 2 / 2 / 7;
+        margin: auto 0;
+    }
+
+    & .nplogo {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        margin-bottom: 10px;
+    }
+
+    & .script {
+        margin: 10px 0 30px 113px;
+    }
+
+    .samplestack {
+        grid-area: 1 / 7 / 2 / 13;
+        object-fit: contain;
+        width: 100%;
+        max-height: 470px;
+    }
+}
+
+
+.ordersamples {
+    padding: 0 $spacebig;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sample-to-order {
+
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    margin-bottom: 60px;
+    width: calc((100% - 60px) / 3);
+
+    &:nth-child(3n) {
+        margin-right: 0;
+    }
+
+    & img {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &-content {
+        margin: 20px;
+
+        & :not(:last-child) {
+            margin-bottom: 4px;
+        }
+    }
+}
+
+.novaposhta {
+    width: 220px;
+    align-self: center;
+    margin-right: 10px;
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+
+    &:hover {
+        color: white;
+        background-color: black;
+    }
+
+    &:before {
+        content: '';
+        width: 18px;
+        height: 18px;
+        background-image: url('./images/icons/novaposhta.svg');
+        background-size: contain;
+        margin-right: 10px;
+    }
+}
+
+.getsample-form {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba( 0,0,0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+
+    & .disclaimer-card {
+        max-width: 600px;
+        text-align: center;
+
+        & h1 {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media only (max-width: 1078px) {
+
+    .pre-ordersamples {
+
+        & .samplestack {
+            grid-area: 1 / 8 / 2 / 13;
+        }
+
+        & .promotext {
+            grid-area: 1 / 1 / 2 / 8;
+        }
+    }
+
+    .ordersamples {
+        flex-direction: column;
+        padding-top: 0;
+
+        & .sample-to-order {
+            margin-right: 0;
+            width: 100%;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media only (max-width: 860px) {
+
+    .pre-ordersamples {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-top: 0;
+
+        & .samplestack {
+            display: none;
+            width: 100%;
+            max-height: 240px;
+
+        }
+
+    }
+
+    .ordersamples  .sample-to-order-content {
+        margin: 10px;
+    }
+}
+
+@media only (max-width: 768px) {
+
+    .pre-ordersamples {
+        padding: $spacemid-mob $spacemid-mob $spacebig-mob;
+
+        & .nplogo {
+            width: 30px;
+            height: 30px;
+        }
+
+        & .script {
+            margin-left: 20px;
+        }
+    }
+
+    .ordersamples {
+        padding: 0 $spacebig-mob $spacebig-mob;
+
+        & .novaposhta {
+            width: calc(100% - 40px);
+        }
+    }
+}

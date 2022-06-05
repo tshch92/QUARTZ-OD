@@ -4,6 +4,7 @@ const DELIVERY = {
   kiev: 40,
   odesa: 30,
   brovary: 50,
+  niko: 35,
 };
 const GREEDRATE = 1.3;
 const OLHARATE = 0.05;
@@ -48,7 +49,7 @@ const discounts = {
   Ginger: 0,
   Quarella: 0,
   Quartzforms_termopal: 0,
-  Royal: 0.27,
+  Royal: 0,
   Çimstone: 0,
   Intekstone: 0,
   Radianz: 0.15,
@@ -131,7 +132,10 @@ function getCosts(array) {
         fakeSlabSpent > 0.5:
         totalCost += DELIVERY.odesa * slabSpent;
         break;
-      case element.brand === "Reston" || element.brand === "Ginger":
+      case element.brand === "Ginger":
+        break;
+      case element.brand === "Reston":
+        totalCost += DELIVERY.niko * slabSpent;
         break;
       case (element.brand === "Belenco" || element.brand === "Vicostone") &&
         fakeSlabSpent <= 0.5:
