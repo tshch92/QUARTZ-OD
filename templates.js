@@ -425,7 +425,7 @@ function removeLoading() {
   }
 
   r.classList.remove("loading");
-  console.log("removed");
+  //console.log("removed");
 }
 
 function updLocalSampleKitchen() {

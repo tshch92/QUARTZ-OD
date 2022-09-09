@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>My first three.js app</title>
+		<style>
+			body { margin: 0; background-color: black;}
+		</style>
+	</head>
+	<body>
+		<script src="js/three.js"></script>
+		<script>
+			
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+            const renderer = new THREE.WebGLRenderer();
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            document.body.appendChild( renderer.domElement );
+
+            const controls = new OrbitControls( camera, renderer.domElement );
+
+            console.log(controls);
+
+            const geometry = new THREE.BoxGeometry( 5, 0.1, 2 );
+            const texture = new THREE.TextureLoader().load('images/samples/Atem/AKOYA_1120.jpg');
+
+            texture.wrapT = THREE.RepeatWrapping;
+            texture.wrapS = THREE.RepeatWrapping;
+            texture.repeat.x = 10;
+
+            const material = new THREE.MeshBasicMaterial( { map: texture } );
+            const cube = new THREE.Mesh( geometry, material );
+
+            scene.add( cube );
+
+            cube.position.y = 2;
+
+            camera.position.z = 5;
+            camera.position.y = 3;
+
+            controls.update();
+
+            function animate() {
+                requestAnimationFrame( animate );
+
+                //cube.rotation.z += 0.01;
+                //cube.rotation.y += 0.01;
+
+                controls.update();
+
+                renderer.render( scene, camera );
+            }
+
+            animate();
+            console.log('aa');
+            console.log(cube.position.y);
+
+		</script>
+	</body>
+</html>

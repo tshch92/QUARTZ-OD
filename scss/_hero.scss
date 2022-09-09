@@ -42,36 +42,6 @@
 
 }
 
-.header-nav {
-  box-sizing: border-box;
-  height: $spacebig;
-  display: flex;
-  min-width: 100vw;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 40px;
-  position: fixed;
-  z-index: 99;
-  top: 0;
-  left: 0;
-
-  &-left :not(:last-child) {
-    margin-right: 60px;
-  }
-
-  &-link {
-    padding: 5px 0;
-
-    &:hover {
-      border-bottom: 2px solid black;
-    }
-
-    &.current {
-      border-bottom: 2px solid black;
-    }
-  }  
-}
-
 .quick-links {
   display: flex;
   flex-wrap: wrap;
@@ -173,15 +143,6 @@ a.whitelink {
 }
 
 @media only (max-width: 1078px) {
-
-  .header-nav {
-    height: $spacebig-mob;
-    padding: 0 15px;
-
-    &-left :not(:last-child) {
-      margin-right: 30px;
-    }
-  }
 
   .wrapper-hero {
     height: 100%;

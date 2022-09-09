@@ -1,5 +1,5 @@
-const UAHRATE = 0.03466;
-const EURRATE = 1.130;
+const UAHRATE = 0.0253;
+const EURRATE = 1.019;
 const DELIVERY = {
   kiev: 40,
   odesa: 30,
@@ -88,20 +88,26 @@ function getCosts(array) {
           fakeSlabSpent;
         break;
 
-      case element.brand === "Caesarstone" &&
-        element.slab[0] === 3060:
+      case element.brand === "Caesarstone" && element.slab[0] === 3060:
         element.cost =
-          element.price.usd * (1 - discounts['Caesarstone_quartzua']) * fakeSlabSpent;
+          element.price.usd *
+          (1 - discounts["Caesarstone_quartzua"]) *
+          fakeSlabSpent;
 
-          if (slabSpent !== Math.round(slabSpent)) {
-            element.cost += RASPILQUARTZUA;
-          }      
-           
+        if (slabSpent !== Math.round(slabSpent)) {
+          element.cost += RASPILQUARTZUA;
+        }
+
         break;
 
       case element.brand === "Атем":
         element.cost =
           element.price.usd * (1 - discounts["Atem"]) * fakeSlabSpent;
+        break;
+
+      case element.brand === "Belenco":
+        element.cost =
+          element.price.usd * (1 - discounts["Belenco"]) * 1.1 * fakeSlabSpent;
         break;
 
       default:

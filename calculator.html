@@ -55,8 +55,6 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
       return false;
     }
     </script>
-
-
         <link rel="stylesheet" href="./normalize.css">
         <link rel="stylesheet" href="./fonts/stylesheet.css">
         <link rel="stylesheet" href="./styles.css">
@@ -301,9 +299,18 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         <h1 style="display: none">Калькулятор вартості стільниць</h1>
         <main class="calc-wrapper">
             <nav class="header-nav">
+                <button class="btn-close" onclick="closeHeaderMob()"></button>
+                <button class="btn-close burger" onclick="openHeaderMob()"></button>
                 <div class="header-nav-left">
-                    <a class="header-nav-link text-bold" href="./index.html">Стільниці</a>
-                    <a class="header-nav-link text-bold current" href="./calculator.html">Ціни</a>
+                    <div class="script">С. Тушич</div>
+                    <h2 class="title-bold">Кварцові стільниці</h1>
+                    <a class="header-nav-link text-bold" href="./index.html">Головна</a>
+                    <a class="header-nav-link text-bold current" href="./calculator.html">Ціни & Кольори</a>
+                    <a class="header-nav-link text-bold" href="./faq.html">Технічні питання</a>
+                    <a class="header-nav-link text-bold" href="./index.html#production">Виробництво</a>
+                    <a class="header-nav-link text-bold" href="./index.html#furn">Меблярам</a>
+                    <a class="header-nav-link text-bold" href="./index.html#reviews">Відгуки</a>
+                    <a class="header-nav-link text-bold" href="./getsamples.html">Замовити зразки</a>
                 </div>
                 <div>
                     <a class="header-nav-link text-bold" href="./contacts.html">Контакти</a>
@@ -587,7 +594,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             </div>
                             <div class="btn-text-44">
                                 <input type="radio" id="backsplash0" name="backsplash" value=0 >
-                                <label for="backsplash0" class="text-bold">нет</label>
+                                <label for="backsplash0" class="text-bold">ні</label>
                             </div>
                         </div>
                     </div>
@@ -684,4 +691,5 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     <script src="disclaimer.js"></script>
     <script src="js/script.js"></script>
     <script src="onboarding.js"></script>
+    <script src="headermob.js"></script>
 </html>

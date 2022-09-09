@@ -43,15 +43,6 @@ if (window.innerWidth < 1079) {
   document.querySelector(".hero").style = `height: ${window.innerHeight}px`;
 }
 
-function closePopup(el) {
-  document.getElementById(el.parentNode.parentNode.id).style = "display: none";
-}
-
-function getsample(sample) {
-  document.getElementById('formSample').value = sample;
-  document.querySelector('#getsample-form').style = "display: flex";
-}
-
 $(document).ready(function () {
   $(".slider-big").slick({
     centerMode: true,

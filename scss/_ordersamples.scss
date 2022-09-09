@@ -25,7 +25,7 @@
         grid-area: 1 / 7 / 2 / 13;
         object-fit: contain;
         width: 100%;
-        max-height: 470px;
+        max-height: 360px;
     }
 }
 
@@ -160,7 +160,7 @@
 @media only (max-width: 768px) {
 
     .pre-ordersamples {
-        padding: $spacemid-mob $spacemid-mob $spacebig-mob;
+        padding: $spacebig $spacemid-mob $spacebig-mob;
 
         & .nplogo {
             width: 30px;
