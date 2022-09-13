@@ -1,0 +1,1044 @@
+.lookandsave {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.lookalike {
+  box-sizing: border-box;
+  height: 44px;
+  flex-grow: 1;
+  margin-top: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  background-color: black;
+  color: white;
+  border: none;
+
+  &:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    transition: 200ms;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  & + .save {
+    margin-top: 15px;
+    margin-right: 15px;
+    width: 44px;
+
+    &::before {
+      margin: 0;
+    }
+  }
+}
+
+.btn {
+  @include btn;
+  color: white;
+  background-color: black;
+  height: 44px;
+  padding: 0 10px;
+  box-sizing: border-box;
+
+  &:hover {
+    color: black;
+    background-color: white;
+    transition: 300ms;
+  }
+
+  &-simple {
+    @include btn;
+    height: 32px;
+    border: 0;
+
+    &:hover {
+      color: $violet;
+    }
+  }
+
+  &-text-32 {
+    @include btn;
+    background-color: transparent;
+    height: 32px;
+    margin: 0 auto;
+
+    &:hover {
+      background-color: white;
+    }
+
+    &.addnode {
+      margin-top: $spacemid-mob;
+      padding-right: 12px;
+
+      &:before {
+        content: "";
+        margin-top: 2px;
+        margin-right: 0;
+        width: 24px;
+        height: 24px;
+        background-image: url(../images/icons/plus.svg);
+        background-size: contain;
+      }
+
+      &:hover {
+        background-color: white;
+      }
+    }
+  }
+
+  &-text-48 {
+    & input[type="radio"] {
+      display: none;
+    }
+
+    & label {
+      @include btn;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 48px;
+      //width: 120px;
+      padding: 3px 0 0;
+      line-height: 15px;
+
+      &:before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    & input[type="radio"]:checked + label {
+      background-color: black;
+      color: white;
+    }
+  }
+
+  &-text-64 {
+    & input[type="radio"] {
+      display: none;
+    }
+
+    & label {
+      @include btn;
+      flex-direction: column;
+      justify-content: center;
+      height: 64px;
+      //width: 80px;
+      padding: 0;
+      line-height: 15px;
+
+      &:before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    & input[type="radio"]:checked + label {
+      background-color: black;
+      color: white;
+    }
+  }
+
+  &-text-44 {
+    & input[type="radio"] {
+      display: none;
+    }
+
+    & label {
+      @include btn;
+      height: 44px;
+      width: 44px;
+      padding: 0 10px;
+    }
+
+    & input[type="radio"]:checked + label {
+      background-color: black;
+      color: white;
+    }
+  }
+
+  &-icon-44 {
+    & input[type="radio"] {
+      display: none;
+    }
+
+    & label {
+      @include btn;
+      width: 44px;
+      height: 44px;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+    }
+
+    & input[type="radio"]:checked + label {
+      background-color: black;
+    }
+
+    &.openpopup {
+      @include btn;
+      width: 44px;
+      height: 44px;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      background-image: url(../images/icons/forma/04.svg);
+
+      &:hover:after {
+        content: "інша";
+        @include iconhovertext;
+      }
+    }
+  }
+
+  &-close {
+    box-sizing: border-box;
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    background-image: url("../images/icons/close-small-black.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 30px;
+    margin-right: -80px;
+    margin-top: -30px;
+
+    &:hover {
+      opacity: 0.6;
+      transition: 150ms;
+    }
+  }
+}
+
+.reset {
+  background-color: black;
+  color: white;
+  border: 0;
+  transition: 200ms;
+  padding-left: 10px;
+  padding-right: 12px;
+  margin-top: $spacebig-mob;
+
+  &:before {
+    content: "";
+    margin-top: 3px;
+    margin-right: 6px;
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/icons/reload-white.svg);
+    background-size: contain;
+    transition: 500ms;
+  }
+
+  &:hover {
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+
+    &:before {
+      background-image: url(../images/icons/reload.svg);
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.opendisclaimer {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  background-color: $violet;
+  opacity: 60%;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icons/question.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 10px;
+  margin-top: 2px;
+
+  &:hover {
+    opacity: 1;
+    transition: 150ms;
+  }
+}
+
+.aboutsinks {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  background-color: white;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icons/question-teal.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 4px;
+  margin-bottom: -3px;
+
+  &:hover {
+    opacity: 0.6;
+    transition: 150ms;
+  }
+}
+
+.tabs {
+  display: flex;
+}
+
+.tab {
+  width: 50%;
+
+  & input[type="radio"] {
+    display: none;
+  }
+
+  & label {
+    @include tab;
+    border-bottom: 1px solid black;
+
+    &.tab-filter::before {
+      content: "Фільтри";
+    }
+
+    &.tab-search::before {
+      content: "Пошук";
+    }
+  }
+
+  & input[type="radio"]:checked + label {
+    border-bottom: 3px solid black;
+    padding-top: 2px;
+  }
+}
+
+@media (max-width: 1078px) {
+  .btn-close {
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .tab {
+    & input[type="radio"] {
+      display: none;
+    }
+
+    & label {
+      background-position: center;
+      background-repeat: no-repeat;
+      border-bottom: 1px solid black;
+
+      &.tab-search {
+        background-image: url(../images/icons/magnifying-glass.svg);
+        background-size: 16px;
+
+        &::before {
+          content: "";
+        }
+      }
+
+      &.tab-filter {
+        background-image: url(../images/icons/filters.svg);
+        background-size: 16px;
+        &::before {
+          content: "";
+        }
+      }
+    }
+
+    & input[type="radio"]:checked + label {
+      border-bottom: 3px solid black;
+      height: 42px;
+      margin-top: 2px;
+    }
+  }
+}
+
+.chip {
+  &-basic {
+    display: inline-block;
+
+    & input[type="checkbox"],
+    input[type="radio"] {
+      display: none;
+    }
+
+    & label {
+      @include btn;
+      height: 32px;
+      padding: 0 10px;
+    }
+
+    & input[type="checkbox"]:checked + label,
+    input[type="radio"]:checked + label {
+      color: white;
+      background-color: black;
+    }
+
+    & #Avant + :before {
+      @include flag;
+      background-image: url("../images/icons/country/China.jpg");
+    }
+
+    & #Reston + :before {
+      @include flag;
+      background-image: url("../images/icons/country/China.jpg");
+    }
+
+    & #Atem + :before {
+      @include flag;
+      background-image: url("../images/icons/country/UA.jpg");
+      background-position: center;
+    }
+
+    & #Vicostone + :before {
+      @include flag;
+      background-image: url("../images/icons/country/Vietnam.jpg");
+    }
+
+    & #Caesarstone + :before {
+      @include flag;
+      background-image: url("../images/icons/country/Israel.jpg");
+    }
+
+    & #Belenco + :before {
+      @include flag;
+      background-image: url("../images/icons/country/Turkey.jpg");
+    }
+  }
+
+  &-X {
+    display: inline-block;
+
+    & input[type="checkbox"] {
+      display: none;
+    }
+
+    & label {
+      @include btn;
+      height: 32px;
+      padding: 0 10px;
+      background-color: yellowgreen;
+
+      &:after {
+        content: "";
+        margin-left: 4px;
+        width: 10px;
+        height: 10px;
+        background-image: url(../images/icons/close-small.svg);
+      }
+    }
+  }
+
+  &-color {
+    display: inline-block;
+
+    & input[type="checkbox"] {
+      display: none;
+    }
+
+    & label {
+      @include btn;
+      padding: 3px;
+    }
+
+    & input[type="checkbox"]:checked + label {
+      color: white;
+      background-color: black;
+    }
+  }
+}
+
+.input {
+  @include btn;
+  height: 44px;
+  padding: 0 10px;
+  width: 100%;
+
+  &:active {
+    border: 2px solid black;
+    border-radius: 0;
+  }
+
+  &:focus {
+    border: 2px solid black;
+    border-radius: 0;
+    outline: none;
+    padding: 0 9px;
+  }
+
+  &:focus::placeholder {
+    color: white;
+  }
+
+  &-small {
+    @include btn;
+    height: 32px;
+    width: 54px;
+    text-align: center;
+
+    &::placeholder {
+      font-family: "Futura PT", sans-serif;
+      font-size: 15px;
+      letter-spacing: 0.4px;
+      font-weight: 400;
+    }
+
+    &:active {
+      border: 2px solid black;
+      border-radius: 0;
+    }
+
+    &:focus::placeholder {
+      color: white;
+    }
+
+    &:focus {
+      border: 2px solid black;
+      border-radius: 0;
+      outline: none;
+
+      & + label.arrow {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+  padding: 10px;
+
+  &:focus {
+      padding: 9px;
+  }
+}
+
+.error {
+  display: block;
+  margin: 15px 15px 0;
+  color: red;
+  text-align: center;
+
+  &-label {
+    padding: 5px;
+    display: none;
+  }
+
+  &-input {
+    border-color: red;
+    color: red;
+
+    &:focus {
+      border-color: red;
+      color: red;
+    }
+  }
+}
+
+.removenode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  height: 32px;
+  width: 32px;
+
+  &:before {
+    display: inline-block;
+    background-image: url("../images/icons/close.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    content: "";
+  }
+
+  &:hover {
+    opacity: 0.6;
+    transition: 100ms;
+  }
+}
+
+.visible {
+  display: none;
+
+  & + label {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    margin-left: 15px;
+  }
+
+  & + label:before {
+    display: inline-block;
+    background-size: contain;
+    content: "";
+    margin-right: 8px;
+    margin-bottom: -2px;
+    height: 16px;
+    width: 16px;
+    background-image: url("../images/icons/visibility/off.svg");
+  }
+
+  &:checked + label:before {
+    background-image: url("../images/icons/visibility/on.svg");
+  }
+}
+
+.cannelures {
+  & > input {
+    display: none;
+  }
+
+  & > label {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    padding: 4px 6px;
+    box-sizing: border-box;
+    margin-left: 5px;
+  }
+
+  & > label:before {
+    display: inline-block;
+    background-size: contain;
+    content: "";
+    margin-right: 8px;
+    margin-bottom: -2px;
+    height: 20px;
+    width: 20px;
+    background-image: url("../images/icons/checkbox/empty.svg");
+  }
+
+  & input:checked + label:before {
+    background-image: url("../images/icons/checkbox/checked.svg");
+  }
+}
+
+.blik {
+  position: relative;
+  animation: black 600ms;
+
+  &::after {
+    content: ""; /* отображает псевдоэлемент */
+    position: absolute; /* абсолютное позиционирование */
+    top: 0; /* верхняя координата */
+    left: 0; /* левая координата */
+    width: 2em; /* относительная ширина */
+    height: 100%; /* высота как у оригинала */
+    background-color: rgba(255, 255, 255, 0.5); /* белый цвет с полупрозрачностью */
+    transform: translateX(-0.5em) skewX(-45deg);    
+    animation: moveLight 600ms ease-out;
+  }
+}
+
+.viber {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 44px;
+  background-color: transparent;
+  border: 1px solid white;
+  box-sizing: border-box;
+  border-radius: 0;
+  transition: 100ms;
+  padding-right: 6px;
+
+  &:before {
+    @include chipcolor;
+    display: inline-block;
+    background-image: url("../images/icons/viber.svg");
+    background-size: cover;
+    margin: 1px 6px 0 -8px;
+  }
+
+  &:after {
+    content: 'Замовити: 095-656-8480'
+  }
+
+  &:hover {
+    background-color: white;
+
+    &::before {
+      background-image: url("../images/icons/viber-violet.svg");
+    }
+
+    &:after {
+      color: $violet;
+    }
+  }
+}
+
+.save {
+
+  width: 100%;
+  color: black;
+  background-color: white;
+  margin-top: 10px;
+  position: relative;
+
+  &:before {
+    @include chipcolor;
+    display: inline-block;
+    background-image: url("../images/icons/save.svg");
+    background-size: cover;
+    margin: 0 6px 0 -8px;
+    opacity: 0.9;
+  }
+
+  &:hover {
+    background-color: black;
+    color: white;
+
+    &:before {
+      background-image: url("../images/icons/save-white.svg");
+      transition: 300ms;
+    }
+  }
+}
+
+.infinity {
+
+  &:before {
+    background-image: url("../images/Infinity.svg");
+    background-size: 100px;
+    background-position: center;
+  }
+
+  &:hover {
+    color: black;
+    background-color: white;
+
+    &:before {
+      background-image: url("../images/Infinity.svg");
+    }
+  }
+}
+
+.edit {
+
+  width: 100%;
+  position: relative;
+
+  &:before {
+    @include chipcolor;
+    display: inline-block;
+    background-image: url("../images/icons/pencil-white.svg");
+    background-size: cover;
+    margin-right: 8px;
+  }
+
+  &:hover {
+
+    &:before {
+      background-image: url("../images/icons/pencil.svg");
+      transition: 300ms;
+    }
+  }
+}
+
+
+@keyframes black {
+
+  90% {
+    background-color: black;
+    color: white;
+  }
+  100% {
+    background-color: white;
+    color: black;
+  }
+}
+
+
+@keyframes moveLight {
+  0% {
+      transform: translateX(-150px) skewX(-45deg);
+      opacity: 0.5;
+  }
+  99% {
+      transform: translateX(100vw) skewX(-45deg);
+      opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.next {
+  display: flex;
+  align-items: center;
+
+  &:after {
+    @include chipcolor;
+    background-image: url("../images/icons/chevron-white.svg");
+    background-size: cover;
+    margin-left: 2px;
+    display: inline-block;
+  }
+
+  &:hover:after {
+    transition: 300ms;
+    background-image: url("../images/icons/chevron.svg");
+  }
+}
+
+.back {
+  background-color: transparent;
+  border: 0;
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+
+  &:before {
+    @include chipcolor;
+    display: inline-block;
+    background-image: url("../images/icons/chevron.svg");
+    transform: rotate(180deg);
+    background-size: cover;
+    margin: 1px 4px 0 -16px;
+    opacity: 0.9;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+}
+
+.c-white::before {
+  @include chipcolor;
+  background-color: snow;
+}
+
+.c-beige::before {
+  @include chipcolor;
+  background-color: beige;
+}
+
+.c-brown::before {
+  @include chipcolor;
+  background-color: rgb(110, 72, 45);
+}
+
+.c-grey::before {
+  @include chipcolor;
+  background-color: gray;
+}
+
+.c-black::before {
+  @include chipcolor;
+  background-color: rgb(15, 15, 15);
+  outline: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.c-rainbow::before {
+  @include chipcolor;
+  background-image: url('../images/icons/rainbow.svg');
+}
+
+
+.icon {
+  &-shapeI {
+    background-image: url("../images/icons/forma/01.svg");
+
+    &:hover:after {
+      content: "пряма";
+      @include iconhovertext;
+    }
+  }
+
+  &-shapeL {
+    background-image: url("../images/icons/forma/03.svg");
+
+    &:hover:after {
+      content: "кутова";
+      @include iconhovertext;
+    }
+  }
+
+  &-shapeU {
+    background-image: url("../images/icons/forma/02.svg");
+
+    &:hover:after {
+      content: "П-подібна";
+      @include iconhovertext;
+    }
+  }
+
+  &-edge1 {
+    background-image: url("../images/icons/profil/01.svg");
+
+    &:hover:after {
+      content: "фаска 3х3";
+      @include iconhovertext;
+    }
+  }
+
+  &-edge2 {
+    background-image: url("../images/icons/profil/02.svg");
+
+    &:hover:after {
+      content: "фаска R3";
+      @include iconhovertext;
+    }
+  }
+
+  &-edge3 {
+    background-image: url("../images/icons/profil/03.svg");
+
+    &:hover:after {
+      content: "О-профіль";
+      @include iconhovertext;
+    }
+  }
+
+  &-edge4 {
+    background-image: url("../images/icons/profil/04.svg");
+
+    &:hover:after {
+      content: "М-профіль";
+      @include iconhovertext;
+    }
+  }
+
+  &-edge5 {
+    background-image: url("../images/icons/profil/05.svg");
+
+    &:hover:after {
+      content: "рваний край";
+      @include iconhovertext;
+    }
+  }
+
+  &-edge6 {
+    background-image: url("../images/icons/profil/06.svg");
+
+    &:hover:after {
+      content: "лофт профіль";
+      @include iconhovertext;
+    }
+  }
+
+  &-edge7 {
+    background-image: url("../images/icons/profil/07.svg");
+
+    &:hover:after {
+      content: "М-профіль";
+      @include iconhovertext;
+    }
+  }
+
+  &-undermount:before {
+    background-image: url("../images/icons/sink/undermount.svg");
+  }
+
+  &-levelmount:before {
+    background-image: url("../images/icons/sink/levelmount.svg");
+  }
+
+  &-quartz:before {
+    background-image: url("../images/icons/sink/quartz.svg");
+  }
+
+  &-round:before {
+    background-image: url("../images/icons/sink/round.svg");
+  }
+
+  &-line:before {
+    background-image: url("../images/icons/sink/line.svg");
+  }
+}
+
+input[type="radio"]:checked + label.icon {
+  &-shapeI {
+    background-image: url("../images/icons/forma/01-white.svg");
+  }
+
+  &-shapeU {
+    background-image: url("../images/icons/forma/02-white.svg");
+  }
+
+  &-shapeL {
+    background-image: url("../images/icons/forma/03-white.svg");
+  }
+
+  &-edge1 {
+    background-image: url("../images/icons/profil/01-white.svg");
+  }
+
+  &-edge2 {
+    background-image: url("../images/icons/profil/02-white.svg");
+  }
+
+  &-edge3 {
+    background-image: url("../images/icons/profil/03-white.svg");
+  }
+
+  &-edge4 {
+    background-image: url("../images/icons/profil/04-white.svg");
+  }
+
+  &-edge5 {
+    background-image: url("../images/icons/profil/05-white.svg");
+  }
+
+  &-edge6 {
+    background-image: url("../images/icons/profil/06-white.svg");
+  }
+
+  &-edge7 {
+    background-image: url("../images/icons/profil/07-white.svg");
+  }
+
+  &-undermount:before {
+    background-image: url("../images/icons/sink/undermount-white.svg");
+  }
+
+  &-levelmount:before {
+    background-image: url("../images/icons/sink/levelmount-white.svg");
+  }
+
+  &-quartz:before {
+    background-image: url("../images/icons/sink/quartz-white.svg");
+  }
+
+  &-round:before {
+    background-image: url("../images/icons/sink/round-white.svg");
+  }
+
+  &-line:before {
+    background-image: url("../images/icons/sink/line-white.svg");
+  }
+}

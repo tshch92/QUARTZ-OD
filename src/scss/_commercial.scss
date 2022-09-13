@@ -1,0 +1,155 @@
+.comm-section {
+  margin: $spacebig $spacebig 160px;
+
+
+  &.commercial {
+    width: calc(100vw - 2 * 80px);
+    height: 100%;
+    padding: $spacebig $spacebig $spacebig 40%;
+    box-sizing: border-box;
+    color: black;
+
+    &::before {
+      display: none;
+    }
+
+    & .title-bold {
+      color: black;
+      font-size: 42px;
+      line-height: 44px;
+      margin-bottom: $spacemid-mob;
+    }
+  }
+}
+
+.commercial {
+  background-image: url("../images/2214_teos_desktop.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+  }
+
+  & .disclaimer-card {
+    min-height: 30vh;
+    max-width: 520px;
+    margin: 0 auto;
+
+    & h2 {
+      margin-bottom: $spacemid-mob;
+      text-align: center;
+    }
+  }
+
+  & .logo {
+    margin-bottom: $spacebig;
+  }
+
+  & .title-bold {
+    color: white;
+    text-align: center;
+    margin-bottom: $spacebig-mob;
+    max-width: 1200px;
+  }
+
+  & .btn.OK.text-bold {
+    margin-top: 10px;
+    color: black;
+    background-color: #ffd800;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 0;
+
+    &:hover {
+      background-color: #f4ca16;
+    }
+  }
+}
+
+.download {
+  & img {
+    max-height: 64px;
+    margin-bottom: 10px;
+  }
+
+  & h2.text-bold {
+    color: black;
+  }
+
+  & .btn.OK.text-bold::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: cover;
+    background-image: url("../images/icons/down-arrow.svg");
+    margin-right: 6px;
+  }
+}
+
+.logo {
+  color: white;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    background-image: url("../images/icons/sink/quartz-white.svg");
+    margin-bottom: -10px;
+    margin-right: 4px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  .commercial {
+    background-image: url("../images/2214_teos_mob.jpg");
+  }
+
+  .comm-section {
+    margin: 0;
+
+    &.commercial {
+      width: 100vw;
+      height: 100%;
+      padding: $spacebig-mob $spacemid-mob;
+      box-sizing: border-box;
+
+      & .title-bold {
+        font-size: 32px;
+        line-height: 34px;
+        margin-bottom: $spacemid-mob;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 766px) {
+  .commercial {
+    & .disclaimer-card {
+      margin: 0 10px;
+      //width: 100%;
+      //max-width: auto;
+    }
+  }
+}

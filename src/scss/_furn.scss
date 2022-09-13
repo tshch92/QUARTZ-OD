@@ -1,0 +1,137 @@
+.furn {
+    padding: 0 $spacebig;
+    margin: $spacebig 0;
+    height: $height-1scr;
+    grid-template-rows: repeat(12, 1fr);
+    @include grid12;
+
+    & .furn-title {
+        grid-area: 2 / 2 / 5 / 13;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    & .script {
+        margin-bottom: 4px;
+    }
+
+    & .title-bold {
+        margin-left: 125px;
+    }
+}
+
+.benefit {
+    display: flex;
+    flex-direction: column;
+
+    &-title {
+    font-family: 'Futura PT', sans-serif;
+    font-size: 19px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    padding-bottom: 30px;
+    }
+
+    & .text {
+        padding-right: calc(30% + 30px);
+    }
+}
+
+.b1 {
+    grid-area: 6 / 3 / 8 / 6;
+}
+
+.b2 {
+    grid-area: 6 / 6 / 8 / 9;
+}
+
+.b3 {
+    grid-area: 6 / 9 / 8 / 12;
+}
+
+.b4 {
+    grid-area: 9 / 5 / 11 / 8;
+}
+
+.b5 {
+    grid-area: 9 / 8 / 11 / 11;
+}
+
+@media only screen and (max-width: 1326px) {
+
+    .benefit {
+    
+        & .text {
+            padding-right: $spacebig-mob;
+        }
+    }
+}
+
+@media screen and (max-width: 1078px) {
+    .b1 {
+        grid-area: 6 / 1 / 8 / 5;
+    }
+    
+    .b2 {
+        grid-area: 6 / 5 / 8 / 9;
+    }
+    
+    .b3 {
+        grid-area: 6 / 9 / 8 / 13;
+    }
+    
+    .b4 {
+        grid-area: 9 / 3 / 11 / 7;
+    }
+    
+    .b5 {
+        grid-area: 9 / 7 / 11 / 11;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .furn {
+        margin: $spacebig-mob 0;
+        padding: 0 $spacemid-mob;
+        display: block;
+        height: auto;
+
+        & > * {
+            margin-bottom: $spacebig-mob;
+        }
+
+        & > :last-child {
+            margin-bottom: 0;
+        }
+
+        & .title-bold {
+            margin-left: 50px;
+        }
+    }
+
+    .benefit {
+        display: flex;
+        flex-direction: column;
+    
+        &-title {
+        font-family: 'Futura PT', sans-serif;
+        font-size: 16px;
+        letter-spacing: 0.6px;
+        font-weight: 600;
+        padding-bottom: 10px;
+        }
+    
+        & .text {
+            padding-right: 0;
+        }
+
+        &:nth-child(odd) {
+            margin-left: $spacebig-mob;
+        }
+
+        &:nth-child(even) {
+            margin-right: $spacebig-mob;
+        }
+    }
+}

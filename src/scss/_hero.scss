@@ -1,0 +1,248 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  & .script {
+    display: inline-block;
+    opacity: 0.2;
+    transform: rotate(-4deg);
+    margin-left: 150px;
+  }
+
+  & .text-big {
+    transform: translateX(-120px) translateY(10px);
+    display: inline-block;
+  }
+
+  & .wrapper-hero {
+    max-height: 100vh;
+    padding: $spacebig $spacebig 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+
+  & h1 {
+    font-size: 90px;
+    line-height: 90px;
+    margin-top: $spacemid-mob;
+  }
+
+  & .hero-title {
+    margin: auto 24px;
+    position: relative;
+  }
+
+  & img {
+    width: 100%;
+    max-height: 50%;
+    object-fit: cover;
+  }
+
+}
+
+.quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 600px;
+  margin-left: $spacemid-mob;
+
+  & .quick-link {
+    border: 1px solid black;
+    border-radius: 0;
+    background-color: white;
+    color: black;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    padding: 0 10px;
+    margin-bottom: 15px;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &:hover {
+      background-color: black;
+      color: white;
+      transition: 200ms;
+    }
+  }
+}
+
+a.whitelink {
+  //color: white;
+
+  &:hover {
+    border-bottom: 2px solid white;
+  }
+
+  &.current {
+    border-bottom: 2px solid white;
+  }
+}
+
+
+.instagram:before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin: 1px 2px 0 0;
+  background-image: url(../images/icons/instagram.svg);
+}
+
+.contact {
+  box-sizing: border-box;
+  height: $spacebig;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: $spacemid-mob;
+
+  & :not(:first-child) {
+    margin-left: 40px;
+  }
+
+  &-link {
+    transition: 300ms;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      color: $violet;
+
+      &.instagram:before {
+        content: "";
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin: 1px 2px 0 0;
+        background-image: url(../images/icons/instagram-hover.svg);
+      }
+    }
+  }
+}
+
+.wrapper-12 {
+  padding: $spacebig $spacebig 0;
+  grid-template-rows: repeat(12, 1fr);
+  @include grid12;
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 960px) {
+  .contact span.text-bold {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1078px) {
+
+  .wrapper-hero {
+    height: 100%;
+  }
+
+}
+
+.newpost:after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-image: url('../images/icons/novaposhta.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-left: 6px;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+
+  }
+
+
+  .side-nav {
+    display: none;
+  }
+
+  .contact {
+    height: $spacebig-mob;
+    justify-content: space-between;
+    margin: 0;
+    align-self: stretch;
+
+    & :not(:first-child) {
+      margin: 0px;
+    }
+
+    & :nth-child(3) {
+      display: none;
+    }
+  }
+
+  .quick-links {
+    margin: auto 0;
+  }
+
+  .instagram-big {
+    display: inline-block;
+  }
+
+  .wrapper-12 {
+    padding: $spacebig-mob $spacemid-mob 0;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: 1fr;
+    flex-grow: 1;
+    align-items: center;
+  }
+
+  .hero .wrapper-hero {
+    padding: $spacemid-mob $spacemid-mob 0;
+    flex-grow: 1;
+    align-items: center;
+
+    & .hero-title {
+
+      margin: auto 0;
+
+      & .script {
+        margin-left: 30px;
+      }
+
+      & .text-big {
+        transform: translateX(60px) translateY(-5px);
+      }
+
+    }
+
+    & h1 {
+      font-size: 48px;
+      line-height: 48px;
+    }
+  }
+}
+
+@media screen and (max-height: 750px) {
+  .hero .wrapper-hero {
+
+    & .hero-title {
+      margin-top: $spacebig-mob;
+      margin-bottom: 15px;
+    }
+
+    & .quick-links {
+      margin: 15px 0;
+    }
+
+  }
+
+  .hero img {
+    max-height: 25%;
+  }
+}

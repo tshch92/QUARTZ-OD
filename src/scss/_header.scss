@@ -1,0 +1,140 @@
+.header-nav {
+    box-sizing: border-box;
+    height: 80px;
+    display: flex;
+    min-width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    background-color: white;
+
+    &-left :not(:last-child) {
+        margin-right: 45px;
+    }
+
+    & .script {
+        display: none;
+    }
+
+    & .btn-close {
+        display: none;
+    }
+
+    & h2 {
+        display: none;
+    }
+
+    &-link {
+        padding: 5px 0;
+
+        &.current {
+            border-bottom: 2px solid black;
+        }
+    }
+}
+
+@media screen and (max-width: 1146px) {
+    .expanded {
+        &.header-nav {
+            color: white;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+    
+            & .header-nav-left {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                & :not(:last-child) {
+                    margin-right: 0;
+                }
+            }
+            
+            & .btn-close {
+                display: flex;
+                position: fixed; 
+                top: 13px;
+                right: 20px;
+                background-color: transparent;
+                background-image: url(../images/icons/close-small.svg);
+
+                &.burger {
+                    display: none;
+                }
+            }
+    
+
+    
+            & h2 {
+                font-size: 30px;
+                text-align: center;
+                margin-bottom: 30px;
+                display: inline;
+            }
+
+            & .script {
+                display: inline;
+                opacity: 0.6;
+
+            }
+    
+            & .header-nav-link {
+                display: inline;
+                margin-bottom: 20px;
+    
+                &.current {
+                    border-bottom: 2px solid white;
+                }
+            }
+        }
+
+    }
+    .burger {
+        background-image: url(../images/icons/burger.svg);
+    }
+    .header-nav {
+        color: black;
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 0 20px;
+
+        height: 50px;
+        
+        & .btn-close {
+            display: none;
+            margin: 0;
+
+            &.burger {
+                display: flex;
+                position: fixed; 
+                top: 13px;
+                right: 20px;
+                background-color: transparent;
+            }
+        }
+
+        & h2 {
+            font-size: 16px;
+            text-align: left;
+            margin-bottom: 0;
+            display: inline;
+        }
+
+        & .script {
+            display: none;
+        }
+
+        &-link {
+           display: none;
+        }
+    }
+}

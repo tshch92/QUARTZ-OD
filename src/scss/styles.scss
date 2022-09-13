@@ -1,0 +1,46 @@
+@import "normalize";
+@import "fonts";
+@import 'variables';
+@import "mixins";
+
+@import 'text';
+
+@import "elements";
+
+@import 'header';
+
+@import 'hero';
+
+@import 'assort';
+
+@import 'getprices';
+
+@import 'production';
+
+@import 'furn';
+
+@import 'exclusive';
+
+@import 'reviews';
+
+@import 'calculator';
+
+@import 'calculator-mob';
+
+@import 'form';
+
+@import 'contacts';
+
+@import 'commercial';
+
+@import 'faq';
+
+@import 'disclaimer_form';
+
+@import 'onboarding';
+
+@import 'ordersamples';
+
+div.example.e-counter.e-backsplash.e-window {
+  display: flex !important;
+}

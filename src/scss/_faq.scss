@@ -1,0 +1,133 @@
+body.faq {
+    background-color: #F6F6F6;
+
+    & .header-nav {
+        background-color: #F6F6F6;
+    }
+
+    & ul.text {
+
+        & > * {
+            font-family: 'Futura PT', sans-serif;
+            font-size: 15px;
+            letter-spacing: 0.4px;
+            font-weight: 400;
+            margin-top: 3px;
+            margin-bottom: 3px;
+        }
+
+    }
+}
+
+.content {
+    width: 720px;
+    margin: 160px auto $spacebig;
+
+    & .text-faq-title {
+        margin: 30px 15px;
+    }
+
+    & .text-big {
+        margin: 30px 15px;
+    }
+
+    & a.text{
+        color: blue;
+    }
+
+    & table {
+        text-align: center;
+    }
+
+    & .example-images {
+        display: flex;
+        flex-direction: column;
+
+        & :not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 5px 15px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:after {
+        content: '+'; /* Unicode character for "plus" sign (+) */
+        font-size: 30px;
+        color: black;
+        float: right;
+        margin-left: 5px;
+      }
+      
+    &.active:after {
+        content: "-"; /* Unicode character for "minus" sign (-) */
+    }
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: rgba(0,0,0,0.02);
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .accordion-panel {
+    padding: 15px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+
+    & > :not(:last-child) {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+  }
+
+
+@media screen and (max-width: 1146px) {
+    body.faq .header-nav {
+            background-color: #F6F6F6;
+
+            &.expanded {
+                background-color: black;
+            }
+        }
+}
+
+@media screen and (max-width: 768px) {
+
+  .content {
+    width: 100vw;
+    margin: 80px auto 0;
+
+        & table img {
+            width: 100px;
+        }
+
+        & .accordion {
+            padding: 5px 20px;
+        }
+
+        & .panel {
+            padding: 15px 20px;
+        }
+     
+        & .text-faq-title {
+            margin: 30px 15px;
+            font-size: 24px;
+        }
+
+    }
+}
