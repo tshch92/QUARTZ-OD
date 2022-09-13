@@ -387,25 +387,27 @@ export const siteExamples = () => {
     ];
 
     const container = document.querySelector('.slider-big');
-    container.innerHTML = '';
-    examples.forEach(item => {
-        container.insertAdjacentHTML('afterbegin', `
-            <div class="example ${item.specs}">
-                <div class="example-picture">
-                    ${item.images.map(examplepictures).join("")}
-                </div>
-        
-                <div class="example-content">
-                    <span class="example-title text-big">${item.title}</span>
-                    <div class="example-brand text-bold">${item.stone}</div>
-                    ${item.details.map(exampledetails).join("")}
-                    <div class="example-bottom">
-                        <span class="text-bold">Вартість <br>під ключ:</span>
-                        <span class="example-price">${item.cost}</span>
-                    </div>
-                </div>
-            </div> `);
-    });
+    // container.innerHTML = '';
+    container.innerHTML = `${examples.map(exampledraft).join("")}`;
+    // return;
+    // examples.forEach(item => {
+    //     container.insertAdjacentHTML('afterbegin', `
+    //         <div class="example ${item.specs}">
+    //             <div class="example-picture">
+    //                 ${item.images.map(examplepictures).join("")}
+    //             </div>
+    //
+    //             <div class="example-content">
+    //                 <span class="example-title text-big">${item.title}</span>
+    //                 <div class="example-brand text-bold">${item.stone}</div>
+    //                 ${item.details.map(exampledetails).join("")}
+    //                 <div class="example-bottom">
+    //                     <span class="text-bold">Вартість <br>під ключ:</span>
+    //                     <span class="example-price">${item.cost}</span>
+    //                 </div>
+    //             </div>
+    //         </div> `);
+    // });
 
     function examplepictures(pic) {
         return `<img src="${pic}" alt="">`;
@@ -416,24 +418,24 @@ export const siteExamples = () => {
     }
 
 
-//     function exampledraft(item) {
-//         return `
-//     <div class="example ${item.specs}">
-//         <div class="example-picture">
-//         ${item.images.map(examplepictures).join("")}
-//         </div>
-//
-//         <div class="example-content">
-//             <span class="example-title text-big">${item.title}</span>
-//             <div class="example-brand text-bold">${item.stone}</div>
-//             ${item.details.map(exampledetails).join("")}
-//             <div class="example-bottom">
-//                 <span class="text-bold">Вартість <br>під ключ:</span>
-//                 <span class="example-price">${item.cost}</span>
-//             </div>
-//         </div>
-//     </div> `;
-//     }
+    function exampledraft(item) {
+        return `
+    <div class="example ${item.specs}">
+        <div class="example-picture">
+        ${item.images.map(examplepictures).join("")}
+        </div>
+
+        <div class="example-content">
+            <span class="example-title text-big">${item.title}</span>
+            <div class="example-brand text-bold">${item.stone}</div>
+            ${item.details.map(exampledetails).join("")}
+            <div class="example-bottom">
+                <span class="text-bold">Вартість <br>під ключ:</span>
+                <span class="example-price">${item.cost}</span>
+            </div>
+        </div>
+    </div> `;
+    }
 //
 //     document.querySelector('.slider-big').innerHTML = `
 // ${siteexamples.map(exampledraft).join("")}
