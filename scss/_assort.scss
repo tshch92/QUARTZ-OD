@@ -125,7 +125,7 @@
     
 
     &-image {
-        background-image: url(./images/5100vanillanoir.jpg);
+        background-image: url(./Assets/images/5100vanillanoir.jpg);
         background-size: cover;
         grid-area: 11 / 4 / 16 / 13;
     }
@@ -153,42 +153,42 @@
 
 .vicostone {
     @include brandimg;
-    background-image: url(./images/brands/VICOSTONE.jpg);
+    background-image: url(./Assets/images/brands/VICOSTONE.jpg);
 }
 
 .avant {
     @include brandimg;
-    background-image: url(./images/brands/AVANT.jpg);
+    background-image: url(./Assets/images/brands/AVANT.jpg);
 }
 
 .belenco {
     @include brandimg;
-    background-image: url(./images/brands/BELENCO.jpg);
+    background-image: url(./Assets/images/brands/BELENCO.jpg);
 }
 
 .reston {
     @include brandimg;
-    background-image: url(./images/brands/RESTON.jpg);
+    background-image: url(./Assets/images/brands/RESTON.jpg);
 }
 
 .atem {
     @include brandimg;
-    background-image: url(./images/brands/ATEM.jpg);
+    background-image: url(./Assets/images/brands/ATEM.jpg);
 }
 
 .caesarstone {
     @include brandimg;
-    background-image: url(./images/brands/CAESARSTONE.jpg);
+    background-image: url(./Assets/images/brands/CAESARSTONE.jpg);
 }
 
 .hanstone {
     @include brandimg;
-    background-image: url(./images/brands/HANSTONE.jpg);
+    background-image: url(./Assets/images/brands/HANSTONE.jpg);
 }
 
 .silestone {
     @include brandimg;
-    background-image: url(./images/brands/SILESTONE.jpg);
+    background-image: url(./Assets/images/brands/SILESTONE.jpg);
 }
 
 .product {
@@ -213,27 +213,27 @@
 
 .countertops::before {
         @include brandimg;
-        background-image: url(./images/product-types/countertops.svg);
+        background-image: url(./Assets/images/product-types/countertops.svg);
     }
 
 .bartops::before{
         @include brandimg;
-        background-image: url(./images/product-types/bartops.svg);
+        background-image: url(./Assets/images/product-types/bartops.svg);
     }
     
 .backsplashes::before {
         @include brandimg;
-        background-image: url(./images/product-types/backsplashes.svg);
+        background-image: url(./Assets/images/product-types/backsplashes.svg);
     }
     
 .washbasins::before {
         @include brandimg;
-        background-image: url(./images/product-types/washbasins.svg);
+        background-image: url(./Assets/images/product-types/washbasins.svg);
     }
     
 .windowsills::before {
         @include brandimg;
-        background-image: url(./images/product-types/windowsills.svg);
+        background-image: url(./Assets/images/product-types/windowsills.svg);
     }
 
 @media only screen and (max-width: 1078px) {

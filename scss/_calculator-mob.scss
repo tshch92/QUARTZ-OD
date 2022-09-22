@@ -30,7 +30,7 @@
 
         &:after {
           content: "";
-          background-image: url(./images/icons/plus.svg);
+          background-image: url(./Assets/images/icons/plus.svg);
           background-position: center;
           background-repeat: no-repeat;
           width: 24px;
@@ -40,7 +40,7 @@
         &.active {
           &:after {
             content: "";
-            background-image: url(./images/icons/minus.svg);
+            background-image: url(./Assets/images/icons/minus.svg);
             background-position: center;
             background-repeat: no-repeat;
             width: 24px;
@@ -73,7 +73,7 @@
               margin-top: 2px;
               width: 10px;
               height: 10px;
-              background-image: url(./images/icons/close-small.svg);
+              background-image: url(./Assets/images/icons/close-small.svg);
             }
           }
 
@@ -193,7 +193,7 @@
     font-size: 0;
     padding: 0px;
     width: 44px;
-    background-image: url(./images/icons/viber.svg);
+    background-image: url(./Assets/images/icons/viber.svg);
     background-size: contain;
     background-repeat: no-repeat;
 

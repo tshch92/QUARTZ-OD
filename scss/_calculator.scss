@@ -130,7 +130,7 @@
       &:after {
         content: "";
         display: block;
-        background-image: url("./images/icons/three-dots-black.svg");
+        background-image: url("./Assets/images/icons/three-dots-black.svg");
         background-size: 36px;
         background-position: center;
         background-color: white;
@@ -187,7 +187,7 @@
       width: 14px;
       height: 14px;
       display: inline-block;
-      background-image: url("./images/icons/ruler.svg");
+      background-image: url("./Assets/images/icons/ruler.svg");
       background-size: cover;
       margin-right: 6px;
     }
@@ -220,7 +220,7 @@
 
 .pricedown {
   @include pricearrow;
-  background-image: url(./images/icons/pricedown.svg);
+  background-image: url(./Assets/images/icons/pricedown.svg);
 
   &:hover:after {
     content: "є шанс, що ціна буде ще нижча";
@@ -233,7 +233,7 @@
 
 .priceup {
   @include pricearrow;
-  background-image: url(./images/icons/priceup.svg);
+  background-image: url(./Assets/images/icons/priceup.svg);
 
   &:hover:after {
     content: "можливо, ціна буде вища через особливості розкрою матеріала";
@@ -283,7 +283,7 @@
 
 .sparkle:after {
   content: "";
-  background-image: url(./images/samples/sparkle.gif);
+  background-image: url(./Assets/images/samples/sparkle.gif);
   background-size: cover;
   display: block;
   position: absolute;
@@ -402,7 +402,7 @@
       background-position: center;
       box-sizing: border-box;
       display: inline-block;
-      background-image: url("./images/icons/pencil-white.svg");
+      background-image: url("./Assets/images/icons/pencil-white.svg");
       background-size: cover;
       margin-right: 8px;
       flex-shrink: 0;
@@ -592,11 +592,11 @@
 }
 
 .shapeU {
-  background-image: url(./images/kitchen-shapes/p-shape.svg);
+  background-image: url(./Assets/images/kitchen-shapes/p-shape.svg);
 }
 
 .shapeL {
-  background-image: url(./images/kitchen-shapes/l-shape.svg);
+  background-image: url(./Assets/images/kitchen-shapes/l-shape.svg);
 }
 
 @mixin arrowpositioning {
@@ -748,7 +748,7 @@
       &:after {
         content: "";
         display: block;
-        background-image: url("./images/icons/three-dots-white.svg");
+        background-image: url("./Assets/images/icons/three-dots-white.svg");
         background-size: 36px;
         background-position: center;
         background-color: $violet;
@@ -805,7 +805,7 @@
     height: 32px;
     display: block;
     margin-bottom: 5px;
-    background-image: url("./images/icons/gift.svg");
+    background-image: url("./Assets/images/icons/gift.svg");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -823,7 +823,7 @@
       height: 16px;
       display: block;
       margin-bottom: 5px;
-      background-image: url("./images/icons/gift.svg");
+      background-image: url("./Assets/images/icons/gift.svg");
       background-size: cover;
       background-repeat: no-repeat;
       background-color: #f5f5f5;
@@ -855,7 +855,7 @@
       width: 10px;
       height: 10px;
       display: inline-block;
-      background-image: url("./images/icons/check.svg");
+      background-image: url("./Assets/images/icons/check.svg");
       background-size: cover;
       background-repeat: no-repeat;
     }

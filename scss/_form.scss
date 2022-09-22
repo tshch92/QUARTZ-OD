@@ -18,7 +18,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(51, 51, 51, 0.9) url("../img/loading.gif") center / 50px
+      background: rgba(51, 51, 51, 0.9) url("./Assets/images/loading.gif") center / 50px
         no-repeat;
       opacity: 0;
       visibility: hidden;
@@ -62,7 +62,7 @@
   & .respondViber {
     & .btn::before {
       @include chipcolor;
-      background-image: url("./images/icons/viber-violet.svg");
+      background-image: url("./Assets/images/icons/viber-violet.svg");
     }
 
     & input:checked + label {
@@ -71,7 +71,7 @@
       border: 0;
 
       &::before {
-        background-image: url("./images/icons/viber.svg");
+        background-image: url("./Assets/images/icons/viber.svg");
       }
     }
   }
@@ -79,7 +79,7 @@
   & .respondTelegram {
     & .btn::before {
       @include chipcolor;
-      background-image: url("./images/icons/telegram-blue.svg");
+      background-image: url("./Assets/images/icons/telegram-blue.svg");
     }
 
     & input:checked + label {
@@ -88,7 +88,7 @@
       border: 0;
 
       &::before {
-        background-image: url("./images/icons/telegram.svg");
+        background-image: url("./Assets/images/icons/telegram.svg");
       }
     }
   }
@@ -96,7 +96,7 @@
   & .respondEmail {
     & .btn::before {
       @include chipcolor;
-      background-image: url("./images/icons/email.svg");
+      background-image: url("./Assets/images/icons/email.svg");
     }
 
     & input:checked + label {
@@ -105,7 +105,7 @@
       border: 0;
 
       &::before {
-        background-image: url("./images/icons/email-white.svg");
+        background-image: url("./Assets/images/icons/email-white.svg");
       }
     }
   }

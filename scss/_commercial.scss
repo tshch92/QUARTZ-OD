@@ -23,7 +23,7 @@
 }
 
 .commercial {
-  background-image: url("./images/2214_teos_desktop.jpg");
+  background-image: url("./Assets/images/2214_teos_desktop.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -99,7 +99,7 @@
     width: 16px;
     height: 16px;
     background-size: cover;
-    background-image: url("./images/icons/down-arrow.svg");
+    background-image: url("./Assets/images/icons/down-arrow.svg");
     margin-right: 6px;
   }
 }
@@ -113,7 +113,7 @@
     width: 32px;
     height: 32px;
     background-size: cover;
-    background-image: url("./images/icons/sink/quartz-white.svg");
+    background-image: url("./Assets/images/icons/sink/quartz-white.svg");
     margin-bottom: -10px;
     margin-right: 4px;
   }
@@ -122,7 +122,7 @@
 @media only (max-width: 1024px) {
 
   &.commercial {
-    background-image: url("./images/2214_teos_mob.jpg");
+    background-image: url("./Assets/images/2214_teos_mob.jpg");
   }
 
   &.comm-section {

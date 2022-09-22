@@ -121,7 +121,7 @@
         margin-right: 0;
         width: 24px;
         height: 24px;
-        background-image: url(./images/icons/plus.svg);
+        background-image: url(./Assets/images/icons/plus.svg);
         background-size: contain;
       }
 
@@ -234,7 +234,7 @@
       background-repeat: no-repeat;
       background-position: center;
       position: relative;
-      background-image: url(./images/icons/forma/04.svg);
+      background-image: url(./Assets/images/icons/forma/04.svg);
 
       &:hover:after {
         content: "інша";
@@ -254,7 +254,7 @@
     width: 24px;
     height: 24px;
     background-color: white;
-    background-image: url("./images/icons/close-small-black.svg");
+    background-image: url("./Assets/images/icons/close-small-black.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -284,7 +284,7 @@
     margin-right: 6px;
     width: 24px;
     height: 24px;
-    background-image: url(./images/icons/reload-white.svg);
+    background-image: url(./Assets/images/icons/reload-white.svg);
     background-size: contain;
     transition: 500ms;
   }
@@ -295,7 +295,7 @@
     border: 1px solid black;
 
     &:before {
-      background-image: url(./images/icons/reload.svg);
+      background-image: url(./Assets/images/icons/reload.svg);
       transform: rotate(90deg);
     }
   }
@@ -312,7 +312,7 @@
   opacity: 60%;
   width: 24px;
   height: 24px;
-  background-image: url("./images/icons/question.svg");
+  background-image: url("./Assets/images/icons/question.svg");
   background-repeat: no-repeat;
   background-position: center;
   margin-left: 10px;
@@ -334,7 +334,7 @@
   background-color: white;
   width: 24px;
   height: 24px;
-  background-image: url("./images/icons/question-teal.svg");
+  background-image: url("./Assets/images/icons/question-teal.svg");
   background-repeat: no-repeat;
   background-position: center;
   margin-right: 4px;
@@ -393,7 +393,7 @@
       border-bottom: 1px solid black;
 
       &.tab-search {
-        background-image: url(./images/icons/magnifying-glass.svg);
+        background-image: url(./Assets/images/icons/magnifying-glass.svg);
         background-size: 16px;
 
         &::before {
@@ -402,7 +402,7 @@
       }
 
       &.tab-filter {
-        background-image: url(./images/icons/filters.svg);
+        background-image: url(./Assets/images/icons/filters.svg);
         background-size: 16px;
         &::before {
           content: "";
@@ -449,33 +449,33 @@
 
     & #Avant + :before {
       @include flag;
-      background-image: url("./images/icons/country/China.jpg");
+      background-image: url("./Assets/images/icons/country/China.jpg");
     }
 
     & #Reston + :before {
       @include flag;
-      background-image: url("./images/icons/country/China.jpg");
+      background-image: url("./Assets/images/icons/country/China.jpg");
     }
 
     & #Atem + :before {
       @include flag;
-      background-image: url("./images/icons/country/UA.jpg");
+      background-image: url("./Assets/images/icons/country/UA.jpg");
       background-position: center;
     }
 
     & #Vicostone + :before {
       @include flag;
-      background-image: url("./images/icons/country/Vietnam.jpg");
+      background-image: url("./Assets/images/icons/country/Vietnam.jpg");
     }
 
     & #Caesarstone + :before {
       @include flag;
-      background-image: url("./images/icons/country/Israel.jpg");
+      background-image: url("./Assets/images/icons/country/Israel.jpg");
     }
 
     & #Belenco + :before {
       @include flag;
-      background-image: url("./images/icons/country/Turkey.jpg");
+      background-image: url("./Assets/images/icons/country/Turkey.jpg");
     }
   }
 
@@ -497,7 +497,7 @@
         margin-left: 4px;
         width: 10px;
         height: 10px;
-        background-image: url(./images/icons/close-small.svg);
+        background-image: url(./Assets/images/icons/close-small.svg);
       }
     }
   }
@@ -620,7 +620,7 @@
 
   &:before {
     display: inline-block;
-    background-image: url("./images/icons/close.svg");
+    background-image: url("./Assets/images/icons/close.svg");
     background-size: contain;
     background-repeat: no-repeat;
     width: 16px;
@@ -652,11 +652,11 @@
     margin-bottom: -2px;
     height: 16px;
     width: 16px;
-    background-image: url("./images/icons/visibility/off.svg");
+    background-image: url("./Assets/images/icons/visibility/off.svg");
   }
 
   &:checked + label:before {
-    background-image: url("./images/icons/visibility/on.svg");
+    background-image: url("./Assets/images/icons/visibility/on.svg");
   }
 }
 
@@ -682,11 +682,11 @@
     margin-bottom: -2px;
     height: 20px;
     width: 20px;
-    background-image: url("./images/icons/checkbox/empty.svg");
+    background-image: url("./Assets/images/icons/checkbox/empty.svg");
   }
 
   & input:checked + label:before {
-    background-image: url("./images/icons/checkbox/checked.svg");
+    background-image: url("./Assets/images/icons/checkbox/checked.svg");
   }
 }
 
@@ -724,7 +724,7 @@
   &:before {
     @include chipcolor;
     display: inline-block;
-    background-image: url("./images/icons/viber.svg");
+    background-image: url("./Assets/images/icons/viber.svg");
     background-size: cover;
     margin: 1px 6px 0 -8px;
   }
@@ -737,7 +737,7 @@
     background-color: white;
 
     &::before {
-      background-image: url("./images/icons/viber-violet.svg");
+      background-image: url("./Assets/images/icons/viber-violet.svg");
     }
 
     &:after {
@@ -757,7 +757,7 @@
   &:before {
     @include chipcolor;
     display: inline-block;
-    background-image: url("./images/icons/save.svg");
+    background-image: url("./Assets/images/icons/save.svg");
     background-size: cover;
     margin: 0 6px 0 -8px;
     opacity: 0.9;
@@ -768,7 +768,7 @@
     color: white;
 
     &:before {
-      background-image: url("./images/icons/save-white.svg");
+      background-image: url("./Assets/images/icons/save-white.svg");
       transition: 300ms;
     }
   }
@@ -777,7 +777,7 @@
 .infinity {
 
   &:before {
-    background-image: url("./images/Infinity.svg");
+    background-image: url("./Assets/images/Infinity.svg");
     background-size: 100px;
     background-position: center;
   }
@@ -787,7 +787,7 @@
     background-color: white;
 
     &:before {
-      background-image: url("./images/Infinity.svg");
+      background-image: url("./Assets/images/Infinity.svg");
     }
   }
 }
@@ -800,7 +800,7 @@
   &:before {
     @include chipcolor;
     display: inline-block;
-    background-image: url("./images/icons/pencil-white.svg");
+    background-image: url("./Assets/images/icons/pencil-white.svg");
     background-size: cover;
     margin-right: 8px;
   }
@@ -808,7 +808,7 @@
   &:hover {
 
     &:before {
-      background-image: url("./images/icons/pencil.svg");
+      background-image: url("./Assets/images/icons/pencil.svg");
       transition: 300ms;
     }
   }
@@ -848,7 +848,7 @@
 
   &:after {
     @include chipcolor;
-    background-image: url("./images/icons/chevron-white.svg");
+    background-image: url("./Assets/images/icons/chevron-white.svg");
     background-size: cover;
     margin-left: 2px;
     display: inline-block;
@@ -856,7 +856,7 @@
 
   &:hover:after {
     transition: 300ms;
-    background-image: url("./images/icons/chevron.svg");
+    background-image: url("./Assets/images/icons/chevron.svg");
   }
 }
 
@@ -871,7 +871,7 @@
   &:before {
     @include chipcolor;
     display: inline-block;
-    background-image: url("./images/icons/chevron.svg");
+    background-image: url("./Assets/images/icons/chevron.svg");
     transform: rotate(180deg);
     background-size: cover;
     margin: 1px 4px 0 -16px;
@@ -912,13 +912,13 @@
 
 .c-rainbow::before {
   @include chipcolor;
-  background-image: url('images/icons/rainbow.svg');
+  background-image: url('./Assets/images/icons/rainbow.svg');
 }
 
 
 .icon {
   &-shapeI {
-    background-image: url(./images/icons/forma/01.svg);
+    background-image: url(./Assets/images/icons/forma/01.svg);
 
     &:hover:after {
       content: "пряма";
@@ -927,7 +927,7 @@
   }
 
   &-shapeL {
-    background-image: url(./images/icons/forma/03.svg);
+    background-image: url(./Assets/images/icons/forma/03.svg);
 
     &:hover:after {
       content: "кутова";
@@ -936,7 +936,7 @@
   }
 
   &-shapeU {
-    background-image: url(./images/icons/forma/02.svg);
+    background-image: url(./Assets/images/icons/forma/02.svg);
 
     &:hover:after {
       content: "П-подібна";
@@ -945,7 +945,7 @@
   }
 
   &-edge1 {
-    background-image: url(./images/icons/profil/01.svg);
+    background-image: url(./Assets/images/icons/profil/01.svg);
 
     &:hover:after {
       content: "фаска 3х3";
@@ -954,7 +954,7 @@
   }
 
   &-edge2 {
-    background-image: url(./images/icons/profil/02.svg);
+    background-image: url(./Assets/images/icons/profil/02.svg);
 
     &:hover:after {
       content: "фаска R3";
@@ -963,7 +963,7 @@
   }
 
   &-edge3 {
-    background-image: url(./images/icons/profil/03.svg);
+    background-image: url(./Assets/images/icons/profil/03.svg);
 
     &:hover:after {
       content: "О-профіль";
@@ -972,7 +972,7 @@
   }
 
   &-edge4 {
-    background-image: url(./images/icons/profil/04.svg);
+    background-image: url(./Assets/images/icons/profil/04.svg);
 
     &:hover:after {
       content: "М-профіль";
@@ -981,7 +981,7 @@
   }
 
   &-edge5 {
-    background-image: url(./images/icons/profil/05.svg);
+    background-image: url(./Assets/images/icons/profil/05.svg);
 
     &:hover:after {
       content: "рваний край";
@@ -990,7 +990,7 @@
   }
 
   &-edge6 {
-    background-image: url(./images/icons/profil/06.svg);
+    background-image: url(./Assets/images/icons/profil/06.svg);
 
     &:hover:after {
       content: "лофт профіль";
@@ -999,7 +999,7 @@
   }
 
   &-edge7 {
-    background-image: url(./images/icons/profil/07.svg);
+    background-image: url(./Assets/images/icons/profil/07.svg);
 
     &:hover:after {
       content: "М-профіль";
@@ -1008,84 +1008,84 @@
   }
 
   &-undermount:before {
-    background-image: url(./images/icons/sink/undermount.svg);
+    background-image: url(./Assets/images/icons/sink/undermount.svg);
   }
 
   &-levelmount:before {
-    background-image: url(./images/icons/sink/levelmount.svg);
+    background-image: url(./Assets/images/icons/sink/levelmount.svg);
   }
 
   &-quartz:before {
-    background-image: url(./images/icons/sink/quartz.svg);
+    background-image: url(./Assets/images/icons/sink/quartz.svg);
   }
 
   &-round:before {
-    background-image: url(./images/icons/sink/round.svg);
+    background-image: url(./Assets/images/icons/sink/round.svg);
   }
 
   &-line:before {
-    background-image: url(./images/icons/sink/line.svg);
+    background-image: url(./Assets/images/icons/sink/line.svg);
   }
 }
 
 input[type="radio"]:checked + label.icon {
   &-shapeI {
-    background-image: url(./images/icons/forma/01-white.svg);
+    background-image: url(./Assets/images/icons/forma/01-white.svg);
   }
 
   &-shapeU {
-    background-image: url(./images/icons/forma/02-white.svg);
+    background-image: url(./Assets/images/icons/forma/02-white.svg);
   }
 
   &-shapeL {
-    background-image: url(./images/icons/forma/03-white.svg);
+    background-image: url(./Assets/images/icons/forma/03-white.svg);
   }
 
   &-edge1 {
-    background-image: url(./images/icons/profil/01-white.svg);
+    background-image: url(./Assets/images/icons/profil/01-white.svg);
   }
 
   &-edge2 {
-    background-image: url(./images/icons/profil/02-white.svg);
+    background-image: url(./Assets/images/icons/profil/02-white.svg);
   }
 
   &-edge3 {
-    background-image: url(./images/icons/profil/03-white.svg);
+    background-image: url(./Assets/images/icons/profil/03-white.svg);
   }
 
   &-edge4 {
-    background-image: url(./images/icons/profil/04-white.svg);
+    background-image: url(./Assets/images/icons/profil/04-white.svg);
   }
 
   &-edge5 {
-    background-image: url(./images/icons/profil/05-white.svg);
+    background-image: url(./Assets/images/icons/profil/05-white.svg);
   }
 
   &-edge6 {
-    background-image: url(./images/icons/profil/06-white.svg);
+    background-image: url(./Assets/images/icons/profil/06-white.svg);
   }
 
   &-edge7 {
-    background-image: url(./images/icons/profil/07-white.svg);
+    background-image: url(./Assets/images/icons/profil/07-white.svg);
   }
 
   &-undermount:before {
-    background-image: url(./images/icons/sink/undermount-white.svg);
+    background-image: url(./Assets/images/icons/sink/undermount-white.svg);
   }
 
   &-levelmount:before {
-    background-image: url(./images/icons/sink/levelmount-white.svg);
+    background-image: url(./Assets/images/icons/sink/levelmount-white.svg);
   }
 
   &-quartz:before {
-    background-image: url(./images/icons/sink/quartz-white.svg);
+    background-image: url(./Assets/images/icons/sink/quartz-white.svg);
   }
 
   &-round:before {
-    background-image: url(./images/icons/sink/round-white.svg);
+    background-image: url(./Assets/images/icons/sink/round-white.svg);
   }
 
   &-line:before {
-    background-image: url(./images/icons/sink/line-white.svg);
+    background-image: url(./Assets/images/icons/sink/line-white.svg);
   }
 }

@@ -10,7 +10,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/RS301.jpg",
+    picture: "./Assets/images/samples/RS301.jpg",
   },
   {
     brand: "Avant",
@@ -23,7 +23,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/CT-401.jpg",
+    picture: "./Assets/images/samples/CT-401.jpg",
   },
   {
     brand: "Avant",
@@ -36,7 +36,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/aurorasnow.jpg",
+    picture: "./Assets/images/samples/aurorasnow.jpg",
   },
   {
     brand: "Avant",
@@ -49,7 +49,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/1250_Пуатье.jpg",
+    picture: "./Assets/images/samples/Avant/1250_Пуатье.jpg",
   },
   {
     brand: "Avant",
@@ -62,7 +62,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/1260_Нанси.jpg",
+    picture: "./Assets/images/samples/Avant/1260_Нанси.jpg",
   },
   {
     brand: "Avant",
@@ -75,7 +75,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/biancocanvas.jpg",
+    picture: "./Assets/images/samples/biancocanvas.jpg",
   },
   {
     brand: "Avant",
@@ -88,7 +88,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/2015_Франш-Конте.jpg",
+    picture: "./Assets/images/samples/Avant/2015_Франш-Конте.jpg",
   },
   {
     brand: "Avant",
@@ -101,7 +101,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/2030_Боттичино_Бурж.jpg",
+    picture: "./Assets/images/samples/Avant/2030_Боттичино_Бурж.jpg",
   },
   {
     brand: "Avant",
@@ -114,7 +114,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/2032_Гренобль.jpg",
+    picture: "./Assets/images/samples/Avant/2032_Гренобль.jpg",
   },
   {
     brand: "Avant",
@@ -127,7 +127,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/2040_Монбельяр.jpg",
+    picture: "./Assets/images/samples/Avant/2040_Монбельяр.jpg",
   },
   {
     brand: "Avant",
@@ -140,7 +140,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/2041_Валанс.jpg",
+    picture: "./Assets/images/samples/Avant/2041_Валанс.jpg",
   },
   {
     brand: "Avant",
@@ -153,7 +153,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/9005_Бурбонне.jpg",
+    picture: "./Assets/images/samples/Avant/9005_Бурбонне.jpg",
   },
   {
     brand: "Avant",
@@ -166,7 +166,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/9006_Лимузен.jpg",
+    picture: "./Assets/images/samples/Avant/9006_Лимузен.jpg",
   },
   {
     brand: "Avant",
@@ -179,7 +179,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/9009_Прованс.jpg",
+    picture: "./Assets/images/samples/Avant/9009_Прованс.jpg",
   },
   {
     brand: "Avant",
@@ -192,7 +192,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/9010_Корсика.jpg",
+    picture: "./Assets/images/samples/Avant/9010_Корсика.jpg",
   },
   {
     brand: "Avant",
@@ -205,7 +205,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/9012_Анжу.jpg",
+    picture: "./Assets/images/samples/Avant/9012_Анжу.jpg",
   },
   {
     brand: "Avant",
@@ -218,7 +218,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/9014_Савойя.jpg",
+    picture: "./Assets/images/samples/Avant/9014_Савойя.jpg",
   },
   {
     brand: "Avant",
@@ -231,7 +231,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/9023_Лотарингия.jpg",
+    picture: "./Assets/images/samples/Avant/9023_Лотарингия.jpg",
   },
   {
     brand: "Avant",
@@ -244,7 +244,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/9050_Грис_Фонсе.jpg",
+    picture: "./Assets/images/samples/Avant/9050_Грис_Фонсе.jpg",
   },
   {
     brand: "Avant",
@@ -257,7 +257,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/7470_Калакатта_Беарн.jpg",
+    picture: "./Assets/images/samples/Avant/7470_Калакатта_Беарн.jpg",
   },
   {
     brand: "Avant",
@@ -270,7 +270,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/7600_Калакатта_ле_Нор.jpg",
+    picture: "./Assets/images/samples/Avant/7600_Калакатта_ле_Нор.jpg",
   },
   {
     brand: "Avant",
@@ -283,7 +283,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/7670_Калакатта_Кассель.jpg",
+    picture: "./Assets/images/samples/Avant/7670_Калакатта_Кассель.jpg",
   },
   {
     brand: "Avant",
@@ -296,7 +296,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/Avant/7900_Калакатта_Ла-Рошель.jpg",
+    picture: "./Assets/images/samples/Avant/7900_Калакатта_Ла-Рошель.jpg",
   },
   {
     brand: "Avant",
@@ -309,7 +309,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/7000_Калакатта_Эно.jpg",
+    picture: "./Assets/images/samples/Avant/7000_Калакатта_Эно.jpg",
   },
   {
     brand: "Avant",
@@ -322,7 +322,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/7100_Статуарио_Лилль.jpg",
+    picture: "./Assets/images/samples/Avant/7100_Статуарио_Лилль.jpg",
   },
   {
     brand: "Avant",
@@ -335,7 +335,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/7200_Аквитания_Бланка.jpg",
+    picture: "./Assets/images/samples/Avant/7200_Аквитания_Бланка.jpg",
   },
   {
     brand: "Avant",
@@ -348,7 +348,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/7300_Калакатта_Аяччо.jpg",
+    picture: "./Assets/images/samples/Avant/7300_Калакатта_Аяччо.jpg",
   },
   {
     brand: "Avant",
@@ -361,7 +361,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/7400_Калакатта_Дофине.jpg",
+    picture: "./Assets/images/samples/Avant/7400_Калакатта_Дофине.jpg",
   },
   {
     brand: "Avant",
@@ -374,7 +374,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/7500_Калакатта_Аррас.jpg",
+    picture: "./Assets/images/samples/Avant/7500_Калакатта_Аррас.jpg",
   },
   {
     brand: "Avant",
@@ -387,7 +387,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/7700_Калакатта_Марсель.jpg",
+    picture: "./Assets/images/samples/Avant/7700_Калакатта_Марсель.jpg",
   },
   {
     brand: "Avant",
@@ -400,7 +400,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/7010_Calacatta_Chambord.jpg",
+    picture: "./Assets/images/samples/Avant/7010_Calacatta_Chambord.jpg",
   },
   {
     brand: "Avant",
@@ -413,7 +413,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/7020_Calacatta_Amboise.jpg",
+    picture: "./Assets/images/samples/Avant/7020_Calacatta_Amboise.jpg",
   },
   {
     brand: "Avant",
@@ -426,7 +426,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/Avant/7030_Calacatta_Chenonceau.jpg",
+    picture: "./Assets/images/samples/Avant/7030_Calacatta_Chenonceau.jpg",
   },
   {
     brand: "Avant",
@@ -439,7 +439,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/7040_Calacatta_Bomenil.jpg",
+    picture: "./Assets/images/samples/Avant/7040_Calacatta_Bomenil.jpg",
   },
   {
     brand: "Avant",
@@ -452,7 +452,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/7050_Calacatta_Benac.jpg",
+    picture: "./Assets/images/samples/Avant/7050_Calacatta_Benac.jpg",
   },
   {
     brand: "Avant",
@@ -465,7 +465,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/7060_Calacatta_Mont_Saint_Michel.jpg",
+    picture: "./Assets/images/samples/Avant/7060_Calacatta_Mont_Saint_Michel.jpg",
   },
   {
     brand: "Avant",
@@ -478,7 +478,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/Avant/7070_Calacatta_Versailles.jpg",
+    picture: "./Assets/images/samples/Avant/7070_Calacatta_Versailles.jpg",
   },
   {
     brand: "Avant",
@@ -491,7 +491,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/7630_Calacatta_Vincennes.jpg",
+    picture: "./Assets/images/samples/Avant/7630_Calacatta_Vincennes.jpg",
   },
   {
     brand: "Avant",
@@ -504,7 +504,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Avant/8100_Moulin.jpg",
+    picture: "./Assets/images/samples/Avant/8100_Moulin.jpg",
   },
   {
     brand: "Avant",
@@ -517,13 +517,13 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/4735_Oxidian.jpg",
+    picture: "./Assets/images/samples/Caesarstone/4735_Oxidian.jpg",
   },
 
   {
     brand: "Атем",
     color: "White 001",
-    price: { uah: 1664, eur: 0, usd: 0 },
+    price: { uah: 16664, eur: 0, usd: 0 },
     slab: [3030, 1420],
     colorGroup: ["white"],
     pattern: ["manka"],
@@ -531,7 +531,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/WHITE_001.jpg",
+    picture: "./Assets/images/samples/Atem/WHITE_001.jpg",
   },
   {
     brand: "Атем",
@@ -544,7 +544,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/WHITE_002.jpg",
+    picture: "./Assets/images/samples/Atem/WHITE_002.jpg",
   },
   {
     brand: "Атем",
@@ -557,7 +557,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/WHITE_005.jpg",
+    picture: "./Assets/images/samples/Atem/WHITE_005.jpg",
   },
   {
     brand: "Атем",
@@ -570,7 +570,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/WHITE_0011.jpg",
+    picture: "./Assets/images/samples/Atem/WHITE_0011.jpg",
   },
   {
     brand: "Атем",
@@ -583,7 +583,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/WHITE_0012.jpg",
+    picture: "./Assets/images/samples/Atem/WHITE_0012.jpg",
   },
   {
     brand: "Атем",
@@ -596,7 +596,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/WHITE_0016.jpg",
+    picture: "./Assets/images/samples/Atem/WHITE_0016.jpg",
   },
   {
     brand: "Атем",
@@ -609,7 +609,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/WHITE_0001_M.jpg",
+    picture: "./Assets/images/samples/Atem/WHITE_0001_M.jpg",
   },
   {
     brand: "Атем",
@@ -622,7 +622,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/aurorasnow.jpg",
+    picture: "./Assets/images/samples/aurorasnow.jpg",
   },
   {
     brand: "Атем",
@@ -635,7 +635,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/biancocanvas.jpg",
+    picture: "./Assets/images/samples/biancocanvas.jpg",
   },
   {
     brand: "Атем",
@@ -648,7 +648,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/BEIGE_LIGHT_0002.jpg",
+    picture: "./Assets/images/samples/Atem/BEIGE_LIGHT_0002.jpg",
   },
   {
     brand: "Атем",
@@ -661,7 +661,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/BEIGE_LIGHT_0012.jpg",
+    picture: "./Assets/images/samples/Atem/BEIGE_LIGHT_0012.jpg",
   },
   {
     brand: "Атем",
@@ -674,7 +674,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/BEIGE_LIGHT_0016.jpg",
+    picture: "./Assets/images/samples/Atem/BEIGE_LIGHT_0016.jpg",
   },
   {
     brand: "Атем",
@@ -687,7 +687,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/BEIGE_LIGHT_0022.jpg",
+    picture: "./Assets/images/samples/Atem/BEIGE_LIGHT_0022.jpg",
   },
   {
     brand: "Атем",
@@ -700,7 +700,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/LATTE_0022.jpg",
+    picture: "./Assets/images/samples/Atem/LATTE_0022.jpg",
   },
   {
     brand: "Атем",
@@ -713,7 +713,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/MOCCO_0002.jpg",
+    picture: "./Assets/images/samples/Atem/MOCCO_0002.jpg",
   },
   {
     brand: "Атем",
@@ -726,7 +726,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/SAND_0003.jpg",
+    picture: "./Assets/images/samples/Atem/SAND_0003.jpg",
   },
   {
     brand: "Атем",
@@ -739,7 +739,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/SAND_005.jpg",
+    picture: "./Assets/images/samples/Atem/SAND_005.jpg",
   },
   {
     brand: "Атем",
@@ -752,7 +752,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/SAND_0014.jpg",
+    picture: "./Assets/images/samples/Atem/SAND_0014.jpg",
   },
   {
     brand: "Атем",
@@ -765,7 +765,7 @@ const samplesArray = [
     recommend: "recommend",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/GREY_0003.jpg",
+    picture: "./Assets/images/samples/Atem/GREY_0003.jpg",
   },
   {
     brand: "Атем",
@@ -778,7 +778,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/GREY_LIGHT_0031.jpg",
+    picture: "./Assets/images/samples/Atem/GREY_LIGHT_0031.jpg",
   },
   {
     brand: "Атем",
@@ -791,7 +791,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/GREY_0231.jpg",
+    picture: "./Assets/images/samples/Atem/GREY_0231.jpg",
   },
   {
     brand: "Атем",
@@ -804,7 +804,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/nopic.jpg",
+    picture: "./Assets/images/samples/nopic.jpg",
   },
   {
     brand: "Атем",
@@ -817,7 +817,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/GREY_0024.jpg",
+    picture: "./Assets/images/samples/Atem/GREY_0024.jpg",
   },
   {
     brand: "Атем",
@@ -830,7 +830,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/CEMENTO_1119.jpg",
+    picture: "./Assets/images/samples/Atem/CEMENTO_1119.jpg",
   },
   {
     brand: "Атем",
@@ -843,7 +843,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/blackaurorasnow.jpg",
+    picture: "./Assets/images/samples/blackaurorasnow.jpg",
   },
   {
     brand: "Атем",
@@ -856,7 +856,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/GREY_ICE_005.jpg",
+    picture: "./Assets/images/samples/Atem/GREY_ICE_005.jpg",
   },
   {
     brand: "Атем",
@@ -869,7 +869,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/TERRA_RED_005.jpg",
+    picture: "./Assets/images/samples/Atem/TERRA_RED_005.jpg",
   },
   {
     brand: "Атем",
@@ -882,7 +882,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/BROWN_0002.jpg",
+    picture: "./Assets/images/samples/Atem/BROWN_0002.jpg",
   },
   {
     brand: "Атем",
@@ -895,7 +895,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/BROWN_0012.jpg",
+    picture: "./Assets/images/samples/Atem/BROWN_0012.jpg",
   },
   {
     brand: "Атем",
@@ -908,7 +908,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/BLACK_0002.jpg",
+    picture: "./Assets/images/samples/Atem/BLACK_0002.jpg",
   },
   {
     brand: "Атем",
@@ -921,7 +921,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/BLACK_0012.jpg",
+    picture: "./Assets/images/samples/Atem/BLACK_0012.jpg",
   },
   {
     brand: "Атем",
@@ -934,7 +934,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/BLACK_0016.jpg",
+    picture: "./Assets/images/samples/Atem/BLACK_0016.jpg",
   },
   {
     brand: "Атем",
@@ -947,7 +947,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/blackbiancocanvas.jpg",
+    picture: "./Assets/images/samples/blackbiancocanvas.jpg",
   },
   {
     brand: "Атем",
@@ -960,7 +960,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/BLACK_1000M.jpg",
+    picture: "./Assets/images/samples/Atem/BLACK_1000M.jpg",
   },
   {
     brand: "Атем",
@@ -973,7 +973,7 @@ const samplesArray = [
     recommend: "recommend",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/TERRA_BLACK_005.jpg",
+    picture: "./Assets/images/samples/Atem/TERRA_BLACK_005.jpg",
   },
   {
     brand: "Атем",
@@ -986,7 +986,7 @@ const samplesArray = [
     recommend: "recommend",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/CACAO_0015.jpg",
+    picture: "./Assets/images/samples/Atem/CACAO_0015.jpg",
   },
   {
     brand: "Атем",
@@ -999,7 +999,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/CACAO_LIGHT_0015.jpg",
+    picture: "./Assets/images/samples/Atem/CACAO_LIGHT_0015.jpg",
   },
   {
     brand: "Атем",
@@ -1012,7 +1012,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/ALPINE_CLOUD_1117.jpg",
+    picture: "./Assets/images/samples/Atem/ALPINE_CLOUD_1117.jpg",
   },
   {
     brand: "Атем",
@@ -1025,7 +1025,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/IVORY_DREAM_1117.jpg",
+    picture: "./Assets/images/samples/Atem/IVORY_DREAM_1117.jpg",
   },
   {
     brand: "Атем",
@@ -1038,7 +1038,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/Noir-Marron.jpg",
+    picture: "./Assets/images/samples/Atem/Noir-Marron.jpg",
   },
   {
     brand: "Атем",
@@ -1051,7 +1051,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/Noir_blanc.jpg",
+    picture: "./Assets/images/samples/Atem/Noir_blanc.jpg",
   },
   {
     brand: "Атем",
@@ -1064,7 +1064,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/Calacatta_W1117.jpg",
+    picture: "./Assets/images/samples/Atem/Calacatta_W1117.jpg",
   },
   {
     brand: "Атем",
@@ -1077,7 +1077,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/CALACATTA_B_1105.jpg",
+    picture: "./Assets/images/samples/Atem/CALACATTA_B_1105.jpg",
   },
   {
     brand: "Атем",
@@ -1090,7 +1090,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/STATUARIO_W1117.jpg",
+    picture: "./Assets/images/samples/Atem/STATUARIO_W1117.jpg",
   },
   {
     brand: "Атем",
@@ -1103,7 +1103,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/VENATINO_W1117.jpg",
+    picture: "./Assets/images/samples/Atem/VENATINO_W1117.jpg",
   },
   {
     brand: "Атем",
@@ -1116,7 +1116,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Atem/VENATINO_Black_1105.jpg",
+    picture: "./Assets/images/samples/Atem/VENATINO_Black_1105.jpg",
   },
 
   {
@@ -1130,7 +1130,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Reston/6103VM-Синай.jpg",
+    picture: "./Assets/images/samples/Reston/6103VM-Синай.jpg",
   },
   {
     brand: "Reston",
@@ -1143,7 +1143,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Reston/6100VM-Айпетри.jpg",
+    picture: "./Assets/images/samples/Reston/6100VM-Айпетри.jpg",
   },
   {
     brand: "Reston",
@@ -1156,7 +1156,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/aurorasnow.jpg",
+    picture: "./Assets/images/samples/aurorasnow.jpg",
   },
   {
     brand: "Reston",
@@ -1169,7 +1169,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/blackbiancocanvas.jpg",
+    picture: "./Assets/images/samples/blackbiancocanvas.jpg",
   },
   {
     brand: "Reston",
@@ -1182,7 +1182,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Reston/A209-Кракатау.jpg",
+    picture: "./Assets/images/samples/Reston/A209-Кракатау.jpg",
   },
   {
     brand: "Reston",
@@ -1195,7 +1195,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Reston/A212-Маккинли.jpg",
+    picture: "./Assets/images/samples/Reston/A212-Маккинли.jpg",
   },
   {
     brand: "Reston",
@@ -1208,7 +1208,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Reston/ART-01-Эльбрус.jpg",
+    picture: "./Assets/images/samples/Reston/ART-01-Эльбрус.jpg",
   },
   {
     brand: "Reston",
@@ -1221,7 +1221,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/biancocanvas.jpg",
+    picture: "./Assets/images/samples/biancocanvas.jpg",
   },
   {
     brand: "Reston",
@@ -1234,7 +1234,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Reston/1028-1-Везувий.jpg",
+    picture: "./Assets/images/samples/Reston/1028-1-Везувий.jpg",
   },
   {
     brand: "Reston",
@@ -1247,7 +1247,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Reston/1028-3-Макалу.jpg",
+    picture: "./Assets/images/samples/Reston/1028-3-Макалу.jpg",
   },
   {
     brand: "Reston",
@@ -1260,7 +1260,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Reston/1028-4-Августин.jpg",
+    picture: "./Assets/images/samples/Reston/1028-4-Августин.jpg",
   },
   {
     brand: "Reston",
@@ -1273,7 +1273,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Reston/1028-5-Ахагар.jpg",
+    picture: "./Assets/images/samples/Reston/1028-5-Ахагар.jpg",
   },
   {
     brand: "Reston",
@@ -1286,7 +1286,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Reston/1028-2-Монблан.jpg",
+    picture: "./Assets/images/samples/Reston/1028-2-Монблан.jpg",
   },
   {
     brand: "Reston",
@@ -1299,7 +1299,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/RS301.jpg",
+    picture: "./Assets/images/samples/RS301.jpg",
   },
   {
     brand: "Reston",
@@ -1312,7 +1312,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Reston/CK2932-Дихтау.jpg",
+    picture: "./Assets/images/samples/Reston/CK2932-Дихтау.jpg",
   },
   {
     brand: "Reston",
@@ -1325,7 +1325,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Reston/CK2937-Джимара-2.jpg",
+    picture: "./Assets/images/samples/Reston/CK2937-Джимара-2.jpg",
   },
   {
     brand: "Reston",
@@ -1338,7 +1338,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Reston/СК2934-Этна.jpg",
+    picture: "./Assets/images/samples/Reston/СК2934-Этна.jpg",
   },
   {
     brand: "Reston",
@@ -1351,7 +1351,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Reston/161124VM-Килиманджаро.jpg",
+    picture: "./Assets/images/samples/Reston/161124VM-Килиманджаро.jpg",
   },
   {
     brand: "Reston",
@@ -1364,7 +1364,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Reston/9009VM-Арарат.jpg",
+    picture: "./Assets/images/samples/Reston/9009VM-Арарат.jpg",
   },
   {
     brand: "Reston",
@@ -1377,7 +1377,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Reston/181225-VM.jpg",
+    picture: "./Assets/images/samples/Reston/181225-VM.jpg",
   },
   {
     brand: "Reston",
@@ -1390,7 +1390,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Reston/2020-А-VM.jpg",
+    picture: "./Assets/images/samples/Reston/2020-А-VM.jpg",
   },
   {
     brand: "Reston",
@@ -1403,7 +1403,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Reston/18111VM-Калакатта.jpg",
+    picture: "./Assets/images/samples/Reston/18111VM-Калакатта.jpg",
   },
 
   {
@@ -1417,7 +1417,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Ginger/Calacatta-Black-7431.jpg",
+    picture: "./Assets/images/samples/Ginger/Calacatta-Black-7431.jpg",
   },
   {
     brand: "Ginger",
@@ -1430,7 +1430,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Ginger/Ivory-White-2011.jpg",
+    picture: "./Assets/images/samples/Ginger/Ivory-White-2011.jpg",
   },
   {
     brand: "Ginger",
@@ -1443,7 +1443,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Ginger/Lauren-Grey-3026.jpg",
+    picture: "./Assets/images/samples/Ginger/Lauren-Grey-3026.jpg",
   },
   {
     brand: "Ginger",
@@ -1456,7 +1456,7 @@ const samplesArray = [
     recommend: "recommend",
     preorder: "",
     out: "",
-    picture: "./images/samples/biancocanvas.jpg",
+    picture: "./Assets/images/samples/biancocanvas.jpg",
   },
   {
     brand: "Ginger",
@@ -1469,7 +1469,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/blackaurorasnow.jpg",
+    picture: "./Assets/images/samples/blackaurorasnow.jpg",
   },
   {
     brand: "Ginger",
@@ -1482,7 +1482,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/CT-401.jpg",
+    picture: "./Assets/images/samples/CT-401.jpg",
   },
   {
     brand: "Ginger",
@@ -1495,7 +1495,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Ginger/Cararra-White-6305.jpg",
+    picture: "./Assets/images/samples/Ginger/Cararra-White-6305.jpg",
   },
   {
     brand: "Ginger",
@@ -1508,7 +1508,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Ginger/Calacatta-White-7412.jpg",
+    picture: "./Assets/images/samples/Ginger/Calacatta-White-7412.jpg",
   },
   {
     brand: "Ginger",
@@ -1521,7 +1521,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Ginger/Shiny-Grey-GDN10.jpg",
+    picture: "./Assets/images/samples/Ginger/Shiny-Grey-GDN10.jpg",
   },
   {
     brand: "Ginger",
@@ -1534,7 +1534,7 @@ const samplesArray = [
     recommend: "recommend",
     preorder: "",
     out: "",
-    picture: "./images/samples/Ginger/Pure-Brown-GDN06.jpg",
+    picture: "./Assets/images/samples/Ginger/Pure-Brown-GDN06.jpg",
   },
   {
     brand: "Ginger",
@@ -1547,7 +1547,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Ginger/Calacatta-White-7478.jpg",
+    picture: "./Assets/images/samples/Ginger/Calacatta-White-7478.jpg",
   },
   {
     brand: "Ginger",
@@ -1560,7 +1560,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Ginger/Calacatta-White-7415.jpg",
+    picture: "./Assets/images/samples/Ginger/Calacatta-White-7415.jpg",
   },
   {
     brand: "Ginger",
@@ -1573,7 +1573,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Hanstone/PASSION_ROUGE.jpg",
+    picture: "./Assets/images/samples/Hanstone/PASSION_ROUGE.jpg",
   },
   {
     brand: "Ginger",
@@ -1586,7 +1586,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/CT-402.jpg",
+    picture: "./Assets/images/samples/CT-402.jpg",
   },
   {
     brand: "Ginger",
@@ -1599,7 +1599,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/aurorasnow.jpg",
+    picture: "./Assets/images/samples/aurorasnow.jpg",
   },
   {
     brand: "Ginger",
@@ -1612,7 +1612,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/nopic.jpg",
+    picture: "./Assets/images/samples/nopic.jpg",
   },
   {
     brand: "Ginger",
@@ -1625,7 +1625,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Ginger/Phoenix-Grey-7362.jpg",
+    picture: "./Assets/images/samples/Ginger/Phoenix-Grey-7362.jpg",
   },
 
   {
@@ -1639,7 +1639,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BS124.jpg",
+    picture: "./Assets/images/samples/Vicostone/BS124.jpg",
   },
   {
     brand: "Vicostone",
@@ -1652,7 +1652,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BS124.jpg",
+    picture: "./Assets/images/samples/Vicostone/BS124.jpg",
   },
   {
     brand: "Vicostone",
@@ -1665,7 +1665,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BS124.jpg",
+    picture: "./Assets/images/samples/Vicostone/BS124.jpg",
   },
   {
     brand: "Vicostone",
@@ -1678,7 +1678,7 @@ const samplesArray = [
     recommend: "recommend",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ1080.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ1080.jpg",
   },
   {
     brand: "Vicostone",
@@ -1691,7 +1691,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ1080.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ1080.jpg",
   },
   {
     brand: "Vicostone",
@@ -1704,7 +1704,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ201.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ201.jpg",
   },
   {
     brand: "Vicostone",
@@ -1717,7 +1717,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ850.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ850.jpg",
   },
   {
     brand: "Vicostone",
@@ -1730,7 +1730,7 @@ const samplesArray = [
     recommend: "recommend",
     preorder: "",
     out: "",
-    picture: "./images/samples/biancocanvas.jpg",
+    picture: "./Assets/images/samples/biancocanvas.jpg",
   },
   {
     brand: "Vicostone",
@@ -1743,7 +1743,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/biancocanvas.jpg",
+    picture: "./Assets/images/samples/biancocanvas.jpg",
   },
   {
     brand: "Vicostone",
@@ -1756,7 +1756,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/biancocanvas.jpg",
+    picture: "./Assets/images/samples/biancocanvas.jpg",
   },
   {
     brand: "Vicostone",
@@ -1769,7 +1769,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ2088.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ2088.jpg",
   },
   {
     brand: "Vicostone",
@@ -1782,7 +1782,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ2088.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ2088.jpg",
   },
   {
     brand: "Vicostone",
@@ -1795,7 +1795,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/blackaurorasnow.jpg",
+    picture: "./Assets/images/samples/blackaurorasnow.jpg",
   },
   {
     brand: "Vicostone",
@@ -1808,7 +1808,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8100.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8100.jpg",
   },
   {
     brand: "Vicostone",
@@ -1821,7 +1821,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8100.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8100.jpg",
   },
   {
     brand: "Vicostone",
@@ -1834,7 +1834,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8100.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8100.jpg",
   },
   {
     brand: "Vicostone",
@@ -1847,7 +1847,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8618.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8618.jpg",
   },
   {
     brand: "Vicostone",
@@ -1860,7 +1860,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8805.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8805.jpg",
   },
   {
     brand: "Vicostone",
@@ -1873,7 +1873,7 @@ const samplesArray = [
     recommend: "recommend",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ9140.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ9140.jpg",
   },
   {
     brand: "Vicostone",
@@ -1886,7 +1886,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ9140.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ9140.jpg",
   },
   {
     brand: "Vicostone",
@@ -1899,7 +1899,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ9140.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ9140.jpg",
   },
   {
     brand: "Vicostone",
@@ -1912,7 +1912,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ206.png",
+    picture: "./Assets/images/samples/Vicostone/BQ206.png",
   },
   {
     brand: "Vicostone",
@@ -1925,7 +1925,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8220.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8220.jpg",
   },
   {
     brand: "Vicostone",
@@ -1938,7 +1938,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8220.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8220.jpg",
   },
   {
     brand: "Vicostone",
@@ -1951,7 +1951,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8220.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8220.jpg",
   },
   {
     brand: "Vicostone",
@@ -1964,7 +1964,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8430.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8430.jpg",
   },
   {
     brand: "Vicostone",
@@ -1977,7 +1977,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8430.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8430.jpg",
   },
   {
     brand: "Vicostone",
@@ -1990,7 +1990,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8440.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8440.jpg",
   },
   {
     brand: "Vicostone",
@@ -2003,7 +2003,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8440.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8440.jpg",
   },
   {
     brand: "Vicostone",
@@ -2016,7 +2016,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8446.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8446.jpg",
   },
   {
     brand: "Vicostone",
@@ -2029,7 +2029,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8806.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8806.jpg",
   },
   {
     brand: "Vicostone",
@@ -2042,7 +2042,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8860.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8860.jpg",
   },
   {
     brand: "Vicostone",
@@ -2055,7 +2055,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8863.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8863.jpg",
   },
   {
     brand: "Vicostone",
@@ -2068,7 +2068,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8864.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8864.jpg",
   },
   {
     brand: "Vicostone",
@@ -2081,7 +2081,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8864.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8864.jpg",
   },
   {
     brand: "Vicostone",
@@ -2094,7 +2094,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8808.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8808.jpg",
   },
   {
     brand: "Vicostone",
@@ -2107,7 +2107,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ9360.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ9360.jpg",
   },
   {
     brand: "Vicostone",
@@ -2120,7 +2120,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ9453.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ9453.jpg",
   },
   {
     brand: "Vicostone",
@@ -2133,7 +2133,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ100.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ100.jpg",
   },
   {
     brand: "Vicostone",
@@ -2146,7 +2146,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ100.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ100.jpg",
   },
   {
     brand: "Vicostone",
@@ -2159,7 +2159,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ100.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ100.jpg",
   },
   {
     brand: "Vicostone",
@@ -2172,7 +2172,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8590.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8590.jpg",
   },
   {
     brand: "Vicostone",
@@ -2185,7 +2185,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8668.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8668.jpg",
   },
   {
     brand: "Vicostone",
@@ -2198,7 +2198,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8794.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8794.jpg",
   },
   {
     brand: "Vicostone",
@@ -2211,7 +2211,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8812.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8812.jpg",
   },
   {
     brand: "Vicostone",
@@ -2224,7 +2224,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ9470.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ9470.jpg",
   },
   {
     brand: "Vicostone",
@@ -2237,7 +2237,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ9427.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ9427.jpg",
   },
   {
     brand: "Vicostone",
@@ -2250,7 +2250,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ9441.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ9441.jpg",
   },
   {
     brand: "Vicostone",
@@ -2263,7 +2263,7 @@ const samplesArray = [
     recommend: "recommend",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8560.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8560.jpg",
   },
   {
     brand: "Vicostone",
@@ -2276,7 +2276,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8583.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8583.jpg",
   },
   {
     brand: "Vicostone",
@@ -2289,7 +2289,7 @@ const samplesArray = [
     recommend: "recommend",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8730.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8730.jpg",
   },
   {
     brand: "Vicostone",
@@ -2302,7 +2302,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8738.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8738.jpg",
   },
   {
     brand: "Vicostone",
@@ -2315,7 +2315,7 @@ const samplesArray = [
     recommend: "recommend",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8740.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8740.jpg",
   },
   {
     brand: "Vicostone",
@@ -2328,7 +2328,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8786.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8786.jpg",
   },
   {
     brand: "Vicostone",
@@ -2341,7 +2341,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8885.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8885.jpg",
   },
   {
     brand: "Vicostone",
@@ -2354,7 +2354,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ9606.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ9606.jpg",
   },
   {
     brand: "Vicostone",
@@ -2367,7 +2367,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8628.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8628.jpg",
   },
   {
     brand: "Vicostone",
@@ -2380,7 +2380,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8660.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8660.jpg",
   },
   {
     brand: "Vicostone",
@@ -2393,7 +2393,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8670.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8670.jpg",
   },
   {
     brand: "Vicostone",
@@ -2406,7 +2406,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8887.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8887.jpg",
   },
   {
     brand: "Vicostone",
@@ -2419,7 +2419,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8918.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8918.jpg",
   },
   {
     brand: "Vicostone",
@@ -2432,7 +2432,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/Vicostone/BQ240.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ240.jpg",
   },
   {
     brand: "Vicostone",
@@ -2445,7 +2445,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ240.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ240.jpg",
   },
   {
     brand: "Vicostone",
@@ -2458,7 +2458,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ240.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ240.jpg",
   },
   {
     brand: "Vicostone",
@@ -2471,7 +2471,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/Vicostone/BS182.jpg",
+    picture: "./Assets/images/samples/Vicostone/BS182.jpg",
   },
   {
     brand: "Vicostone",
@@ -2484,7 +2484,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BS120.jpg",
+    picture: "./Assets/images/samples/Vicostone/BS120.jpg",
   },
   {
     brand: "Vicostone",
@@ -2497,7 +2497,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BS120.jpg",
+    picture: "./Assets/images/samples/Vicostone/BS120.jpg",
   },
   {
     brand: "Vicostone",
@@ -2510,7 +2510,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BS120.jpg",
+    picture: "./Assets/images/samples/Vicostone/BS120.jpg",
   },
   {
     brand: "Vicostone",
@@ -2523,7 +2523,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BS160.jpg",
+    picture: "./Assets/images/samples/Vicostone/BS160.jpg",
   },
   {
     brand: "Vicostone",
@@ -2536,7 +2536,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BS170.jpg",
+    picture: "./Assets/images/samples/Vicostone/BS170.jpg",
   },
   {
     brand: "Vicostone",
@@ -2549,7 +2549,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BS170.jpg",
+    picture: "./Assets/images/samples/Vicostone/BS170.jpg",
   },
   {
     brand: "Vicostone",
@@ -2562,7 +2562,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/Vicostone/BQ241.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ241.jpg",
   },
   {
     brand: "Vicostone",
@@ -2575,7 +2575,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ241.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ241.jpg",
   },
   {
     brand: "Vicostone",
@@ -2588,7 +2588,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ241.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ241.jpg",
   },
   {
     brand: "Vicostone",
@@ -2601,7 +2601,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/Vicostone/BQ8437.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8437.jpg",
   },
   {
     brand: "Vicostone",
@@ -2614,7 +2614,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ9419.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ9419.jpg",
   },
   {
     brand: "Vicostone",
@@ -2627,7 +2627,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8330.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8330.jpg",
   },
   {
     brand: "Vicostone",
@@ -2640,7 +2640,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/Vicostone/BQ8370.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8370.jpg",
   },
   {
     brand: "Vicostone",
@@ -2653,7 +2653,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8370.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8370.jpg",
   },
   {
     brand: "Vicostone",
@@ -2666,7 +2666,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/Vicostone/BQ9418.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ9418.jpg",
   },
   {
     brand: "Vicostone",
@@ -2679,7 +2679,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ9420.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ9420.jpg",
   },
   {
     brand: "Vicostone",
@@ -2692,7 +2692,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8810.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8810.jpg",
   },
   {
     brand: "Vicostone",
@@ -2705,7 +2705,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/Vicostone/BQ8550.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8550.jpg",
   },
   {
     brand: "Vicostone",
@@ -2718,7 +2718,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8550.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8550.jpg",
   },
   {
     brand: "Vicostone",
@@ -2731,7 +2731,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Vicostone/BQ8550.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8550.jpg",
   },
   {
     brand: "Vicostone",
@@ -2744,7 +2744,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/Vicostone/BQ9438.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ9438.jpg",
   },
   {
     brand: "Vicostone",
@@ -2757,7 +2757,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/Vicostone/BQ9602.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ9602.jpg",
   },
   {
     brand: "Vicostone",
@@ -2770,7 +2770,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/Vicostone/BQ8270.jpg",
+    picture: "./Assets/images/samples/Vicostone/BQ8270.jpg",
   },
   {
     brand: "Vicostone",
@@ -2783,7 +2783,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/aurorasnow.jpg",
+    picture: "./Assets/images/samples/aurorasnow.jpg",
   },
 
   {
@@ -2797,7 +2797,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/iceberg.jpg",
+    picture: "./Assets/images/samples/Belenco/iceberg.jpg",
   },
   {
     brand: "Belenco",
@@ -2810,7 +2810,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/perla.jpg",
+    picture: "./Assets/images/samples/Belenco/perla.jpg",
   },
   {
     brand: "Belenco",
@@ -2823,7 +2823,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/1150-dorata.webp",
+    picture: "./Assets/images/samples/Belenco/1150-dorata.webp",
   },
   {
     brand: "Belenco",
@@ -2836,7 +2836,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/victory.jpg",
+    picture: "./Assets/images/samples/Belenco/victory.jpg",
   },
   {
     brand: "Belenco",
@@ -2849,7 +2849,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/teos.jpg",
+    picture: "./Assets/images/samples/Belenco/teos.jpg",
   },
   {
     brand: "Belenco",
@@ -2862,7 +2862,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/3110-Polaris.jpg",
+    picture: "./Assets/images/samples/Belenco/3110-Polaris.jpg",
   },
   {
     brand: "Belenco",
@@ -2875,7 +2875,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/daphne_crack.jpg",
+    picture: "./Assets/images/samples/Belenco/daphne_crack.jpg",
   },
   {
     brand: "Belenco",
@@ -2888,7 +2888,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/boletus.jpg",
+    picture: "./Assets/images/samples/Belenco/boletus.jpg",
   },
   {
     brand: "Belenco",
@@ -2901,7 +2901,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/Belenco/3535-NEMESİS.jpg",
+    picture: "./Assets/images/samples/Belenco/3535-NEMESİS.jpg",
   },
   {
     brand: "Belenco",
@@ -2914,7 +2914,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/parma.jpg",
+    picture: "./Assets/images/samples/Belenco/parma.jpg",
   },
   {
     brand: "Belenco",
@@ -2927,7 +2927,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/3618_olympos.jpg",
+    picture: "./Assets/images/samples/Belenco/3618_olympos.jpg",
   },
   {
     brand: "Belenco",
@@ -2940,7 +2940,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/aizano.jpg",
+    picture: "./Assets/images/samples/Belenco/aizano.jpg",
   },
   {
     brand: "Belenco",
@@ -2953,7 +2953,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/kashmera_white.jpg",
+    picture: "./Assets/images/samples/Belenco/kashmera_white.jpg",
   },
   {
     brand: "Belenco",
@@ -2966,7 +2966,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/fairy_white.jpg",
+    picture: "./Assets/images/samples/Belenco/fairy_white.jpg",
   },
   {
     brand: "Belenco",
@@ -2979,7 +2979,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/CT-402.jpg",
+    picture: "./Assets/images/samples/CT-402.jpg",
   },
   {
     brand: "Belenco",
@@ -2992,7 +2992,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/sahara.jpg",
+    picture: "./Assets/images/samples/Belenco/sahara.jpg",
   },
   {
     brand: "Belenco",
@@ -3005,7 +3005,7 @@ const samplesArray = [
     recommend: "recommend",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/4458_chakra_beige.jpg",
+    picture: "./Assets/images/samples/Belenco/4458_chakra_beige.jpg",
   },
   {
     brand: "Belenco",
@@ -3018,7 +3018,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/4524_laluna.jpg",
+    picture: "./Assets/images/samples/Belenco/4524_laluna.jpg",
   },
   {
     brand: "Belenco",
@@ -3031,7 +3031,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/terre_grey.jpg",
+    picture: "./Assets/images/samples/Belenco/terre_grey.jpg",
   },
   {
     brand: "Belenco",
@@ -3044,7 +3044,7 @@ const samplesArray = [
     recommend: "recommend",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/babilon.jpg",
+    picture: "./Assets/images/samples/Belenco/babilon.jpg",
   },
   {
     brand: "Belenco",
@@ -3057,7 +3057,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/5050_forza_fume.jpg",
+    picture: "./Assets/images/samples/Belenco/5050_forza_fume.jpg",
   },
   {
     brand: "Belenco",
@@ -3070,7 +3070,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/5114_carola.jpg",
+    picture: "./Assets/images/samples/Belenco/5114_carola.jpg",
   },
   {
     brand: "Belenco",
@@ -3083,7 +3083,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/5123-kashmera.webp",
+    picture: "./Assets/images/samples/Belenco/5123-kashmera.webp",
   },
   {
     brand: "Belenco",
@@ -3096,7 +3096,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/aurorasnow.jpg",
+    picture: "./Assets/images/samples/aurorasnow.jpg",
   },
   {
     brand: "Belenco",
@@ -3109,7 +3109,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/5250_elixir_white.jpg",
+    picture: "./Assets/images/samples/Belenco/5250_elixir_white.jpg",
   },
   {
     brand: "Belenco",
@@ -3122,7 +3122,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/mocca_mousse.jpg",
+    picture: "./Assets/images/samples/Belenco/mocca_mousse.jpg",
   },
   {
     brand: "Belenco",
@@ -3135,7 +3135,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/CT-401.jpg",
+    picture: "./Assets/images/samples/CT-401.jpg",
   },
   {
     brand: "Belenco",
@@ -3148,7 +3148,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/belenco-lisbon.jpg",
+    picture: "./Assets/images/samples/Belenco/belenco-lisbon.jpg",
   },
   {
     brand: "Belenco",
@@ -3161,7 +3161,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/7119_calacatta_venatino.jpg",
+    picture: "./Assets/images/samples/Belenco/7119_calacatta_venatino.jpg",
   },
   {
     brand: "Belenco",
@@ -3174,7 +3174,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/pergamon.jpg",
+    picture: "./Assets/images/samples/Belenco/pergamon.jpg",
   },
   {
     brand: "Belenco",
@@ -3187,7 +3187,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/metropol_grey.jpg",
+    picture: "./Assets/images/samples/Belenco/metropol_grey.jpg",
   },
   {
     brand: "Belenco",
@@ -3200,7 +3200,7 @@ const samplesArray = [
     recommend: "recommend",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/montana.jpg",
+    picture: "./Assets/images/samples/Belenco/montana.jpg",
   },
   {
     brand: "Belenco",
@@ -3213,7 +3213,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/anemon.jpg",
+    picture: "./Assets/images/samples/Belenco/anemon.jpg",
   },
   {
     brand: "Belenco",
@@ -3226,7 +3226,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/8224_interstellar.jpg",
+    picture: "./Assets/images/samples/Belenco/8224_interstellar.jpg",
   },
   {
     brand: "Belenco",
@@ -3239,7 +3239,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/spa_black.jpg",
+    picture: "./Assets/images/samples/Belenco/spa_black.jpg",
   },
   {
     brand: "Belenco",
@@ -3252,7 +3252,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/volcano.jpg",
+    picture: "./Assets/images/samples/Belenco/volcano.jpg",
   },
   {
     brand: "Belenco",
@@ -3265,7 +3265,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/alinda.jpg",
+    picture: "./Assets/images/samples/Belenco/alinda.jpg",
   },
   {
     brand: "Belenco",
@@ -3278,7 +3278,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/calacattaveneto_eb486.jpg",
+    picture: "./Assets/images/samples/Belenco/calacattaveneto_eb486.jpg",
   },
   {
     brand: "Belenco",
@@ -3291,7 +3291,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/9219_marquina_tierra.jpg",
+    picture: "./Assets/images/samples/Belenco/9219_marquina_tierra.jpg",
   },
   {
     brand: "Belenco",
@@ -3304,7 +3304,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/9719_marquina_lavagna.jpg",
+    picture: "./Assets/images/samples/Belenco/9719_marquina_lavagna.jpg",
   },
   {
     brand: "Belenco",
@@ -3317,7 +3317,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/boletus.jpg",
+    picture: "./Assets/images/samples/Belenco/boletus.jpg",
   },
   {
     brand: "Belenco",
@@ -3330,7 +3330,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/aizano.jpg",
+    picture: "./Assets/images/samples/Belenco/aizano.jpg",
   },
   {
     brand: "Belenco",
@@ -3343,7 +3343,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/4233_antique_white.jpg",
+    picture: "./Assets/images/samples/Belenco/4233_antique_white.jpg",
   },
   {
     brand: "Belenco",
@@ -3356,7 +3356,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/babilon.jpg",
+    picture: "./Assets/images/samples/Belenco/babilon.jpg",
   },
   {
     brand: "Belenco",
@@ -3369,7 +3369,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/metropol_grey.jpg",
+    picture: "./Assets/images/samples/Belenco/metropol_grey.jpg",
   },
   {
     brand: "Belenco",
@@ -3382,7 +3382,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/montana.jpg",
+    picture: "./Assets/images/samples/Belenco/montana.jpg",
   },
   {
     brand: "Belenco",
@@ -3395,7 +3395,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/spa_black.jpg",
+    picture: "./Assets/images/samples/Belenco/spa_black.jpg",
   },
   {
     brand: "Belenco",
@@ -3408,7 +3408,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Belenco/volcano.jpg",
+    picture: "./Assets/images/samples/Belenco/volcano.jpg",
   },
 
   {
@@ -3422,7 +3422,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/biancocanvas.jpg",
+    picture: "./Assets/images/samples/biancocanvas.jpg",
   },
   {
     brand: "Hanstone",
@@ -3435,7 +3435,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quarella/BIANCHISSIMO.jpg",
+    picture: "./Assets/images/samples/Quarella/BIANCHISSIMO.jpg",
   },
   {
     brand: "Hanstone",
@@ -3448,7 +3448,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/aurorasnow.jpg",
+    picture: "./Assets/images/samples/aurorasnow.jpg",
   },
   {
     brand: "Hanstone",
@@ -3461,7 +3461,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Hanstone/champagne-pearl.jpg",
+    picture: "./Assets/images/samples/Hanstone/champagne-pearl.jpg",
   },
   {
     brand: "Hanstone",
@@ -3474,7 +3474,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Hanstone/Tiffany_Grey.jpg",
+    picture: "./Assets/images/samples/Hanstone/Tiffany_Grey.jpg",
   },
   {
     brand: "Hanstone",
@@ -3487,7 +3487,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Hanstone/Sandcastle.jpg",
+    picture: "./Assets/images/samples/Hanstone/Sandcastle.jpg",
   },
   {
     brand: "Hanstone",
@@ -3500,7 +3500,7 @@ const samplesArray = [
     recommend: "recommend",
     preorder: "",
     out: "",
-    picture: "./images/samples/CT-402.jpg",
+    picture: "./Assets/images/samples/CT-402.jpg",
   },
   {
     brand: "Hanstone",
@@ -3513,7 +3513,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Hanstone/mo622-ambrosial.jpg",
+    picture: "./Assets/images/samples/Hanstone/mo622-ambrosial.jpg",
   },
   {
     brand: "Hanstone",
@@ -3526,7 +3526,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Hanstone/mo624-concord.jpg",
+    picture: "./Assets/images/samples/Hanstone/mo624-concord.jpg",
   },
   {
     brand: "Hanstone",
@@ -3539,7 +3539,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Hanstone/Victorian-Sands.jpg",
+    picture: "./Assets/images/samples/Hanstone/Victorian-Sands.jpg",
   },
   {
     brand: "Hanstone",
@@ -3552,7 +3552,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Hanstone/Aspen.jpg",
+    picture: "./Assets/images/samples/Hanstone/Aspen.jpg",
   },
   {
     brand: "Hanstone",
@@ -3565,7 +3565,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Hanstone/Liscia.webp",
+    picture: "./Assets/images/samples/Hanstone/Liscia.webp",
   },
   {
     brand: "Hanstone",
@@ -3578,7 +3578,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Hanstone/Jamocha.jpg",
+    picture: "./Assets/images/samples/Hanstone/Jamocha.jpg",
   },
   {
     brand: "Hanstone",
@@ -3591,7 +3591,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Hanstone/Destin.jpg",
+    picture: "./Assets/images/samples/Hanstone/Destin.jpg",
   },
   {
     brand: "Hanstone",
@@ -3604,7 +3604,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Hanstone/Campina.jpg",
+    picture: "./Assets/images/samples/Hanstone/Campina.jpg",
   },
   {
     brand: "Hanstone",
@@ -3617,7 +3617,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Hanstone/WT720-Mondo.jpg",
+    picture: "./Assets/images/samples/Hanstone/WT720-Mondo.jpg",
   },
 
   {
@@ -3631,7 +3631,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Cherry_Beige.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Cherry_Beige.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3644,7 +3644,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Cloudy_Black.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Cloudy_Black.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3657,7 +3657,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Dolphin_Grey.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Dolphin_Grey.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3670,7 +3670,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Iceberg_White.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Iceberg_White.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3683,7 +3683,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Light_Beige.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Light_Beige.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3696,7 +3696,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Jupiter.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Jupiter.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3709,7 +3709,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Mars.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Mars.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3722,7 +3722,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Mars.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Mars.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3735,7 +3735,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Pluto.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Pluto.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3748,7 +3748,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Qf_Brown_530_detail.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Qf_Brown_530_detail.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3761,7 +3761,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Light_Beige.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Light_Beige.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3774,7 +3774,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Ma_Beige_100_detail.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Ma_Beige_100_detail.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3787,7 +3787,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Cloudy_Black.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Cloudy_Black.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3800,7 +3800,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Cloudy_Brown_605_detail.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Cloudy_Brown_605_detail.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3813,7 +3813,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Cloudy_Desert_610_detail.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Cloudy_Desert_610_detail.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3826,7 +3826,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Cloudy_White_615_detail.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Cloudy_White_615_detail.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3839,7 +3839,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Cloudy_Beige_620_detail.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Cloudy_Beige_620_detail.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3852,7 +3852,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Cloudy_Black_And_More.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Cloudy_Black_And_More.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3865,7 +3865,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Cloudy_Portland_Grey_630_detail.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Cloudy_Portland_Grey_630_detail.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3878,7 +3878,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Breeze_Ashen_Light_800_detail.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Breeze_Ashen_Light_800_detail.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3891,7 +3891,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Breeze_Sand_810_detail.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Breeze_Sand_810_detail.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3904,7 +3904,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Veined_Africa_900_detail.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Veined_Africa_900_detail.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3917,7 +3917,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Veined_Deco_915_detail.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Veined_Deco_915_detail.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3930,7 +3930,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Veined_Cream_910_detail.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Veined_Cream_910_detail.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3943,7 +3943,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Veined_Michelangelo_920_detail.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Veined_Michelangelo_920_detail.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3956,7 +3956,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Forest-Magnolia.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Forest-Magnolia.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3969,7 +3969,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Planet_Mercury_2001_detail.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Planet_Mercury_2001_detail.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3982,7 +3982,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Mars.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Mars.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3995,7 +3995,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Planet_Neptune_2025_detail.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Planet_Neptune_2025_detail.jpg",
   },
   {
     brand: "Quartzforms",
@@ -4008,7 +4008,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Pluto.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Pluto.jpg",
   },
   {
     brand: "Quartzforms",
@@ -4021,7 +4021,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Planet_Halley_3015_detail.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Planet_Halley_3015_detail.jpg",
   },
   {
     brand: "Quartzforms",
@@ -4034,7 +4034,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Planet_Honey_Galaxy.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Planet_Honey_Galaxy.jpg",
   },
   {
     brand: "Quartzforms",
@@ -4047,7 +4047,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Veined_Baroque_905_detail.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Veined_Baroque_905_detail.jpg",
   },
   {
     brand: "Quartzforms",
@@ -4060,7 +4060,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Veined_Cream_910_detail.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Veined_Cream_910_detail.jpg",
   },
   {
     brand: "Quartzforms",
@@ -4073,7 +4073,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quartzforms/Veined_Michelangelo_920_detail.jpg",
+    picture: "./Assets/images/samples/Quartzforms/Veined_Michelangelo_920_detail.jpg",
   },
 
   {
@@ -4087,7 +4087,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quarella/NERO_VELLUTO_3228.jpg",
+    picture: "./Assets/images/samples/Quarella/NERO_VELLUTO_3228.jpg",
   },
   {
     brand: "Quarella",
@@ -4100,7 +4100,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quarella/NERO_VELLUTO_3228.jpg",
+    picture: "./Assets/images/samples/Quarella/NERO_VELLUTO_3228.jpg",
   },
   {
     brand: "Quarella",
@@ -4113,7 +4113,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quarella/NERO_VELLUTO_3228.jpg",
+    picture: "./Assets/images/samples/Quarella/NERO_VELLUTO_3228.jpg",
   },
   {
     brand: "Quarella",
@@ -4126,7 +4126,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quarella/CREMA-CHIARA.jpg",
+    picture: "./Assets/images/samples/Quarella/CREMA-CHIARA.jpg",
   },
   {
     brand: "Quarella",
@@ -4139,7 +4139,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quarella/CREMA-CHIARA.jpg",
+    picture: "./Assets/images/samples/Quarella/CREMA-CHIARA.jpg",
   },
   {
     brand: "Quarella",
@@ -4152,7 +4152,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quarella/BLANCO-PALOMA.jpg",
+    picture: "./Assets/images/samples/Quarella/BLANCO-PALOMA.jpg",
   },
   {
     brand: "Quarella",
@@ -4165,7 +4165,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quarella/BLANCO-PALOMA.jpg",
+    picture: "./Assets/images/samples/Quarella/BLANCO-PALOMA.jpg",
   },
   {
     brand: "Quarella",
@@ -4178,7 +4178,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quarella/GRIS_ANTRACITE_3237.jpg",
+    picture: "./Assets/images/samples/Quarella/GRIS_ANTRACITE_3237.jpg",
   },
   {
     brand: "Quarella",
@@ -4191,7 +4191,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quarella/GRIS_ANTRACITE_3237.jpg",
+    picture: "./Assets/images/samples/Quarella/GRIS_ANTRACITE_3237.jpg",
   },
   {
     brand: "Quarella",
@@ -4204,7 +4204,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quarella/GRIS_ANTRACITE_3237.jpg",
+    picture: "./Assets/images/samples/Quarella/GRIS_ANTRACITE_3237.jpg",
   },
   {
     brand: "Quarella",
@@ -4217,7 +4217,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quarella/BLU-FIANDRE.jpg",
+    picture: "./Assets/images/samples/Quarella/BLU-FIANDRE.jpg",
   },
   {
     brand: "Quarella",
@@ -4230,7 +4230,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quarella/BLU-FIANDRE.jpg",
+    picture: "./Assets/images/samples/Quarella/BLU-FIANDRE.jpg",
   },
   {
     brand: "Quarella",
@@ -4243,7 +4243,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/blackbiancocanvas.jpg",
+    picture: "./Assets/images/samples/blackbiancocanvas.jpg",
   },
   {
     brand: "Quarella",
@@ -4256,7 +4256,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/blackbiancocanvas.jpg",
+    picture: "./Assets/images/samples/blackbiancocanvas.jpg",
   },
   {
     brand: "Quarella",
@@ -4269,7 +4269,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/blackbiancocanvas.jpg",
+    picture: "./Assets/images/samples/blackbiancocanvas.jpg",
   },
   {
     brand: "Quarella",
@@ -4282,7 +4282,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quarella/Carina.jpg",
+    picture: "./Assets/images/samples/Quarella/Carina.jpg",
   },
   {
     brand: "Quarella",
@@ -4295,7 +4295,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quarella/Carina.jpg",
+    picture: "./Assets/images/samples/Quarella/Carina.jpg",
   },
   {
     brand: "Quarella",
@@ -4308,7 +4308,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quarella/Auriga.jpg",
+    picture: "./Assets/images/samples/Quarella/Auriga.jpg",
   },
   {
     brand: "Quarella",
@@ -4321,7 +4321,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quarella/Auriga.jpg",
+    picture: "./Assets/images/samples/Quarella/Auriga.jpg",
   },
   {
     brand: "Quarella",
@@ -4334,7 +4334,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quarella/Tucana.jpg",
+    picture: "./Assets/images/samples/Quarella/Tucana.jpg",
   },
   {
     brand: "Quarella",
@@ -4347,7 +4347,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quarella/BIANCHISSIMO.jpg",
+    picture: "./Assets/images/samples/Quarella/BIANCHISSIMO.jpg",
   },
   {
     brand: "Quarella",
@@ -4360,7 +4360,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Quarella/BIANCHISSIMO.jpg",
+    picture: "./Assets/images/samples/Quarella/BIANCHISSIMO.jpg",
   },
 
   {
@@ -4374,7 +4374,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/biancocanvas.jpg",
+    picture: "./Assets/images/samples/biancocanvas.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4387,7 +4387,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/blackaurorasnow.jpg",
+    picture: "./Assets/images/samples/blackaurorasnow.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4400,7 +4400,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/6270_Atlantic_salt.jpg",
+    picture: "./Assets/images/samples/Caesarstone/6270_Atlantic_salt.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4413,7 +4413,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/4003_Sleek_Concrete.jpg",
+    picture: "./Assets/images/samples/Caesarstone/4003_Sleek_Concrete.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4426,7 +4426,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/4120_Raven.jpg",
+    picture: "./Assets/images/samples/Caesarstone/4120_Raven.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4439,7 +4439,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/4130_Clamshell.jpg",
+    picture: "./Assets/images/samples/Caesarstone/4130_Clamshell.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4452,7 +4452,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/4220_Buttermilk.jpg",
+    picture: "./Assets/images/samples/Caesarstone/4220_Buttermilk.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4465,7 +4465,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/4230_Shitake.jpg",
+    picture: "./Assets/images/samples/Caesarstone/4230_Shitake.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4478,7 +4478,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/4330_Ginger.jpg",
+    picture: "./Assets/images/samples/Caesarstone/4330_Ginger.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4491,7 +4491,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/4350_Mink.jpg",
+    picture: "./Assets/images/samples/Caesarstone/4350_Mink.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4504,7 +4504,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/4120_Raven.jpg",
+    picture: "./Assets/images/samples/Caesarstone/4120_Raven.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4517,7 +4517,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/1141_Pure_White.jpg",
+    picture: "./Assets/images/samples/Caesarstone/1141_Pure_White.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4530,7 +4530,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/5000_London_Grey.jpg",
+    picture: "./Assets/images/samples/Caesarstone/5000_London_Grey.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4543,7 +4543,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/5003_Piatra_Grey.jpg",
+    picture: "./Assets/images/samples/Caesarstone/5003_Piatra_Grey.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4556,7 +4556,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/5100_Vanilla_Noir.jpg",
+    picture: "./Assets/images/samples/Caesarstone/5100_Vanilla_Noir.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4569,7 +4569,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/5110_Alpine_Mist.jpg",
+    picture: "./Assets/images/samples/Caesarstone/5110_Alpine_Mist.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4582,7 +4582,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/5133_Symphony_Grey.jpg",
+    picture: "./Assets/images/samples/Caesarstone/5133_Symphony_Grey.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4595,7 +4595,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/5141_Frosty_Carrina.jpg",
+    picture: "./Assets/images/samples/Caesarstone/5141_Frosty_Carrina.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4608,7 +4608,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/5211_Noble_Grey.jpg",
+    picture: "./Assets/images/samples/Caesarstone/5211_Noble_Grey.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4621,7 +4621,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/5212_Taj_Royale.jpg",
+    picture: "./Assets/images/samples/Caesarstone/5212_Taj_Royale.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4634,7 +4634,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/6003_Coastal_Grey.jpg",
+    picture: "./Assets/images/samples/Caesarstone/6003_Coastal_Grey.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4647,7 +4647,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/6131_Bianco_Drift.jpg",
+    picture: "./Assets/images/samples/Caesarstone/6131_Bianco_Drift.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4660,7 +4660,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/6338_Woodlands.jpg",
+    picture: "./Assets/images/samples/Caesarstone/6338_Woodlands.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4673,7 +4673,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/6046_Moorland_Fog.jpg",
+    picture: "./Assets/images/samples/Caesarstone/6046_Moorland_Fog.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4686,7 +4686,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/5143_White_Attica.jpg",
+    picture: "./Assets/images/samples/Caesarstone/5143_White_Attica.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4699,7 +4699,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/5220_Dreamy_Marfil.jpg",
+    picture: "./Assets/images/samples/Caesarstone/5220_Dreamy_Marfil.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4712,7 +4712,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/5810_Black_Tempal.jpg",
+    picture: "./Assets/images/samples/Caesarstone/5810_Black_Tempal.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4725,7 +4725,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/4011_Cloudburst_Concrete.jpg",
+    picture: "./Assets/images/samples/Caesarstone/4011_Cloudburst_Concrete.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4738,7 +4738,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/4023_Topus_Concrete.jpg",
+    picture: "./Assets/images/samples/Caesarstone/4023_Topus_Concrete.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4751,7 +4751,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/4033_Rugged_Concrete.jpg",
+    picture: "./Assets/images/samples/Caesarstone/4033_Rugged_Concrete.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4764,7 +4764,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/4044_Airy_Concrete.jpg",
+    picture: "./Assets/images/samples/Caesarstone/4044_Airy_Concrete.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4777,7 +4777,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/4046_Excava.jpg",
+    picture: "./Assets/images/samples/Caesarstone/4046_Excava.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4790,7 +4790,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/2003_Concrete.jpg",
+    picture: "./Assets/images/samples/Caesarstone/2003_Concrete.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4803,7 +4803,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/Caesarstone/2710_Apple_Martini.jpg",
+    picture: "./Assets/images/samples/Caesarstone/2710_Apple_Martini.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4816,7 +4816,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/3141_Osprey.jpg",
+    picture: "./Assets/images/samples/Caesarstone/3141_Osprey.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4829,7 +4829,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/3142_White_Shimmer.jpg",
+    picture: "./Assets/images/samples/Caesarstone/3142_White_Shimmer.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4842,7 +4842,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/4030_Oyster.jpg",
+    picture: "./Assets/images/samples/Caesarstone/4030_Oyster.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4855,7 +4855,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/4170_Black_Rocks.jpg",
+    picture: "./Assets/images/samples/Caesarstone/4170_Black_Rocks.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4868,7 +4868,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/4600_Organic_White.jpg",
+    picture: "./Assets/images/samples/Caesarstone/4600_Organic_White.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4881,7 +4881,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Caesarstone/4643_Flannel_Grey.jpg",
+    picture: "./Assets/images/samples/Caesarstone/4643_Flannel_Grey.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4894,7 +4894,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Caesarstone/4735_Oxidian.jpg",
+    picture: "./Assets/images/samples/Caesarstone/4735_Oxidian.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4907,7 +4907,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/CT-401.jpg",
+    picture: "./Assets/images/samples/CT-401.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4920,7 +4920,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/6600_Nougat.jpg",
+    picture: "./Assets/images/samples/Caesarstone/6600_Nougat.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4933,7 +4933,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/CT-401.jpg",
+    picture: "./Assets/images/samples/CT-401.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4946,7 +4946,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Caesarstone/5031_Statuario_Maximus.jpg",
+    picture: "./Assets/images/samples/Caesarstone/5031_Statuario_Maximus.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4959,7 +4959,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Caesarstone/5101_Empira_Black.jpg",
+    picture: "./Assets/images/samples/Caesarstone/5101_Empira_Black.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4972,7 +4972,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Caesarstone/5104_Tuscan_Dawn.jpg",
+    picture: "./Assets/images/samples/Caesarstone/5104_Tuscan_Dawn.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4985,7 +4985,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Caesarstone/5111_Statuario_Nuvo.jpg",
+    picture: "./Assets/images/samples/Caesarstone/5111_Statuario_Nuvo.jpg",
   },
   {
     brand: "Caesarstone",
@@ -4998,7 +4998,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Caesarstone/5131_Calacatta_Nuvo.jpg",
+    picture: "./Assets/images/samples/Caesarstone/5131_Calacatta_Nuvo.jpg",
   },
   {
     brand: "Caesarstone",
@@ -5011,7 +5011,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Caesarstone/5151_Empira_White.jpg",
+    picture: "./Assets/images/samples/Caesarstone/5151_Empira_White.jpg",
   },
   {
     brand: "Caesarstone",
@@ -5024,7 +5024,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/Caesarstone/2003_Stripes.jpg",
+    picture: "./Assets/images/samples/Caesarstone/2003_Stripes.jpg",
   },
   {
     brand: "Caesarstone",
@@ -5037,7 +5037,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/Caesarstone/2141_Lace.jpg",
+    picture: "./Assets/images/samples/Caesarstone/2141_Lace.jpg",
   },
   {
     brand: "Caesarstone",
@@ -5050,7 +5050,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/Caesarstone/2141_Crocodile.jpg",
+    picture: "./Assets/images/samples/Caesarstone/2141_Crocodile.jpg",
   },
   {
     brand: "Caesarstone",
@@ -5063,7 +5063,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/Caesarstone/2220_Braids.jpg",
+    picture: "./Assets/images/samples/Caesarstone/2220_Braids.jpg",
   },
   {
     brand: "Caesarstone",
@@ -5076,7 +5076,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/Caesarstone/1350_Maharaja.jpg",
+    picture: "./Assets/images/samples/Caesarstone/1350_Maharaja.jpg",
   },
 
   {
@@ -5090,7 +5090,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Cimstone/925-NEBULA.webp",
+    picture: "./Assets/images/samples/Cimstone/925-NEBULA.webp",
   },
   {
     brand: "Çimstone",
@@ -5103,7 +5103,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Cimstone/815-SMYRNA.webp",
+    picture: "./Assets/images/samples/Cimstone/815-SMYRNA.webp",
   },
   {
     brand: "Çimstone",
@@ -5116,7 +5116,7 @@ const samplesArray = [
     recommend: "recommend",
     preorder: "",
     out: "",
-    picture: "./images/samples/Cimstone/306-OASIS.jpg",
+    picture: "./Assets/images/samples/Cimstone/306-OASIS.jpg",
   },
   {
     brand: "Çimstone",
@@ -5129,7 +5129,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Cimstone/328-NEVERS.jpg",
+    picture: "./Assets/images/samples/Cimstone/328-NEVERS.jpg",
   },
   {
     brand: "Çimstone",
@@ -5142,7 +5142,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Cimstone/332-LAPAZ.jpg",
+    picture: "./Assets/images/samples/Cimstone/332-LAPAZ.jpg",
   },
   {
     brand: "Çimstone",
@@ -5155,7 +5155,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Cimstone/811-ELVAS.jpg",
+    picture: "./Assets/images/samples/Cimstone/811-ELVAS.jpg",
   },
   {
     brand: "Çimstone",
@@ -5168,7 +5168,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Cimstone/900-LAPLAND.jpg",
+    picture: "./Assets/images/samples/Cimstone/900-LAPLAND.jpg",
   },
   {
     brand: "Çimstone",
@@ -5181,7 +5181,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Cimstone/759-SAVANA.jpg",
+    picture: "./Assets/images/samples/Cimstone/759-SAVANA.jpg",
   },
   {
     brand: "Çimstone",
@@ -5194,7 +5194,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Cimstone/955-BARENTS.jpg",
+    picture: "./Assets/images/samples/Cimstone/955-BARENTS.jpg",
   },
   {
     brand: "Çimstone",
@@ -5207,7 +5207,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Cimstone/796-SINES.jpg",
+    picture: "./Assets/images/samples/Cimstone/796-SINES.jpg",
   },
   {
     brand: "Çimstone",
@@ -5220,7 +5220,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Cimstone/814-CALDERA.jpg",
+    picture: "./Assets/images/samples/Cimstone/814-CALDERA.jpg",
   },
   {
     brand: "Çimstone",
@@ -5233,7 +5233,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Cimstone/912-TROAS.jpg",
+    picture: "./Assets/images/samples/Cimstone/912-TROAS.jpg",
   },
   {
     brand: "Çimstone",
@@ -5246,7 +5246,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Cimstone/936-OLYMPOS.jpg",
+    picture: "./Assets/images/samples/Cimstone/936-OLYMPOS.jpg",
   },
   {
     brand: "Çimstone",
@@ -5259,7 +5259,7 @@ const samplesArray = [
     recommend: "recommend",
     preorder: "",
     out: "",
-    picture: "./images/samples/Cimstone/870-TUNDRA.jpg",
+    picture: "./Assets/images/samples/Cimstone/870-TUNDRA.jpg",
   },
   {
     brand: "Çimstone",
@@ -5272,7 +5272,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Cimstone/890-TERRA.jpg",
+    picture: "./Assets/images/samples/Cimstone/890-TERRA.jpg",
   },
   {
     brand: "Çimstone",
@@ -5285,7 +5285,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Cimstone/985-EFES.jpg",
+    picture: "./Assets/images/samples/Cimstone/985-EFES.jpg",
   },
   {
     brand: "Çimstone",
@@ -5298,7 +5298,7 @@ const samplesArray = [
     recommend: "recommend",
     preorder: "",
     out: "",
-    picture: "./images/samples/Cimstone/880-TOROS.jpg",
+    picture: "./Assets/images/samples/Cimstone/880-TOROS.jpg",
   },
   {
     brand: "Çimstone",
@@ -5311,7 +5311,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Cimstone/930-ARES.jpg",
+    picture: "./Assets/images/samples/Cimstone/930-ARES.jpg",
   },
   {
     brand: "Çimstone",
@@ -5324,7 +5324,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Cimstone/470-FUGA.jpg",
+    picture: "./Assets/images/samples/Cimstone/470-FUGA.jpg",
   },
   {
     brand: "Çimstone",
@@ -5337,7 +5337,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Cimstone/465-HERMES.jpg",
+    picture: "./Assets/images/samples/Cimstone/465-HERMES.jpg",
   },
   {
     brand: "Çimstone",
@@ -5350,7 +5350,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Cimstone/220-ARTEMIS.jpg",
+    picture: "./Assets/images/samples/Cimstone/220-ARTEMIS.jpg",
   },
   {
     brand: "Çimstone",
@@ -5363,7 +5363,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Cimstone/100-HIERAPOLIS.jpg",
+    picture: "./Assets/images/samples/Cimstone/100-HIERAPOLIS.jpg",
   },
 
   {
@@ -5377,7 +5377,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Royal/МА-3105-Black-Marquina.jpg",
+    picture: "./Assets/images/samples/Royal/МА-3105-Black-Marquina.jpg",
   },
   {
     brand: "Royal",
@@ -5390,7 +5390,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Royal/МА-3307-Oriental-White.jpg",
+    picture: "./Assets/images/samples/Royal/МА-3307-Oriental-White.jpg",
   },
   {
     brand: "Royal",
@@ -5403,7 +5403,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Royal/МА-3202-Statuario-Mona-Lisa.jpg",
+    picture: "./Assets/images/samples/Royal/МА-3202-Statuario-Mona-Lisa.jpg",
   },
   {
     brand: "Royal",
@@ -5416,7 +5416,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Royal/МА-3215-Calacatta-Violetta.jpg",
+    picture: "./Assets/images/samples/Royal/МА-3215-Calacatta-Violetta.jpg",
   },
   {
     brand: "Royal",
@@ -5429,7 +5429,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Royal/МА-3320-Calacatta-Rivers.jpg",
+    picture: "./Assets/images/samples/Royal/МА-3320-Calacatta-Rivers.jpg",
   },
   {
     brand: "Royal",
@@ -5442,7 +5442,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Royal/MA-3402-Calacatta-Aurora.jpg",
+    picture: "./Assets/images/samples/Royal/MA-3402-Calacatta-Aurora.jpg",
   },
   {
     brand: "Royal",
@@ -5455,7 +5455,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Royal/МА-3222-Calacatta-Elsa.jpg",
+    picture: "./Assets/images/samples/Royal/МА-3222-Calacatta-Elsa.jpg",
   },
   {
     brand: "Royal",
@@ -5468,7 +5468,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Royal/МА-3326-Polis.jpg",
+    picture: "./Assets/images/samples/Royal/МА-3326-Polis.jpg",
   },
   {
     brand: "Royal",
@@ -5481,7 +5481,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Royal/MM-2315-Carra-White.jpg",
+    picture: "./Assets/images/samples/Royal/MM-2315-Carra-White.jpg",
   },
   {
     brand: "Royal",
@@ -5494,7 +5494,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Royal/МM-2345-Rhapsody.jpg",
+    picture: "./Assets/images/samples/Royal/МM-2345-Rhapsody.jpg",
   },
   {
     brand: "Royal",
@@ -5507,7 +5507,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Royal/МM-2327-Cloud.jpg",
+    picture: "./Assets/images/samples/Royal/МM-2327-Cloud.jpg",
   },
   {
     brand: "Royal",
@@ -5520,7 +5520,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Royal/МM-2313-Portoro.jpg",
+    picture: "./Assets/images/samples/Royal/МM-2313-Portoro.jpg",
   },
 
   {
@@ -5534,7 +5534,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Intekstone/IC-3100.jpg",
+    picture: "./Assets/images/samples/Intekstone/IC-3100.jpg",
   },
   {
     brand: "Intekstone",
@@ -5547,7 +5547,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Intekstone/BC-4003.jpg",
+    picture: "./Assets/images/samples/Intekstone/BC-4003.jpg",
   },
   {
     brand: "Intekstone",
@@ -5560,7 +5560,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Intekstone/IC-3002.jpg",
+    picture: "./Assets/images/samples/Intekstone/IC-3002.jpg",
   },
   {
     brand: "Intekstone",
@@ -5573,7 +5573,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Intekstone/BC-3001.jpg",
+    picture: "./Assets/images/samples/Intekstone/BC-3001.jpg",
   },
   {
     brand: "Intekstone",
@@ -5586,7 +5586,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Intekstone/BC-1006.jpg",
+    picture: "./Assets/images/samples/Intekstone/BC-1006.jpg",
   },
   {
     brand: "Intekstone",
@@ -5599,7 +5599,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Intekstone/BC-1019.jpg",
+    picture: "./Assets/images/samples/Intekstone/BC-1019.jpg",
   },
   {
     brand: "Intekstone",
@@ -5612,7 +5612,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Intekstone/CC-1000.jpg",
+    picture: "./Assets/images/samples/Intekstone/CC-1000.jpg",
   },
   {
     brand: "Intekstone",
@@ -5625,7 +5625,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Intekstone/CC-1001.jpg",
+    picture: "./Assets/images/samples/Intekstone/CC-1001.jpg",
   },
   {
     brand: "Intekstone",
@@ -5638,7 +5638,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Intekstone/BC-5220.jpg",
+    picture: "./Assets/images/samples/Intekstone/BC-5220.jpg",
   },
   {
     brand: "Intekstone",
@@ -5651,7 +5651,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Intekstone/CC-1003.jpg",
+    picture: "./Assets/images/samples/Intekstone/CC-1003.jpg",
   },
   {
     brand: "Intekstone",
@@ -5664,7 +5664,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Intekstone/Calacatta.jpg",
+    picture: "./Assets/images/samples/Intekstone/Calacatta.jpg",
   },
 
   {
@@ -5678,7 +5678,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/Silestone/Magenta-Energy.jpg",
+    picture: "./Assets/images/samples/Silestone/Magenta-Energy.jpg",
   },
   {
     brand: "Silestone",
@@ -5691,7 +5691,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/Blanco-City.jpg",
+    picture: "./Assets/images/samples/Silestone/Blanco-City.jpg",
   },
   {
     brand: "Silestone",
@@ -5704,7 +5704,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/Blanco-City.jpg",
+    picture: "./Assets/images/samples/Silestone/Blanco-City.jpg",
   },
   {
     brand: "Silestone",
@@ -5717,7 +5717,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/Gris-Expo.jpg",
+    picture: "./Assets/images/samples/Silestone/Gris-Expo.jpg",
   },
   {
     brand: "Silestone",
@@ -5730,7 +5730,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/Gris-Expo.jpg",
+    picture: "./Assets/images/samples/Silestone/Gris-Expo.jpg",
   },
   {
     brand: "Silestone",
@@ -5743,7 +5743,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/Gris-Expo.jpg",
+    picture: "./Assets/images/samples/Silestone/Gris-Expo.jpg",
   },
   {
     brand: "Silestone",
@@ -5756,7 +5756,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/MAR-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/MAR-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -5769,7 +5769,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/MAR-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/MAR-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -5782,7 +5782,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/Noka.jpg",
+    picture: "./Assets/images/samples/Silestone/Noka.jpg",
   },
   {
     brand: "Silestone",
@@ -5795,7 +5795,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/Noka.jpg",
+    picture: "./Assets/images/samples/Silestone/Noka.jpg",
   },
   {
     brand: "Silestone",
@@ -5808,7 +5808,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/Rougui.jpg",
+    picture: "./Assets/images/samples/Silestone/Rougui.jpg",
   },
   {
     brand: "Silestone",
@@ -5821,7 +5821,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/Rougui.jpg",
+    picture: "./Assets/images/samples/Silestone/Rougui.jpg",
   },
   {
     brand: "Silestone",
@@ -5834,7 +5834,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/ARU-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/ARU-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -5847,7 +5847,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/ARU-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/ARU-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -5860,7 +5860,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/ARU-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/ARU-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -5873,7 +5873,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/M14-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/M14-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -5886,7 +5886,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/M14-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/M14-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -5899,7 +5899,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/BN1-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/BN1-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -5912,7 +5912,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/BN1-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/BN1-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -5925,7 +5925,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/Camden.jpg",
+    picture: "./Assets/images/samples/Silestone/Camden.jpg",
   },
   {
     brand: "Silestone",
@@ -5938,7 +5938,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/CV-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/CV-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -5951,7 +5951,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/CV-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/CV-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -5964,7 +5964,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/CV-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/CV-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -5977,7 +5977,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/BCR-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/BCR-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -5990,7 +5990,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/BCR-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/BCR-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6003,7 +6003,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/SBR-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/SBR-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6016,7 +6016,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/SBR-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/SBR-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6029,7 +6029,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/MW7-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/MW7-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6042,7 +6042,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/GV3-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/GV3-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6055,7 +6055,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/GV3-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/GV3-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6068,7 +6068,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/NIE-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/NIE-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6081,7 +6081,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/NIE-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/NIE-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6094,7 +6094,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/ISM-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/ISM-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6107,7 +6107,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/ISM-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/ISM-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6120,7 +6120,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/SL3-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/SL3-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6133,7 +6133,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/SL3-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/SL3-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6146,7 +6146,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/6B-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/6B-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6159,7 +6159,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/6B-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/6B-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6172,7 +6172,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/5N-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/5N-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6185,7 +6185,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/5N-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/5N-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6198,7 +6198,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/Silestone/silestone-gris-amazon-big-min.jpg",
+    picture: "./Assets/images/samples/Silestone/silestone-gris-amazon-big-min.jpg",
   },
   {
     brand: "Silestone",
@@ -6211,7 +6211,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/Silestone/silestone-gris-amazon-big-min.jpg",
+    picture: "./Assets/images/samples/Silestone/silestone-gris-amazon-big-min.jpg",
   },
   {
     brand: "Silestone",
@@ -6224,7 +6224,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/Silestone/silestone-gris-amazon-big-min.jpg",
+    picture: "./Assets/images/samples/Silestone/silestone-gris-amazon-big-min.jpg",
   },
   {
     brand: "Silestone",
@@ -6237,7 +6237,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/BD-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/BD-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6250,7 +6250,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/BD-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/BD-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6263,7 +6263,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/BD-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/BD-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6276,7 +6276,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/EW-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/EW-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6289,7 +6289,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/EW-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/EW-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6302,7 +6302,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/BS4-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/BS4-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6315,7 +6315,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/BS4-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/BS4-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6328,7 +6328,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/VZ-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/VZ-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6341,7 +6341,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/VZ-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/VZ-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6354,7 +6354,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/VC5-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/VC5-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6367,7 +6367,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/VC5-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/VC5-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6380,7 +6380,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/GVX-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/GVX-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6393,7 +6393,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/GVX-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/GVX-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6406,7 +6406,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/SL9-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/SL9-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6419,7 +6419,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/MVN-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/MVN-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6432,7 +6432,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/MVN-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/MVN-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6445,7 +6445,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/MOM-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/MOM-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6458,7 +6458,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/MOM-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/MOM-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6471,7 +6471,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/ES-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/ES-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6484,7 +6484,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/MOS-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/MOS-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6497,7 +6497,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/Silken-Pearl.jpg",
+    picture: "./Assets/images/samples/Silestone/Silken-Pearl.jpg",
   },
   {
     brand: "Silestone",
@@ -6510,7 +6510,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/Silken-Pearl.jpg",
+    picture: "./Assets/images/samples/Silestone/Silken-Pearl.jpg",
   },
   {
     brand: "Silestone",
@@ -6523,7 +6523,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/LG1-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/LG1-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6536,7 +6536,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/LG1-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/LG1-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6549,7 +6549,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/6T-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/6T-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6562,7 +6562,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/6T-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/6T-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6575,7 +6575,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/6T-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/6T-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6588,7 +6588,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/LG2-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/LG2-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6601,7 +6601,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/LG2-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/LG2-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6614,7 +6614,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/WS1-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/WS1-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6627,7 +6627,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/WS1-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/WS1-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6640,7 +6640,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/6Y-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/6Y-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6653,7 +6653,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/6Y-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/6Y-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6666,7 +6666,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/acrilia_red.jpg",
+    picture: "./Assets/images/samples/Silestone/acrilia_red.jpg",
   },
   {
     brand: "Silestone",
@@ -6679,7 +6679,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/XB-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/XB-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6692,7 +6692,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/BON-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/BON-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6705,7 +6705,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/BON-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/BON-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6718,7 +6718,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/BZ-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/BZ-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6731,7 +6731,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/BZ-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/BZ-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6744,7 +6744,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/BZ-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/BZ-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6757,7 +6757,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/cala_blue.jpg",
+    picture: "./Assets/images/samples/Silestone/cala_blue.jpg",
   },
   {
     brand: "Silestone",
@@ -6770,7 +6770,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/1JH-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/1JH-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6783,7 +6783,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/1JH-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/1JH-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6796,7 +6796,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/cincel-grey.jpg",
+    picture: "./Assets/images/samples/Silestone/cincel-grey.jpg",
   },
   {
     brand: "Silestone",
@@ -6809,7 +6809,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/ICM-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/ICM-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6822,7 +6822,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/Corktown.jpg",
+    picture: "./Assets/images/samples/Silestone/Corktown.jpg",
   },
   {
     brand: "Silestone",
@@ -6835,7 +6835,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/1JS-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/1JS-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6848,7 +6848,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/1JS-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/1JS-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6861,7 +6861,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/faro-white.jpg",
+    picture: "./Assets/images/samples/Silestone/faro-white.jpg",
   },
   {
     brand: "Silestone",
@@ -6874,7 +6874,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/Silestone/silestone-zen-05-haiku-h.jpg",
+    picture: "./Assets/images/samples/Silestone/silestone-zen-05-haiku-h.jpg",
   },
   {
     brand: "Silestone",
@@ -6887,7 +6887,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./images/samples/Silestone/silestone-zen-05-haiku-h.jpg",
+    picture: "./Assets/images/samples/Silestone/silestone-zen-05-haiku-h.jpg",
   },
   {
     brand: "Silestone",
@@ -6900,7 +6900,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/HAS-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/HAS-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6913,7 +6913,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/HAS-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/HAS-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6926,7 +6926,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/SL6-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/SL6-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6939,7 +6939,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/ZQ-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/ZQ-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6952,7 +6952,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/ZQ-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/ZQ-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6965,7 +6965,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/ZQ-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/ZQ-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6978,7 +6978,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/VLN-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/VLN-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -6991,7 +6991,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/VLN-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/VLN-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7004,7 +7004,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/LSS-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/LSS-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7017,7 +7017,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/VLM-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/VLM-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7030,7 +7030,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/VLM-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/VLM-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7043,7 +7043,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/VMN-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/VMN-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7056,7 +7056,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/VMN-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/VMN-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7069,7 +7069,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/HCT-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/HCT-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7082,7 +7082,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/1JP-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/1JP-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7095,7 +7095,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/1JP-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/1JP-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7108,7 +7108,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/C10-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/C10-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7121,7 +7121,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/posidonia-green.jpg",
+    picture: "./Assets/images/samples/Silestone/posidonia-green.jpg",
   },
   {
     brand: "Silestone",
@@ -7134,7 +7134,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/GCT-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/GCT-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7147,7 +7147,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/STJ-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/STJ-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7160,7 +7160,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/STJ-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/STJ-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7173,7 +7173,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/ZZ-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/ZZ-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7186,7 +7186,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/ZZ-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/ZZ-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7199,7 +7199,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/ARI-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/ARI-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7212,7 +7212,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/ARI-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/ARI-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7225,7 +7225,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/CAY-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/CAY-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7238,7 +7238,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/CAY-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/CAY-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7251,7 +7251,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/1JR-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/1JR-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7264,7 +7264,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/1JR-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/1JR-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7277,7 +7277,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/NWH-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/NWH-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7290,7 +7290,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/NWH-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/NWH-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7303,7 +7303,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/NMB-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/NMB-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7316,7 +7316,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/NMB-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/NMB-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7329,7 +7329,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/EPJ-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/EPJ-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7342,7 +7342,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/EPJ-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/EPJ-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7355,7 +7355,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/ECJ-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/ECJ-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7368,7 +7368,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/ECJ-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/ECJ-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7381,7 +7381,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/1JM-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/1JM-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7394,7 +7394,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/1JM-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/1JM-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7407,7 +7407,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/1JE-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/1JE-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7420,7 +7420,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/1JE-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/1JE-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7433,7 +7433,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/BJJ-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/BJJ-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7446,7 +7446,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/BJJ-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/BJJ-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7459,7 +7459,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/OJF-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/OJF-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7472,7 +7472,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/OCA-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/OCA-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7485,7 +7485,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/OCP-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/OCP-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7498,7 +7498,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/SL8-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/SL8-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7511,7 +7511,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/SL8-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/SL8-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7524,7 +7524,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/WD2-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/WD2-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7537,7 +7537,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/BCT-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/BCT-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7550,7 +7550,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/BCT-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/BCT-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7563,7 +7563,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/Eternal-Calacatta-Gold.jpg",
+    picture: "./Assets/images/samples/Silestone/Eternal-Calacatta-Gold.jpg",
   },
   {
     brand: "Silestone",
@@ -7576,7 +7576,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Silestone/Eternal-Calacatta-Gold.jpg",
+    picture: "./Assets/images/samples/Silestone/Eternal-Calacatta-Gold.jpg",
   },
   {
     brand: "Silestone",
@@ -7589,7 +7589,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/SNJ-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/SNJ-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7602,7 +7602,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/SNJ-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/SNJ-detail.jpg",
   },
   {
     brand: "Silestone",
@@ -7615,7 +7615,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/Ethereal-Dusk.jpg",
+    picture: "./Assets/images/samples/Silestone/Ethereal-Dusk.jpg",
   },
   {
     brand: "Silestone",
@@ -7628,7 +7628,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/Ethereal-Dusk.jpg",
+    picture: "./Assets/images/samples/Silestone/Ethereal-Dusk.jpg",
   },
   {
     brand: "Silestone",
@@ -7641,7 +7641,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/Ethereal-Glow.jpg",
+    picture: "./Assets/images/samples/Silestone/Ethereal-Glow.jpg",
   },
   {
     brand: "Silestone",
@@ -7654,7 +7654,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/Ethereal-Glow.jpg",
+    picture: "./Assets/images/samples/Silestone/Ethereal-Glow.jpg",
   },
   {
     brand: "Silestone",
@@ -7667,7 +7667,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/Ethereal-Haze.jpg",
+    picture: "./Assets/images/samples/Silestone/Ethereal-Haze.jpg",
   },
   {
     brand: "Silestone",
@@ -7680,7 +7680,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/Ethereal-Haze.jpg",
+    picture: "./Assets/images/samples/Silestone/Ethereal-Haze.jpg",
   },
   {
     brand: "Silestone",
@@ -7693,7 +7693,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/Ethereal-Noctis.jpg",
+    picture: "./Assets/images/samples/Silestone/Ethereal-Noctis.jpg",
   },
   {
     brand: "Silestone",
@@ -7706,7 +7706,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/Ethereal-Noctis.jpg",
+    picture: "./Assets/images/samples/Silestone/Ethereal-Noctis.jpg",
   },
   {
     brand: "Silestone",
@@ -7719,7 +7719,7 @@ const samplesArray = [
     recommend: "",
     preorder: "preorder",
     out: "",
-    picture: "./images/samples/Silestone/TMH-detail.jpg",
+    picture: "./Assets/images/samples/Silestone/TMH-detail.jpg",
   },
 
   {
@@ -7733,7 +7733,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Technistone/Elegance_Eco_Nev_web.jpg",
+    picture: "./Assets/images/samples/Technistone/Elegance_Eco_Nev_web.jpg",
   },
   {
     brand: "Technistone",
@@ -7746,7 +7746,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Technistone/Gobi_Grey_web.jpg",
+    picture: "./Assets/images/samples/Technistone/Gobi_Grey_web.jpg",
   },
   {
     brand: "Technistone",
@@ -7759,7 +7759,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Technistone/Crystal_Nevada_web.jpg",
+    picture: "./Assets/images/samples/Technistone/Crystal_Nevada_web.jpg",
   },
   {
     brand: "Technistone",
@@ -7772,7 +7772,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Technistone/Taurus-Black.jpeg",
+    picture: "./Assets/images/samples/Technistone/Taurus-Black.jpeg",
   },
   {
     brand: "Technistone",
@@ -7785,7 +7785,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Technistone/Harmonia_Cerros.jpg",
+    picture: "./Assets/images/samples/Technistone/Harmonia_Cerros.jpg",
   },
   {
     brand: "Technistone",
@@ -7798,7 +7798,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Technistone/Starlight_Black.jpg",
+    picture: "./Assets/images/samples/Technistone/Starlight_Black.jpg",
   },
   {
     brand: "Technistone",
@@ -7811,7 +7811,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Technistone/Crystal_Polar_White_web.jpg",
+    picture: "./Assets/images/samples/Technistone/Crystal_Polar_White_web.jpg",
   },
   {
     brand: "Technistone",
@@ -7824,7 +7824,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Technistone/Noble_Concrete_Grey_web.jpg",
+    picture: "./Assets/images/samples/Technistone/Noble_Concrete_Grey_web.jpg",
   },
   {
     brand: "Technistone",
@@ -7837,7 +7837,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Technistone/Noble_Concrete_Grey_web.jpg",
+    picture: "./Assets/images/samples/Technistone/Noble_Concrete_Grey_web.jpg",
   },
   {
     brand: "Technistone",
@@ -7850,7 +7850,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Technistone/Brilliant_Arabesco_web.jpg",
+    picture: "./Assets/images/samples/Technistone/Brilliant_Arabesco_web.jpg",
   },
   {
     brand: "Technistone",
@@ -7863,7 +7863,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Technistone/Noble_Athos_Brown_web.jpg",
+    picture: "./Assets/images/samples/Technistone/Noble_Athos_Brown_web.jpg",
   },
   {
     brand: "Technistone",
@@ -7876,7 +7876,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Technistone/Noble_Areti_Bianco_web.jpg",
+    picture: "./Assets/images/samples/Technistone/Noble_Areti_Bianco_web.jpg",
   },
   {
     brand: "Technistone",
@@ -7889,7 +7889,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Technistone/Noble_Imperial_Grey_web.jpg",
+    picture: "./Assets/images/samples/Technistone/Noble_Imperial_Grey_web.jpg",
   },
   {
     brand: "Technistone",
@@ -7902,7 +7902,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Technistone/Noble_Olympos_Mist_web.jpg",
+    picture: "./Assets/images/samples/Technistone/Noble_Olympos_Mist_web.jpg",
   },
 
   {
@@ -7916,7 +7916,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Compac/ABSOLUT-BLANC.jpg",
+    picture: "./Assets/images/samples/Compac/ABSOLUT-BLANC.jpg",
   },
   {
     brand: "Compac",
@@ -7929,7 +7929,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/nopic.jpg",
+    picture: "./Assets/images/samples/nopic.jpg",
   },
   {
     brand: "Compac",
@@ -7942,7 +7942,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Compac/calacatta.jpg",
+    picture: "./Assets/images/samples/Compac/calacatta.jpg",
   },
   {
     brand: "Compac",
@@ -7955,7 +7955,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Compac/compac-ceniza.jpg",
+    picture: "./Assets/images/samples/Compac/compac-ceniza.jpg",
   },
   {
     brand: "Compac",
@@ -7968,7 +7968,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Compac/ICEWHITE.jpg",
+    picture: "./Assets/images/samples/Compac/ICEWHITE.jpg",
   },
   {
     brand: "Compac",
@@ -7981,7 +7981,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Compac/MARQUINA.jpg",
+    picture: "./Assets/images/samples/Compac/MARQUINA.jpg",
   },
   {
     brand: "Compac",
@@ -7994,7 +7994,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Compac/compac-plomo.jpg",
+    picture: "./Assets/images/samples/Compac/compac-plomo.jpg",
   },
   {
     brand: "Compac",
@@ -8007,7 +8007,7 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/Compac/PORTORO.jpg",
+    picture: "./Assets/images/samples/Compac/PORTORO.jpg",
   },
 
   {
@@ -8021,6 +8021,6 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./images/samples/ModernStone/MA3202-STATUARIO-MONA-LISA.jpg",
+    picture: "./Assets/images/samples/ModernStone/MA3202-STATUARIO-MONA-LISA.jpg",
   },
 ];

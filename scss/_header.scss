@@ -64,7 +64,7 @@
                 top: 13px;
                 right: 20px;
                 background-color: transparent;
-                background-image: url(./images/icons/close-small.svg);
+                background-image: url(./Assets/images/icons/close-small.svg);
 
                 &.burger {
                     display: none;
@@ -99,7 +99,7 @@
     }
 
     & .burger {
-        background-image: url(./images/icons/burger.svg);
+        background-image: url(./Assets/images/icons/burger.svg);
     }
 
     & .header-nav {
