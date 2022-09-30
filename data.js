@@ -465,7 +465,8 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./Assets/images/samples/Avant/7060_Calacatta_Mont_Saint_Michel.jpg",
+    picture:
+      "./Assets/images/samples/Avant/7060_Calacatta_Mont_Saint_Michel.jpg",
   },
   {
     brand: "Avant",
@@ -3865,7 +3866,8 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./Assets/images/samples/Quartzforms/Cloudy_Portland_Grey_630_detail.jpg",
+    picture:
+      "./Assets/images/samples/Quartzforms/Cloudy_Portland_Grey_630_detail.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3878,7 +3880,8 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./Assets/images/samples/Quartzforms/Breeze_Ashen_Light_800_detail.jpg",
+    picture:
+      "./Assets/images/samples/Quartzforms/Breeze_Ashen_Light_800_detail.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3943,7 +3946,8 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./Assets/images/samples/Quartzforms/Veined_Michelangelo_920_detail.jpg",
+    picture:
+      "./Assets/images/samples/Quartzforms/Veined_Michelangelo_920_detail.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3969,7 +3973,8 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./Assets/images/samples/Quartzforms/Planet_Mercury_2001_detail.jpg",
+    picture:
+      "./Assets/images/samples/Quartzforms/Planet_Mercury_2001_detail.jpg",
   },
   {
     brand: "Quartzforms",
@@ -3995,7 +4000,8 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./Assets/images/samples/Quartzforms/Planet_Neptune_2025_detail.jpg",
+    picture:
+      "./Assets/images/samples/Quartzforms/Planet_Neptune_2025_detail.jpg",
   },
   {
     brand: "Quartzforms",
@@ -4021,7 +4027,8 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./Assets/images/samples/Quartzforms/Planet_Halley_3015_detail.jpg",
+    picture:
+      "./Assets/images/samples/Quartzforms/Planet_Halley_3015_detail.jpg",
   },
   {
     brand: "Quartzforms",
@@ -4047,7 +4054,8 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./Assets/images/samples/Quartzforms/Veined_Baroque_905_detail.jpg",
+    picture:
+      "./Assets/images/samples/Quartzforms/Veined_Baroque_905_detail.jpg",
   },
   {
     brand: "Quartzforms",
@@ -4073,7 +4081,8 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "",
-    picture: "./Assets/images/samples/Quartzforms/Veined_Michelangelo_920_detail.jpg",
+    picture:
+      "./Assets/images/samples/Quartzforms/Veined_Michelangelo_920_detail.jpg",
   },
 
   {
@@ -4366,7 +4375,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "2141 Snow",
-    price: { uah: 0, eur: 895, usd: 0 },
+    price: { uah: 0, eur: 985, usd: 0 },
     slab: [3050, 1440],
     colorGroup: ["white"],
     pattern: ["manka"],
@@ -4379,7 +4388,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "3100 Jet Black",
-    price: { uah: 0, eur: 895, usd: 0 },
+    price: { uah: 0, eur: 985, usd: 0 },
     slab: [3050, 1440],
     colorGroup: ["black"],
     pattern: ["manka"],
@@ -4392,7 +4401,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "6270 Atlantic salt",
-    price: { uah: 0, eur: 895, usd: 0 },
+    price: { uah: 0, eur: 985, usd: 0 },
     slab: [3050, 1440],
     colorGroup: ["grey"],
     pattern: ["zerno"],
@@ -4405,7 +4414,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "4003 Sleek Concrete",
-    price: { uah: 0, eur: 960, usd: 0 },
+    price: { uah: 0, eur: 1025, usd: 0 },
     slab: [3050, 1440],
     colorGroup: ["grey", "brown"],
     pattern: ["manka"],
@@ -4418,7 +4427,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "4120 Raven",
-    price: { uah: 0, eur: 960, usd: 0 },
+    price: { uah: 0, eur: 1025, usd: 0 },
     slab: [3050, 1440],
     colorGroup: ["grey"],
     pattern: ["marble"],
@@ -4431,7 +4440,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "4130 Clamshell",
-    price: { uah: 0, eur: 960, usd: 0 },
+    price: { uah: 0, eur: 1025, usd: 0 },
     slab: [3050, 1440],
     colorGroup: ["beige"],
     pattern: ["marble"],
@@ -4444,7 +4453,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "4220 Buttermilk",
-    price: { uah: 0, eur: 960, usd: 0 },
+    price: { uah: 0, eur: 1025, usd: 0 },
     slab: [3050, 1440],
     colorGroup: ["beige"],
     pattern: ["marble"],
@@ -4457,7 +4466,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "4230 Shitake",
-    price: { uah: 0, eur: 960, usd: 0 },
+    price: { uah: 0, eur: 1025, usd: 0 },
     slab: [3050, 1440],
     colorGroup: ["beige", "brown"],
     pattern: ["marble"],
@@ -4470,7 +4479,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "4330 Ginger",
-    price: { uah: 0, eur: 960, usd: 0 },
+    price: { uah: 0, eur: 1025, usd: 0 },
     slab: [3050, 1440],
     colorGroup: ["beige", "brown"],
     pattern: ["marble"],
@@ -4483,7 +4492,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "4350 Mink",
-    price: { uah: 0, eur: 960, usd: 0 },
+    price: { uah: 0, eur: 1025, usd: 0 },
     slab: [3050, 1440],
     colorGroup: ["brown"],
     pattern: ["marble"],
@@ -4496,7 +4505,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "4120 Raven",
-    price: { uah: 0, eur: 1025, usd: 0 },
+    price: { uah: 0, eur: 1095, usd: 0 },
     slab: [3050, 1440],
     colorGroup: ["grey"],
     pattern: ["marble"],
@@ -4509,7 +4518,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "1141 Pure White",
-    price: { uah: 0, eur: 995, usd: 0 },
+    price: { uah: 0, eur: 1045, usd: 0 },
     slab: [3050, 1440],
     colorGroup: ["white"],
     pattern: ["manka"],
@@ -4522,7 +4531,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "5000 London Grey",
-    price: { uah: 0, eur: 1115, usd: 0 },
+    price: { uah: 0, eur: 1195, usd: 0 },
     slab: [3050, 1440],
     colorGroup: ["grey"],
     pattern: ["marble"],
@@ -4535,7 +4544,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "5003 Piatra Grey",
-    price: { uah: 0, eur: 1115, usd: 0 },
+    price: { uah: 0, eur: 1195, usd: 0 },
     slab: [3050, 1440],
     colorGroup: ["brown", "grey"],
     pattern: ["marble"],
@@ -4548,7 +4557,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "5100 Vanilla Noir",
-    price: { uah: 0, eur: 1115, usd: 0 },
+    price: { uah: 0, eur: 1195, usd: 0 },
     slab: [3050, 1440],
     colorGroup: ["black"],
     pattern: ["marble"],
@@ -4561,7 +4570,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "5110 Alpine Mist",
-    price: { uah: 0, eur: 1115, usd: 0 },
+    price: { uah: 0, eur: 1195, usd: 0 },
     slab: [3050, 1440],
     colorGroup: ["grey", "white"],
     pattern: ["marble"],
@@ -4574,7 +4583,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "5133 Symphony Grey",
-    price: { uah: 0, eur: 1115, usd: 0 },
+    price: { uah: 0, eur: 1195, usd: 0 },
     slab: [3050, 1440],
     colorGroup: ["beige", "grey"],
     pattern: ["marble"],
@@ -4587,7 +4596,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "5141 Frosty Carrina",
-    price: { uah: 0, eur: 1115, usd: 0 },
+    price: { uah: 0, eur: 1195, usd: 0 },
     slab: [3050, 1440],
     colorGroup: ["white"],
     pattern: ["marble"],
@@ -4600,7 +4609,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "5211 Noble Grey",
-    price: { uah: 0, eur: 1115, usd: 0 },
+    price: { uah: 0, eur: 1195, usd: 0 },
     slab: [3050, 1440],
     colorGroup: ["grey"],
     pattern: ["marble"],
@@ -4613,7 +4622,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "5212 Taj Royale",
-    price: { uah: 0, eur: 1115, usd: 0 },
+    price: { uah: 0, eur: 1195, usd: 0 },
     slab: [3050, 1440],
     colorGroup: ["beige"],
     pattern: ["marble"],
@@ -4626,7 +4635,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "6003 Coastal Grey",
-    price: { uah: 0, eur: 1115, usd: 0 },
+    price: { uah: 0, eur: 1195, usd: 0 },
     slab: [3050, 1440],
     colorGroup: ["brown"],
     pattern: ["marble"],
@@ -4639,7 +4648,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "6131 Bianco Drift",
-    price: { uah: 0, eur: 1115, usd: 0 },
+    price: { uah: 0, eur: 1195, usd: 0 },
     slab: [3050, 1440],
     colorGroup: ["grey"],
     pattern: ["marble"],
@@ -4652,7 +4661,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "6338 Woodlands",
-    price: { uah: 0, eur: 1115, usd: 0 },
+    price: { uah: 0, eur: 1195, usd: 0 },
     slab: [3050, 1440],
     colorGroup: ["brown"],
     pattern: ["marble"],
@@ -4665,7 +4674,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "6046 Moorland Fog",
-    price: { uah: 0, eur: 1115, usd: 0 },
+    price: { uah: 0, eur: 1195, usd: 0 },
     slab: [3050, 1440],
     colorGroup: ["beige"],
     pattern: ["marble"],
@@ -4678,7 +4687,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "5143 White Attica",
-    price: { uah: 0, eur: 1115, usd: 0 },
+    price: { uah: 0, eur: 1195, usd: 0 },
     slab: [3050, 1440],
     colorGroup: ["white", "beige"],
     pattern: ["marble"],
@@ -4691,7 +4700,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "5220 Dreamy Marfil",
-    price: { uah: 0, eur: 1325, usd: 0 },
+    price: { uah: 0, eur: 1425, usd: 0 },
     slab: [3340, 1640],
     colorGroup: ["beige"],
     pattern: ["marble"],
@@ -4704,7 +4713,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "5810 Black Tempal",
-    price: { uah: 0, eur: 1325, usd: 0 },
+    price: { uah: 0, eur: 1425, usd: 0 },
     slab: [3340, 1640],
     colorGroup: ["black", "grey"],
     pattern: ["beton"],
@@ -4717,7 +4726,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "4011 Cloudburst Concrete",
-    price: { uah: 0, eur: 1325, usd: 0 },
+    price: { uah: 0, eur: 1425, usd: 0 },
     slab: [3340, 1640],
     colorGroup: ["grey"],
     pattern: ["beton"],
@@ -4730,7 +4739,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "4023 Topus Concrete",
-    price: { uah: 0, eur: 1325, usd: 0 },
+    price: { uah: 0, eur: 1425, usd: 0 },
     slab: [3340, 1640],
     colorGroup: ["beige", "grey"],
     pattern: ["beton"],
@@ -4743,7 +4752,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "4033 Rugged Concrete",
-    price: { uah: 0, eur: 1115, usd: 0 },
+    price: { uah: 0, eur: 1195, usd: 0 },
     slab: [3050, 1440],
     colorGroup: ["grey"],
     pattern: ["beton"],
@@ -4756,7 +4765,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "4044 Airy Concrete",
-    price: { uah: 0, eur: 1325, usd: 0 },
+    price: { uah: 0, eur: 1425, usd: 0 },
     slab: [3340, 1640],
     colorGroup: ["grey"],
     pattern: ["beton"],
@@ -4769,7 +4778,7 @@ const samplesArray = [
   {
     brand: "Caesarstone",
     color: "4046 Excava",
-    price: { uah: 0, eur: 1325, usd: 0 },
+    price: { uah: 0, eur: 1425, usd: 0 },
     slab: [3340, 1640],
     colorGroup: ["beige"],
     pattern: ["beton"],
@@ -4778,6 +4787,19 @@ const samplesArray = [
     preorder: "",
     out: "",
     picture: "./Assets/images/samples/Caesarstone/4046_Excava.jpg",
+  },
+  {
+    brand: "Caesarstone",
+    color: "4043 Primordia",
+    price: { uah: 0, eur: 1425, usd: 0 },
+    slab: [3340, 1640],
+    colorGroup: ["beige", "grey"],
+    pattern: ["beton"],
+    surface: "matte",
+    recommend: "",
+    preorder: "",
+    out: "",
+    picture: "./Assets/images/samples/Caesarstone/4043_Primordia.jpg",
   },
   {
     brand: "Caesarstone",
@@ -6198,7 +6220,8 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./Assets/images/samples/Silestone/silestone-gris-amazon-big-min.jpg",
+    picture:
+      "./Assets/images/samples/Silestone/silestone-gris-amazon-big-min.jpg",
   },
   {
     brand: "Silestone",
@@ -6211,7 +6234,8 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./Assets/images/samples/Silestone/silestone-gris-amazon-big-min.jpg",
+    picture:
+      "./Assets/images/samples/Silestone/silestone-gris-amazon-big-min.jpg",
   },
   {
     brand: "Silestone",
@@ -6224,7 +6248,8 @@ const samplesArray = [
     recommend: "",
     preorder: "",
     out: "out",
-    picture: "./Assets/images/samples/Silestone/silestone-gris-amazon-big-min.jpg",
+    picture:
+      "./Assets/images/samples/Silestone/silestone-gris-amazon-big-min.jpg",
   },
   {
     brand: "Silestone",
@@ -8008,19 +8033,5 @@ const samplesArray = [
     preorder: "",
     out: "",
     picture: "./Assets/images/samples/Compac/PORTORO.jpg",
-  },
-
-  {
-    brand: "Modern Stone",
-    color: "MA3202 STATUARIO MONA LISA",
-    price: { uah: 0, eur: 0, usd: 775 },
-    slab: [3200, 1600],
-    colorGroup: ["white"],
-    pattern: ["calacatta"],
-    surface: "glanz",
-    recommend: "",
-    preorder: "",
-    out: "",
-    picture: "./Assets/images/samples/ModernStone/MA3202-STATUARIO-MONA-LISA.jpg",
   },
 ];

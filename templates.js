@@ -686,9 +686,9 @@ function longKitchenSummary() {
       if (kitchen.cutouts[c].type === "levelmount") {
         msg += `+ виріз під мийку урівень`;
       } else if (kitchen.cutouts[c].type === "undermount") {
-        msg += `+ віріз під мойку нижного монтажу`;
+        msg += `+ виріз під мийку нижного монтажу`;
       } else {
-        msg += `+ мийка из кварцю `;
+        msg += `+ мийка з кварцу `;
         if (kitchen.cutouts[c].option === "round") {
           msg += `${kitchen.cutouts[c].size}мм, круглий стік`;
         } else {
