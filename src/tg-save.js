@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function goToDownload() {
-    window.location.href = "https://quartz-stone.od.ua/commercial-success.html";
+    window.location.href = "commercial-success.html";
   }
 });
 

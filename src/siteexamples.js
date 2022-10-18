@@ -10,9 +10,9 @@ const siteexamples = [
         ],
         cost: '1779$',
         images: [
-            './Assets/images/cases/tetroom_marsel/4.jpg',
-            './Assets/images/cases/tetroom_marsel/3.jpg',
-            './Assets/images/cases/tetroom_marsel/2.jpg',
+            './assets/images/cases/tetroom_marsel/4.jpg',
+            './assets/images/cases/tetroom_marsel/3.jpg',
+            './assets/images/cases/tetroom_marsel/2.jpg',
         ]
     },
 
@@ -28,9 +28,9 @@ const siteexamples = [
         ],
         cost: '854$',
         images: [
-            './Assets/images/cases/grafit_white/8.jpg',
-            './Assets/images/cases/grafit_white/9.jpg',
-            './Assets/images/cases/grafit_white/1.jpg',
+            './assets/images/cases/grafit_white/8.jpg',
+            './assets/images/cases/grafit_white/9.jpg',
+            './assets/images/cases/grafit_white/1.jpg',
         ]
     },
 
@@ -45,8 +45,8 @@ const siteexamples = [
         ],
         cost: '1305$',
         images: [
-            './Assets/images/cases/Caesarstone_clamshell/3.jpg',
-            './Assets/images/cases/Caesarstone_clamshell/2.jpg',
+            './assets/images/cases/Caesarstone_clamshell/3.jpg',
+            './assets/images/cases/Caesarstone_clamshell/2.jpg',
         ]
     },
 
@@ -62,11 +62,11 @@ const siteexamples = [
         ],
         cost: '1766$',
         images: [
-            './Assets/images/cases/pila_avant-windowsill/1.jpg',
-            './Assets/images/cases/pila_avant-windowsill/2.jpg',
-            './Assets/images/cases/pila_avant-windowsill/3.jpg',
-            './Assets/images/cases/pila_avant-windowsill/4.jpg',
-            './Assets/images/cases/pila_avant-windowsill/5.jpg',
+            './assets/images/cases/pila_avant-windowsill/1.jpg',
+            './assets/images/cases/pila_avant-windowsill/2.jpg',
+            './assets/images/cases/pila_avant-windowsill/3.jpg',
+            './assets/images/cases/pila_avant-windowsill/4.jpg',
+            './assets/images/cases/pila_avant-windowsill/5.jpg',
         ]
     },
 
@@ -85,9 +85,9 @@ const siteexamples = [
         ],
         cost: '3519$',
         images: [
-            './Assets/images/cases/beige_canelures/1.jpg',
-            './Assets/images/cases/beige_canelures/2.jpg',
-            './Assets/images/cases/beige_canelures/3.jpg',
+            './assets/images/cases/beige_canelures/1.jpg',
+            './assets/images/cases/beige_canelures/2.jpg',
+            './assets/images/cases/beige_canelures/3.jpg',
         ]
     },
 
@@ -103,9 +103,9 @@ const siteexamples = [
         ],
         cost: '1362$',
         images: [
-            './Assets/images/cases/pila_vanity-aquit/1.jpg',
-            './Assets/images/cases/pila_vanity-aquit/2.jpg',
-            './Assets/images/cases/pila_vanity-aquit/3.jpg',
+            './assets/images/cases/pila_vanity-aquit/1.jpg',
+            './assets/images/cases/pila_vanity-aquit/2.jpg',
+            './assets/images/cases/pila_vanity-aquit/3.jpg',
         ]
     },
 
@@ -121,10 +121,10 @@ const siteexamples = [
         ],
         cost: '1708$',
         images: [
-            './Assets/images/cases/Avant_1240/1.jpg',
-            './Assets/images/cases/Avant_1240/2.jpg',
-            './Assets/images/cases/Avant_1240/9.jpg',
-            './Assets/images/cases/Avant_1240/11.jpg',
+            './assets/images/cases/Avant_1240/1.jpg',
+            './assets/images/cases/Avant_1240/2.jpg',
+            './assets/images/cases/Avant_1240/9.jpg',
+            './assets/images/cases/Avant_1240/11.jpg',
         ]
     },
 
@@ -139,9 +139,9 @@ const siteexamples = [
         ],
         cost: '2983$',
         images: [
-            './Assets/images/cases/olha_arras/1.jpg',
-            './Assets/images/cases/olha_arras/2.jpg',
-            './Assets/images/cases/olha_arras/3.jpg',
+            './assets/images/cases/olha_arras/1.jpg',
+            './assets/images/cases/olha_arras/2.jpg',
+            './assets/images/cases/olha_arras/3.jpg',
         ]
     },
 
@@ -157,9 +157,9 @@ const siteexamples = [
         ],
         cost: '951$',
         images: [
-            './Assets/images/cases/Avant_9023/1.jpg',
-            './Assets/images/cases/Avant_9023/2.jpg',
-            './Assets/images/cases/Avant_9023/3.jpg',
+            './assets/images/cases/Avant_9023/1.jpg',
+            './assets/images/cases/Avant_9023/2.jpg',
+            './assets/images/cases/Avant_9023/3.jpg',
         ]
     },
 
@@ -177,9 +177,9 @@ const siteexamples = [
         ],
         cost: '4732$',
         images: [
-            './Assets/images/cases/pila_big-avant/1.webp',
-            './Assets/images/cases/pila_big-avant/2.webp',
-            './Assets/images/cases/pila_big-avant/3.webp',
+            './assets/images/cases/pila_big-avant/1.webp',
+            './assets/images/cases/pila_big-avant/2.webp',
+            './assets/images/cases/pila_big-avant/3.webp',
         ]
     },
 
@@ -195,9 +195,9 @@ const siteexamples = [
         ],
         cost: '1051$',
         images: [
-            './Assets/images/cases/Avant_7000_calacatta_eno/1.jpg',
-            './Assets/images/cases/Avant_7000_calacatta_eno/2.jpg',
-            './Assets/images/cases/Avant_7000_calacatta_eno/3.jpg',
+            './assets/images/cases/Avant_7000_calacatta_eno/1.jpg',
+            './assets/images/cases/Avant_7000_calacatta_eno/2.jpg',
+            './assets/images/cases/Avant_7000_calacatta_eno/3.jpg',
         ]
     },
 
@@ -214,10 +214,10 @@ const siteexamples = [
         ],
         cost: '3365$',
         images: [
-            './Assets/images/cases/Avant_calacatta_noir/3.jpg',
-            './Assets/images/cases/Avant_calacatta_noir/6.jpg',
-            './Assets/images/cases/Avant_calacatta_noir/8.jpg',
-            './Assets/images/cases/Avant_calacatta_noir/10.jpg',
+            './assets/images/cases/Avant_calacatta_noir/3.jpg',
+            './assets/images/cases/Avant_calacatta_noir/6.jpg',
+            './assets/images/cases/Avant_calacatta_noir/8.jpg',
+            './assets/images/cases/Avant_calacatta_noir/10.jpg',
         ]
     },
 
@@ -232,9 +232,9 @@ const siteexamples = [
         ],
         cost: '1523$',
         images: [
-            './Assets/images/cases/Avant_1220_clermont/2.jpg',
-            './Assets/images/cases/Avant_1220_clermont/1.jpg',
-            './Assets/images/cases/Avant_1220_clermont/3.jpg',
+            './assets/images/cases/Avant_1220_clermont/2.jpg',
+            './assets/images/cases/Avant_1220_clermont/1.jpg',
+            './assets/images/cases/Avant_1220_clermont/3.jpg',
         ]
     },
 
@@ -251,9 +251,9 @@ const siteexamples = [
         ],
         cost: '3504$',
         images: [
-            './Assets/images/cases/barbecue/1.jpg',
-            './Assets/images/cases/barbecue/2.jpg',
-            './Assets/images/cases/barbecue/3.jpg',
+            './assets/images/cases/barbecue/1.jpg',
+            './assets/images/cases/barbecue/2.jpg',
+            './assets/images/cases/barbecue/3.jpg',
         ]
     },
 
@@ -271,9 +271,9 @@ const siteexamples = [
         ],
         cost: '2471$',
         images: [
-            './Assets/images/cases/plain_black/1.jpg',
-            './Assets/images/cases/plain_black/2.jpg',
-            './Assets/images/cases/plain_black/3.jpg',
+            './assets/images/cases/plain_black/1.jpg',
+            './assets/images/cases/plain_black/2.jpg',
+            './assets/images/cases/plain_black/3.jpg',
         ]
     },
 
@@ -289,7 +289,7 @@ const siteexamples = [
         ],
         cost: '1372$',
         images: [
-            './Assets/images/cases/Avant_dijon/1.jpg',
+            './assets/images/cases/Avant_dijon/1.jpg',
         ]
     },
 
@@ -306,8 +306,8 @@ const siteexamples = [
         ],
         cost: '4940$',
         images: [
-            './Assets/images/cases/Atem_Chocolate/1.jpg',
-            './Assets/images/cases/Atem_Chocolate/2.jpg',
+            './assets/images/cases/Atem_Chocolate/1.jpg',
+            './assets/images/cases/Atem_Chocolate/2.jpg',
         ]
     },
 
@@ -324,12 +324,12 @@ const siteexamples = [
         ],
         cost: '3500$',
         images: [
-            './Assets/images/cases/tetroom_azul-aran/1.jpg',
-            './Assets/images/cases/tetroom_azul-aran/2.jpg',
-            './Assets/images/cases/tetroom_azul-aran/3.jpg',
-            './Assets/images/cases/tetroom_azul-aran/4.jpg',
-            './Assets/images/cases/tetroom_azul-aran/5.jpg',
-            './Assets/images/cases/tetroom_azul-aran/6.jpg',
+            './assets/images/cases/tetroom_azul-aran/1.jpg',
+            './assets/images/cases/tetroom_azul-aran/2.jpg',
+            './assets/images/cases/tetroom_azul-aran/3.jpg',
+            './assets/images/cases/tetroom_azul-aran/4.jpg',
+            './assets/images/cases/tetroom_azul-aran/5.jpg',
+            './assets/images/cases/tetroom_azul-aran/6.jpg',
         ]
     },
 
@@ -346,9 +346,9 @@ const siteexamples = [
         ],
         cost: '1577$',
         images: [
-            './Assets/images/cases/olha_burgundy/1.jpg',
-            './Assets/images/cases/olha_burgundy/2.jpeg',
-            './Assets/images/cases/olha_burgundy/3.jpg',
+            './assets/images/cases/olha_burgundy/1.jpg',
+            './assets/images/cases/olha_burgundy/2.jpeg',
+            './assets/images/cases/olha_burgundy/3.jpg',
         ]
     },
     {
@@ -362,11 +362,11 @@ const siteexamples = [
         ],
         cost: '5172$',
         images: [
-            './Assets/images/cases/tarutino/1.jpg',
-            './Assets/images/cases/tarutino/2.jpg',
-            './Assets/images/cases/tarutino/3.jpg',
-            './Assets/images/cases/tarutino/4.jpg',
-            './Assets/images/cases/tarutino/5.jpg',
+            './assets/images/cases/tarutino/1.jpg',
+            './assets/images/cases/tarutino/2.jpg',
+            './assets/images/cases/tarutino/3.jpg',
+            './assets/images/cases/tarutino/4.jpg',
+            './assets/images/cases/tarutino/5.jpg',
         ]
     },
     {
@@ -380,9 +380,9 @@ const siteexamples = [
         ],
         cost: '872$',
         images: [
-            './Assets/images/cases/pila_grenoble/1.jpg',
-            './Assets/images/cases/pila_grenoble/2.jpg',
-            './Assets/images/cases/pila_grenoble/3.jpg',
+            './assets/images/cases/pila_grenoble/1.jpg',
+            './assets/images/cases/pila_grenoble/2.jpg',
+            './assets/images/cases/pila_grenoble/3.jpg',
         ]
     }, */
 ];
